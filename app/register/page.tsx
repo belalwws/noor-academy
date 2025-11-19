@@ -56,6 +56,10 @@ type FormData = z.infer<typeof registerSchema>;
 export default function RegisterPage() {
   const router = useRouter();
 
+  useEffect(() => {
+    console.log('📝 [Register Page] Register page loaded');
+  }, []);
+
   const [error, setError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});

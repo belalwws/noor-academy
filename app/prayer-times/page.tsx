@@ -17,6 +17,11 @@ export default function PrayerTimesPage() {
   const [showSettings, setShowSettings] = useState(false);
   const { getCurrentLocation, settings } = usePrayerTimes();
 
+  // Log page load
+  useEffect(() => {
+    console.log('🕌 [Prayer Times Page] Prayer times page loaded');
+  }, []);
+
   // Request location permission on page load
   useEffect(() => {
     // Only request if no location is set

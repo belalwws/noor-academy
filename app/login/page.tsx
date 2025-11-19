@@ -22,6 +22,10 @@ export default function LoginPage() {
 
   const searchParams = useSearchParams();
 
+  useEffect(() => {
+    console.log('🔐 [Login Page] Login page loaded');
+  }, []);
+
   const [formData, setFormData] = useState({
     email: '',
     password: ''

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { Header } from '@/components/landingpage/sections/Header';
 import { HeroSection } from '@/components/landingpage/sections/HeroSection';
@@ -72,6 +72,10 @@ const Footer = dynamic(
 );
 
 export const LandingPage = () => {
+  useEffect(() => {
+    console.log('🏠 [Home Page] Landing page loaded');
+  }, []);
+
   return (
     <div className="min-h-screen bg-white transition-colors duration-300">
       <Header />

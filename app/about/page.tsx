@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -57,6 +58,10 @@ const fadeUp = {
 
 export default function AboutPage() {
   const router = useRouter();
+
+  useEffect(() => {
+    console.log('ℹ️ [About Page] About page loaded');
+  }, []);
 
   return (
     <main

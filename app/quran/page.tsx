@@ -5,6 +5,8 @@ import SomethingWentWrong from "./components/something-went-wrong";
 import { Separator } from "@/components/ui/separator";
 
 export default async function QuranPage() {
+  console.log('📖 [Quran Page] Quran page loaded');
+  
   try {
     const result = await GetSurahs();
 

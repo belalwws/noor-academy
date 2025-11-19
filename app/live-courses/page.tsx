@@ -41,6 +41,10 @@ export default function LiveTeachingPage() {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
+    console.log('🎥 [Live Courses Page] Live courses page loaded');
+  }, []);
+
+  useEffect(() => {
     fetchCourses();
   }, []);
 

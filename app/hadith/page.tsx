@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useMemo, useState } from 'react'
+import React, { useMemo, useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HadithHeader, HadithCard, HadithControls } from './components'
 import { hadithCollection } from './data/hadiths'
@@ -9,6 +9,10 @@ import type { Hadith as HadithType } from './components'
 export default function HadithPage() {
   const [currentHadith, setCurrentHadith] = useState<HadithType>(hadithCollection[0])
   const [favourites, setFavourites] = useState<string[]>([])
+
+  useEffect(() => {
+    console.log('📖 [Hadith Page] Hadith page loaded');
+  }, []);
 
   const categories = useMemo(() => {
     const counts = new Map<string, number>()

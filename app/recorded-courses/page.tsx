@@ -36,6 +36,10 @@ export default function RecordedCoursesPage() {
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState(searchTerm);
 
   useEffect(() => {
+    console.log('📹 [Recorded Courses Page] Recorded courses page loaded');
+  }, []);
+
+  useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedSearchTerm(searchTerm);
       setPage(1); // Reset to first page when searching

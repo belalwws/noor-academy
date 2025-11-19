@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, BookOpen, Rows3 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -34,6 +34,10 @@ const mainTabs: Array<{ id: MainTab; label: string; icon: any; description: stri
 
 export default function DhikrPage() {
   const [activeTab, setActiveTab] = useState<MainTab>('adhkar');
+
+  useEffect(() => {
+    console.log('🕌 [Dhikr Page] Dhikr page loaded');
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 pt-20">
