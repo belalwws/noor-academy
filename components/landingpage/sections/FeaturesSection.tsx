@@ -80,7 +80,7 @@ export const FeaturesSection: React.FC = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.9 }}
+          transition={{ duration: 0.3 }}
           className="text-center mb-8 max-w-5xl mx-auto"
         >
           {/* Badge */}
@@ -88,7 +88,7 @@ export const FeaturesSection: React.FC = () => {
             initial={{ opacity: 0, scale: 0.85, y: -20 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1, type: "spring" }}
+            transition={{ delay: 0.05, duration: 0.3 }}
             className="inline-flex items-center gap-2.5 bg-gradient-to-r from-[#0A5734]/10 via-[#4A8F5C]/8 to-[#0A5734]/10 dark:from-[#0A5734]/20 dark:via-[#4A8F5C]/15 dark:to-[#0A5734]/20 px-6 py-3 rounded-full border border-[#0A5734]/20 dark:border-[#4A8F5C]/30 shadow-lg backdrop-blur-sm mb-8"
           >
             <Sparkles className="text-[#0A5734] dark:text-[#4A8F5C]" size={18} />
@@ -126,7 +126,7 @@ export const FeaturesSection: React.FC = () => {
                 initial={{ opacity: 0, y: 50, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.7, delay: index * 0.1, type: "spring", stiffness: 100 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
                 className="group relative"
               >
                 {/* Card with Enhanced Design */}

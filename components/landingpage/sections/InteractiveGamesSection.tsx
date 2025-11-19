@@ -114,7 +114,7 @@ export const InteractiveGamesSection: React.FC = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.3, delay: 0.15 }}
             className="relative w-full max-w-md mx-auto mb-8"
           >
             <div className="relative h-[400px] flex items-center justify-center">

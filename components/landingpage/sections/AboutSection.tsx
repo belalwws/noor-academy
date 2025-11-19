@@ -56,7 +56,7 @@ export const AboutSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.3 }}
           className="text-center mb-16"
         >
           <motion.div
@@ -88,7 +88,7 @@ export const AboutSection: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3 + index * 0.1, duration: 0.6 }}
+              transition={{ delay: 0.1 + index * 0.05, duration: 0.3 }}
             >
               <Card className="h-full bg-white dark:bg-slate-800 rounded-2xl p-6 border border-gray-100 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <div className="text-center">

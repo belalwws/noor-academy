@@ -96,7 +96,7 @@ export const CommunitiesSection: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3 + index * 0.1, duration: 0.6 }}
+              transition={{ delay: 0.1 + index * 0.05, duration: 0.3 }}
               className={`bg-gradient-to-br ${community.bgColor} dark:from-slate-800 dark:to-slate-900 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border ${community.borderColor} dark:border-slate-700 hover:scale-105`}
             >
               <div className={`w-16 h-16 bg-gradient-to-br ${community.color} rounded-2xl flex items-center justify-center shadow-lg mb-6`}>

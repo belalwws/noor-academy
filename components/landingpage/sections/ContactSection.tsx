@@ -78,7 +78,7 @@ export const ContactSection: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
             className="relative bg-white/12 backdrop-blur-2xl rounded-3xl p-8 lg:p-10 shadow-2xl border-2 border-white/20"
           >
             {/* Decorative Corners */}

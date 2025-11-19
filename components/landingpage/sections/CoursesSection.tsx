@@ -108,7 +108,7 @@ export const CoursesSection: React.FC = () => {
                 initial={{ opacity: 0, y: 60, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.9, delay: index * 0.2, type: "spring", stiffness: 100 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
                 className="group relative"
               >
                 {/* Main Card - Premium Design */}

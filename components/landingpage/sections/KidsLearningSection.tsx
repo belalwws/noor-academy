@@ -76,7 +76,7 @@ export const KidsLearningSection: React.FC = () => {
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.9 }}
+            transition={{ duration: 0.3 }}
             className="lg:col-span-7 space-y-6"
           >
             {/* Badge */}
@@ -119,7 +119,7 @@ export const KidsLearningSection: React.FC = () => {
                     initial={{ opacity: 0, x: -40, scale: 0.95 }}
                     whileInView={{ opacity: 1, x: 0, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1, type: "spring" }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
                     className="group relative bg-white dark:bg-slate-900 rounded-xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#0A5734]/10 dark:border-slate-700/50 hover:border-[#0A5734]/30 dark:hover:border-[#4A8F5C]/30"
                   >
                     <div className="flex items-start gap-4">
@@ -167,14 +167,14 @@ export const KidsLearningSection: React.FC = () => {
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.9 }}
+            transition={{ duration: 0.3 }}
             className="lg:col-span-5 relative hidden lg:block"
           >
             <div className="relative">
               {/* Multi-layer Glow Effects */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="absolute w-full h-full max-w-lg bg-gradient-to-br from-[#0A5734]/18 to-[#4A8F5C]/12 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute w-[90%] h-[90%] bg-gradient-to-br from-[#C5A15A]/10 to-[#4A8F5C]/8 rounded-full blur-2xl animate-pulse delay-1000" />
+                <div className="absolute w-full h-full max-w-lg bg-gradient-to-br from-[#0A5734]/18 to-[#4A8F5C]/12 rounded-full blur-3xl" />
+                <div className="absolute w-[90%] h-[90%] bg-gradient-to-br from-[#C5A15A]/10 to-[#4A8F5C]/8 rounded-full blur-2xl" />
               </div>
               
               {/* Card - Enhanced */}
