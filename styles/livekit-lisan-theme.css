@@ -1,0 +1,320 @@
+/* Rushd Academy Custom Theme for LiveKit Meet */
+/* Override LiveKit default styles with Rushd Academy branding */
+/* Uses Design System tokens from tokens.css */
+
+[data-lk-theme="lisan"] {
+  /* Primary Colors - Using Design System tokens */
+  --lk-brand-color: var(--color-secondary);
+  --lk-brand-color-hover: var(--color-secondary-dark);
+  --lk-brand-color-active: #0d3e10;
+  
+  /* Background Colors */
+  --lk-bg: #f5f5f0;
+  --lk-bg2: #ffffff;
+  --lk-bg3: #f8f8f5;
+  
+  /* Text Colors */
+  --lk-fg: #1a1a1a;
+  --lk-fg2: #4a4a4a;
+  --lk-fg3: #6a6a6a;
+  
+  /* Accent Colors - Gold/Amber */
+  --lk-accent: #d4af37;
+  --lk-accent-hover: #b8941f;
+  --lk-accent-active: #9c7a0f;
+  
+  /* Control Bar */
+  --lk-control-bg: rgba(45, 125, 50, 0.95);
+  --lk-control-fg: #ffffff;
+  --lk-control-hover-bg: rgba(27, 94, 32, 0.95);
+  
+  /* Buttons */
+  --lk-button-bg: #2d7d32;
+  --lk-button-fg: #ffffff;
+  --lk-button-hover-bg: #1b5e20;
+  --lk-button-active-bg: #0d3e10;
+  --lk-button-disabled-bg: #cccccc;
+  
+  /* Danger/Error States */
+  --lk-danger: #d32f2f;
+  --lk-danger-hover: #c62828;
+  
+  /* Success States */
+  --lk-success: #2d7d32;
+  --lk-success-hover: #1b5e20;
+  
+  /* Border Colors */
+  --lk-border-color: rgba(45, 125, 50, 0.2);
+  --lk-focus-color: #2d7d32;
+  
+  /* Shadows */
+  --lk-shadow: 0 2px 8px rgba(45, 125, 50, 0.15);
+  --lk-shadow-hover: 0 4px 12px rgba(45, 125, 50, 0.25);
+}
+
+/* Override specific LiveKit components */
+[data-lk-theme="lisan"] .lk-room {
+  background: linear-gradient(135deg, #f5f5f0 0%, #e8f5e9 100%);
+}
+
+[data-lk-theme="lisan"] .lk-control-bar {
+  background: linear-gradient(135deg, rgba(45, 125, 50, 0.95) 0%, rgba(27, 94, 32, 0.95) 100%);
+  border-top: 2px solid var(--lk-accent);
+}
+
+[data-lk-theme="lisan"] .lk-button {
+  background-color: var(--lk-button-bg);
+  color: var(--lk-button-fg);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+[data-lk-theme="lisan"] .lk-button:hover {
+  background-color: var(--lk-button-hover-bg);
+  transform: translateY(-1px);
+  box-shadow: var(--lk-shadow-hover);
+  border-color: var(--lk-accent);
+}
+
+[data-lk-theme="lisan"] .lk-participant-tile {
+  background: var(--lk-bg2);
+  border: 2px solid var(--lk-border-color);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+[data-lk-theme="lisan"] .lk-participant-name {
+  background: linear-gradient(135deg, rgba(45, 125, 50, 0.9) 0%, rgba(27, 94, 32, 0.9) 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-family: 'Noto Kufi Arabic', 'Segoe UI', Tahoma, sans-serif;
+}
+
+[data-lk-theme="lisan"] .lk-chat {
+  background: var(--lk-bg2);
+  border: 1px solid var(--lk-border-color);
+  border-radius: 12px;
+}
+
+[data-lk-theme="lisan"] .lk-chat-entry {
+  background: #f8f8f5;
+  border-radius: 8px;
+  margin: 4px 8px;
+  padding: 8px 12px;
+  border-left: 3px solid var(--lk-brand-color);
+}
+
+[data-lk-theme="lisan"] .lk-chat-entry.lk-message-send {
+  background: rgba(45, 125, 50, 0.1);
+  border-left-color: var(--lk-accent);
+}
+
+[data-lk-theme="lisan"] .lk-prejoin {
+  background: linear-gradient(135deg, #f5f5f0 0%, #e8f5e9 100%);
+}
+
+[data-lk-theme="lisan"] .lk-prejoin-header {
+  color: var(--lk-brand-color);
+  font-family: 'Noto Kufi Arabic', 'Segoe UI', Tahoma, sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Input Fields */
+[data-lk-theme="lisan"] input,
+[data-lk-theme="lisan"] select,
+[data-lk-theme="lisan"] textarea {
+  background: var(--lk-bg2);
+  border: 2px solid var(--lk-border-color);
+  border-radius: 8px;
+  color: var(--lk-fg);
+  padding: 10px 14px;
+  transition: all 0.3s ease;
+  font-family: 'Noto Kufi Arabic', 'Segoe UI', Tahoma, sans-serif;
+}
+
+[data-lk-theme="lisan"] input:focus,
+[data-lk-theme="lisan"] select:focus,
+[data-lk-theme="lisan"] textarea:focus {
+  border-color: var(--lk-focus-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(45, 125, 50, 0.1);
+}
+
+/* Tabs */
+[data-lk-theme="lisan"] .lk-tabs {
+  border-bottom: 2px solid var(--lk-border-color);
+}
+
+[data-lk-theme="lisan"] .lk-tab {
+  color: var(--lk-fg2);
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+[data-lk-theme="lisan"] .lk-tab:hover {
+  color: var(--lk-brand-color);
+  background: rgba(45, 125, 50, 0.05);
+}
+
+[data-lk-theme="lisan"] .lk-tab.lk-active {
+  color: var(--lk-brand-color);
+  border-bottom-color: var(--lk-brand-color);
+  font-weight: 600;
+}
+
+/* Settings Menu */
+[data-lk-theme="lisan"] .lk-settings-menu {
+  background: var(--lk-bg2);
+  border: 1px solid var(--lk-border-color);
+  border-radius: 12px;
+  box-shadow: var(--lk-shadow);
+}
+
+[data-lk-theme="lisan"] .lk-settings-menu-item:hover {
+  background: rgba(45, 125, 50, 0.1);
+}
+
+/* Toast Notifications */
+[data-lk-theme="lisan"] .lk-toast {
+  background: var(--lk-bg2);
+  border: 1px solid var(--lk-border-color);
+  border-left: 4px solid var(--lk-brand-color);
+  border-radius: 8px;
+  box-shadow: var(--lk-shadow);
+}
+
+[data-lk-theme="lisan"] .lk-toast.lk-toast-error {
+  border-left-color: var(--lk-danger);
+}
+
+[data-lk-theme="lisan"] .lk-toast.lk-toast-success {
+  border-left-color: var(--lk-success);
+}
+
+/* Scrollbars */
+[data-lk-theme="lisan"] ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+[data-lk-theme="lisan"] ::-webkit-scrollbar-track {
+  background: var(--lk-bg3);
+  border-radius: 4px;
+}
+
+[data-lk-theme="lisan"] ::-webkit-scrollbar-thumb {
+  background: var(--lk-brand-color);
+  border-radius: 4px;
+}
+
+[data-lk-theme="lisan"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--lk-brand-color-hover);
+}
+
+/* Arabic/RTL Support */
+[data-lk-theme="lisan"][dir="rtl"] .lk-chat-entry {
+  border-left: none;
+  border-right: 3px solid var(--lk-brand-color);
+  text-align: right;
+}
+
+[data-lk-theme="lisan"][dir="rtl"] .lk-control-bar {
+  direction: rtl;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 640px) {
+  .lk-room-container {
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile */
+    overflow: hidden;
+  }
+
+  [data-lk-theme="lisan"] .lk-control-bar {
+    padding: 8px 4px;
+    gap: 4px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  [data-lk-theme="lisan"] .lk-button {
+    padding: 10px 12px;
+    min-width: 44px; /* Minimum touch target size */
+    min-height: 44px;
+    font-size: 14px;
+  }
+
+  [data-lk-theme="lisan"] .lk-participant-tile {
+    border-radius: 8px;
+  }
+
+  [data-lk-theme="lisan"] .lk-participant-name {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  [data-lk-theme="lisan"] .lk-chat {
+    max-height: 50vh;
+    border-radius: 8px;
+  }
+
+  [data-lk-theme="lisan"] .lk-chat-entry {
+    padding: 6px 10px;
+    font-size: 13px;
+    margin: 3px 6px;
+  }
+
+  /* Hide non-essential elements on mobile */
+  [data-lk-theme="lisan"] .lk-settings-menu {
+    max-width: 90vw;
+    max-height: 80vh;
+  }
+
+  /* Improve touch targets */
+  [data-lk-theme="lisan"] button,
+  [data-lk-theme="lisan"] .lk-button {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(45, 125, 50, 0.2);
+  }
+
+  /* Optimize video grid for mobile */
+  [data-lk-theme="lisan"] .lk-grid {
+    gap: 4px;
+    padding: 4px;
+  }
+
+  /* Make control bar more compact on mobile */
+  [data-lk-theme="lisan"] .lk-control-bar .lk-button-group {
+    gap: 6px;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 641px) and (max-width: 1024px) {
+  [data-lk-theme="lisan"] .lk-control-bar {
+    padding: 10px 8px;
+    gap: 8px;
+  }
+
+  [data-lk-theme="lisan"] .lk-button {
+    padding: 12px 16px;
+    min-width: 48px;
+    min-height: 48px;
+  }
+}
+
+/* Animations */
+@keyframes lisan-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+[data-lk-theme="lisan"] .lk-button.lk-active {
+  animation: lisan-pulse 2s infinite;
+  background: var(--lk-accent);
+  color: var(--lk-fg);
+}

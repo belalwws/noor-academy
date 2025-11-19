@@ -1,0 +1,178 @@
+@import '../styles/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background-light text-text-primary font-sans antialiased transition-colors duration-300;
+  }
+
+  html.dark body {
+    @apply bg-slate-950 text-slate-50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Improve text contrast in dark mode */
+  html.dark h1,
+  html.dark h2,
+  html.dark h3,
+  html.dark h4,
+  html.dark h5,
+  html.dark h6 {
+    @apply text-slate-50;
+  }
+
+  html.dark p {
+    @apply text-slate-300;
+  }
+}
+
+@layer components {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-navbar {
+    background: var(--gradient-navbar);
+  }
+
+  .gradient-card-header {
+    background: var(--gradient-card-header);
+  }
+
+  .pattern-dots {
+    background-image: radial-gradient(circle, rgba(233, 168, 33, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  html.dark .pattern-dots {
+    background-image: radial-gradient(circle, rgba(233, 168, 33, 0.15) 1px, transparent 1px);
+  }
+
+  .pattern-diagonal {
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(233, 168, 33, 0.02) 10px,
+      rgba(233, 168, 33, 0.02) 20px
+    );
+  }
+
+  html.dark .pattern-diagonal {
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(233, 168, 33, 0.04) 10px,
+      rgba(233, 168, 33, 0.04) 20px
+    );
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+    transition: box-shadow var(--transition-base);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+    transition: box-shadow var(--transition-base);
+  }
+
+  /* Card backgrounds */
+  .bg-card-light {
+    @apply bg-white;
+  }
+
+  html.dark .bg-card-light {
+    @apply bg-slate-800;
+  }
+
+  /* Border improvements */
+  .border-light {
+    @apply border-gray-200;
+  }
+
+  html.dark .border-light {
+    @apply border-slate-700;
+  }
+
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-slate-100 dark:bg-slate-800 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 dark:bg-slate-600 rounded-full hover:bg-slate-400 dark:hover:bg-slate-500;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-purple-500 dark:bg-purple-600;
+  }
+
+  /* Firefox Scrollbar */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(203 213 225) rgb(241 245 249);
+  }
+
+  html.dark .custom-scrollbar {
+    scrollbar-color: rgb(71 85 105) rgb(30 41 59);
+  }
+
+  /* Arabic Font for Quranic and Religious Text */
+  .font-arabic {
+    font-family: 'Amiri', 'Noto Naskh Arabic', 'Traditional Arabic', 'Arabic Typesetting', serif;
+    font-weight: 400;
+    line-height: 2;
+  }
+
+  /* Scrollbar for reminder modal */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 dark:bg-slate-600 rounded-full;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400 dark:bg-slate-500;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .dark-aware {
+    @apply transition-colors duration-300;
+  }
+}
+

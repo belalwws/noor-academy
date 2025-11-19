@@ -1,0 +1,215 @@
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { BookOpen, FileQuestion, Brain, Target, ArrowLeft, FlaskConical } from 'lucide-react';
+import Link from 'next/link';
+import Lottie from 'lottie-react';
+
+export const KnowledgeLabSection: React.FC = () => {
+  const [bookAnimation, setBookAnimation] = useState<any>(null);
+
+  useEffect(() => {
+    fetch('/book.json')
+      .then((res) => res.json())
+      .then((data) => setBookAnimation(data))
+      .catch((err) => console.error('Error loading animation:', err));
+  }, []);
+
+  const features = [
+    {
+      icon: FileQuestion,
+      text: 'بنك أسئلة شامل',
+      description: 'مجموعة واسعة من الأسئلة في مختلف المواضيع',
+    },
+    {
+      icon: Brain,
+      text: 'تمارين تفاعلية',
+      description: 'اختبارات وتمارين لقياس الفهم والاستيعاب',
+    },
+    {
+      icon: Target,
+      text: 'تقييم الأداء',
+      description: 'تتبع تقدمك وتحليل نقاط القوة والضعف',
+    },
+    {
+      icon: BookOpen,
+      text: 'محتوى منظم',
+      description: 'أسئلة مرتبة حسب الموضوع والمستوى',
+    },
+  ];
+
+  return (
+    <section 
+      id="knowledge-lab" 
+      dir="rtl"
+      className="relative py-12 md:py-16 bg-white dark:bg-slate-900 transition-colors duration-300 overflow-hidden"
+    >
+      {/* Background Pattern */}
+      <div className="absolute inset-0 gradient-hero pattern-dots opacity-30 -z-10" />
+      
+      {/* Color Effect Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-yellow-500/10 via-yellow-500/5 to-transparent pointer-events-none -z-10" />
+
+      {/* Floating Elements */}
+      <div className="absolute top-20 right-10 w-32 h-32 bg-yellow-500/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-20 left-10 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl animate-pulse delay-700" />
+      <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-yellow-400/10 rounded-full blur-2xl animate-pulse delay-1000" />
+
+      <div className="container mx-auto px-4 lg:px-8 py-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Content Section - Left */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center lg:text-right space-y-6"
+          >
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 text-yellow-600 dark:text-yellow-400 px-4 py-2.5 rounded-full text-sm font-semibold border border-yellow-200 dark:border-yellow-800 shadow-sm"
+            >
+              <FlaskConical size={18} />
+              <span>مختبر المعرفة</span>
+            </motion.div>
+
+            {/* Title */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary dark:text-slate-50 leading-tight"
+            >
+              <span className="gradient-primary bg-clip-text text-transparent">
+                بنك أسئلة شامل
+              </span>
+              <br />
+              <span className="text-text-primary dark:text-slate-50">لتعزيز المعرفة والفهم</span>
+            </motion.h2>
+
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="text-lg md:text-xl text-text-secondary dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0"
+            >
+              استكشف بنك أسئلة شامل يحتوي على آلاف الأسئلة في مختلف المواضيع. اختبر معرفتك، 
+              قيّم فهمك، وطور مهاراتك من خلال تمارين تفاعلية واختبارات شاملة مصممة لمساعدتك 
+              على إتقان المادة التعليمية.
+            </motion.p>
+
+            {/* Features List */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8"
+            >
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.6 + index * 0.1 }}
+                  className="flex items-center gap-3 p-3 rounded-xl hover:bg-yellow-50/50 dark:hover:bg-slate-800/50 transition-colors"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-500/10 to-amber-500/10 flex items-center justify-center border border-yellow-200 dark:border-yellow-800 shadow-sm flex-shrink-0">
+                    <feature.icon className="text-yellow-600 dark:text-yellow-400" size={22} />
+                  </div>
+                  <span className="text-text-primary dark:text-slate-200 font-medium text-sm md:text-base">
+                    {feature.text}
+                  </span>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              className="flex justify-center lg:justify-start"
+            >
+              <Link href="/dashboard/teacher">
+                <Button variant="primary" size="lg" className="group mt-6 shadow-lg hover:shadow-xl transition-all">
+                  <span className="text-lg">استكشف الآن</span>
+                  <ArrowLeft className="mr-2 group-hover:translate-x-1 transition-transform" size={22} />
+                </Button>
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          {/* Image Section - Right */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative hidden lg:block"
+          >
+            <div className="relative w-full h-[900px] flex items-center justify-center">
+              {/* Lottie Animation */}
+              <motion.div
+                animate={{
+                  y: [0, -20, 0],
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="w-full h-full flex items-center justify-center"
+              >
+                {bookAnimation ? (
+                  <Lottie
+                    animationData={bookAnimation}
+                    loop={true}
+                    className="w-full h-full"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <div className="animate-pulse text-text-secondary">جاري التحميل...</div>
+                  </div>
+                )}
+              </motion.div>
+
+              {/* Floating badge */}
+              <motion.div
+                animate={{ y: [0, -15, 0], rotate: [0, 5, -5, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-48 left-16 bg-gradient-to-br from-yellow-500 to-amber-500 text-white p-5 rounded-2xl shadow-glow z-10"
+              >
+                <FlaskConical size={36} />
+              </motion.div>
+
+              {/* Floating Card */}
+              <motion.div
+                animate={{ y: [0, -20, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-60 right-16 bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-glow w-64 z-10 border border-gray-100 dark:border-slate-700"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-yellow-500/10 dark:bg-yellow-500/20 rounded-xl flex items-center justify-center">
+                    <FileQuestion className="text-yellow-600 dark:text-yellow-400" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-text-primary dark:text-slate-100">بنك أسئلة</h4>
+                    <p className="text-sm text-text-secondary dark:text-slate-400">آلاف الأسئلة</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Central Glow Effect */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-yellow-500 to-amber-500 rounded-full blur-3xl opacity-10 animate-pulse -z-10" />
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+

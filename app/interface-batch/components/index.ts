@@ -1,0 +1,7 @@
+export { default as CourseSidebar } from './CourseSidebar'
+export { default as CourseTopBar } from './CourseTopBar'
+export { default as CourseDetails } from './CourseDetails'
+export { default as CourseMembers } from './CourseMembers'
+export { default as CourseFiles } from './CourseFiles'
+export { default as PostCard } from './PostCard'
+export { default as PostsList } from './PostsList'

@@ -1,0 +1,77 @@
+"use client";
+
+import { useCurrentFont } from "@/lib/store/hooks/useQuran";
+import { Button } from "@/components/ui/button";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { FontNames } from "../constants";
+import { SettingsIcon } from "lucide-react";
+import { Label } from "@/components/ui/label";
+
+export default function Settings() {
+  const [font, setFont] = useCurrentFont();
+
+  return (
+    <Drawer>
+      <DrawerTrigger asChild>
+        <Button size={"icon"} variant={"secondary"} className="h-8 w-8">
+          <SettingsIcon className="size-4" />
+        </Button>
+      </DrawerTrigger>
+      <DrawerContent className="bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-700">
+        <DrawerTitle className="sr-only">Settings</DrawerTitle>
+        <div className="mx-auto w-full max-w-sm py-10">
+          <div className="grid grid-cols-3 items-center gap-4">
+            <Label
+              className="text-left"
+              style={{ fontFamily: "var(--font-noto-kufi-arabic)" }}
+            >
+              فۆنت
+            </Label>
+            <Select
+              onValueChange={(value) => setFont(value)}
+              value={font}
+              dir="rtl"
+            >
+              <SelectTrigger className="w-[180px] h-13 col-span-2">
+                <SelectValue placeholder="فۆنت" />
+              </SelectTrigger>
+              <SelectContent className="bg-white dark:bg-slate-900">
+                {FontNames.map((font) => (
+                  <SelectItem
+                    key={font.value}
+                    value={font.value}
+                    className="py-2.5"
+                  >
+                    <div className="flex flex-col text-start">
+                      <span
+                        className="text-base"
+                        style={{ fontFamily: `var(--font-${font.value})` }}
+                      >
+                        لا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا
+                      </span>
+                      <span className="text-muted-foreground text-xs">
+                        {font.label}
+                      </span>
+                    </div>
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+      </DrawerContent>
+    </Drawer>
+  );
+}

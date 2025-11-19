@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "lisan-alhekma-web",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_API_URL_LOCAL": "http://localhost:8000/api",
+    "NEXT_PUBLIC_API_URL_STAGING": "https://staging-backend.render.com/api",
+    "NEXT_PUBLIC_API_URL_PRODUCTION": "https://lisan-alhekma.onrender.com/api"
+  }
+}
