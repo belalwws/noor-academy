@@ -58,7 +58,7 @@ export const IslamicFeaturesSection: React.FC = () => {
     <section 
       id="islamic-features" 
       dir="rtl"
-      className="relative py-8 md:py-12 lg:py-14 bg-gradient-to-b from-white via-[#0A5734]/2 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300 overflow-hidden"
+      className="relative py-4 md:py-6 lg:py-6 bg-gradient-to-b from-white via-[#0A5734]/2 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300 overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.03]">
@@ -79,14 +79,14 @@ export const IslamicFeaturesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3 }}
-          className="text-center mb-8"
+          className="text-center mb-4 sm:mb-6 lg:mb-8"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#0A5734]/10 to-[#4A8F5C]/10 dark:from-[#0A5734]/20 dark:to-[#4A8F5C]/20 px-5 py-2.5 rounded-full text-sm font-semibold border border-[#0A5734]/20 dark:border-[#4A8F5C]/30 shadow-sm mb-6"
+            className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-[#0A5734]/10 to-[#4A8F5C]/10 dark:from-[#0A5734]/20 dark:to-[#4A8F5C]/20 px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 lg:py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-[#0A5734]/20 dark:border-[#4A8F5C]/30 shadow-sm mb-3 sm:mb-4 lg:mb-6"
           >
             <Sparkles className="text-[#0A5734] dark:text-[#4A8F5C]" size={16} />
             <span className="text-[#0A5734] dark:text-[#4A8F5C]">الأدوات الإسلامية</span>

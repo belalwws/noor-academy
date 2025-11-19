@@ -52,7 +52,7 @@ export const CoursesSection: React.FC = () => {
     <section 
       id="courses" 
       dir="rtl"
-      className="relative py-8 md:py-12 lg:py-14 bg-gradient-to-b from-white via-[#0A5734]/3 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300 overflow-hidden"
+      className="relative py-4 md:py-6 lg:py-6 bg-gradient-to-b from-white via-[#0A5734]/3 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300 overflow-hidden"
     >
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.025]">
@@ -73,15 +73,15 @@ export const CoursesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.9 }}
-          className="text-center mb-8 max-w-4xl mx-auto"
+          className="text-center mb-4 sm:mb-6 lg:mb-8 max-w-4xl mx-auto"
         >
-          <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-[#222222] dark:text-slate-50 mb-4 leading-[1.2] tracking-tight">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-[#222222] dark:text-slate-50 mb-2 sm:mb-3 lg:mb-4 leading-[1.2] tracking-tight">
             اختر النوع الذي
-            <span className="block mt-3 text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">
+            <span className="block mt-1 sm:mt-2 lg:mt-3 text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">
               يناسبك
             </span>
           </h2>
-          <p className="text-base md:text-lg text-[#555555] dark:text-slate-300 leading-relaxed font-light mb-4">
+          <p className="text-sm sm:text-base md:text-lg text-[#555555] dark:text-slate-300 leading-relaxed font-light mb-3 sm:mb-4">
             دورات مسجلة للتعلم المرن أو دورات مباشرة للتفاعل الفوري
           </p>
           
@@ -91,7 +91,7 @@ export const CoursesSection: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1, type: "spring" }}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#0A5734]/10 via-[#4A8F5C]/8 to-[#0A5734]/10 dark:from-[#0A5734]/20 dark:via-[#4A8F5C]/15 dark:to-[#0A5734]/20 px-5 py-2 rounded-full border border-[#0A5734]/20 dark:border-[#4A8F5C]/30 shadow-lg backdrop-blur-sm"
+            className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-[#0A5734]/10 via-[#4A8F5C]/8 to-[#0A5734]/10 dark:from-[#0A5734]/20 dark:via-[#4A8F5C]/15 dark:to-[#0A5734]/20 px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full border border-[#0A5734]/20 dark:border-[#4A8F5C]/30 shadow-lg backdrop-blur-sm text-xs sm:text-sm"
           >
             <Sparkles className="text-[#0A5734] dark:text-[#4A8F5C]" size={16} />
             <span className="text-xs font-bold text-[#0A5734] dark:text-[#4A8F5C] tracking-wide">أنواع الدورات</span>
@@ -99,7 +99,7 @@ export const CoursesSection: React.FC = () => {
         </motion.div>
 
         {/* Courses Grid - Enhanced Layout */}
-        <div className="grid md:grid-cols-2 gap-5 lg:gap-6 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-3 sm:gap-4 lg:gap-6 max-w-7xl mx-auto">
           {courses.map((course, index) => {
             const Icon = course.icon;
             return (

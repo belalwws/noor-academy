@@ -90,7 +90,7 @@ export const InteractionSection: React.FC = () => {
     <section 
       id="interaction" 
       dir="rtl"
-      className="relative py-8 md:py-12 lg:py-14 bg-gradient-to-b from-white via-[#4A8F5C]/4 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300 overflow-hidden"
+      className="relative py-4 md:py-6 lg:py-6 bg-gradient-to-b from-white via-[#4A8F5C]/4 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300 overflow-hidden"
     >
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.025]">
@@ -111,11 +111,11 @@ export const InteractionSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.9 }}
-          className="text-center mb-8 max-w-4xl mx-auto"
+          className="text-center mb-4 sm:mb-6 lg:mb-8 max-w-4xl mx-auto"
         >
-          <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-[#222222] dark:text-slate-50 mb-4 leading-[1.2] tracking-tight">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-[#222222] dark:text-slate-50 mb-2 sm:mb-3 lg:mb-4 leading-[1.2] tracking-tight">
             انضم إلى مجتمعات تفاعلية
-            <span className="block mt-3 text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">
+            <span className="block mt-1 sm:mt-2 lg:mt-3 text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">
               واستمتع بألعاب تعليمية
             </span>
           </h2>

@@ -28,7 +28,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="relative py-8 md:py-12 lg:py-14 bg-gradient-to-br from-[#0A5734] via-[#073D24] to-[#0A5734] dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 text-white overflow-hidden" dir="rtl">
+    <section id="contact" className="relative py-4 md:py-6 lg:py-6 bg-gradient-to-br from-[#0A5734] via-[#073D24] to-[#0A5734] dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 text-white overflow-hidden" dir="rtl">
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.04]">
         <div className="absolute inset-0" style={{
@@ -51,7 +51,7 @@ export const ContactSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.9 }}
-          className="text-center max-w-5xl mx-auto space-y-10"
+          className="text-center max-w-5xl mx-auto space-y-4 sm:space-y-6 lg:space-y-10"
         >
           {/* Badge */}
           <motion.div
@@ -59,16 +59,16 @@ export const ContactSection: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1, type: "spring" }}
-            className="inline-flex items-center gap-2.5 bg-white/15 backdrop-blur-md px-6 py-3 rounded-full border-2 border-white/25 shadow-xl"
+            className="inline-flex items-center gap-1.5 sm:gap-2.5 bg-white/15 backdrop-blur-md px-3 sm:px-5 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full border-2 border-white/25 shadow-xl text-xs sm:text-sm"
           >
             <Sparkles className="text-white" size={18} />
             <span className="text-sm font-bold text-white tracking-wide">تواصل معنا</span>
           </motion.div>
 
           {/* Title - Enhanced */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.2] tracking-tight">
-            <span className="block mb-4">سجّل الآن وابدأ</span>
-            <span className="block mt-4 text-white font-extrabold">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.2] tracking-tight">
+            <span className="block mb-2 sm:mb-3 lg:mb-4">سجّل الآن وابدأ</span>
+            <span className="block mt-2 sm:mt-3 lg:mt-4 text-white font-extrabold">
               رحلتك مع القرآن
             </span>
           </h2>

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Sparkles, Award, Users, BookMarked, ArrowLeft } from 'lucide-react';
+import { BookOpen, Sparkles, Award, Users, BookMarked, ArrowLeft, Eye } from 'lucide-react';
 import { useAppSelector } from '@/lib/hooks';
 import Lottie from 'lottie-react';
 
@@ -28,6 +28,10 @@ export const HeroSection: React.FC = () => {
     }
   };
 
+  const handleBrowseCourses = () => {
+    router.push('/courses');
+  };
+
   const stats = [
     { icon: Users, label: 'طلاب', value: '500+', color: 'from-[#0A5734] to-[#4A8F5C]' },
     { icon: BookMarked, label: 'دورة', value: '50+', color: 'from-[#4A8F5C] to-[#5BA86D]' },
@@ -35,7 +39,7 @@ export const HeroSection: React.FC = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] flex items-center pt-12 sm:pt-16 pb-8 sm:pb-12 overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-300" dir="rtl">
+    <section id="home" className="relative min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] flex items-center mt-20 sm:mt-24 lg:mt-8 pt-8 sm:pt-12 pb-6 sm:pb-8 overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-300" dir="rtl">
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.025] dark:opacity-[0.04]">
         <div className="absolute inset-0" style={{
@@ -52,21 +56,21 @@ export const HeroSection: React.FC = () => {
       <div className="hidden md:block absolute top-32 right-24 w-px h-40 bg-gradient-to-b from-[#0A5734] via-[#4A8F5C] to-transparent opacity-15" />
       <div className="hidden md:block absolute bottom-32 left-24 w-40 h-px bg-gradient-to-r from-[#C5A15A] via-[#4A8F5C] to-transparent opacity-15" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-5 lg:py-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
           {/* Content - Takes 7 columns */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="lg:col-span-7 text-center lg:text-right space-y-4 sm:space-y-6"
+            className="lg:col-span-7 text-center lg:text-right space-y-3 sm:space-y-4 lg:space-y-6"
           >
             {/* Main Title */}
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.4, ease: "easeOut" }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.3] sm:leading-[1.4] tracking-tight space-y-1 sm:space-y-2"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.2] sm:leading-[1.3] lg:leading-[1.4] tracking-tight space-y-0.5 sm:space-y-1 lg:space-y-2"
             >
               <span className="text-[#222222] dark:text-slate-50 block">مع أكاديمية نور…</span>
               <span className="block text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">
@@ -80,7 +84,7 @@ export const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.3 }}
-              className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#555555] dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light px-2 sm:px-0"
+              className="text-sm sm:text-base md:text-lg lg:text-2xl text-[#555555] dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light px-2 sm:px-0 mb-2 sm:mb-0"
             >
               بيئة قرآنية تربوية متكاملة تجمع بين <span className="font-semibold text-[#0A5734] dark:text-[#4A8F5C]">الإتقان</span> و<span className="font-semibold text-[#0A5734] dark:text-[#4A8F5C]">العصرية</span> بإشراف نخبة من المعلمين والمعلمات.
             </motion.p>
@@ -90,7 +94,7 @@ export const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.3 }}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 lg:gap-6 pt-4 border-t-2 border-[#0A5734]/10 dark:border-[#4A8F5C]/20"
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-3 lg:gap-6 pt-3 sm:pt-4 border-t-2 border-[#0A5734]/10 dark:border-[#4A8F5C]/20"
             >
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
@@ -102,14 +106,14 @@ export const HeroSection: React.FC = () => {
                     transition={{ delay: 0.25 + index * 0.05, duration: 0.3 }}
                     className="group relative"
                   >
-                    <div className="relative bg-gradient-to-br from-white to-[#0A5734]/5 dark:from-slate-900 dark:to-slate-800 rounded-xl p-3 sm:p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#0A5734]/10 dark:border-[#4A8F5C]/20 min-w-[80px] sm:min-w-[100px]">
+                    <div className="relative bg-gradient-to-br from-white to-[#0A5734]/5 dark:from-slate-900 dark:to-slate-800 rounded-lg sm:rounded-xl p-2 sm:p-3 lg:p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#0A5734]/10 dark:border-[#4A8F5C]/20 min-w-[70px] sm:min-w-[90px] lg:min-w-[100px]">
                       <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-5 rounded-xl transition-opacity duration-300`} />
                       <div className="relative z-10 text-center">
                         <div className="flex items-center justify-center gap-2 mb-1.5">
                           <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${stat.color} flex items-center justify-center shadow-md group-hover:scale-110 transition-transform`}>
                             <Icon className="text-white" size={18} />
                           </div>
-                          <span className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-[#0A5734] dark:text-[#4A8F5C]">{stat.value}</span>
+                          <span className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-extrabold text-[#0A5734] dark:text-[#4A8F5C]">{stat.value}</span>
                         </div>
                         <span className="text-[10px] sm:text-xs lg:text-sm text-[#555555] dark:text-slate-400 font-semibold">{stat.label}</span>
                       </div>
@@ -124,16 +128,25 @@ export const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.3 }}
-              className="flex flex-col sm:flex-row gap-3 lg:gap-4 justify-center lg:justify-start pt-4 w-full sm:w-auto"
+              className="flex flex-col sm:flex-row gap-2 sm:gap-3 lg:gap-4 justify-center lg:justify-start pt-3 sm:pt-4 w-full sm:w-auto"
             >
               <Button 
                 onClick={handleBookTrial}
-                className="group relative bg-gradient-to-r from-[#0A5734] via-[#4A8F5C] to-[#0A5734] hover:from-[#073D24] hover:via-[#3A7148] hover:to-[#073D24] text-white px-6 sm:px-8 lg:px-10 py-4 sm:py-5 lg:py-6 text-sm sm:text-base lg:text-lg font-bold shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden w-full sm:w-auto"
+                className="group relative bg-gradient-to-r from-[#0A5734] via-[#4A8F5C] to-[#0A5734] hover:from-[#073D24] hover:via-[#3A7148] hover:to-[#073D24] text-white px-5 sm:px-7 lg:px-10 py-3 sm:py-4 lg:py-6 text-xs sm:text-sm lg:text-lg font-bold shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden w-full sm:w-auto"
                 size="lg"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
                 <BookOpen className="ml-2 group-hover:rotate-12 transition-transform relative z-10" size={20} />
                 <span className="relative z-10">سجل الآن</span>
+              </Button>
+              <Button 
+                onClick={handleBrowseCourses}
+                variant="outline"
+                className="group border-2 border-[#0A5734] dark:border-[#4A8F5C] bg-transparent text-[#0A5734] dark:text-[#4A8F5C] hover:bg-[#0A5734]/10 dark:hover:bg-[#4A8F5C]/10 px-5 sm:px-7 lg:px-10 py-3 sm:py-4 lg:py-6 text-xs sm:text-sm lg:text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto"
+                size="lg"
+              >
+                <Eye className="ml-2 group-hover:scale-110 transition-transform relative z-10" size={20} />
+                <span className="relative z-10">تصفح الدورات</span>
               </Button>
             </motion.div>
           </motion.div>

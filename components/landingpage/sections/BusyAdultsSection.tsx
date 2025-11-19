@@ -56,7 +56,7 @@ export const BusyAdultsSection: React.FC = () => {
   };
 
   return (
-    <section id="busy-adults" className="relative py-8 md:py-12 lg:py-14 bg-gradient-to-b from-white via-[#4A8F5C]/4 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 overflow-hidden" dir="rtl">
+    <section id="busy-adults" className="relative py-4 md:py-6 lg:py-6 bg-gradient-to-b from-white via-[#4A8F5C]/4 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 overflow-hidden" dir="rtl">
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.025]">
         <div className="absolute inset-0" style={{
@@ -70,14 +70,14 @@ export const BusyAdultsSection: React.FC = () => {
       <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-gradient-to-tr from-[#C5A15A]/6 via-[#4A8F5C]/4 to-transparent rounded-full blur-[120px]" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-16 items-center max-w-7xl mx-auto">
           {/* Content - Takes 7 columns */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.3 }}
-            className="lg:col-span-7 space-y-6"
+            className="lg:col-span-7 space-y-3 sm:space-y-4 lg:space-y-6"
           >
             {/* Badge */}
             <motion.div
@@ -85,15 +85,15 @@ export const BusyAdultsSection: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1, type: "spring" }}
-              className="inline-flex items-center gap-2.5 bg-gradient-to-r from-[#0A5734]/10 via-[#4A8F5C]/8 to-[#0A5734]/10 dark:from-[#0A5734]/20 dark:via-[#4A8F5C]/15 dark:to-[#0A5734]/20 px-6 py-3 rounded-full border border-[#0A5734]/20 dark:border-[#4A8F5C]/30 shadow-lg backdrop-blur-sm"
+              className="inline-flex items-center gap-1.5 sm:gap-2.5 bg-gradient-to-r from-[#0A5734]/10 via-[#4A8F5C]/8 to-[#0A5734]/10 dark:from-[#0A5734]/20 dark:via-[#4A8F5C]/15 dark:to-[#0A5734]/20 px-3 sm:px-5 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full border border-[#0A5734]/20 dark:border-[#4A8F5C]/30 shadow-lg backdrop-blur-sm text-xs sm:text-sm"
             >
-              <Sparkles className="text-[#0A5734] dark:text-[#4A8F5C]" size={18} />
-              <span className="text-sm font-bold text-[#0A5734] dark:text-[#4A8F5C] tracking-wide">للأشخاص المشغولين</span>
+              <Sparkles className="text-[#0A5734] dark:text-[#4A8F5C]" size={14} style={{ width: '14px', height: '14px' }} />
+              <span className="font-bold text-[#0A5734] dark:text-[#4A8F5C] tracking-wide">للأشخاص المشغولين</span>
             </motion.div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.2] tracking-tight">
-              <span className="text-[#222222] dark:text-slate-50 block mb-4">حتى لو وقتك ضيق…</span>
-              <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold block my-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.2] tracking-tight">
+              <span className="text-[#222222] dark:text-slate-50 block mb-2 sm:mb-3 lg:mb-4">حتى لو وقتك ضيق…</span>
+              <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold block my-2 sm:my-3 lg:my-4">
                 ما زال بإمكانك حفظ القرآن
               </span>
             </h2>
@@ -103,7 +103,7 @@ export const BusyAdultsSection: React.FC = () => {
             </p>
 
             {/* Features Grid - Enhanced */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {features.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
