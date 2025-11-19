@@ -81,7 +81,7 @@ export default function RegisterPage() {
       password: '',
       password2: '',
       phone: '',
-      country_code: '+966',
+      country_code: '+962',
       gender: '',
       age: 0,
       preferred_language: 'ar',
@@ -567,6 +567,7 @@ export default function RegisterPage() {
                     className={`${getInputClassName(!!errors['country_code'])} appearance-none`}
                     required
                   >
+                    <option value="+962">🇯🇴 الأردن</option>
                     <option value="+966">🇸🇦 السعودية</option>
                     <option value="+971">🇦🇪 الإمارات</option>
                     <option value="+965">🇰🇼 الكويت</option>
