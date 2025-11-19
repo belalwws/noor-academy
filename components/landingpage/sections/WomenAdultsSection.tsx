@@ -56,7 +56,7 @@ export const WomenAdultsSection: React.FC = () => {
   };
 
   return (
-    <section id="women-adults" className="relative py-4 md:py-6 lg:py-6 bg-white dark:bg-slate-950 overflow-hidden" dir="rtl">
+    <section id="women-adults" className="relative py-4 sm:py-5 md:py-6 lg:py-6 bg-white dark:bg-slate-950 overflow-hidden" dir="rtl">
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.025]">
         <div className="absolute inset-0" style={{
@@ -70,7 +70,7 @@ export const WomenAdultsSection: React.FC = () => {
       <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-gradient-to-tl from-[#0A5734]/6 via-[#4A8F5C]/4 to-transparent rounded-full blur-[120px]" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-16 items-center max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-12 gap-4 sm:gap-6 md:gap-8 lg:gap-16 items-center max-w-7xl mx-auto">
           {/* Illustration - Takes 5 columns */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
@@ -134,7 +134,7 @@ export const WomenAdultsSection: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.3 }}
-            className="lg:col-span-7 order-1 lg:order-2 space-y-3 sm:space-y-4 lg:space-y-6"
+            className="lg:col-span-7 order-1 lg:order-2 space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6"
           >
             {/* Badge */}
             <motion.div

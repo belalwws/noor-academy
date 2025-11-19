@@ -39,7 +39,7 @@ export const HeroSection: React.FC = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] flex items-center mt-20 sm:mt-24 lg:mt-8 pt-8 sm:pt-12 pb-6 sm:pb-8 overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-300" dir="rtl">
+    <section id="home" className="relative min-h-[60vh] sm:min-h-[65vh] md:min-h-[68vh] lg:min-h-[70vh] flex items-center mt-20 sm:mt-24 md:mt-20 lg:mt-8 pt-8 sm:pt-10 md:pt-12 lg:pt-12 pb-6 sm:pb-8 md:pb-10 lg:pb-8 overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-300" dir="rtl">
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.025] dark:opacity-[0.04]">
         <div className="absolute inset-0" style={{
@@ -56,21 +56,21 @@ export const HeroSection: React.FC = () => {
       <div className="hidden md:block absolute top-32 right-24 w-px h-40 bg-gradient-to-b from-[#0A5734] via-[#4A8F5C] to-transparent opacity-15" />
       <div className="hidden md:block absolute bottom-32 left-24 w-40 h-px bg-gradient-to-r from-[#C5A15A] via-[#4A8F5C] to-transparent opacity-15" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-5 lg:py-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-8 py-3 sm:py-4 md:py-5 lg:py-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-center">
           {/* Content - Takes 7 columns */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="lg:col-span-7 text-center lg:text-right space-y-3 sm:space-y-4 lg:space-y-6"
+            className="lg:col-span-7 text-center md:text-center lg:text-right space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6"
           >
             {/* Main Title */}
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.4, ease: "easeOut" }}
-              className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.2] sm:leading-[1.3] lg:leading-[1.4] tracking-tight space-y-0.5 sm:space-y-1 lg:space-y-2"
+              className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.2] sm:leading-[1.3] md:leading-[1.35] lg:leading-[1.4] tracking-tight space-y-0.5 sm:space-y-1 md:space-y-1.5 lg:space-y-2"
             >
               <span className="text-[#222222] dark:text-slate-50 block">مع أكاديمية نور…</span>
               <span className="block text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">
@@ -84,7 +84,7 @@ export const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.3 }}
-              className="text-sm sm:text-base md:text-lg lg:text-2xl text-[#555555] dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light px-2 sm:px-0 mb-2 sm:mb-0"
+              className="text-sm sm:text-base md:text-xl lg:text-2xl text-[#555555] dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light px-2 sm:px-0 md:px-4 lg:px-0 mb-2 sm:mb-0"
             >
               بيئة قرآنية تربوية متكاملة تجمع بين <span className="font-semibold text-[#0A5734] dark:text-[#4A8F5C]">الإتقان</span> و<span className="font-semibold text-[#0A5734] dark:text-[#4A8F5C]">العصرية</span> بإشراف نخبة من المعلمين والمعلمات.
             </motion.p>
@@ -94,7 +94,7 @@ export const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.3 }}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-3 lg:gap-6 pt-3 sm:pt-4 border-t-2 border-[#0A5734]/10 dark:border-[#4A8F5C]/20"
+              className="flex flex-wrap items-center justify-center md:justify-center lg:justify-start gap-2 sm:gap-3 md:gap-4 lg:gap-6 pt-3 sm:pt-4 md:pt-5 lg:pt-4 border-t-2 border-[#0A5734]/10 dark:border-[#4A8F5C]/20"
             >
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
@@ -106,14 +106,14 @@ export const HeroSection: React.FC = () => {
                     transition={{ delay: 0.25 + index * 0.05, duration: 0.3 }}
                     className="group relative"
                   >
-                    <div className="relative bg-gradient-to-br from-white to-[#0A5734]/5 dark:from-slate-900 dark:to-slate-800 rounded-lg sm:rounded-xl p-2 sm:p-3 lg:p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#0A5734]/10 dark:border-[#4A8F5C]/20 min-w-[70px] sm:min-w-[90px] lg:min-w-[100px]">
+                    <div className="relative bg-gradient-to-br from-white to-[#0A5734]/5 dark:from-slate-900 dark:to-slate-800 rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-3.5 lg:p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#0A5734]/10 dark:border-[#4A8F5C]/20 min-w-[70px] sm:min-w-[90px] md:min-w-[95px] lg:min-w-[100px]">
                       <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-5 rounded-xl transition-opacity duration-300`} />
                       <div className="relative z-10 text-center">
                         <div className="flex items-center justify-center gap-2 mb-1.5">
                           <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${stat.color} flex items-center justify-center shadow-md group-hover:scale-110 transition-transform`}>
                             <Icon className="text-white" size={18} />
                           </div>
-                          <span className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-extrabold text-[#0A5734] dark:text-[#4A8F5C]">{stat.value}</span>
+                          <span className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl font-extrabold text-[#0A5734] dark:text-[#4A8F5C]">{stat.value}</span>
                         </div>
                         <span className="text-[10px] sm:text-xs lg:text-sm text-[#555555] dark:text-slate-400 font-semibold">{stat.label}</span>
                       </div>
@@ -128,7 +128,7 @@ export const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.3 }}
-              className="flex flex-col sm:flex-row gap-2 sm:gap-3 lg:gap-4 justify-center lg:justify-start pt-3 sm:pt-4 w-full sm:w-auto"
+              className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 lg:gap-4 justify-center md:justify-center lg:justify-start pt-3 sm:pt-4 md:pt-5 lg:pt-4 w-full sm:w-auto"
             >
               <Button 
                 onClick={handleBookTrial}

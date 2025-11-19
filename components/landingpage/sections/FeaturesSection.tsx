@@ -57,7 +57,7 @@ const features = [
 
 export const FeaturesSection: React.FC = () => {
   return (
-    <section id="features" className="relative py-4 md:py-6 lg:py-6 bg-white dark:bg-slate-950 overflow-hidden" dir="rtl">
+    <section id="features" className="relative py-4 sm:py-5 md:py-6 lg:py-6 bg-white dark:bg-slate-950 overflow-hidden" dir="rtl">
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.025]">
         <div className="absolute inset-0" style={{
@@ -81,7 +81,7 @@ export const FeaturesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.3 }}
-          className="text-center mb-4 sm:mb-6 lg:mb-8 max-w-5xl mx-auto"
+          className="text-center mb-4 sm:mb-5 md:mb-6 lg:mb-8 max-w-5xl mx-auto"
         >
           {/* Badge */}
           <motion.div
@@ -95,7 +95,7 @@ export const FeaturesSection: React.FC = () => {
             <span className="text-sm font-bold text-[#0A5734] dark:text-[#4A8F5C] tracking-wide">مميزاتنا</span>
           </motion.div>
 
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-[#222222] dark:text-slate-50 mb-2 sm:mb-3 lg:mb-4 leading-[1.2] tracking-tight">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-[#222222] dark:text-slate-50 mb-2 sm:mb-3 md:mb-3 lg:mb-4 leading-[1.2] tracking-tight">
             ماذا نقدم في
             <span className="block mt-3 text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">
               أكاديمية نور؟
@@ -117,7 +117,7 @@ export const FeaturesSection: React.FC = () => {
         </motion.div>
 
         {/* Features Grid - Enhanced Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-5 lg:gap-5 max-w-7xl mx-auto">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (

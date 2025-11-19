@@ -56,7 +56,7 @@ export const BusyAdultsSection: React.FC = () => {
   };
 
   return (
-    <section id="busy-adults" className="relative py-4 md:py-6 lg:py-6 bg-gradient-to-b from-white via-[#4A8F5C]/4 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 overflow-hidden" dir="rtl">
+    <section id="busy-adults" className="relative py-4 sm:py-5 md:py-6 lg:py-6 bg-gradient-to-b from-white via-[#4A8F5C]/4 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 overflow-hidden" dir="rtl">
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.025]">
         <div className="absolute inset-0" style={{
@@ -70,14 +70,14 @@ export const BusyAdultsSection: React.FC = () => {
       <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-gradient-to-tr from-[#C5A15A]/6 via-[#4A8F5C]/4 to-transparent rounded-full blur-[120px]" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-16 items-center max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-12 gap-4 sm:gap-6 md:gap-8 lg:gap-16 items-center max-w-7xl mx-auto">
           {/* Content - Takes 7 columns */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.3 }}
-            className="lg:col-span-7 space-y-3 sm:space-y-4 lg:space-y-6"
+            className="lg:col-span-7 space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6"
           >
             {/* Badge */}
             <motion.div
@@ -92,8 +92,8 @@ export const BusyAdultsSection: React.FC = () => {
             </motion.div>
 
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.2] tracking-tight">
-              <span className="text-[#222222] dark:text-slate-50 block mb-2 sm:mb-3 lg:mb-4">حتى لو وقتك ضيق…</span>
-              <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold block my-2 sm:my-3 lg:my-4">
+              <span className="text-[#222222] dark:text-slate-50 block mb-2 sm:mb-3 md:mb-3 lg:mb-4">حتى لو وقتك ضيق…</span>
+              <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold block my-2 sm:my-3 md:my-3 lg:my-4">
                 ما زال بإمكانك حفظ القرآن
               </span>
             </h2>

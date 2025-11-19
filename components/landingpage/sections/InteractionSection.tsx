@@ -90,7 +90,7 @@ export const InteractionSection: React.FC = () => {
     <section 
       id="interaction" 
       dir="rtl"
-      className="relative py-4 md:py-6 lg:py-6 bg-gradient-to-b from-white via-[#4A8F5C]/4 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300 overflow-hidden"
+      className="relative py-4 sm:py-5 md:py-6 lg:py-6 bg-gradient-to-b from-white via-[#4A8F5C]/4 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300 overflow-hidden"
     >
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.025]">

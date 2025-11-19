@@ -52,7 +52,7 @@ export const CoursesSection: React.FC = () => {
     <section 
       id="courses" 
       dir="rtl"
-      className="relative py-4 md:py-6 lg:py-6 bg-gradient-to-b from-white via-[#0A5734]/3 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300 overflow-hidden"
+      className="relative py-4 sm:py-5 md:py-6 lg:py-6 bg-gradient-to-b from-white via-[#0A5734]/3 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300 overflow-hidden"
     >
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.025]">
@@ -73,7 +73,7 @@ export const CoursesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.9 }}
-          className="text-center mb-4 sm:mb-6 lg:mb-8 max-w-4xl mx-auto"
+          className="text-center mb-4 sm:mb-5 md:mb-6 lg:mb-8 max-w-4xl mx-auto"
         >
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-[#222222] dark:text-slate-50 mb-2 sm:mb-3 lg:mb-4 leading-[1.2] tracking-tight">
             اختر النوع الذي
@@ -99,7 +99,7 @@ export const CoursesSection: React.FC = () => {
         </motion.div>
 
         {/* Courses Grid - Enhanced Layout */}
-        <div className="grid md:grid-cols-2 gap-3 sm:gap-4 lg:gap-6 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-3 sm:gap-4 md:gap-5 lg:gap-6 max-w-7xl mx-auto">
           {courses.map((course, index) => {
             const Icon = course.icon;
             return (

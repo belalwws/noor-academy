@@ -28,22 +28,22 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="relative py-4 md:py-6 lg:py-6 bg-gradient-to-br from-[#0A5734] via-[#073D24] to-[#0A5734] dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 text-white overflow-hidden" dir="rtl">
+    <section id="contact" className="relative py-4 sm:py-5 md:py-6 lg:py-6 bg-white dark:bg-slate-950 text-[#222222] dark:text-slate-50 overflow-hidden" dir="rtl">
       {/* Premium Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.04]">
+      <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.025]">
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 2px 2px, #0A5734 1px, transparent 0)`,
           backgroundSize: '56px 56px'
         }} />
       </div>
 
       {/* Sophisticated Gradient Overlays */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-[#4A8F5C]/15 via-[#0A5734]/10 to-transparent rounded-full blur-[120px]" />
-      <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-gradient-to-tr from-[#C5A15A]/15 via-[#4A8F5C]/10 to-transparent rounded-full blur-[120px]" />
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-[#4A8F5C]/8 via-[#0A5734]/5 to-transparent rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-gradient-to-tr from-[#C5A15A]/8 via-[#4A8F5C]/5 to-transparent rounded-full blur-[120px]" />
 
       {/* Elegant Decorative Elements */}
-      <div className="absolute top-24 right-24 w-1.5 h-40 bg-gradient-to-b from-white/25 via-white/15 to-transparent" />
-      <div className="absolute bottom-24 left-24 w-40 h-1.5 bg-gradient-to-r from-white/25 via-white/15 to-transparent" />
+      <div className="hidden md:block absolute top-24 right-24 w-1.5 h-40 bg-gradient-to-b from-[#0A5734]/15 via-[#4A8F5C]/10 to-transparent" />
+      <div className="hidden md:block absolute bottom-24 left-24 w-40 h-1.5 bg-gradient-to-r from-[#0A5734]/15 via-[#4A8F5C]/10 to-transparent" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <motion.div
@@ -59,16 +59,16 @@ export const ContactSection: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1, type: "spring" }}
-            className="inline-flex items-center gap-1.5 sm:gap-2.5 bg-white/15 backdrop-blur-md px-3 sm:px-5 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full border-2 border-white/25 shadow-xl text-xs sm:text-sm"
+            className="inline-flex items-center gap-1.5 sm:gap-2.5 bg-gradient-to-r from-[#0A5734]/10 via-[#4A8F5C]/8 to-[#0A5734]/10 dark:from-[#0A5734]/20 dark:via-[#4A8F5C]/15 dark:to-[#0A5734]/20 px-3 sm:px-5 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full border-2 border-[#0A5734]/20 dark:border-[#4A8F5C]/30 shadow-xl text-xs sm:text-sm"
           >
-            <Sparkles className="text-white" size={18} />
-            <span className="text-sm font-bold text-white tracking-wide">تواصل معنا</span>
+            <Sparkles className="text-[#0A5734] dark:text-[#4A8F5C]" size={18} />
+            <span className="text-sm font-bold text-[#0A5734] dark:text-[#4A8F5C] tracking-wide">تواصل معنا</span>
           </motion.div>
 
           {/* Title - Enhanced */}
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.2] tracking-tight">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.2] tracking-tight text-[#222222] dark:text-slate-50">
             <span className="block mb-2 sm:mb-3 lg:mb-4">سجّل الآن وابدأ</span>
-            <span className="block mt-2 sm:mt-3 lg:mt-4 text-white font-extrabold">
+            <span className="block mt-2 sm:mt-3 lg:mt-4 text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">
               رحلتك مع القرآن
             </span>
           </h2>
@@ -79,35 +79,35 @@ export const ContactSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3, delay: 0.1 }}
-            className="relative bg-white/12 backdrop-blur-2xl rounded-3xl p-8 lg:p-10 shadow-2xl border-2 border-white/20"
+            className="relative bg-gradient-to-br from-white via-[#0A5734]/5 to-white dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 rounded-3xl p-8 lg:p-10 shadow-2xl border-2 border-[#0A5734]/10 dark:border-[#4A8F5C]/20"
           >
             {/* Decorative Corners */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-white/15 to-transparent rounded-tl-[2.5rem] rounded-br-full" />
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-[#C5A15A]/20 to-transparent rounded-br-[2.5rem] rounded-tl-full" />
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#0A5734]/10 to-transparent rounded-tl-[2.5rem] rounded-br-full" />
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-[#C5A15A]/10 to-transparent rounded-br-[2.5rem] rounded-tl-full" />
 
             <div className="relative z-10 space-y-8">
               {/* Phone Number - Enhanced */}
               <div className="flex flex-col items-center gap-5">
                 <motion.div
                   whileHover={{ scale: 1.15, rotate: 5 }}
-                  className="w-20 h-20 rounded-2xl bg-gradient-to-br from-white/25 to-white/15 flex items-center justify-center shadow-xl border-2 border-white/30"
+                  className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#0A5734] to-[#4A8F5C] flex items-center justify-center shadow-xl"
                 >
                   <Phone className="text-white" size={36} />
                 </motion.div>
                 <a 
                   href="tel:00962776642079" 
-                  className="text-3xl md:text-4xl font-extrabold hover:text-[#C5A15A] transition-colors duration-300 tracking-tight"
+                  className="text-3xl md:text-4xl font-extrabold text-[#0A5734] dark:text-[#4A8F5C] hover:text-[#C5A15A] transition-colors duration-300 tracking-tight"
                 >
                   00962776642079
                 </a>
-                <p className="text-white/90 text-lg font-semibold">اتصل بنا الآن</p>
+                <p className="text-[#555555] dark:text-slate-300 text-lg font-semibold">اتصل بنا الآن</p>
               </div>
 
               {/* Divider - Enhanced */}
               <div className="flex items-center justify-center gap-5">
-                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-white/30 to-white/20"></div>
-                <div className="w-3 h-3 rounded-full bg-white/50 shadow-lg"></div>
-                <div className="flex-1 h-px bg-gradient-to-l from-transparent via-white/30 to-white/20"></div>
+                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#0A5734]/20 to-[#0A5734]/10"></div>
+                <div className="w-3 h-3 rounded-full bg-gradient-to-br from-[#0A5734] to-[#4A8F5C] shadow-lg"></div>
+                <div className="flex-1 h-px bg-gradient-to-l from-transparent via-[#0A5734]/20 to-[#0A5734]/10"></div>
               </div>
 
               {/* Action Buttons - Enhanced Grid */}
@@ -124,7 +124,7 @@ export const ContactSection: React.FC = () => {
                 
                 <Button
                   onClick={handleCall}
-                  className="bg-white/15 backdrop-blur-md text-white hover:bg-white/25 border-2 border-white/40 px-10 py-8 text-lg lg:text-xl font-bold transition-all duration-300 rounded-2xl group hover:scale-[1.02]"
+                  className="bg-transparent backdrop-blur-md text-[#0A5734] dark:text-[#4A8F5C] hover:bg-[#0A5734]/10 dark:hover:bg-[#4A8F5C]/10 border-2 border-[#0A5734] dark:border-[#4A8F5C] px-10 py-8 text-lg lg:text-xl font-bold transition-all duration-300 rounded-2xl group hover:scale-[1.02]"
                   size="lg"
                   variant="outline"
                 >
@@ -144,11 +144,11 @@ export const ContactSection: React.FC = () => {
               </div>
 
               {/* Email - Enhanced */}
-              <div className="flex items-center justify-center gap-4 pt-6 border-t-2 border-white/25">
-                <Mail className="text-white/90" size={24} />
+              <div className="flex items-center justify-center gap-4 pt-6 border-t-2 border-[#0A5734]/10 dark:border-[#4A8F5C]/20">
+                <Mail className="text-[#0A5734] dark:text-[#4A8F5C]" size={24} />
                 <a 
                   href="mailto:info@nour.academy"
-                  className="text-white/90 hover:text-white transition-colors font-semibold text-lg"
+                  className="text-[#0A5734] dark:text-[#4A8F5C] hover:text-[#4A8F5C] dark:hover:text-[#6BA86D] transition-colors font-semibold text-lg"
                 >
                   info@nour.academy
                 </a>
@@ -157,7 +157,7 @@ export const ContactSection: React.FC = () => {
           </motion.div>
 
           {/* Description - Enhanced */}
-          <p className="text-xl md:text-2xl text-white/95 leading-relaxed font-light max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#555555] dark:text-slate-300 leading-relaxed font-light max-w-3xl mx-auto">
             تواصل معنا الآن واحصل على استشارة مجانية حول البرنامج المناسب لك أو لأبنائك
           </p>
         </motion.div>
