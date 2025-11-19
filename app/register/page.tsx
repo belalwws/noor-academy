@@ -221,6 +221,12 @@ export default function RegisterPage() {
   const onSubmit = rhfHandleSubmit(async (data: FormData) => {
     setIsSubmitting(true);
     setError('');
+    
+    console.log('🔍 [Register] بدء عملية التسجيل...', {
+      email: data.email.trim().toLowerCase(),
+      timestamp: new Date().toISOString()
+    });
+    
     try {
       const registrationData = {
         first_name: data.first_name.trim(),
@@ -236,17 +242,43 @@ export default function RegisterPage() {
         accept_terms: data.accept_terms
       };
 
-      const response = await fetch(getApiUrl('/auth/register/'), {
+      const apiUrl = getApiUrl('/auth/register/');
+      console.log('📡 [Register] Sending request to:', apiUrl);
+
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
         body: JSON.stringify(registrationData),
       });
 
+      console.log('📡 [Register] Response received:', {
+        status: response.status,
+        statusText: response.statusText,
+        ok: response.ok,
+        timestamp: new Date().toISOString()
+      });
+
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.detail || errorData.message || 'فشل في إنشاء الحساب');
+        const errorMessage = errorData.detail || errorData.message || 'فشل في إنشاء الحساب';
+        
+        console.error('❌ [Register] Registration failed:', {
+          status: response.status,
+          statusText: response.statusText,
+          error: errorMessage,
+          errorData: errorData,
+          email: data.email.trim().toLowerCase(),
+          timestamp: new Date().toISOString()
+        });
+        
+        throw new Error(errorMessage);
       }
+
+      console.log('✅ [Register] Registration successful:', {
+        email: data.email.trim().toLowerCase(),
+        timestamp: new Date().toISOString()
+      });
 
       setErrors({});
       setUsernameWarning('');
@@ -255,7 +287,16 @@ export default function RegisterPage() {
       // Redirect to success page with email
       router.push(`/register/success?email=${encodeURIComponent(data.email)}`);
     } catch (err: any) {
-      setError(err instanceof Error ? err.message : 'حدث خطأ ما');
+      const errorMessage = err instanceof Error ? err.message : 'حدث خطأ ما';
+      
+      console.error('❌ [Register] Registration error:', {
+        error: errorMessage,
+        errorType: err instanceof TypeError && err.message.includes('CORS') ? 'CORS_ERROR' : 
+                   err instanceof TypeError && err.message.includes('fetch') ? 'NETWORK_ERROR' : 'UNKNOWN_ERROR',
+        timestamp: new Date().toISOString()
+      });
+      
+      setError(errorMessage);
     } finally {
       setIsSubmitting(false);
     }

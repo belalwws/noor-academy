@@ -119,12 +119,22 @@ export default function LoginPage() {
       setIsSubmitting(true);
       setSuccess('');
 
-      console.log('🔍 بدء عملية تسجيل الدخول...');
+      console.log('🔍 [Login] بدء عملية تسجيل الدخول...', {
+        email: formData.email.trim(),
+        timestamp: new Date().toISOString()
+      });
 
       // استخدام الخدمة الموحدة الجديدة
       const result = await simpleLogin({
         email: formData.email.trim(),
         password: formData.password
+      });
+
+      console.log('📡 [Login] Response received:', {
+        success: result.success,
+        hasData: !!result.data,
+        hasError: !!result.error,
+        timestamp: new Date().toISOString()
       });
 
       if (result.success && result.data) {
@@ -208,12 +218,25 @@ export default function LoginPage() {
         // عرض رسالة الخطأ للمستخدم فقط
         const errorMessage = result.error || 'فشل في تسجيل الدخول';
         
+        console.error('❌ [Login] Login failed:', {
+          error: errorMessage,
+          email: formData.email.trim(),
+          timestamp: new Date().toISOString()
+        });
+        
         // This error handling is no longer needed since we allow pending teachers to login
         setUserError(errorMessage);
         setIsTeacherPendingError(false);
       }
     } catch (error) {
       // معالجة أخطاء الشبكة
+      console.error('❌ [Login] Network/Request error:', {
+        error: error instanceof Error ? error.message : String(error),
+        email: formData.email.trim(),
+        timestamp: new Date().toISOString(),
+        errorType: error instanceof TypeError && error.message.includes('CORS') ? 'CORS_ERROR' : 'NETWORK_ERROR'
+      });
+      
       const appError = errorHandler.handleNetworkError(error, {
         action: 'login',
         email: formData.email
