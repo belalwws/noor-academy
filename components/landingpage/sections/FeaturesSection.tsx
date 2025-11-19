@@ -57,7 +57,7 @@ const features = [
 
 export const FeaturesSection: React.FC = () => {
   return (
-    <section id="features" className="relative py-12 md:py-16 lg:py-20 bg-white dark:bg-slate-950 overflow-hidden" dir="rtl">
+    <section id="features" className="relative py-8 md:py-12 lg:py-14 bg-white dark:bg-slate-950 overflow-hidden" dir="rtl">
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.025]">
         <div className="absolute inset-0" style={{
@@ -97,7 +97,7 @@ export const FeaturesSection: React.FC = () => {
 
           <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-[#222222] dark:text-slate-50 mb-4 leading-[1.2] tracking-tight">
             ماذا نقدم في
-            <span className="block mt-3 bg-gradient-to-r from-[#0A5734] via-[#4A8F5C] to-[#0A5734] dark:from-[#4A8F5C] dark:via-[#5BA86D] dark:to-[#4A8F5C] bg-clip-text text-transparent">
+            <span className="block mt-3 text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">
               أكاديمية نور؟
             </span>
           </h2>

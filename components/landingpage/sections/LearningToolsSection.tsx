@@ -83,7 +83,7 @@ export const LearningToolsSection: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 dark:text-slate-50">
-            <span className="gradient-primary bg-clip-text text-transparent">أدوات تعليمية تفاعلية</span>
+            <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">أدوات تعليمية تفاعلية</span>
           </h2>
           <p className="text-lg text-text-secondary dark:text-slate-300 max-w-2xl mx-auto">
             مجموعة متكاملة من الأدوات لتحسين تجربتك التعليمية وتحقيق أهدافك

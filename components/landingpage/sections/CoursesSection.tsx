@@ -52,7 +52,7 @@ export const CoursesSection: React.FC = () => {
     <section 
       id="courses" 
       dir="rtl"
-      className="relative py-28 md:py-36 lg:py-40 bg-gradient-to-b from-white via-[#0A5734]/3 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300 overflow-hidden"
+      className="relative py-8 md:py-12 lg:py-14 bg-gradient-to-b from-white via-[#0A5734]/3 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300 overflow-hidden"
     >
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.025]">
@@ -77,7 +77,7 @@ export const CoursesSection: React.FC = () => {
         >
           <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-[#222222] dark:text-slate-50 mb-4 leading-[1.2] tracking-tight">
             اختر النوع الذي
-            <span className="block mt-3 bg-gradient-to-r from-[#0A5734] via-[#4A8F5C] to-[#0A5734] dark:from-[#4A8F5C] dark:via-[#5BA86D] dark:to-[#4A8F5C] bg-clip-text text-transparent">
+            <span className="block mt-3 text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">
               يناسبك
             </span>
           </h2>
@@ -130,7 +130,7 @@ export const CoursesSection: React.FC = () => {
 
                     {/* Title - Enhanced */}
                     <h3 className="text-2xl md:text-3xl font-extrabold mb-3 leading-[1.2]">
-                      <span className={`bg-gradient-to-r ${course.gradient} bg-clip-text text-transparent block mb-2`}>
+                      <span className={`text-[#0A5734] dark:text-[#4A8F5C] font-extrabold block mb-2`}>
                         {course.title}
                       </span>
                       <span className="text-[#222222] dark:text-slate-50 text-xl block mt-2">{course.subtitle}</span>

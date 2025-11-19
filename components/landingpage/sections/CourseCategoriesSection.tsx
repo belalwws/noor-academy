@@ -60,7 +60,7 @@ export const CourseCategoriesSection: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-primary bg-clip-text text-transparent">محتوى الدورات والتعليم</span>
+            <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">محتوى الدورات والتعليم</span>
           </h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
             محتوى تعليمي شامل بأنواع مختلفة ينسجم مع احتياجات الطلاب

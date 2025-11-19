@@ -56,7 +56,7 @@ export const BusyAdultsSection: React.FC = () => {
   };
 
   return (
-    <section id="busy-adults" className="relative py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white via-[#4A8F5C]/4 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 overflow-hidden" dir="rtl">
+    <section id="busy-adults" className="relative py-8 md:py-12 lg:py-14 bg-gradient-to-b from-white via-[#4A8F5C]/4 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 overflow-hidden" dir="rtl">
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.025]">
         <div className="absolute inset-0" style={{
@@ -93,7 +93,7 @@ export const BusyAdultsSection: React.FC = () => {
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.2] tracking-tight">
               <span className="text-[#222222] dark:text-slate-50 block mb-4">حتى لو وقتك ضيق…</span>
-              <span className="bg-gradient-to-r from-[#0A5734] via-[#4A8F5C] to-[#0A5734] dark:from-[#4A8F5C] dark:via-[#5BA86D] dark:to-[#4A8F5C] bg-clip-text text-transparent block my-4">
+              <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold block my-4">
                 ما زال بإمكانك حفظ القرآن
               </span>
             </h2>

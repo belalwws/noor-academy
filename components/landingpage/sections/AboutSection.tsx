@@ -71,7 +71,7 @@ export const AboutSection: React.FC = () => {
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary dark:text-slate-50 mb-6 leading-tight">
-            <span className="gradient-primary bg-clip-text text-transparent">من نحن</span>
+            <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">من نحن</span>
           </h2>
           <p className="text-lg md:text-xl text-text-secondary dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
             أكاديمية رُشد هي منصة تعليمية رقمية متخصصة في تقديم دورات تدريبية عالية الجودة 
@@ -131,7 +131,7 @@ export const AboutSection: React.FC = () => {
                 <div className="w-16 h-16 bg-primary/10 dark:bg-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="text-primary" size={32} />
                 </div>
-                <h4 className="text-4xl md:text-5xl font-bold gradient-primary bg-clip-text text-transparent mb-2">
+                <h4 className="text-4xl md:text-5xl font-bold text-[#0A5734] dark:text-[#4A8F5C] mb-2">
                   {stat.number}
                 </h4>
                 <p className="text-text-secondary dark:text-slate-300 font-medium">

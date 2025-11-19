@@ -86,7 +86,7 @@ export const InteractiveGamesSection: React.FC = () => {
             transition={{ delay: 0.3 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary dark:text-slate-50 leading-tight mb-6"
           >
-            <span className="gradient-primary bg-clip-text text-transparent">
+            <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">
               تعلم ممتع
             </span>
             <br />

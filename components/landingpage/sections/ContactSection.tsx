@@ -28,7 +28,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="relative py-12 md:py-16 lg:py-20 bg-gradient-to-br from-[#0A5734] via-[#073D24] to-[#0A5734] dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 text-white overflow-hidden" dir="rtl">
+    <section id="contact" className="relative py-8 md:py-12 lg:py-14 bg-gradient-to-br from-[#0A5734] via-[#073D24] to-[#0A5734] dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 text-white overflow-hidden" dir="rtl">
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.04]">
         <div className="absolute inset-0" style={{
@@ -68,7 +68,7 @@ export const ContactSection: React.FC = () => {
           {/* Title - Enhanced */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.2] tracking-tight">
             <span className="block mb-4">سجّل الآن وابدأ</span>
-            <span className="block mt-4 bg-gradient-to-r from-white via-[#C5A15A] to-white bg-clip-text text-transparent">
+            <span className="block mt-4 text-white font-extrabold">
               رحلتك مع القرآن
             </span>
           </h2>

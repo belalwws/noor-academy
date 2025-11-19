@@ -35,7 +35,7 @@ export const HeroSection: React.FC = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-[85vh] flex items-center pt-24 pb-16 overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-300" dir="rtl">
+    <section id="home" className="relative min-h-[65vh] flex items-center pt-16 pb-12 overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-300" dir="rtl">
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.025] dark:opacity-[0.04]">
         <div className="absolute inset-0" style={{
@@ -52,7 +52,7 @@ export const HeroSection: React.FC = () => {
       <div className="absolute top-32 right-24 w-px h-40 bg-gradient-to-b from-[#0A5734] via-[#4A8F5C] to-transparent opacity-15" />
       <div className="absolute bottom-32 left-24 w-40 h-px bg-gradient-to-r from-[#C5A15A] via-[#4A8F5C] to-transparent opacity-15" />
 
-      <div className="container mx-auto px-4 lg:px-8 py-12 lg:py-16 relative z-10">
+      <div className="container mx-auto px-4 lg:px-8 py-8 lg:py-12 relative z-10">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Content - Takes 7 columns */}
           <motion.div
@@ -77,13 +77,13 @@ export const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25, duration: 0.9, ease: "easeOut" }}
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.2] tracking-tight"
+              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.4] tracking-tight space-y-2"
             >
-              <span className="text-[#222222] dark:text-slate-50 block mb-4">مع أكاديمية نور…</span>
-              <span className="bg-gradient-to-r from-[#0A5734] via-[#4A8F5C] to-[#0A5734] dark:from-[#4A8F5C] dark:via-[#5BA86D] dark:to-[#4A8F5C] bg-clip-text text-transparent block my-4">
+              <span className="text-[#222222] dark:text-slate-50 block">مع أكاديمية نور…</span>
+              <span className="block text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">
                 اجعل لأبنائك نورًا يهتدي به
               </span>
-              <span className="text-[#222222] dark:text-slate-50 block mt-4">في دروب الحياة</span>
+              <span className="text-[#222222] dark:text-slate-50 block">في دروب الحياة</span>
             </motion.h1>
 
             {/* Description */}
@@ -120,7 +120,7 @@ export const HeroSection: React.FC = () => {
                           <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${stat.color} flex items-center justify-center shadow-md group-hover:scale-110 transition-transform`}>
                             <Icon className="text-white" size={18} />
                           </div>
-                          <span className="text-2xl lg:text-3xl font-extrabold bg-gradient-to-r from-[#0A5734] to-[#4A8F5C] dark:from-[#4A8F5C] dark:to-[#5BA86D] bg-clip-text text-transparent">{stat.value}</span>
+                          <span className="text-2xl lg:text-3xl font-extrabold text-[#0A5734] dark:text-[#4A8F5C]">{stat.value}</span>
                         </div>
                         <span className="text-xs lg:text-sm text-[#555555] dark:text-slate-400 font-semibold">{stat.label}</span>
                       </div>

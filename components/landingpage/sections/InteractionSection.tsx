@@ -90,7 +90,7 @@ export const InteractionSection: React.FC = () => {
     <section 
       id="interaction" 
       dir="rtl"
-      className="relative py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white via-[#4A8F5C]/4 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300 overflow-hidden"
+      className="relative py-8 md:py-12 lg:py-14 bg-gradient-to-b from-white via-[#4A8F5C]/4 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300 overflow-hidden"
     >
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.025]">
@@ -115,7 +115,7 @@ export const InteractionSection: React.FC = () => {
         >
           <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-[#222222] dark:text-slate-50 mb-4 leading-[1.2] tracking-tight">
             انضم إلى مجتمعات تفاعلية
-            <span className="block mt-3 bg-gradient-to-r from-[#0A5734] via-[#C5A15A] to-[#4A8F5C] dark:from-[#4A8F5C] dark:via-[#C5A15A] dark:to-[#5BA86D] bg-clip-text text-transparent">
+            <span className="block mt-3 text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">
               واستمتع بألعاب تعليمية
             </span>
           </h2>
@@ -168,7 +168,7 @@ export const InteractionSection: React.FC = () => {
 
                     {/* Title - Enhanced */}
                     <h3 className="text-2xl md:text-3xl font-extrabold mb-3 leading-[1.2]">
-                      <span className={`bg-gradient-to-r ${interaction.gradient} bg-clip-text text-transparent block mb-2`}>
+                      <span className={`text-[#0A5734] dark:text-[#4A8F5C] font-extrabold block mb-2`}>
                         {interaction.title}
                       </span>
                       <span className="text-[#222222] dark:text-slate-50 text-xl block mt-2">{interaction.subtitle}</span>

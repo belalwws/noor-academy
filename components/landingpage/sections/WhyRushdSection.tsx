@@ -103,7 +103,7 @@ export const WhyRushdSection: React.FC = () => {
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary dark:text-slate-50 mb-6 leading-tight">
-            <span className="gradient-primary bg-clip-text text-transparent">لماذا أكاديمية رُشد؟</span>
+            <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">لماذا أكاديمية رُشد؟</span>
           </h2>
           <p className="text-lg md:text-xl text-text-secondary dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
             نقدم لك تجربة تعليمية متكاملة تجمع بين الجودة والابتكار في بيئة تفاعلية وآمنة. 

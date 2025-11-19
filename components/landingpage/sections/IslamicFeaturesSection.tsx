@@ -58,7 +58,7 @@ export const IslamicFeaturesSection: React.FC = () => {
     <section 
       id="islamic-features" 
       dir="rtl"
-      className="relative py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white via-[#0A5734]/2 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300 overflow-hidden"
+      className="relative py-8 md:py-12 lg:py-14 bg-gradient-to-b from-white via-[#0A5734]/2 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300 overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.03]">
@@ -93,7 +93,7 @@ export const IslamicFeaturesSection: React.FC = () => {
           </motion.div>
 
           <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-4 text-[#222222] dark:text-slate-50 leading-[1.2] tracking-tight">
-            <span className="bg-gradient-to-r from-[#0A5734] via-[#4A8F5C] to-[#0A5734] dark:from-[#4A8F5C] dark:via-[#5BA86D] dark:to-[#4A8F5C] bg-clip-text text-transparent block">
+            <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold block">
               الأدوات الإسلامية في نور
             </span>
           </h2>
@@ -168,7 +168,7 @@ export const IslamicFeaturesSection: React.FC = () => {
                 transition={{ delay: 0.9 }}
                 className="text-center"
               >
-                <h4 className="text-2xl font-bold bg-gradient-to-r from-[#0A5734] to-[#4A8F5C] dark:from-[#4A8F5C] dark:to-[#5BA86D] bg-clip-text text-transparent">4</h4>
+                <h4 className="text-2xl font-bold text-[#0A5734] dark:text-[#4A8F5C]">4</h4>
                 <p className="text-sm text-[#555555] dark:text-slate-300">مزايا إسلامية</p>
               </motion.div>
               <motion.div
@@ -178,7 +178,7 @@ export const IslamicFeaturesSection: React.FC = () => {
                 transition={{ delay: 0.95 }}
                 className="text-center"
               >
-                <h4 className="text-2xl font-bold bg-gradient-to-r from-[#0A5734] to-[#4A8F5C] dark:from-[#4A8F5C] dark:to-[#5BA86D] bg-clip-text text-transparent">مجاني</h4>
+                <h4 className="text-2xl font-bold text-[#0A5734] dark:text-[#4A8F5C]">مجاني</h4>
                 <p className="text-sm text-[#555555] dark:text-slate-300">لجميع المستخدمين</p>
               </motion.div>
               <motion.div
@@ -188,7 +188,7 @@ export const IslamicFeaturesSection: React.FC = () => {
                 transition={{ delay: 1 }}
                 className="text-center"
               >
-                <h4 className="text-2xl font-bold bg-gradient-to-r from-[#0A5734] to-[#4A8F5C] dark:from-[#4A8F5C] dark:to-[#5BA86D] bg-clip-text text-transparent">آمن</h4>
+                <h4 className="text-2xl font-bold text-[#0A5734] dark:text-[#4A8F5C]">آمن</h4>
                 <p className="text-sm text-[#555555] dark:text-slate-300">محتوى معتمد</p>
               </motion.div>
             </div>

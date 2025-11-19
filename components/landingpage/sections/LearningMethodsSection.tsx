@@ -63,7 +63,7 @@ export const LearningMethodsSection: React.FC = () => {
           <div className="inline-flex items-center gap-3 mb-4">
             <Sparkles className="w-10 h-10 text-primary dark:text-primary" />
             <h2 className="text-4xl md:text-5xl font-bold">
-              <span className="gradient-primary bg-clip-text text-transparent">
+              <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">
                 طرق التعلم
               </span>
             </h2>

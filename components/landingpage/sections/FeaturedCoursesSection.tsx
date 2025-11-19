@@ -28,7 +28,7 @@ export const FeaturedCoursesSection: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-primary bg-clip-text text-transparent">الدورات المميزة</span>
+            <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">الدورات المميزة</span>
           </h2>
           <p className="text-lg text-text-secondary dark:text-slate-300 max-w-2xl mx-auto">
             اختر من بين مجموعة متنوعة من الدورات التعليمية المتخصصة
