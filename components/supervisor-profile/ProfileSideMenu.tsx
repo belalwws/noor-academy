@@ -60,17 +60,17 @@ export const ProfileSideMenu: React.FC<ProfileSideMenuProps> = ({
               onClick={() => onSectionChange(item.id)}
               className={`w-full flex items-center gap-4 p-4 rounded-xl text-right transition-all duration-300 group ${
                 isActive
-                  ? 'bg-gradient-to-r from-green-600 to-green-700 text-white shadow-lg transform scale-105'
-                  : 'text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-green-50 hover:text-gray-900 hover:shadow-md hover:transform hover:scale-102'
+                  ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg transform scale-105'
+                  : 'text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 hover:text-gray-900 hover:shadow-md hover:transform hover:scale-102'
               }`}
             >
               <div className={`p-2 rounded-lg transition-colors ${
                 isActive 
                   ? 'bg-white/20' 
-                  : 'bg-gray-100 group-hover:bg-green-100'
+                  : 'bg-gray-100 group-hover:bg-blue-100'
               }`}>
                 <Icon className={`w-5 h-5 ${
-                  isActive ? 'text-white' : 'text-gray-600 group-hover:text-green-600'
+                  isActive ? 'text-white' : 'text-gray-600 group-hover:text-blue-600'
                 }`} />
               </div>
               <div className="flex-1 text-right">

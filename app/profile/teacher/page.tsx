@@ -638,14 +638,14 @@ export default function TeacherProfilePage() {
                 <CardContent className="space-y-4">
                   <div className="flex items-center justify-between">
                     <span className="text-text-secondary">اكتمال الملف الشخصي</span>
-                    <Badge className={profile.is_profile_complete ? 'bg-green-500' : 'bg-amber-500'}>
+                    <Badge className={profile.is_profile_complete ? 'bg-blue-500' : 'bg-amber-500'}>
                       {profile.is_profile_complete ? 'مكتمل' : 'غير مكتمل'}
                     </Badge>
                   </div>
                   <Separator />
                   <div className="flex items-center justify-between">
                     <span className="text-text-secondary">التحقق</span>
-                    <Badge className={profile.is_verified ? 'bg-green-500' : 'bg-gray-500'}>
+                    <Badge className={profile.is_verified ? 'bg-blue-500' : 'bg-gray-500'}>
                       {profile.is_verified ? 'موثق' : 'غير موثق'}
                     </Badge>
                   </div>
@@ -949,7 +949,7 @@ export default function TeacherProfilePage() {
                     <p className="font-medium text-text-primary">الملف الشخصي العام</p>
                     <p className="text-sm text-text-secondary">السماح للآخرين برؤية ملفك الشخصي</p>
             </div>
-                  <Badge className={profile.is_profile_public ? 'bg-green-500' : 'bg-gray-500'}>
+                  <Badge className={profile.is_profile_public ? 'bg-blue-500' : 'bg-gray-500'}>
                     {profile.is_profile_public ? 'مفعل' : 'معطل'}
                   </Badge>
           </div>
@@ -1193,7 +1193,7 @@ export default function TeacherProfilePage() {
                             {profile.role === 'teacher' ? 'معلم' : profile.role}
                           </Badge>
                           {profile.is_active && (
-                            <Badge className="bg-green-500/30 text-white border-green-300/30">
+                            <Badge className="bg-blue-500/30 text-white border-blue-300/30">
                               <CheckCircle2 className="w-3 h-3 ml-1" />
                               نشط
                             </Badge>

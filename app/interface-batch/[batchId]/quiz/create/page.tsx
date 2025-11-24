@@ -668,9 +668,9 @@ export default function CreateQuizPage() {
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ delay: 0.2, type: "spring" }}
-                      className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30 flex items-center justify-center"
+                      className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-blue-100 to-blue-100 dark:from-blue-900/30 dark:to-blue-900/30 flex items-center justify-center"
                     >
-                      <HelpCircle className="w-10 h-10 text-green-500" />
+                      <HelpCircle className="w-10 h-10 text-blue-500" />
                     </motion.div>
                     <h3 className="text-xl font-bold text-gray-700 dark:text-slate-300 mb-2">
                       لا توجد أسئلة بعد
@@ -855,7 +855,7 @@ export default function CreateQuizPage() {
                                 key={choiceIndex} 
                                 className={`flex items-center gap-3 p-3 rounded-lg border-2 transition-all ${
                                   question.correct_answer === choiceIndex.toString() && choice.trim()
-                                    ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
+                                    ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
                                     : 'border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800'
                                 }`}
                               >
@@ -874,7 +874,7 @@ export default function CreateQuizPage() {
                                   className="flex-1 text-base"
                                 />
                                 {question.correct_answer === choiceIndex.toString() && choice.trim() && (
-                                  <CheckCircle className="w-5 h-5 text-green-500" />
+                                  <CheckCircle className="w-5 h-5 text-blue-500" />
                                 )}
                               </div>
                             ))}
@@ -904,8 +904,8 @@ export default function CreateQuizPage() {
                               whileTap={{ scale: 0.98 }}
                               className={`flex items-center justify-center gap-3 p-5 rounded-lg border-2 cursor-pointer transition-all ${
                                 question.correct_answer === 'true'
-                                  ? 'border-green-500 bg-green-50 dark:bg-green-900/20 shadow-md'
-                                  : 'border-gray-200 dark:border-slate-700 hover:border-green-300'
+                                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 shadow-md'
+                                  : 'border-gray-200 dark:border-slate-700 hover:border-blue-300'
                               }`}
                             >
                               <input
@@ -916,7 +916,7 @@ export default function CreateQuizPage() {
                                 className="w-5 h-5"
                               />
                               <CheckCircle className={`w-6 h-6 ${
-                                question.correct_answer === 'true' ? 'text-green-500' : 'text-gray-400'
+                                question.correct_answer === 'true' ? 'text-blue-500' : 'text-gray-400'
                               }`} />
                               <span className="font-bold text-lg">صحيح</span>
                             </motion.label>
@@ -1005,7 +1005,7 @@ export default function CreateQuizPage() {
                       <motion.div
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
-                        className="flex items-center gap-2 text-green-600"
+                        className="flex items-center gap-2 text-blue-600"
                       >
                         <CheckCircle className="w-5 h-5" />
                         <div>

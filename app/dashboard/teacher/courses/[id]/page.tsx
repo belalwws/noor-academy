@@ -106,7 +106,7 @@ export default function CourseDetailsPage() {
 
     const config = statusConfig[status] || { label: status, variant: 'secondary' }
     return (
-      <Badge variant={config.variant} className={status === 'approved' || status === 'active' ? 'bg-green-500' : status === 'rejected' ? 'bg-red-500' : ''}>
+      <Badge variant={config.variant} className={status === 'approved' || status === 'active' ? 'bg-blue-500' : status === 'rejected' ? 'bg-red-500' : ''}>
         {config.label}
       </Badge>
     )

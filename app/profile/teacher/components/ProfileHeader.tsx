@@ -106,7 +106,7 @@ const getApprovalStatus = (isApproved: boolean, approvalStatus: string) => {
   if (isApproved) {
     return {
       label: 'معتمد',
-      color: 'bg-green-500',
+      color: 'bg-blue-500',
       textColor: 'text-white',
       icon: CheckCircle
     }
@@ -314,12 +314,12 @@ export default function ProfileHeader({
   const fullName = `${profile.first_name} ${profile.last_name}`.trim() || user.username
 
   return (
-    <Card className="border-0 shadow-2xl bg-gradient-to-br from-white via-green-50/30 to-white rounded-3xl overflow-hidden">
+    <Card className="border-0 shadow-2xl bg-gradient-to-br from-white via-blue-50/30 to-white rounded-3xl overflow-hidden">
       {/* Header Background */}
       <div className="bg-gradient-to-r from-[#2d7d32] via-[#4caf50] to-[#1b5e20] p-8 relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-0 left-0 w-24 h-24 bg-green-300/20 rounded-full blur-xl"></div>
+        <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-300/20 rounded-full blur-xl"></div>
         
         <div className="relative z-10">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
@@ -369,26 +369,26 @@ export default function ProfileHeader({
 
               {/* Simplified Basic Info */}
               <div className="text-white">
-                <h1 className="text-3xl font-bold mb-4 bg-gradient-to-r from-white to-green-100 bg-clip-text text-transparent">
+                <h1 className="text-3xl font-bold mb-4 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
                   {user?.full_name || fullName}
                 </h1>
                 
                 {/* Essential Info Only */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-4">
-                  <div className="flex items-center gap-2 text-green-100 min-w-0">
+                  <div className="flex items-center gap-2 text-blue-100 min-w-0">
                     <Mail className="w-4 h-4 flex-shrink-0" />
                     <span className="text-sm truncate max-w-[180px] overflow-hidden text-ellipsis" title={user?.email || profile.email}>{user?.email || profile.email}</span>
                   </div>
                   
                   {user?.phone_number && (
-                    <div className="flex items-center gap-2 text-green-100">
+                    <div className="flex items-center gap-2 text-blue-100">
                       <Phone className="w-4 h-4" />
                       <span className="text-sm">{user.country_code} {user.phone_number}</span>
                     </div>
                   )}
                   
                   {profile.specialization && (
-                    <div className="flex items-center gap-2 text-green-100">
+                    <div className="flex items-center gap-2 text-blue-100">
                       <Award className="w-4 h-4" />
                       <span className="text-sm">{getSpecializationLabel(profile.specialization)}</span>
                     </div>
@@ -401,7 +401,7 @@ export default function ProfileHeader({
                     👨‍🏫 معلم
                   </span>
                   {user?.is_active && (
-                    <span className="bg-green-500/30 text-white px-3 py-1 rounded-full text-sm">
+                    <span className="bg-blue-500/30 text-white px-3 py-1 rounded-full text-sm">
                       🟢 نشط
                     </span>
                   )}

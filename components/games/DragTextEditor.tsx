@@ -43,7 +43,7 @@ function DraggableWordItem({ word, onRemove, onUpdate }: {
       animate={{ opacity: isDragging ? 0.5 : 1, scale: isDragging ? 0.95 : 1 }}
       className={`flex items-center gap-2 px-4 py-2 rounded-lg border-2 cursor-grab active:cursor-grabbing ${
         word.position !== null
-          ? 'bg-green-100 dark:bg-green-900/50 border-green-400 dark:border-green-600'
+          ? 'bg-blue-100 dark:bg-blue-900/50 border-blue-400 dark:border-blue-600'
           : 'bg-indigo-100 dark:bg-indigo-900/50 border-indigo-300 dark:border-indigo-700'
       }`}
     >
@@ -59,7 +59,7 @@ function DraggableWordItem({ word, onRemove, onUpdate }: {
         onClick={(e) => e.stopPropagation()}
       />
       {word.position !== null && (
-        <span className="text-xs text-green-600 dark:text-green-400">✓</span>
+        <span className="text-xs text-blue-600 dark:text-blue-400">✓</span>
       )}
       <Button
         type="button"
@@ -232,7 +232,7 @@ function DroppableTextArea({
                   key={idx}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="inline-block mx-1 px-3 py-1.5 bg-green-200 dark:bg-green-800 text-green-900 dark:text-green-100 rounded-lg font-semibold border-2 border-green-400 dark:border-green-600"
+                  className="inline-block mx-1 px-3 py-1.5 bg-blue-200 dark:bg-blue-800 text-blue-900 dark:text-blue-100 rounded-lg font-semibold border-2 border-blue-400 dark:border-blue-600"
                 >
                   {part.content}
                 </motion.span>

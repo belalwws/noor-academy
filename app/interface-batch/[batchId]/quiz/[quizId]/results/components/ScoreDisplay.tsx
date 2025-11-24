@@ -149,9 +149,9 @@ export default function ScoreDisplay({
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         transition={{ delay: 0.8, type: 'spring', stiffness: 200 }}
-                        className="p-4 bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30 rounded-full"
+                        className="p-4 bg-gradient-to-br from-blue-100 to-blue-100 dark:from-blue-900/30 dark:to-blue-900/30 rounded-full"
                       >
-                        <CheckCircle className="w-10 h-10 text-green-600 dark:text-green-400" />
+                        <CheckCircle className="w-10 h-10 text-blue-600 dark:text-blue-400" />
                       </motion.div>
                       <div>
                         <motion.h2
@@ -243,20 +243,20 @@ export default function ScoreDisplay({
                   transition={{ delay: 1.3 }}
                   className={`flex items-center justify-between p-3 rounded-lg ${
                     passed
-                      ? 'bg-green-50 dark:bg-green-900/20'
+                      ? 'bg-blue-50 dark:bg-blue-900/20'
                       : 'bg-yellow-50 dark:bg-yellow-900/20'
                   }`}
                 >
                   <span className={`text-sm font-semibold ${
                     passed
-                      ? 'text-green-700 dark:text-green-300'
+                      ? 'text-blue-700 dark:text-blue-300'
                       : 'text-yellow-700 dark:text-yellow-300'
                   }`}>
                     الفارق
                   </span>
                   <span className={`text-lg font-bold ${
                     passed
-                      ? 'text-green-600 dark:text-green-400'
+                      ? 'text-blue-600 dark:text-blue-400'
                       : 'text-yellow-600 dark:text-yellow-400'
                   }`}>
                     {passed ? `+${score - passingScore}%` : `-${passingScore - score}%`}

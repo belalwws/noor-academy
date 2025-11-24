@@ -159,7 +159,7 @@ const CommunityProfileSection = ({ userId, className }: CommunityProfileSectionP
     if (level >= 50) return { title: 'أسطورة', color: 'text-purple-600', icon: <Crown className="h-4 w-4" /> }
     if (level >= 30) return { title: 'خبير', color: 'text-yellow-600', icon: <Medal className="h-4 w-4" /> }
     if (level >= 20) return { title: 'متقدم', color: 'text-blue-600', icon: <Star className="h-4 w-4" /> }
-    if (level >= 10) return { title: 'متوسط', color: 'text-green-600', icon: <Target className="h-4 w-4" /> }
+    if (level >= 10) return { title: 'متوسط', color: 'text-blue-600', icon: <Target className="h-4 w-4" /> }
     return { title: 'مبتدئ', color: 'text-gray-600', icon: <Sparkles className="h-4 w-4" /> }
   }
 
@@ -197,10 +197,10 @@ const CommunityProfileSection = ({ userId, className }: CommunityProfileSectionP
   return (
     <div className={`space-y-6 ${className}`}>
       {/* User Level & XP */}
-      <Card className="bg-gradient-to-r from-emerald-50 to-green-50 border-emerald-200">
+      <Card className="bg-gradient-to-r from-blue-50 to-blue-50 border-blue-200">
         <CardHeader className="pb-3">
-          <CardTitle className="flex items-center gap-3 text-emerald-800">
-            <div className="p-2 bg-emerald-100 rounded-lg">
+          <CardTitle className="flex items-center gap-3 text-blue-800">
+            <div className="p-2 bg-blue-100 rounded-lg">
               {levelInfo.icon}
             </div>
             <div>
@@ -210,7 +210,7 @@ const CommunityProfileSection = ({ userId, className }: CommunityProfileSectionP
                   {levelInfo.title}
                 </Badge>
               </div>
-              <p className="text-sm text-emerald-600 font-normal">
+              <p className="text-sm text-blue-600 font-normal">
                 {stats.xp} / {stats.nextLevelXp} نقطة خبرة
               </p>
             </div>
@@ -219,31 +219,31 @@ const CommunityProfileSection = ({ userId, className }: CommunityProfileSectionP
         <CardContent className="space-y-4">
           <div>
             <div className="flex justify-between text-sm mb-2">
-              <span className="text-emerald-700">التقدم للمستوى التالي</span>
-              <span className="text-emerald-600">{Math.round(xpProgress)}%</span>
+              <span className="text-blue-700">التقدم للمستوى التالي</span>
+              <span className="text-blue-600">{Math.round(xpProgress)}%</span>
             </div>
-            <Progress value={xpProgress} className="h-3 bg-emerald-100" />
+            <Progress value={xpProgress} className="h-3 bg-blue-100" />
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-2">
             <div className="text-center">
-              <div className="text-lg font-bold text-emerald-800">{stats.totalPosts}</div>
-              <div className="text-xs text-emerald-600">مشاركة</div>
+              <div className="text-lg font-bold text-blue-800">{stats.totalPosts}</div>
+              <div className="text-xs text-blue-600">مشاركة</div>
             </div>
             <div className="text-center">
-              <div className="text-lg font-bold text-emerald-800">{stats.totalLikes}</div>
-              <div className="text-xs text-emerald-600">إعجاب</div>
+              <div className="text-lg font-bold text-blue-800">{stats.totalLikes}</div>
+              <div className="text-xs text-blue-600">إعجاب</div>
             </div>
             <div className="text-center">
-              <div className="text-lg font-bold text-emerald-800">{stats.reputation}</div>
-              <div className="text-xs text-emerald-600">سمعة</div>
+              <div className="text-lg font-bold text-blue-800">{stats.reputation}</div>
+              <div className="text-xs text-blue-600">سمعة</div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center gap-1">
                 <Flame className="h-4 w-4 text-orange-500" />
-                <span className="text-lg font-bold text-emerald-800">{stats.streak}</span>
+                <span className="text-lg font-bold text-blue-800">{stats.streak}</span>
               </div>
-              <div className="text-xs text-emerald-600">يوم متتالي</div>
+              <div className="text-xs text-blue-600">يوم متتالي</div>
             </div>
           </div>
         </CardContent>
@@ -360,8 +360,8 @@ const CommunityProfileSection = ({ userId, className }: CommunityProfileSectionP
           <CardContent>
             <div className="space-y-3">
               {bookmarkedTopics.slice(0, 5).map((topic) => (
-                <div key={topic.id} className="flex items-center gap-3 p-3 bg-gradient-to-r from-emerald-50 to-green-50 rounded-lg hover:shadow-md transition-shadow">
-                  <div className="text-emerald-600">
+                <div key={topic.id} className="flex items-center gap-3 p-3 bg-gradient-to-r from-blue-50 to-blue-50 rounded-lg hover:shadow-md transition-shadow">
+                  <div className="text-blue-600">
                     {topic.forum.icon}
                   </div>
                   <div className="flex-1">

@@ -20,36 +20,36 @@ export const IslamicFeaturesSection: React.FC = () => {
       title: 'مواقيت الصلاة الدقيقة',
       description: 'أوقات صلاة حسب الموقع الجغرافي مع تنبيهات',
       icon: Zap,
-      color: 'from-[#0A5734] to-[#4A8F5C]',
-      bgColor: 'from-[#0A5734]/5 to-[#4A8F5C]/5',
-      borderColor: 'border-[#0A5734]/20',
+      color: 'from-[#1e40af] to-[#2563eb]',
+      bgColor: 'from-[#1e40af]/5 to-[#2563eb]/5',
+      borderColor: 'border-[#1e40af]/20',
       path: '/prayer-times',
     },
     {
       title: 'قارئ القرآن الكريم',
       description: 'تجربة قراءة متكاملة بأصوات متعددة',
       icon: BookOpen,
-      color: 'from-[#4A8F5C] to-[#5BA86D]',
-      bgColor: 'from-[#4A8F5C]/5 to-[#5BA86D]/5',
-      borderColor: 'border-[#4A8F5C]/20',
+      color: 'from-[#2563eb] to-[#3b82f6]',
+      bgColor: 'from-[#2563eb]/5 to-[#3b82f6]/5',
+      borderColor: 'border-[#2563eb]/20',
       path: '/quran',
     },
     {
       title: 'الحديث اليومي',
       description: 'أحاديث نبوية موثقة مع شروح مبسطة',
       icon: Mic,
-      color: 'from-[#0A5734] to-[#4A8F5C]',
-      bgColor: 'from-[#0A5734]/5 to-[#4A8F5C]/5',
-      borderColor: 'border-[#0A5734]/20',
+      color: 'from-[#1e40af] to-[#2563eb]',
+      bgColor: 'from-[#1e40af]/5 to-[#2563eb]/5',
+      borderColor: 'border-[#1e40af]/20',
       path: '/hadith',
     },
     {
       title: 'منطقة الذكر والتسبيح',
       description: 'أذكار الصباح والمساء، مسبحة رقمية مع إحصاءات',
       icon: Sparkles,
-      color: 'from-[#4A8F5C] to-[#5BA86D]',
-      bgColor: 'from-[#4A8F5C]/5 to-[#5BA86D]/5',
-      borderColor: 'border-[#4A8F5C]/20',
+      color: 'from-[#2563eb] to-[#3b82f6]',
+      bgColor: 'from-[#2563eb]/5 to-[#3b82f6]/5',
+      borderColor: 'border-[#2563eb]/20',
       path: '/dhikr',
     },
   ];
@@ -58,21 +58,21 @@ export const IslamicFeaturesSection: React.FC = () => {
     <section 
       id="islamic-features" 
       dir="rtl"
-      className="relative py-4 md:py-6 lg:py-6 bg-gradient-to-b from-white via-[#0A5734]/2 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300 overflow-hidden"
+      className="relative py-4 md:py-6 lg:py-6 bg-gradient-to-b from-white via-[#1e40af]/2 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300 overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.03]">
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, #0A5734 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 2px 2px, #1e40af 1px, transparent 0)`,
           backgroundSize: '48px 48px'
         }} />
       </div>
       
       {/* Gradient Accents */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#0A5734]/8 to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#1e40af]/8 to-transparent rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#C5A15A]/8 to-transparent rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
+      <div className="container mx-auto max-w-6xl px-4 lg:px-8 relative z-10">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -86,14 +86,14 @@ export const IslamicFeaturesSection: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-[#0A5734]/10 to-[#4A8F5C]/10 dark:from-[#0A5734]/20 dark:to-[#4A8F5C]/20 px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 lg:py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-[#0A5734]/20 dark:border-[#4A8F5C]/30 shadow-sm mb-3 sm:mb-4 lg:mb-6"
+            className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-[#1e40af]/10 to-[#2563eb]/10 dark:from-[#1e40af]/20 dark:to-[#2563eb]/20 px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 lg:py-2.5 rounded-full text-xs sm:text-sm font-semibold border border-[#1e40af]/20 dark:border-blue-400/30 shadow-sm mb-3 sm:mb-4 lg:mb-6"
           >
-            <Sparkles className="text-[#0A5734] dark:text-[#4A8F5C]" size={16} />
-            <span className="text-[#0A5734] dark:text-[#4A8F5C]">الأدوات الإسلامية</span>
+            <Sparkles className="text-[#1e40af] dark:text-blue-400" size={16} />
+            <span className="text-[#1e40af] dark:text-blue-400">الأدوات الإسلامية</span>
           </motion.div>
 
           <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-4 text-[#222222] dark:text-slate-50 leading-[1.2] tracking-tight">
-            <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold block">
+            <span className="text-[#1e40af] dark:text-blue-400 font-extrabold block">
               الأدوات الإسلامية في نور
             </span>
           </h2>
@@ -134,7 +134,7 @@ export const IslamicFeaturesSection: React.FC = () => {
                     </p>
                   </div>
                   {/* Arrow Icon */}
-                  <div className="mt-2 flex items-center gap-2 text-xs font-medium text-[#0A5734] dark:text-[#4A8F5C] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="mt-2 flex items-center gap-2 text-xs font-medium text-[#1e40af] dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span>استكشف الأداة</span>
                     <ArrowLeft className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -150,7 +150,7 @@ export const IslamicFeaturesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.8 }}
-          className="bg-gradient-to-br from-[#0A5734]/10 to-[#4A8F5C]/10 dark:from-slate-800 dark:to-slate-900 rounded-2xl p-6 lg:p-8 border border-[#0A5734]/20 dark:border-slate-700 shadow-lg"
+          className="bg-gradient-to-br from-[#1e40af]/10 to-[#2563eb]/10 dark:from-slate-800 dark:to-slate-900 rounded-2xl p-6 lg:p-8 border border-[#1e40af]/20 dark:border-slate-700 shadow-lg"
         >
           <div className="max-w-3xl mx-auto text-center">
             <h3 className="text-xl md:text-2xl font-bold text-[#222222] dark:text-slate-50 mb-3">
@@ -168,7 +168,7 @@ export const IslamicFeaturesSection: React.FC = () => {
                 transition={{ delay: 0.9 }}
                 className="text-center"
               >
-                <h4 className="text-2xl font-bold text-[#0A5734] dark:text-[#4A8F5C]">4</h4>
+                <h4 className="text-2xl font-bold text-[#1e40af] dark:text-blue-400">4</h4>
                 <p className="text-sm text-[#555555] dark:text-slate-300">مزايا إسلامية</p>
               </motion.div>
               <motion.div
@@ -178,7 +178,7 @@ export const IslamicFeaturesSection: React.FC = () => {
                 transition={{ delay: 0.95 }}
                 className="text-center"
               >
-                <h4 className="text-2xl font-bold text-[#0A5734] dark:text-[#4A8F5C]">مجاني</h4>
+                <h4 className="text-2xl font-bold text-[#1e40af] dark:text-blue-400">مجاني</h4>
                 <p className="text-sm text-[#555555] dark:text-slate-300">لجميع المستخدمين</p>
               </motion.div>
               <motion.div
@@ -188,7 +188,7 @@ export const IslamicFeaturesSection: React.FC = () => {
                 transition={{ delay: 1 }}
                 className="text-center"
               >
-                <h4 className="text-2xl font-bold text-[#0A5734] dark:text-[#4A8F5C]">آمن</h4>
+                <h4 className="text-2xl font-bold text-[#1e40af] dark:text-blue-400">آمن</h4>
                 <p className="text-sm text-[#555555] dark:text-slate-300">محتوى معتمد</p>
               </motion.div>
             </div>

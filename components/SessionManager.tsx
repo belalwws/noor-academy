@@ -208,7 +208,7 @@ export default function SessionManager({ course, onSessionCreated }: SessionMana
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'scheduled': return 'bg-blue-100 text-blue-800';
-      case 'active': return 'bg-green-100 text-green-800';
+      case 'active': return 'bg-blue-100 text-blue-800';
       case 'completed': return 'bg-gray-100 text-gray-800';
       case 'cancelled': return 'bg-red-100 text-red-800';
       default: return 'bg-gray-100 text-gray-800';
@@ -234,12 +234,12 @@ export default function SessionManager({ course, onSessionCreated }: SessionMana
     <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-bold text-gray-800">
-          <i className="fas fa-video me-2 text-green-600"></i>
+          <i className="fas fa-video me-2 text-blue-600"></i>
           إدارة الجلسات
         </h2>
         <button
           onClick={() => setShowCreateForm(true)}
-          className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
         >
           <i className="fas fa-plus me-2"></i>
           إنشاء جلسة جديدة
@@ -248,7 +248,7 @@ export default function SessionManager({ course, onSessionCreated }: SessionMana
 
       {/* Success/Error Messages */}
       {success && (
-        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+        <div className="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded mb-4">
           <i className="fas fa-check-circle me-2"></i>
           {success}
         </div>
@@ -279,7 +279,7 @@ export default function SessionManager({ course, onSessionCreated }: SessionMana
           </div>
           <div>
             <span className="text-gray-600">الحالة:</span>
-            <span className="ms-2 px-2 py-1 rounded text-xs bg-green-100 text-green-800">
+            <span className="ms-2 px-2 py-1 rounded text-xs bg-blue-100 text-blue-800">
               معتمدة
             </span>
           </div>
@@ -321,7 +321,7 @@ export default function SessionManager({ course, onSessionCreated }: SessionMana
                     href={session.webrtc_join_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-green-100 hover:bg-green-200 text-green-700 p-2 rounded-lg transition-colors text-sm"
+                    className="bg-blue-100 hover:bg-blue-200 text-blue-700 p-2 rounded-lg transition-colors text-sm"
                     title="دخول الجلسة"
                   >
                     <i className="fas fa-external-link-alt"></i>
@@ -361,7 +361,7 @@ export default function SessionManager({ course, onSessionCreated }: SessionMana
             <div className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-xl font-bold text-gray-800">
-                  <i className="fas fa-plus-circle me-2 text-green-600"></i>
+                  <i className="fas fa-plus-circle me-2 text-blue-600"></i>
                   إنشاء جلسة جديدة
                 </h2>
                 <button
@@ -385,7 +385,7 @@ export default function SessionManager({ course, onSessionCreated }: SessionMana
                     type="text"
                     value={sessionForm.title}
                     onChange={(e) => setSessionForm(prev => ({ ...prev, title: e.target.value }))}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     placeholder="مثال: جلسة تحفيظ سورة البقرة"
                     required
                   />
@@ -400,7 +400,7 @@ export default function SessionManager({ course, onSessionCreated }: SessionMana
                     value={sessionForm.description}
                     onChange={(e) => setSessionForm(prev => ({ ...prev, description: e.target.value }))}
                     rows={3}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     placeholder="اكتب وصفاً مختصراً عن محتوى الجلسة..."
                   />
                 </div>
@@ -414,7 +414,7 @@ export default function SessionManager({ course, onSessionCreated }: SessionMana
                     type="datetime-local"
                     value={sessionForm.scheduled_time}
                     onChange={(e) => setSessionForm(prev => ({ ...prev, scheduled_time: e.target.value }))}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     min={new Date().toISOString().slice(0, 16)}
                     required
                   />
@@ -428,7 +428,7 @@ export default function SessionManager({ course, onSessionCreated }: SessionMana
                   <select
                     value={sessionForm.duration_minutes}
                     onChange={(e) => setSessionForm(prev => ({ ...prev, duration_minutes: parseInt(e.target.value) }))}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   >
                     <option value={30}>30 دقيقة</option>
                     <option value={45}>45 دقيقة</option>
@@ -455,7 +455,7 @@ export default function SessionManager({ course, onSessionCreated }: SessionMana
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="flex-1 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white py-2 px-4 rounded-lg transition-colors"
+                    className="flex-1 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white py-2 px-4 rounded-lg transition-colors"
                   >
                     {isLoading ? (
                       <>

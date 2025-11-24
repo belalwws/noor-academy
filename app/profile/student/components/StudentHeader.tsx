@@ -76,7 +76,7 @@ export default function StudentHeader({
                 طالب
               </Badge>
               {profile?.is_verified && (
-                <Badge variant="secondary" className="bg-green-100 text-green-800">
+                <Badge variant="secondary" className="bg-blue-100 text-blue-800">
                   <Award className="w-4 h-4 ml-1" />
                   موثق
                 </Badge>
@@ -102,7 +102,7 @@ export default function StudentHeader({
                 <div className="bg-blue-100 p-3 rounded-xl">
                   <BookOpen className="w-6 h-6 text-blue-600" />
                 </div>
-                <TrendingUp className="w-5 h-5 text-green-500" />
+                <TrendingUp className="w-5 h-5 text-blue-500" />
               </div>
               <div className="text-2xl font-bold text-gray-800 mb-1">
                 {courses.length}
@@ -113,10 +113,10 @@ export default function StudentHeader({
             {/* Completed Courses */}
             <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
               <div className="flex items-center justify-between mb-3">
-                <div className="bg-green-100 p-3 rounded-xl">
-                  <Award className="w-6 h-6 text-green-600" />
+                <div className="bg-blue-100 p-3 rounded-xl">
+                  <Award className="w-6 h-6 text-blue-600" />
                 </div>
-                <div className="text-xs text-green-600 font-medium">
+                <div className="text-xs text-blue-600 font-medium">
                   {courses.length > 0 ? Math.round((completedCourses / courses.length) * 100) : 0}%
                 </div>
               </div>

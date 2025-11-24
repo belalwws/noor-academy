@@ -42,7 +42,7 @@ export default function StudentCourseCard({ course, onViewDetails }: StudentCour
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'active':
-        return <Badge className="bg-green-100 text-green-800">نشط</Badge>
+        return <Badge className="bg-blue-100 text-blue-800">نشط</Badge>
       case 'completed':
         return <Badge className="bg-blue-100 text-blue-800">مكتمل</Badge>
       case 'paused':
@@ -126,7 +126,7 @@ export default function StudentCourseCard({ course, onViewDetails }: StudentCour
         {/* Action Buttons */}
         <div className="flex gap-2 pt-4 border-t">
           {course.status === 'active' && (
-            <Button size="sm" className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700">
+            <Button size="sm" className="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700">
               <Play className="w-4 h-4 ml-2" />
               متابعة الدراسة
             </Button>

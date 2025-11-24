@@ -50,7 +50,7 @@ const getCourseTypeColor = (courseType: string) => {
     case 'family':
       return 'bg-purple-100 text-purple-800 border-purple-200'
     case 'group_private':
-      return 'bg-green-100 text-green-800 border-green-200'
+      return 'bg-blue-100 text-blue-800 border-blue-200'
     case 'group_public':
       return 'bg-orange-100 text-orange-800 border-orange-200'
     default:
@@ -60,7 +60,7 @@ const getCourseTypeColor = (courseType: string) => {
 
 const getStatusColor = (status?: string, isApproved?: boolean, approvalStatus?: string) => {
   if (isApproved === true || approvalStatus === 'approved') {
-    return 'bg-green-100 text-green-800 border-green-200'
+    return 'bg-blue-100 text-blue-800 border-blue-200'
   }
   if (approvalStatus === 'pending' || status === 'pending_review') {
     return 'bg-yellow-100 text-yellow-800 border-yellow-200'
@@ -164,11 +164,11 @@ export default function TeamsStyleTeacherCourseCard({
           )}
           
           {course.recent_notes_count !== undefined && (
-            <div className="flex items-center gap-2 p-2 bg-green-50 rounded-lg">
-              <MessageSquare className="w-4 h-4 text-green-600" />
+            <div className="flex items-center gap-2 p-2 bg-blue-50 rounded-lg">
+              <MessageSquare className="w-4 h-4 text-blue-600" />
               <div>
-                <p className="text-xs text-green-600 font-medium">{course.recent_notes_count}</p>
-                <p className="text-xs text-green-500">ملحوظة</p>
+                <p className="text-xs text-blue-600 font-medium">{course.recent_notes_count}</p>
+                <p className="text-xs text-blue-500">ملحوظة</p>
               </div>
             </div>
           )}

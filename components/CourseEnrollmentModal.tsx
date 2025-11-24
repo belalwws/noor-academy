@@ -162,16 +162,16 @@ export default function CourseEnrollmentModal({
     <>
     <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto bg-white dark:bg-slate-900">
-        <div className="relative bg-gradient-to-br from-green-50 via-white to-emerald-50 rounded-2xl -m-6 p-6">
+        <div className="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 rounded-2xl -m-6 p-6">
           {/* Animated Background Circles */}
           <motion.div 
-            className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-green-400/20 to-emerald-400/20 rounded-full blur-3xl"
+            className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-blue-400/20 to-blue-400/20 rounded-full blur-3xl"
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           />
           <motion.div 
-            className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-emerald-400/20 to-green-400/20 rounded-full blur-2xl"
+            className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-blue-400/20 to-blue-400/20 rounded-full blur-2xl"
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
@@ -184,7 +184,7 @@ export default function CourseEnrollmentModal({
           >
         <DialogHeader className="text-center pb-6 relative z-10">
                 <motion.div 
-                  className="mx-auto w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg"
+                  className="mx-auto w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg"
                   initial={{ scale: 0, rotate: -180 }}
                   animate={{ scale: 1, rotate: 0 }}
                   transition={{ 
@@ -196,7 +196,7 @@ export default function CourseEnrollmentModal({
                 >
             <BookOpen className="w-8 h-8 text-white" />
                 </motion.div>
-                <DialogTitle className="text-2xl font-bold text-green-800 mb-2">
+                <DialogTitle className="text-2xl font-bold text-blue-800 mb-2">
                   التسجيل في الدورة
           </DialogTitle>
                 <DialogDescription className="text-gray-600 text-base leading-relaxed">
@@ -213,18 +213,18 @@ export default function CourseEnrollmentModal({
             >
           {/* Course Info */}
               <motion.div 
-                className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-green-200 shadow-sm hover:shadow-md transition-shadow duration-300"
+                className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-blue-200 shadow-sm hover:shadow-md transition-shadow duration-300"
                 whileHover={{ scale: 1.01 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
             <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-green-600 to-emerald-600 rounded-xl flex items-center justify-center shadow-md">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-600 rounded-xl flex items-center justify-center shadow-md">
                 <BookOpen className="w-7 h-7 text-white" />
               </div>
               <div className="flex-1">
-                    <h3 className="font-bold text-green-800 text-lg mb-1">{course.title}</h3>
+                    <h3 className="font-bold text-blue-800 text-lg mb-1">{course.title}</h3>
                     <div className="flex items-center gap-2">
-                      <span className="inline-flex items-center gap-1 text-sm text-green-700 bg-green-100 px-3 py-1 rounded-full font-medium">
+                      <span className="inline-flex items-center gap-1 text-sm text-blue-700 bg-blue-100 px-3 py-1 rounded-full font-medium">
                         <CheckCircle className="w-3.5 h-3.5" />
                         {course.course_type}
                       </span>
@@ -235,7 +235,7 @@ export default function CourseEnrollmentModal({
 
           {/* Notes Input */}
           <div className="space-y-3">
-                <Label htmlFor="notes" className="text-right text-green-800 font-semibold text-base flex items-center gap-2">
+                <Label htmlFor="notes" className="text-right text-blue-800 font-semibold text-base flex items-center gap-2">
                   <span>ملاحظات التسجيل</span>
                   <span className="text-xs text-gray-500 font-normal">(اختياري)</span>
             </Label>
@@ -245,12 +245,12 @@ export default function CourseEnrollmentModal({
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
                 placeholder="اكتب ملاحظاتك حول سبب رغبتك في التسجيل في هذه الدورة..."
-                    className="min-h-[140px] text-right resize-none border-2 border-green-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 rounded-xl p-4 text-base transition-all duration-200 bg-white/80 backdrop-blur-sm"
+                    className="min-h-[140px] text-right resize-none border-2 border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded-xl p-4 text-base transition-all duration-200 bg-white/80 backdrop-blur-sm"
                 disabled={isSubmitting}
               />
             </div>
                 <p className="text-sm text-gray-600 text-right leading-relaxed flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
                   <span>هذه الملاحظات ستساعد المعلم في فهم احتياجاتك التعليمية وتخصيص المحتوى لك</span>
             </p>
           </div>
@@ -266,7 +266,7 @@ export default function CourseEnrollmentModal({
               onClick={handleClose}
               variant="outline"
               disabled={isSubmitting}
-                  className="border-2 border-green-200 text-gray-700 hover:bg-green-50 hover:border-green-300 px-6 py-3 rounded-xl font-semibold transition-all duration-200"
+                  className="border-2 border-blue-200 text-gray-700 hover:bg-blue-50 hover:border-blue-300 px-6 py-3 rounded-xl font-semibold transition-all duration-200"
             >
               <X className="w-5 h-5 ml-2" />
               إلغاء
@@ -278,7 +278,7 @@ export default function CourseEnrollmentModal({
             <Button
               onClick={handleSubmit}
               disabled={isSubmitting}
-                    className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
+                    className="bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
             >
               {isSubmitting ? (
                 <>

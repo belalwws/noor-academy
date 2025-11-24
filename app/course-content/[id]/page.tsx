@@ -280,9 +280,9 @@ export default function CourseContentCreation() {
   if (isLoading) {
     return (
       <ProtectedRoute allowedRoles={['teacher']}>
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center">
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto mb-4"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
             <p className="text-gray-600">جاري تحميل بيانات الدورة...</p>
           </div>
         </div>
@@ -293,14 +293,14 @@ export default function CourseContentCreation() {
   if (!courseData) {
     return (
       <ProtectedRoute allowedRoles={['teacher']}>
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center">
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center">
           <div className="text-center">
             <i className="fas fa-exclamation-triangle text-red-500 text-4xl mb-4"></i>
             <h2 className="text-xl font-bold text-gray-800 mb-2">لم يتم العثور على الدورة</h2>
             <p className="text-gray-600 mb-4">الدورة المطلوبة غير موجودة أو تم حذفها</p>
             <button
               onClick={() => router.push('/dashboard/teacher')}
-              className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg"
             >
               العودة للوحة التحكم
             </button>
@@ -312,14 +312,14 @@ export default function CourseContentCreation() {
 
   return (
     <ProtectedRoute allowedRoles={['teacher']}>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 p-4" dir="rtl">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 p-4" dir="rtl">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
             <div className="flex items-center justify-between">
               <div>
                 <h1 className="text-2xl font-bold text-gray-800 mb-2">
-                  <i className="fas fa-book-open me-3 text-green-600"></i>
+                  <i className="fas fa-book-open me-3 text-blue-600"></i>
                   إضافة محتوى الدورة
                 </h1>
                 <h2 className="text-xl text-gray-600">{courseData.title}</h2>
@@ -344,10 +344,10 @@ export default function CourseContentCreation() {
           )}
 
           {success && (
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
               <div className="flex items-center">
-                <i className="fas fa-check-circle text-green-500 me-3"></i>
-                <div className="text-green-700">{success}</div>
+                <i className="fas fa-check-circle text-blue-500 me-3"></i>
+                <div className="text-blue-700">{success}</div>
               </div>
             </div>
           )}
@@ -361,7 +361,7 @@ export default function CourseContentCreation() {
               </h3>
               <button
                 onClick={() => setShowAddLesson(true)}
-                className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg flex items-center gap-2"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center gap-2"
               >
                 <i className="fas fa-plus"></i>
                 إضافة درس جديد
@@ -397,7 +397,7 @@ export default function CourseContentCreation() {
                       </div>
                       <div>
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                          lesson.is_published ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'
+                          lesson.is_published ? 'bg-blue-100 text-blue-800' : 'bg-yellow-100 text-yellow-800'
                         }`}>
                           {lesson.is_published ? 'منشور' : 'مسودة'}
                         </span>
@@ -415,7 +415,7 @@ export default function CourseContentCreation() {
               <div className="bg-white rounded-lg p-6 w-full max-w-2xl mx-4">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-gray-800">
-                    <i className="fas fa-plus me-3 text-green-600"></i>
+                    <i className="fas fa-plus me-3 text-blue-600"></i>
                     إضافة درس جديد
                   </h3>
                   <button
@@ -436,7 +436,7 @@ export default function CourseContentCreation() {
                         type="text"
                         value={currentLesson.title}
                         onChange={(e) => setCurrentLesson({...currentLesson, title: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         placeholder="أدخل عنوان الدرس"
                         required
                       />
@@ -449,7 +449,7 @@ export default function CourseContentCreation() {
                       <textarea
                         value={currentLesson.description}
                         onChange={(e) => setCurrentLesson({...currentLesson, description: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         rows={3}
                         placeholder="أدخل وصف الدرس"
                         required
@@ -464,7 +464,7 @@ export default function CourseContentCreation() {
                         <select
                           value={currentLesson.lesson_type}
                           onChange={(e) => setCurrentLesson({...currentLesson, lesson_type: e.target.value as any})}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         >
                           <option value="video_file">فيديو مسجل</option>
                           <option value="youtube_link">رابط يوتيوب</option>
@@ -480,7 +480,7 @@ export default function CourseContentCreation() {
                           type="number"
                           value={currentLesson.duration_minutes}
                           onChange={(e) => setCurrentLesson({...currentLesson, duration_minutes: parseInt(e.target.value)})}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                           min="1"
                           max="300"
                         />
@@ -497,7 +497,7 @@ export default function CourseContentCreation() {
                           type="url"
                           value={currentLesson.youtube_url || ''}
                           onChange={(e) => setCurrentLesson({...currentLesson, youtube_url: e.target.value})}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                           placeholder="https://www.youtube.com/watch?v=..."
                           required
                         />
@@ -510,7 +510,7 @@ export default function CourseContentCreation() {
                         id="is_published"
                         checked={currentLesson.is_published}
                         onChange={(e) => setCurrentLesson({...currentLesson, is_published: e.target.checked})}
-                        className="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
+                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                       />
                       <label htmlFor="is_published" className="mr-2 block text-sm text-gray-700">
                         نشر الدرس فوراً
@@ -529,7 +529,7 @@ export default function CourseContentCreation() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white px-6 py-2 rounded-lg flex items-center gap-2"
+                      className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-6 py-2 rounded-lg flex items-center gap-2"
                     >
                       {isSubmitting ? (
                         <>
@@ -568,10 +568,10 @@ export default function CourseContentCreation() {
                   </div>
                 </div>
               ) : (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
                   <div className="flex items-center justify-center">
-                    <i className="fas fa-check-circle text-green-500 me-3"></i>
-                    <span className="text-green-700">الدورة جاهزة للإرسال - تم إضافة {lessons.length} درس</span>
+                    <i className="fas fa-check-circle text-blue-500 me-3"></i>
+                    <span className="text-blue-700">الدورة جاهزة للإرسال - تم إضافة {lessons.length} درس</span>
                   </div>
                 </div>
               )}

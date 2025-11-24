@@ -53,7 +53,7 @@ const getStatusBadge = (approvalStatus: string, isPublished: boolean) => {
   if (approvalStatus === 'approved' && isPublished) {
     return {
       label: 'منشورة',
-      className: 'bg-green-500 text-white',
+      className: 'bg-blue-500 text-white',
       icon: CheckCircle
     }
   } else if (approvalStatus === 'approved' && !isPublished) {
@@ -156,14 +156,14 @@ export default function ProfileCourses({ teacherId }: ProfileCoursesProps) {
           </CardContent>
         </Card>
 
-        <Card className="border-2 border-green-100">
-          <CardContent className="p-4 bg-green-50">
+        <Card className="border-2 border-blue-100">
+          <CardContent className="p-4 bg-blue-50">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-green-600">معتمدة</p>
-                <p className="text-2xl font-bold text-green-800">{approvedCourses}</p>
+                <p className="text-sm text-blue-600">معتمدة</p>
+                <p className="text-2xl font-bold text-blue-800">{approvedCourses}</p>
               </div>
-              <CheckCircle className="w-8 h-8 text-green-600" />
+              <CheckCircle className="w-8 h-8 text-blue-600" />
             </div>
           </CardContent>
         </Card>

@@ -345,7 +345,7 @@ export default function Navbar() {
                     تسجيل الدخول
                   </Link>
                   <Link
-                    className="btn btn-light btn-sm px-3 text-green fw-bold"
+                    className="btn btn-light btn-sm px-3 text-blue fw-bold"
                     href="/register"
                     style={{ borderRadius: '20px' }}
                   >

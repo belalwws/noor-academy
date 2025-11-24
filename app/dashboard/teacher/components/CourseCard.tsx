@@ -114,9 +114,9 @@ const getCourseTypeInfo = (lp?: string, courseType?: string, source?: string) =>
       case 'family':
         return {
           name: 'برنامج عائلي',
-          color: 'text-emerald-700 dark:text-emerald-300',
-          bg: 'bg-emerald-100 dark:bg-emerald-900/30',
-          border: 'border-emerald-300 dark:border-emerald-700'
+          color: 'text-blue-700 dark:text-blue-300',
+          bg: 'bg-blue-100 dark:bg-blue-900/30',
+          border: 'border-blue-300 dark:border-blue-700'
         }
       case 'group_private':
         return {
@@ -147,9 +147,9 @@ const getCourseTypeInfo = (lp?: string, courseType?: string, source?: string) =>
     case 'individual':
       return {
         name: 'مسار فردي',
-        color: 'text-emerald-700 dark:text-emerald-300',
-        bg: 'bg-emerald-100 dark:bg-emerald-900/30',
-        border: 'border-emerald-300 dark:border-emerald-700'
+        color: 'text-blue-700 dark:text-blue-300',
+        bg: 'bg-blue-100 dark:bg-blue-900/30',
+        border: 'border-blue-300 dark:border-blue-700'
       }
     case 'group_continuous':
       return {
@@ -301,7 +301,7 @@ export default function CourseCard({ course, onViewDetails }: CourseCardProps) {
         label: 'تمت الموافقة',
         Icon: CheckCircle,
         classes:
-          'bg-emerald-50 text-emerald-700 border border-emerald-100 dark:bg-emerald-500/10 dark:text-emerald-200 dark:border-emerald-500/30'
+          'bg-blue-50 text-blue-700 border border-blue-100 dark:bg-blue-500/10 dark:text-blue-200 dark:border-blue-500/30'
       }
     }
 
@@ -503,14 +503,14 @@ export default function CourseCard({ course, onViewDetails }: CourseCardProps) {
             <motion.div
               initial={{ opacity: 0, y: 4 }}
               animate={{ opacity: 1, y: 0 }}
-              className="rounded-lg border border-emerald-200/60 bg-emerald-50 p-3 dark:border-emerald-600/30 dark:bg-emerald-900/20"
+              className="rounded-lg border border-blue-200/60 bg-blue-50 p-3 dark:border-blue-600/30 dark:bg-blue-900/20"
             >
               <div className="flex items-center gap-2">
                 <span className="relative inline-flex h-2.5 w-2.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75" />
+                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-blue-500" />
                 </span>
-                <span className="text-xs font-semibold text-emerald-700 dark:text-emerald-200">بث مباشر الآن</span>
+                <span className="text-xs font-semibold text-blue-700 dark:text-blue-200">بث مباشر الآن</span>
               </div>
             </motion.div>
           )}
@@ -590,7 +590,7 @@ export default function CourseCard({ course, onViewDetails }: CourseCardProps) {
               >
                 <Button
                   size="sm"
-                  className="gap-2 bg-emerald-600 font-semibold text-white hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-600"
+                  className="gap-2 bg-blue-600 font-semibold text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
                 >
                   <Play className="h-4 w-4" />
                   <span className="hidden sm:inline">بث</span>

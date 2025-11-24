@@ -22,7 +22,7 @@ const ROLE_NAMES: Record<UserRole, string> = {
 const ROLE_COLORS: Record<UserRole, string> = {
   anonymous: 'bg-gray-100 text-gray-800',
   student: 'bg-blue-100 text-blue-800',
-  teacher: 'bg-green-100 text-green-800',
+  teacher: 'bg-blue-100 text-blue-800',
   supervisor: 'bg-purple-100 text-purple-800',
   general_supervisor: 'bg-purple-100 text-purple-800',
   academic_supervisor: 'bg-indigo-100 text-indigo-800',
@@ -73,7 +73,7 @@ export default function RateLimitStatus({
     const percentage = (status.current / status.limit) * 100;
     if (percentage >= 90) return 'bg-red-500';
     if (percentage >= 70) return 'bg-yellow-500';
-    return 'bg-green-500';
+    return 'bg-blue-500';
   };
 
   const formatTime = (seconds: number): string => {
@@ -145,7 +145,7 @@ export default function RateLimitStatus({
               {status.current >= status.limit ? (
                 <span className="text-red-600 font-medium">تم الوصول للحد الأقصى</span>
               ) : (
-                <span className="text-green-600">متاح</span>
+                <span className="text-blue-600">متاح</span>
               )}
             </span>
           </div>

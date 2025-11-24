@@ -19,8 +19,8 @@ export default async function QuranPage() {
       >
         {/* Decorative Background Elements */}
         <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-emerald-200/20 to-green-200/20 dark:from-emerald-900/10 dark:to-green-900/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-teal-200/20 to-emerald-200/20 dark:from-teal-900/10 dark:to-emerald-900/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-blue-200/20 to-blue-200/20 dark:from-blue-900/10 dark:to-blue-900/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-teal-200/20 to-blue-200/20 dark:from-teal-900/10 dark:to-blue-900/10 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">

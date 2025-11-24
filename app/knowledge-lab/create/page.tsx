@@ -614,14 +614,14 @@ const KnowledgeLabCreatePage = () => {
                     formData.is_standalone 
                       ? 'bg-amber-50 border-amber-200' 
                       : formData.course_type === 'live'
-                        ? 'bg-green-50 border-green-200'
+                        ? 'bg-blue-50 border-blue-200'
                         : 'bg-blue-50 border-blue-200'
                   }`}>
                     <div className="flex items-start gap-3">
                       {formData.is_standalone ? (
                         <AlertCircle className="w-5 h-5 text-amber-600 mt-0.5" />
                       ) : (
-                        <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
+                        <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5" />
                       )}
                       <div className="flex-1">
                         <p className="font-semibold text-sm mb-1">

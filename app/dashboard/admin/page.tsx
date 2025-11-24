@@ -200,14 +200,14 @@ export default function AdminDashboard() {
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
                     <Users className="w-6 h-6 text-white" />
                   </div>
-                  <TrendingUp className="w-5 h-5 text-green-500" />
+                  <TrendingUp className="w-5 h-5 text-blue-500" />
                 </div>
                 <div className="text-right">
                   <p className="text-sm text-slate-600 dark:text-slate-400 mb-1">إجمالي المستخدمين</p>
                   <p className="text-3xl font-bold text-slate-800 dark:text-slate-100">
                     {stats?.total_users?.toLocaleString('ar-EG') || 0}
                   </p>
-                  <p className="text-xs text-green-600 dark:text-green-400 mt-2">
+                  <p className="text-xs text-blue-600 dark:text-blue-400 mt-2">
                     +{stats?.recent_activity?.new_users_24h || 0} خلال 24 ساعة
                   </p>
                 </div>
@@ -221,13 +221,13 @@ export default function AdminDashboard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <Card className="border-0 shadow-xl bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-900/20 dark:to-green-900/20 hover:shadow-2xl transition-all duration-300">
+            <Card className="border-0 shadow-xl bg-gradient-to-br from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20 hover:shadow-2xl transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
                     <Activity className="w-6 h-6 text-white" />
                   </div>
-                  <CheckCircle className="w-5 h-5 text-emerald-500" />
+                  <CheckCircle className="w-5 h-5 text-blue-500" />
                 </div>
                 <div className="text-right">
                   <p className="text-sm text-slate-600 dark:text-slate-400 mb-1">المستخدمون النشطون</p>
@@ -281,14 +281,14 @@ export default function AdminDashboard() {
                   <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
                     <Settings className="w-6 h-6 text-white" />
                   </div>
-                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <CheckCircle className="w-5 h-5 text-blue-500" />
                 </div>
                 <div className="text-right">
                   <p className="text-sm text-slate-600 dark:text-slate-400 mb-1">حالة النظام</p>
                   <p className="text-3xl font-bold text-slate-800 dark:text-slate-100">
                     {stats?.system_health === 'healthy' ? '100%' : '85%'}
                   </p>
-                  <p className="text-xs text-green-600 dark:text-green-400 mt-2">
+                  <p className="text-xs text-blue-600 dark:text-blue-400 mt-2">
                     جميع الأنظمة تعمل بكفاءة
                   </p>
                 </div>
@@ -375,7 +375,7 @@ export default function AdminDashboard() {
                   إدارة المستخدمين
                 </Button>
                 <Button
-                  className="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white"
+                  className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white"
                   onClick={() => window.location.href = '/admin'}
                 >
                   <BookOpen className="w-4 h-4 mr-2" />

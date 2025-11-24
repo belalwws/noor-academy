@@ -373,11 +373,11 @@ export default function QiblaPage() {
                     }}
                   >
                     {/* Arrow Head */}
-                    <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-8 border-l-transparent border-r-transparent border-b-emerald-600" />
+                    <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-8 border-l-transparent border-r-transparent border-b-blue-600" />
                   </div>
 
                   {/* Center Dot */}
-                  <div className="absolute top-1/2 left-1/2 w-4 h-4 bg-emerald-600 rounded-full transform -translate-x-1/2 -translate-y-1/2 shadow-lg" />
+                  <div className="absolute top-1/2 left-1/2 w-4 h-4 bg-blue-600 rounded-full transform -translate-x-1/2 -translate-y-1/2 shadow-lg" />
 
                   {/* Kaaba Icon */}
                   <div
@@ -392,18 +392,18 @@ export default function QiblaPage() {
 
                 {/* Direction Info */}
                 <div className="text-center mt-6">
-                  <div className="bg-emerald-50 rounded-xl p-4 inline-block">
-                    <div className="text-sm text-emerald-600 mb-1">الاتجاه النسبي</div>
-                    <div className="text-2xl font-bold text-emerald-800">
+                  <div className="bg-blue-50 rounded-xl p-4 inline-block">
+                    <div className="text-sm text-blue-600 mb-1">الاتجاه النسبي</div>
+                    <div className="text-2xl font-bold text-blue-800">
                       {qiblaRelativeDirection.toFixed(0)}°
                     </div>
                   </div>
                 </div>
 
                 {/* Instructions */}
-                <div className="mt-6 p-4 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl">
-                  <h4 className="font-semibold text-emerald-800 mb-2">تعليمات الاستخدام:</h4>
-                  <ul className="text-emerald-700 text-sm space-y-1">
+                <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-teal-50 rounded-xl">
+                  <h4 className="font-semibold text-blue-800 mb-2">تعليمات الاستخدام:</h4>
+                  <ul className="text-blue-700 text-sm space-y-1">
                     <li>• امسك الجهاز بشكل مسطح</li>
                     <li>• وجه الجهاز نحو السهم الأخضر</li>
                     <li>• عندما يشير السهم للأعلى تكون متجهاً للقبلة</li>

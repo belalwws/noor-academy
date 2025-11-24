@@ -187,7 +187,7 @@ export default function CoursesTab() {
   const getCourseTypeBadge = (type: string) => {
     switch (type) {
       case 'individual': return 'bg-blue-100 text-blue-800'
-      case 'family': return 'bg-green-100 text-green-800' 
+      case 'family': return 'bg-blue-100 text-blue-800' 
       case 'group_private': return 'bg-purple-100 text-purple-800'
       case 'group_public': return 'bg-orange-100 text-orange-800'
       default: return 'bg-gray-100 text-gray-800'
@@ -200,7 +200,7 @@ export default function CoursesTab() {
       case 'pending':
         return <Badge variant="outline" className="text-yellow-700 bg-yellow-50 border-yellow-200"><AlertCircle className="w-3 h-3 mr-1" /> قيد المراجعة</Badge>
       case 'approved':
-        return <Badge variant="outline" className="text-green-700 bg-green-50 border-green-200"><CheckCircle className="w-3 h-3 mr-1" /> معتمد</Badge>
+        return <Badge variant="outline" className="text-blue-700 bg-blue-50 border-blue-200"><CheckCircle className="w-3 h-3 mr-1" /> معتمد</Badge>
       case 'rejected':
         return <Badge variant="outline" className="text-red-700 bg-red-50 border-red-200"><XCircle className="w-3 h-3 mr-1" /> مرفوض</Badge>
       case 'completed':
@@ -222,7 +222,7 @@ export default function CoursesTab() {
     return (
       <div className="flex items-center justify-center py-8">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-gray-600">جاري تحميل الكورسات...</p>
         </div>
       </div>
@@ -262,7 +262,7 @@ export default function CoursesTab() {
                 <select 
                   value={selectedType} 
                   onChange={(e) => setSelectedType(e.target.value)}
-                  className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="all">جميع الأنواع</option>
                   <option value="individual">فردي</option>
@@ -334,12 +334,12 @@ export default function CoursesTab() {
                         <ul className="text-xs text-gray-600 space-y-1">
                           {course.learning_outcomes.slice(0, 2).map((outcome, index) => (
                             <li key={index} className="flex items-start gap-1">
-                              <CheckCircle className="w-3 h-3 text-green-500 mt-0.5 flex-shrink-0" />
+                              <CheckCircle className="w-3 h-3 text-blue-500 mt-0.5 flex-shrink-0" />
                               <span className="line-clamp-1">{outcome}</span>
                             </li>
                           ))}
                           {course.learning_outcomes.length > 2 && (
-                            <li className="text-green-600 font-medium">+ {course.learning_outcomes.length - 2} المزيد...</li>
+                            <li className="text-blue-600 font-medium">+ {course.learning_outcomes.length - 2} المزيد...</li>
                           )}
                         </ul>
                       </div>
@@ -397,7 +397,7 @@ export default function CoursesTab() {
                     <div className="mt-3 pt-3 border-t border-gray-100">
                       <Link 
                         href={`/live-teaching/${course.course_type === 'individual' ? 'single-individual' : course.course_type}`}
-                        className="text-xs text-green-600 hover:text-green-800 font-medium"
+                        className="text-xs text-blue-600 hover:text-blue-800 font-medium"
                       >
                         عرض المزيد من الكورسات المشابهة ←
                       </Link>
@@ -471,7 +471,7 @@ export default function CoursesTab() {
                         </div>
                         {enrollment.completion_date && (
                           <div className="flex items-center gap-2 text-sm text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-green-600" />
+                            <CheckCircle className="w-4 h-4 text-blue-600" />
                             <span>تاريخ الإنجاز: {new Date(enrollment.completion_date).toLocaleDateString('ar-SA')}</span>
                           </div>
                         )}
@@ -486,7 +486,7 @@ export default function CoursesTab() {
                           </div>
                           <div className="w-full bg-gray-200 rounded-full h-2">
                             <div 
-                              className="bg-green-600 h-2 rounded-full transition-all duration-300"
+                              className="bg-blue-600 h-2 rounded-full transition-all duration-300"
                               style={{ width: `${enrollment.progress}%` }}
                             />
                           </div>
@@ -502,11 +502,11 @@ export default function CoursesTab() {
                           <div className="text-xl font-bold text-blue-600">{enrollment.course.lessons.length}</div>
                           <div className="text-sm text-blue-600">درس</div>
                         </div>
-                        <div className="text-center p-3 bg-green-50 rounded-lg">
-                          <div className="text-xl font-bold text-green-600">
+                        <div className="text-center p-3 bg-blue-50 rounded-lg">
+                          <div className="text-xl font-bold text-blue-600">
                             {enrollment.course.current_enrollments}
                           </div>
-                          <div className="text-sm text-green-600">طالب مسجل</div>
+                          <div className="text-sm text-blue-600">طالب مسجل</div>
                         </div>
                       </div>
 

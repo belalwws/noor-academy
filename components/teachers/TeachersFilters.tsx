@@ -132,12 +132,12 @@ export const TeachersFilters: React.FC<TeachersFiltersProps> = ({
             </div>
           </div>
 
-          <div className="bg-green-50 p-3 rounded-lg border border-green-200">
+          <div className="bg-blue-50 p-3 rounded-lg border border-blue-200">
             <div className="flex items-center gap-2">
-              <UserCheck className="w-5 h-5 text-green-600" />
+              <UserCheck className="w-5 h-5 text-blue-600" />
               <div>
-                <p className="text-sm text-green-600 font-medium" dir="rtl">معتمد</p>
-                <p className="text-xl font-bold text-green-800">{approvedCount}</p>
+                <p className="text-sm text-blue-600 font-medium" dir="rtl">معتمد</p>
+                <p className="text-xl font-bold text-blue-800">{approvedCount}</p>
               </div>
             </div>
           </div>

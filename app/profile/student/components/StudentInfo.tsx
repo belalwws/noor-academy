@@ -121,9 +121,9 @@ export default function StudentInfo({ profile, onEdit }: StudentInfoProps) {
                   {new Date(profile.enrollment_date).toLocaleDateString('ar-SA')}
                 </div>
               </div>
-              <div className="text-center p-3 bg-green-50 rounded-lg">
+              <div className="text-center p-3 bg-blue-50 rounded-lg">
                 <div className="text-sm text-gray-500">الحالة</div>
-                <Badge variant="secondary" className="bg-green-100 text-green-800">
+                <Badge variant="secondary" className="bg-blue-100 text-blue-800">
                   {profile.user?.is_active ? 'نشط' : 'غير نشط'}
                 </Badge>
               </div>
@@ -181,11 +181,11 @@ export default function StudentInfo({ profile, onEdit }: StudentInfoProps) {
               </div>
               <div className="text-sm text-blue-600">إجمالي الدورات</div>
             </div>
-            <div className="text-center p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-lg">
-              <div className="text-2xl font-bold text-green-700 mb-1">
+            <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg">
+              <div className="text-2xl font-bold text-blue-700 mb-1">
                 {profile.certificates_earned || 0}
               </div>
-              <div className="text-sm text-green-600">الشهادات المكتسبة</div>
+              <div className="text-sm text-blue-600">الشهادات المكتسبة</div>
             </div>
           </div>
 

@@ -74,8 +74,8 @@ const TeachersManagementTab: React.FC = () => {
     switch (status) {
       case 'approved':
         return (
-          <div className="flex items-center gap-1 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-semibold border border-green-200">
-            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+          <div className="flex items-center gap-1 px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-semibold border border-blue-200">
+            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
             معتمد
           </div>
         );
@@ -106,7 +106,7 @@ const TeachersManagementTab: React.FC = () => {
   const getSpecializationIcon = (specialization: string) => {
     switch (specialization) {
       case 'memorize_quran':
-        return <BookOpen className="w-3 h-3 text-green-600" />;
+        return <BookOpen className="w-3 h-3 text-blue-600" />;
       case 'arabic_language':
         return <GraduationCap className="w-3 h-3 text-blue-600" />;
       case 'islamic_studies':
@@ -120,8 +120,8 @@ const TeachersManagementTab: React.FC = () => {
     return (
       <div className="flex items-center justify-center py-12">
         <div className="text-center space-y-4">
-          <div className="w-12 h-12 border-4 border-emerald-200 border-t-emerald-600 rounded-full animate-spin mx-auto"></div>
-          <p className="text-sm text-emerald-700 font-medium">جارٍ تحميل بيانات المعلمين...</p>
+          <div className="w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mx-auto"></div>
+          <p className="text-sm text-blue-700 font-medium">جارٍ تحميل بيانات المعلمين...</p>
         </div>
       </div>
     );
@@ -138,7 +138,7 @@ const TeachersManagementTab: React.FC = () => {
         <Button
           variant="outline"
           onClick={() => loadTeachers(true)}
-          className="border-emerald-200 text-emerald-700 hover:bg-emerald-50 hover:border-emerald-300 transition-all duration-200 shadow-sm"
+          className="border-blue-200 text-blue-700 hover:bg-blue-50 hover:border-blue-300 transition-all duration-200 shadow-sm"
         >
           <RefreshCw className="w-4 h-4 mr-2" />
           تحديث البيانات
@@ -165,7 +165,7 @@ const TeachersManagementTab: React.FC = () => {
           {Array.isArray(teachers) && teachers.map((teacher, index) => (
             <Card 
               key={teacher.id} 
-              className="group border border-gray-200 hover:border-emerald-300 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-gradient-to-br from-white to-gray-50/30"
+              className="group border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-gradient-to-br from-white to-gray-50/30"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardContent className="p-6">
@@ -173,7 +173,7 @@ const TeachersManagementTab: React.FC = () => {
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <div className="relative">
-                      <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-lg">
+                      <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-lg">
                         <Users className="w-7 h-7 text-white" />
                       </div>
                       <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-white rounded-full border-2 border-white flex items-center justify-center">
@@ -212,7 +212,7 @@ const TeachersManagementTab: React.FC = () => {
                   
                   {teacher.approved_at && (
                     <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <Clock className="w-4 h-4 text-green-500" />
+                      <Clock className="w-4 h-4 text-blue-500" />
                       <span className="font-medium">اعتمد:</span>
                       <span className="text-gray-800">{new Date(teacher.approved_at).toLocaleDateString('ar-SA')}</span>
                     </div>
@@ -242,7 +242,7 @@ const TeachersManagementTab: React.FC = () => {
                   <div className="flex items-center justify-between text-xs text-gray-500">
                     <span>معلم #{teacher.id}</span>
                     <span className="flex items-center gap-1">
-                      <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
+                      <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                       نشط
                     </span>
                   </div>

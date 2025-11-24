@@ -165,9 +165,9 @@ export default function ProfileEdit({ profile, onSave, onCancel }: ProfileEditPr
       </Card>
 
       {/* Professional Information */}
-      <Card className="border-2 border-green-100 shadow-lg">
-        <CardHeader className="bg-gradient-to-r from-green-50 to-emerald-50">
-          <CardTitle className="text-green-800 flex items-center gap-2">
+      <Card className="border-2 border-blue-100 shadow-lg">
+        <CardHeader className="bg-gradient-to-r from-blue-50 to-blue-50">
+          <CardTitle className="text-blue-800 flex items-center gap-2">
             <Award className="w-5 h-5" />
             المعلومات المهنية
           </CardTitle>

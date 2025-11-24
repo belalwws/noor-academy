@@ -13,7 +13,7 @@ export default function RootHeader() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-500 via-green-600 to-emerald-600 dark:from-emerald-700 dark:via-green-800 dark:to-emerald-800 p-8 text-white shadow-2xl shadow-emerald-500/20 dark:shadow-emerald-900/40"
+      className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-500 via-blue-600 to-blue-600 dark:from-blue-700 dark:via-blue-800 dark:to-blue-800 p-8 text-white shadow-2xl shadow-blue-500/20 dark:shadow-blue-900/40"
     >
       {/* Sparkles decorations */}
       <motion.div
@@ -28,7 +28,7 @@ export default function RootHeader() {
         }}
         className="absolute top-8 left-8"
       >
-        <Sparkles className="w-6 h-6 text-emerald-200 dark:text-emerald-300" />
+        <Sparkles className="w-6 h-6 text-blue-200 dark:text-blue-300" />
       </motion.div>
       <motion.div
         animate={{
@@ -42,7 +42,7 @@ export default function RootHeader() {
         }}
         className="absolute bottom-8 right-8"
       >
-        <Sparkles className="w-8 h-8 text-green-200 dark:text-green-300" />
+        <Sparkles className="w-8 h-8 text-blue-200 dark:text-blue-300" />
       </motion.div>
 
       <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-6">

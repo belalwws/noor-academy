@@ -167,7 +167,7 @@ export default function PendingStudents({ courseId, batchId, existingStudents = 
                   size="sm"
                   onClick={() => handleAddToBatch(student.student_id)}
                   disabled={adding !== null}
-                  className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shrink-0 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shrink-0 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {adding === student.student_id ? (
                     <RefreshCw className="w-3 h-3 animate-spin" />

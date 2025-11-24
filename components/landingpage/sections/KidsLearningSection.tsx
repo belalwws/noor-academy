@@ -13,25 +13,25 @@ const methods = [
     icon: BookMarked,
     title: 'تقسيم السور إلى مقاطع صغيرة',
     description: 'نقسم السور إلى أجزاء صغيرة يسهل على الطفل حفظها وتذكرها',
-    color: 'from-[#0A5734] to-[#4A8F5C]',
+    color: 'from-[#1e40af] to-[#2563eb]',
   },
   {
     icon: Image,
     title: 'ربط الآيات بالصور والمواقف',
     description: 'نستخدم الصور والقصص لربط الآيات بمواقف حياتية يسهل تذكرها',
-    color: 'from-[#4A8F5C] to-[#5BA86D]',
+    color: 'from-[#2563eb] to-[#3b82f6]',
   },
   {
     icon: Headphones,
     title: 'الاستماع والترديد لتثبيت الحفظ',
     description: 'جلسات استماع وترديد منتظمة لضمان تثبيت الحفظ بشكل صحيح',
-    color: 'from-[#0A5734] to-[#4A8F5C]',
+    color: 'from-[#1e40af] to-[#2563eb]',
   },
   {
     icon: BookOpen,
     title: 'البدء بالسور القصيرة لزيادة الدافعية',
     description: 'نبدأ بالسور القصيرة لبناء الثقة وزيادة الدافعية لدى الطفل',
-    color: 'from-[#4A8F5C] to-[#C5A15A]',
+    color: 'from-[#2563eb] to-[#C5A15A]',
   },
 ];
 
@@ -56,28 +56,28 @@ export const KidsLearningSection: React.FC = () => {
   };
 
   return (
-    <section id="kids-learning" className="relative py-4 sm:py-5 md:py-6 lg:py-6 bg-gradient-to-b from-white via-[#0A5734]/4 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 overflow-hidden" dir="rtl">
+    <section id="kids-learning" className="relative py-2 sm:py-4 md:py-5 lg:py-5 bg-gradient-to-b from-white via-[#1e40af]/4 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 overflow-hidden" dir="rtl">
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.025]">
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, #0A5734 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 2px 2px, #1e40af 1px, transparent 0)`,
           backgroundSize: '48px 48px'
         }} />
       </div>
 
       {/* Sophisticated Gradient Accents */}
-      <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-gradient-to-bl from-[#0A5734]/6 via-[#4A8F5C]/4 to-transparent rounded-full blur-[120px]" />
-      <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-gradient-to-tr from-[#C5A15A]/6 via-[#4A8F5C]/4 to-transparent rounded-full blur-[120px]" />
+      <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-gradient-to-bl from-[#1e40af]/6 via-[#2563eb]/4 to-transparent rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-gradient-to-tr from-[#C5A15A]/6 via-[#2563eb]/4 to-transparent rounded-full blur-[120px]" />
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-4 sm:gap-6 md:gap-8 lg:gap-16 items-center max-w-7xl mx-auto">
+      <div className="container mx-auto max-w-6xl px-3 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-12 gap-3 sm:gap-6 md:gap-8 lg:gap-16 items-center mx-auto">
           {/* Content - Takes 7 columns */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.3 }}
-            className="lg:col-span-7 space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6"
+            className="lg:col-span-7 space-y-2 sm:space-y-3 md:space-y-4 lg:space-y-4"
           >
             {/* Badge */}
             <motion.div
@@ -85,32 +85,32 @@ export const KidsLearningSection: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1, type: "spring" }}
-              className="inline-flex items-center gap-1.5 sm:gap-2.5 bg-gradient-to-r from-[#0A5734]/10 via-[#4A8F5C]/8 to-[#0A5734]/10 dark:from-[#0A5734]/20 dark:via-[#4A8F5C]/15 dark:to-[#0A5734]/20 px-3 sm:px-5 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full border border-[#0A5734]/20 dark:border-[#4A8F5C]/30 shadow-lg backdrop-blur-sm text-xs sm:text-sm"
+              className="inline-flex items-center gap-1 sm:gap-2.5 bg-gradient-to-r from-[#1e40af]/10 via-[#2563eb]/8 to-[#1e40af]/10 dark:from-[#1e40af]/20 dark:via-[#2563eb]/15 dark:to-[#1e40af]/20 px-2 sm:px-5 lg:px-6 py-1 sm:py-2 lg:py-3 rounded-full border border-[#1e40af]/20 dark:border-blue-400/30 shadow-lg backdrop-blur-sm text-[10px] sm:text-sm"
             >
-              <Sparkles className="text-[#0A5734] dark:text-[#4A8F5C]" size={14} style={{ width: '14px', height: '14px' }} />
-              <span className="font-bold text-[#0A5734] dark:text-[#4A8F5C] tracking-wide">تعليم الأطفال</span>
+              <Sparkles className="text-[#1e40af] dark:text-blue-400" size={12} style={{ width: '12px', height: '12px' }} />
+              <span className="font-bold text-[#1e40af] dark:text-blue-400 tracking-wide">تعليم الأطفال</span>
             </motion.div>
 
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.2] tracking-tight">
-              <span className="text-[#222222] dark:text-slate-50 block mb-2 sm:mb-3 md:mb-3 lg:mb-4">هل ترغبين أن يُقبل طفلك</span>
-              <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold block my-2 sm:my-3 md:my-3 lg:my-4">
+            <h2 className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-extrabold leading-[1.2] tracking-tight">
+              <span className="text-[#222222] dark:text-slate-50 block mb-1 sm:mb-2 md:mb-2 lg:mb-3">هل ترغبين أن يُقبل طفلك</span>
+              <span className="text-[#1e40af] dark:text-blue-400 font-extrabold block my-1 sm:my-2 md:my-2 lg:my-3">
                 على القرآن بحب؟
               </span>
             </h2>
             
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#555555] dark:text-slate-300 leading-relaxed font-light">
-              كثير من الأمهات يشتكين من صعوبة الحفظ لدى أطفالهن، لكن في <span className="font-bold text-[#0A5734] dark:text-[#4A8F5C]">أكاديمية نور</span> جعلنا الحفظ رحلة ممتعة مليئة بالتحفيز والبهجة 💚
+            <p className="hidden sm:block text-sm md:text-base text-[#555555] dark:text-slate-300 leading-relaxed font-light">
+              كثير من الأمهات يشتكين من صعوبة الحفظ لدى أطفالهن، لكن في <span className="font-bold text-[#1e40af] dark:text-blue-400">أكاديمية نور</span> جعلنا الحفظ رحلة ممتعة مليئة بالتحفيز والبهجة 💚
             </p>
 
             {/* Highlight Box - Enhanced */}
-            <div className="bg-gradient-to-r from-[#0A5734]/12 via-[#4A8F5C]/10 to-[#0A5734]/12 dark:from-[#0A5734]/20 dark:via-[#4A8F5C]/18 dark:to-[#0A5734]/20 rounded-2xl p-6 border-r-4 border-[#0A5734] dark:border-[#4A8F5C] shadow-xl">
-              <p className="text-lg md:text-xl font-bold text-[#0A5734] dark:text-[#4A8F5C] leading-relaxed">
+            <div className="bg-gradient-to-r from-[#1e40af]/12 via-[#2563eb]/10 to-[#1e40af]/12 dark:from-[#1e40af]/20 dark:via-[#2563eb]/18 dark:to-[#1e40af]/20 rounded-lg p-3 border-r-4 border-[#1e40af] dark:border-blue-400 shadow-xl">
+              <p className="text-xs md:text-base font-bold text-[#1e40af] dark:text-blue-400 leading-relaxed">
                 نستخدم أساليب تربوية حديثة تُحبّب الطفل في الحفظ:
               </p>
             </div>
 
             {/* Methods Grid - Enhanced */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-4">
               {methods.map((method, index) => {
                 const Icon = method.icon;
                 return (
@@ -120,20 +120,20 @@ export const KidsLearningSection: React.FC = () => {
                     whileInView={{ opacity: 1, x: 0, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
-                    className="group relative bg-white dark:bg-slate-900 rounded-xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#0A5734]/10 dark:border-slate-700/50 hover:border-[#0A5734]/30 dark:hover:border-[#4A8F5C]/30"
+                    className="group relative bg-white dark:bg-slate-900 rounded-lg p-3 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#1e40af]/10 dark:border-slate-700/50 hover:border-[#1e40af]/30 dark:hover:border-blue-400/30"
                   >
-                    <div className="flex items-start gap-4">
+                    <div className="flex items-start gap-2.5">
                       <motion.div
                         whileHover={{ scale: 1.15, rotate: 8 }}
-                        className={`w-14 h-14 rounded-xl bg-gradient-to-br ${method.color} flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl transition-all duration-300`}
+                        className={`w-10 h-10 rounded-md bg-gradient-to-br ${method.color} flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl transition-all duration-300`}
                       >
-                        <Icon className="text-white" size={28} />
+                        <Icon className="text-white" size={18} />
                       </motion.div>
-                      <div className="flex-1 pt-1">
-                        <h3 className="text-base lg:text-lg font-extrabold text-[#222222] dark:text-slate-50 mb-1.5 leading-tight">
+                      <div className="flex-1 pt-0.5">
+                        <h3 className="text-xs lg:text-base font-extrabold text-[#222222] dark:text-slate-50 mb-0.5 leading-tight">
                           {method.title}
                         </h3>
-                        <p className="text-sm text-[#555555] dark:text-slate-300 leading-relaxed">
+                        <p className="text-[10px] text-[#555555] dark:text-slate-300 leading-relaxed line-clamp-2 sm:line-clamp-none">
                           {method.description}
                         </p>
                       </div>
@@ -144,8 +144,8 @@ export const KidsLearningSection: React.FC = () => {
             </div>
 
             {/* Goal Box - Enhanced */}
-            <div className="bg-gradient-to-r from-[#C5A15A]/12 via-[#D4B16B]/10 to-[#C5A15A]/12 dark:from-[#C5A15A]/20 dark:via-[#D4B16B]/18 dark:to-[#C5A15A]/20 rounded-2xl p-6 border-r-4 border-[#C5A15A] dark:border-[#C5A15A] shadow-xl">
-              <p className="text-xl md:text-2xl font-extrabold text-[#0A5734] dark:text-[#4A8F5C] leading-relaxed">
+            <div className="hidden sm:block bg-gradient-to-r from-[#C5A15A]/12 via-[#D4B16B]/10 to-[#C5A15A]/12 dark:from-[#C5A15A]/20 dark:via-[#D4B16B]/18 dark:to-[#C5A15A]/20 rounded-lg p-3 border-r-4 border-[#C5A15A] dark:border-[#C5A15A] shadow-xl">
+              <p className="text-sm md:text-lg font-extrabold text-[#1e40af] dark:text-blue-400 leading-relaxed">
                 هدفنا: زرع حب القرآن قبل حفظه.
               </p>
             </div>
@@ -153,7 +153,7 @@ export const KidsLearningSection: React.FC = () => {
             {/* CTA Button - Enhanced */}
             <Button
               onClick={handleRegister}
-              className="group relative bg-gradient-to-r from-[#0A5734] via-[#4A8F5C] to-[#0A5734] hover:from-[#073D24] hover:via-[#3A7148] hover:to-[#073D24] text-white px-10 py-6 text-base lg:text-lg font-bold shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden rounded-xl"
+              className="group relative bg-gradient-to-r from-[#1e40af] via-[#2563eb] to-[#1e40af] hover:from-[#1e3a8a] hover:via-[#1e40af] hover:to-[#1e3a8a] text-white px-5 py-3 text-xs lg:text-base font-bold shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden rounded-xl"
               size="lg"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
@@ -173,15 +173,15 @@ export const KidsLearningSection: React.FC = () => {
             <div className="relative">
               {/* Multi-layer Glow Effects */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="absolute w-full h-full max-w-lg bg-gradient-to-br from-[#0A5734]/18 to-[#4A8F5C]/12 rounded-full blur-3xl" />
-                <div className="absolute w-[90%] h-[90%] bg-gradient-to-br from-[#C5A15A]/10 to-[#4A8F5C]/8 rounded-full blur-2xl" />
+                <div className="absolute w-full h-full max-w-lg bg-gradient-to-br from-[#1e40af]/18 to-[#2563eb]/12 rounded-full blur-3xl" />
+                <div className="absolute w-[90%] h-[90%] bg-gradient-to-br from-[#C5A15A]/10 to-[#2563eb]/8 rounded-full blur-2xl" />
               </div>
               
               {/* Card - Enhanced */}
-              <div className="relative bg-gradient-to-br from-white via-white to-[#0A5734]/5 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 rounded-3xl p-10 shadow-2xl border-2 border-[#0A5734]/10 dark:border-[#4A8F5C]/20 backdrop-blur-xl">
+              <div className="relative bg-gradient-to-br from-white via-white to-[#1e40af]/5 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 rounded-3xl p-10 shadow-2xl border-2 border-[#1e40af]/10 dark:border-blue-400/20 backdrop-blur-xl">
                 {/* Decorative Corners */}
-                <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-bl from-[#0A5734]/10 via-[#4A8F5C]/6 to-transparent rounded-tl-3xl rounded-br-full" />
-                <div className="absolute bottom-0 left-0 w-28 h-28 bg-gradient-to-tr from-[#C5A15A]/10 via-[#4A8F5C]/6 to-transparent rounded-bl-3xl rounded-tl-full" />
+                <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-bl from-[#1e40af]/10 via-[#2563eb]/6 to-transparent rounded-tl-3xl rounded-br-full" />
+                <div className="absolute bottom-0 left-0 w-28 h-28 bg-gradient-to-tr from-[#C5A15A]/10 via-[#2563eb]/6 to-transparent rounded-bl-3xl rounded-tl-full" />
                 
                 {/* Content */}
                 <div className="relative z-10 text-center space-y-6">
@@ -195,22 +195,27 @@ export const KidsLearningSection: React.FC = () => {
                       repeat: Infinity, 
                       ease: "easeInOut" 
                     }}
-                    className="w-full h-80 mx-auto flex items-center justify-center"
+                    className="w-full h-80 mx-auto flex items-center justify-center relative"
                   >
+                    {/* Glow Background for Animation - Blue theme */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="absolute w-full h-full max-w-[300px] bg-gradient-to-br from-[#1e40af]/35 via-[#2563eb]/30 to-[#1e40af]/25 rounded-full blur-3xl animate-pulse" />
+                      <div className="absolute w-[85%] h-[85%] bg-gradient-to-br from-[#2563eb]/25 via-[#3b82f6]/20 to-[#2563eb]/15 rounded-full blur-2xl" />
+                    </div>
                     {ramadanAnimation ? (
                       <Lottie
                         animationData={ramadanAnimation}
                         loop={true}
-                        className="w-full h-full"
+                        className="w-full h-full relative z-10"
                       />
                     ) : (
-                      <div className="w-40 h-40 mx-auto bg-gradient-to-br from-[#0A5734] to-[#4A8F5C] rounded-2xl flex items-center justify-center shadow-2xl">
+                      <div className="w-40 h-40 mx-auto bg-gradient-to-br from-[#1e40af] to-[#2563eb] rounded-2xl flex items-center justify-center shadow-2xl relative z-10">
                         <div className="text-8xl">👶📖</div>
                       </div>
                     )}
                   </motion.div>
                   
-                  <div className="space-y-2 pt-4 border-t-2 border-[#0A5734]/10 dark:border-[#4A8F5C]/20">
+                  <div className="space-y-2 pt-4 border-t-2 border-[#1e40af]/10 dark:border-blue-400/20">
                     <h3 className="text-2xl font-extrabold text-[#222222] dark:text-slate-50">تعليم ممتع</h3>
                     <p className="text-lg text-[#555555] dark:text-slate-300 font-semibold">لأطفالك</p>
                   </div>

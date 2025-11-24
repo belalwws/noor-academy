@@ -56,7 +56,7 @@ const ProfileImage: React.FC<ProfileImageProps> = ({
   return (
     <div className={`${sizeClasses[size]} rounded-full overflow-hidden border-4 border-white shadow-lg relative ${className}`}>
       {isLoading ? (
-        <div className="w-full h-full bg-gradient-to-r from-green-600 to-green-700 flex items-center justify-center">
+        <div className="w-full h-full bg-gradient-to-r from-blue-600 to-blue-700 flex items-center justify-center">
           <Spinner size={size === 'lg' ? 'lg' : 'md'} tone="contrast" className={iconSizes[size]} />
         </div>
       ) : shouldShowImage ? (
@@ -69,7 +69,7 @@ const ProfileImage: React.FC<ProfileImageProps> = ({
       ) : null}
       
       {/* Fallback Avatar */}
-      <div className={`absolute inset-0 bg-gradient-to-r from-green-600 to-green-700 flex items-center justify-center ${shouldShowImage ? 'hidden' : ''}`}>
+      <div className={`absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700 flex items-center justify-center ${shouldShowImage ? 'hidden' : ''}`}>
         {fallbackIcon || <User className={`${iconSizes[size]} text-white`} />}
       </div>
     </div>

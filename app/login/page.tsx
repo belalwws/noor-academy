@@ -350,7 +350,7 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center p-4 relative overflow-hidden pt-24">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-[#0A5734]/10 to-[#4A8F5C]/10 rounded-full blur-3xl opacity-30 dark:opacity-20"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-[#1e40af]/10 to-[#2563eb]/10 rounded-full blur-3xl opacity-30 dark:opacity-20"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#C5A15A]/10 rounded-full blur-3xl opacity-30 dark:opacity-20"></div>
       </div>
 
@@ -363,7 +363,7 @@ export default function LoginPage() {
         {/* Logo & Header */}
         <motion.div variants={itemVariants} className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-white dark:bg-slate-800 shadow-2xl mb-4 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#0A5734]/10 to-[#4A8F5C]/10 rounded-2xl blur-xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#1e40af]/10 to-[#2563eb]/10 rounded-2xl blur-xl"></div>
             <Image
               src="/logo.png"
               alt="شعار أكاديمية نور"
@@ -373,17 +373,17 @@ export default function LoginPage() {
               priority
             />
           </div>
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-[#0A5734] to-[#4A8F5C] dark:from-[#4A8F5C] dark:to-[#5BA86D] bg-clip-text text-transparent mb-2">أكاديمية نور</h1>
-          <p className="text-lg text-[#0A5734]/70 dark:text-[#4A8F5C]/70 font-medium">بيئة قرآنية تربوية متكاملة</p>
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-[#1e40af] to-[#2563eb] dark:from-blue-400 dark:to-[#3b82f6] bg-clip-text text-transparent mb-2">أكاديمية نور</h1>
+          <p className="text-lg text-[#1e40af]/70 dark:text-blue-400/70 font-medium">بيئة قرآنية تربوية متكاملة</p>
         </motion.div>
 
         {/* Success Message */}
         {success && (
           <motion.div
             variants={itemVariants}
-            className="mb-6 p-4 rounded-lg bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800"
+            className="mb-6 p-4 rounded-lg bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800"
           >
-            <p className="text-green-800 dark:text-green-200 text-sm whitespace-pre-line">{success}</p>
+            <p className="text-blue-800 dark:text-blue-200 text-sm whitespace-pre-line">{success}</p>
           </motion.div>
         )}
 
@@ -417,7 +417,7 @@ export default function LoginPage() {
                   className={`w-full pr-10 pl-4 py-3 rounded-lg border-2 transition-all bg-slate-50 dark:bg-slate-800/50 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none ${
                     validationErrors['email']
                       ? 'border-red-400 dark:border-red-500 focus:ring-2 focus:ring-red-200 dark:focus:ring-red-900'
-                      : 'border-slate-200 dark:border-slate-700 focus:border-[#0A5734] focus:ring-2 focus:ring-[#0A5734]/20 dark:focus:ring-[#4A8F5C]/20'
+                      : 'border-slate-200 dark:border-slate-700 focus:border-[#1e40af] focus:ring-2 focus:ring-[#1e40af]/20 dark:focus:ring-[#2563eb]/20'
                   }`}
                 />
               </div>
@@ -440,7 +440,7 @@ export default function LoginPage() {
                   className={`w-full pr-10 pl-12 py-3 rounded-lg border-2 transition-all bg-slate-50 dark:bg-slate-800/50 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none ${
                     validationErrors['password']
                       ? 'border-red-400 dark:border-red-500 focus:ring-2 focus:ring-red-200 dark:focus:ring-red-900'
-                      : 'border-slate-200 dark:border-slate-700 focus:border-[#0A5734] focus:ring-2 focus:ring-[#0A5734]/20 dark:focus:ring-[#4A8F5C]/20'
+                      : 'border-slate-200 dark:border-slate-700 focus:border-[#1e40af] focus:ring-2 focus:ring-[#1e40af]/20 dark:focus:ring-[#2563eb]/20'
                   }`}
                 />
                 <button
@@ -460,7 +460,7 @@ export default function LoginPage() {
             <motion.div variants={itemVariants} className="flex justify-end">
               <Link
                 href="/forgot-password"
-                className="text-sm text-[#0A5734] hover:text-[#073D24] dark:text-[#4A8F5C] transition-colors font-medium"
+                className="text-sm text-[#1e40af] hover:text-[#1e3a8a] dark:text-blue-400 transition-colors font-medium"
               >
                 نسيت كلمة المرور؟
               </Link>
@@ -476,7 +476,7 @@ export default function LoginPage() {
               className={`w-full py-3 px-4 rounded-lg font-semibold text-white transition-all duration-200 flex items-center justify-center gap-2 ${
                 isSubmitting
                   ? 'bg-slate-400 dark:bg-slate-600 cursor-not-allowed'
-                  : 'bg-gradient-to-r from-[#0A5734] to-[#4A8F5C] hover:from-[#073D24] hover:to-[#3A7148] hover:shadow-lg hover:shadow-[#0A5734]/30'
+                  : 'bg-gradient-to-r from-[#1e40af] to-[#2563eb] hover:from-[#1e3a8a] hover:to-[#1e40af] hover:shadow-lg hover:shadow-[#1e40af]/30'
               }`}
             >
               {isSubmitting ? (
@@ -499,7 +499,7 @@ export default function LoginPage() {
               ليس لديك حساب؟
               <Link
                 href="/register"
-                className="text-[#0A5734] dark:text-[#4A8F5C] hover:text-[#073D24] dark:hover:text-[#3A7148] font-semibold transition-colors mr-1"
+                className="text-[#1e40af] dark:text-blue-400 hover:text-[#1e3a8a] dark:hover:text-blue-400 font-semibold transition-colors mr-1"
               >
                 إنشاء حساب جديد
               </Link>

@@ -147,15 +147,15 @@ export default function TeamsStyleTeacherCoursesView({
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-200">
+        <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200">
           <CardContent className="p-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center">
                 <CheckCircle className="w-5 h-5 text-white" />
               </div>
               <div>
-                <p className="text-2xl font-bold text-green-700">{stats.approvedCourses}</p>
-                <p className="text-sm text-green-600">دورات معتمدة</p>
+                <p className="text-2xl font-bold text-blue-700">{stats.approvedCourses}</p>
+                <p className="text-sm text-blue-600">دورات معتمدة</p>
               </div>
             </div>
           </CardContent>

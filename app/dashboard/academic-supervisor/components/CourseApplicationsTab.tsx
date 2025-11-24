@@ -133,7 +133,7 @@ const CourseApplicationsTab: React.FC = () => {
       },
       ready_for_teacher: {
         label: 'جاهز للمعلم',
-        className: 'bg-gradient-to-r from-green-500 to-emerald-600 text-white border-green-400',
+        className: 'bg-gradient-to-r from-blue-500 to-blue-600 text-white border-blue-400',
         icon: CheckCircle
       },
       rejected: {
@@ -392,8 +392,8 @@ const CourseApplicationsTab: React.FC = () => {
                           )}
 
                           <div className="flex items-center gap-3 p-3 bg-white/60 dark:bg-slate-800/60 rounded-xl border border-amber-100 dark:border-amber-900/30">
-                            <div className="p-2 bg-gradient-to-br from-green-100 to-green-200 dark:from-green-900/40 dark:to-green-800/40 rounded-lg">
-                              <Calendar className="w-5 h-5 text-green-600 dark:text-green-400" />
+                            <div className="p-2 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900/40 dark:to-blue-800/40 rounded-lg">
+                              <Calendar className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                             </div>
                             <div>
                               <p className="text-xs text-gray-500 dark:text-gray-400 mb-0.5">تاريخ التقديم</p>
@@ -458,7 +458,7 @@ const CourseApplicationsTab: React.FC = () => {
                           <Button
                             size="sm"
                             onClick={() => handleOpenReviewModal(application, 'approve')}
-                              className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold"
+                              className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold"
                               style={{ transform: 'none' }}
                           >
                             <CheckCircle className="w-4 h-4 ml-2" />

@@ -96,23 +96,23 @@ const SupervisorProfilePage: React.FC = () => {
 
   return (
     <ProtectedRoute allowedRoles={['supervisor', 'admin']}>
-      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
         <div className="container mx-auto px-4 py-8">
           {/* Header Card */}
-          <Card className="border-0 shadow-2xl bg-gradient-to-br from-white via-green-50/40 to-blue-50/30 overflow-hidden mb-8">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-green-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
+          <Card className="border-0 shadow-2xl bg-gradient-to-br from-white via-blue-50/40 to-blue-50/30 overflow-hidden mb-8">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
             <CardHeader className="flex flex-col md:flex-row items-center gap-6 p-8 relative z-10">
               <div className="relative">
-                <Avatar className="w-32 h-32 border-4 border-white shadow-2xl ring-4 ring-green-100">
+                <Avatar className="w-32 h-32 border-4 border-white shadow-2xl ring-4 ring-blue-100">
                   <AvatarImage src={imageUrls?.profile_image_url || user.profile_image_url || "/default-avatar.png"} alt={user.full_name} />
-                  <AvatarFallback className="text-4xl bg-gradient-to-br from-green-500 to-blue-500 text-white">{user.full_name?.charAt(0) || 'S'}</AvatarFallback>
+                  <AvatarFallback className="text-4xl bg-gradient-to-br from-blue-500 to-blue-500 text-white">{user.full_name?.charAt(0) || 'S'}</AvatarFallback>
                 </Avatar>
-                <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg">
+                <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-500 rounded-full flex items-center justify-center shadow-lg">
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
               </div>
               <div className="text-center md:text-right flex-1">
-                <CardTitle className="text-4xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent mb-2">
+                <CardTitle className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent mb-2">
                   {user.full_name}
                 </CardTitle>
                 <p className="text-lg text-gray-600 font-medium mb-2">{profile.supervisor_type_display || 'مشرف'}</p>
@@ -124,7 +124,7 @@ const SupervisorProfilePage: React.FC = () => {
                 )}
                 <div className="flex items-center justify-center md:justify-start gap-2 mt-4 flex-wrap">
                   {user.is_active ? (
-                    <Badge className="bg-green-500 text-white hover:bg-green-600">✓ نشط</Badge>
+                    <Badge className="bg-blue-500 text-white hover:bg-blue-600">✓ نشط</Badge>
                   ) : (
                     <Badge variant="destructive">غير نشط</Badge>
                   )}
@@ -144,11 +144,11 @@ const SupervisorProfilePage: React.FC = () => {
           {/* Main Content */}
           <div className="space-y-6">
             {/* Essential Info */}
-            <Card className="border-0 shadow-xl bg-gradient-to-br from-white via-green-50/30 to-blue-50/20 overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
+            <Card className="border-0 shadow-xl bg-gradient-to-br from-white via-blue-50/30 to-blue-50/20 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
               <CardContent className="p-6 relative z-10">
                 <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
-                  <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-blue-500 rounded-lg flex items-center justify-center">
+                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-500 rounded-lg flex items-center justify-center">
                     <User className="w-4 h-4 text-white" />
                   </div>
                   المعلومات الأساسية
@@ -165,13 +165,13 @@ const SupervisorProfilePage: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-100 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
-                    <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-blue-50 to-blue-50 rounded-xl border border-blue-100 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Mail className="w-5 h-5 text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs text-green-600 font-medium mb-1">البريد الإلكتروني</p>
-                      <p className="font-bold text-green-800 text-sm break-words">{user.email}</p>
+                      <p className="text-xs text-blue-600 font-medium mb-1">البريد الإلكتروني</p>
+                      <p className="font-bold text-blue-800 text-sm break-words">{user.email}</p>
                     </div>
                   </div>
 
@@ -287,14 +287,14 @@ const SupervisorProfilePage: React.FC = () => {
                         href={(profile as any).graduation_certificate_download_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200 hover:border-green-400 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 group"
+                        className="flex items-center gap-3 p-4 bg-gradient-to-r from-blue-50 to-blue-50 rounded-xl border border-blue-200 hover:border-blue-400 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 group"
                       >
-                        <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                        <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                           <Award className="w-6 h-6 text-white" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <p className="text-sm font-bold text-green-800 mb-1">شهادة التخرج</p>
-                          <p className="text-xs text-green-600 flex items-center gap-1">
+                          <p className="text-sm font-bold text-blue-800 mb-1">شهادة التخرج</p>
+                          <p className="text-xs text-blue-600 flex items-center gap-1">
                             <Download className="w-3 h-3" />
                             تحميل المستند
                           </p>
@@ -348,11 +348,11 @@ const SupervisorProfilePage: React.FC = () => {
 
             {/* Islamic Studies Info */}
             {((profile as any).has_ijazah || (profile as any).islamic_specialization) && (
-              <Card className="border-0 shadow-xl bg-gradient-to-br from-white via-emerald-50/30 to-teal-50/20 overflow-hidden">
-                <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-emerald-400/10 to-teal-400/10 rounded-full blur-3xl"></div>
+              <Card className="border-0 shadow-xl bg-gradient-to-br from-white via-blue-50/30 to-teal-50/20 overflow-hidden">
+                <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-blue-400/10 to-teal-400/10 rounded-full blur-3xl"></div>
                 <CardContent className="p-6 relative z-10">
                   <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
-                    <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center">
+                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-teal-500 rounded-lg flex items-center justify-center">
                       <BookOpen className="w-4 h-4 text-white" />
                     </div>
                     المعلومات الإسلامية
@@ -360,13 +360,13 @@ const SupervisorProfilePage: React.FC = () => {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {(profile as any).has_ijazah && (profile as any).ijazah_source && (
-                      <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl border border-emerald-100">
-                        <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-blue-50 to-teal-50 rounded-xl border border-blue-100">
+                        <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
                           <Award className="w-5 h-5 text-white" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <p className="text-xs text-emerald-600 font-medium mb-1">جهة الإجازة</p>
-                          <p className="font-bold text-emerald-800 break-words">{(profile as any).ijazah_source}</p>
+                          <p className="text-xs text-blue-600 font-medium mb-1">جهة الإجازة</p>
+                          <p className="font-bold text-blue-800 break-words">{(profile as any).ijazah_source}</p>
                         </div>
                       </div>
                     )}

@@ -209,9 +209,9 @@ export const InviteAcademicSupervisorDialog: React.FC<InviteAcademicSupervisorDi
           )}
 
           {success && (
-            <Alert className="border-green-200 bg-green-50">
-              <CheckCircle className="h-4 w-4 text-green-600" />
-              <AlertDescription className="text-green-800">
+            <Alert className="border-blue-200 bg-blue-50">
+              <CheckCircle className="h-4 w-4 text-blue-600" />
+              <AlertDescription className="text-blue-800">
                 {success}
               </AlertDescription>
             </Alert>

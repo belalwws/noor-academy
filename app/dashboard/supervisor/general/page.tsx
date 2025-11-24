@@ -1146,7 +1146,7 @@ const GeneralSupervisorDashboard: React.FC = () => {
                       لوحة تحكم المشرف العام
                     </h1>
                     <p className="text-base md:text-lg text-gray-600 dark:text-slate-400 font-medium flex items-center gap-2">
-                      <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                      <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
                       إدارة شاملة للمنصة التعليمية
                     </p>
                   </motion.div>
@@ -1466,7 +1466,7 @@ const GeneralSupervisorDashboard: React.FC = () => {
                     </TabsTrigger>
                     <TabsTrigger 
                       value="interactive-games" 
-                      className="flex-1 h-full data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500 data-[state=active]:via-emerald-600 data-[state=active]:to-green-600 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm px-4 py-3 font-semibold data-[state=inactive]:text-gray-600 dark:data-[state=inactive]:text-gray-400 data-[state=inactive]:bg-transparent data-[state=inactive]:hover:bg-green-50/60 dark:data-[state=inactive]:hover:bg-green-950/30 data-[state=inactive]:hover:text-green-700 dark:data-[state=inactive]:hover:text-green-400"
+                      className="flex-1 h-full data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-500 data-[state=active]:via-blue-600 data-[state=active]:to-blue-600 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm px-4 py-3 font-semibold data-[state=inactive]:text-gray-600 dark:data-[state=inactive]:text-gray-400 data-[state=inactive]:bg-transparent data-[state=inactive]:hover:bg-blue-50/60 dark:data-[state=inactive]:hover:bg-blue-950/30 data-[state=inactive]:hover:text-blue-700 dark:data-[state=inactive]:hover:text-blue-400"
                     >
                       <span className="hidden sm:inline">الألعاب التفاعلية</span>
                       <Gamepad2 className="w-4 h-4 shrink-0" />
@@ -1566,31 +1566,31 @@ const GeneralSupervisorDashboard: React.FC = () => {
 
       {/* Coming Soon Modal */}
       <Dialog open={showComingSoonModal} onOpenChange={setShowComingSoonModal}>
-        <DialogContent className="max-w-md bg-white rounded-3xl shadow-2xl border-2 border-green-200">
+        <DialogContent className="max-w-md bg-white rounded-3xl shadow-2xl border-2 border-blue-200">
           <DialogHeader className="text-center pb-4">
-            <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-emerald-100 rounded-full flex items-center justify-center shadow-lg mx-auto mb-4">
-              <Video className="w-10 h-10 text-green-600" />
+            <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-100 rounded-full flex items-center justify-center shadow-lg mx-auto mb-4">
+              <Video className="w-10 h-10 text-blue-600" />
             </div>
-              <DialogTitle className="text-3xl font-bold text-green-800 mb-2">🚀 قريباً إن شاء الله</DialogTitle>
+              <DialogTitle className="text-3xl font-bold text-blue-800 mb-2">🚀 قريباً إن شاء الله</DialogTitle>
               <DialogDescription className="text-gray-600 text-lg">🚀 سيتم إضافة هذه الميزة قريباً إن شاء الله</DialogDescription>
           </DialogHeader>
           
           <div className="space-y-4">
-            <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl p-6">
-              <div className="flex items-center justify-center gap-3 text-green-700 mb-2">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                  <span className="text-green-600 font-bold">📹</span>
+            <div className="bg-gradient-to-r from-blue-50 to-blue-50 border-2 border-blue-200 rounded-2xl p-6">
+              <div className="flex items-center justify-center gap-3 text-blue-700 mb-2">
+                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                  <span className="text-blue-600 font-bold">📹</span>
                 </div>
                 <span className="font-semibold text-lg">اجتماعات المشرفين</span>
               </div>
-                <p className="text-green-600 text-center text-sm">ميزة الاجتماعات مع المشرفين الأكاديميين قيد التطوير</p>
+                <p className="text-blue-600 text-center text-sm">ميزة الاجتماعات مع المشرفين الأكاديميين قيد التطوير</p>
             </div>
           </div>
 
           <div className="flex gap-4 justify-center pt-4">
             <Button
               onClick={() => setShowComingSoonModal(false)}
-              className="px-8 py-3 text-lg font-semibold bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+              className="px-8 py-3 text-lg font-semibold bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <CheckCircle className="w-5 h-5 ml-2" />
               فهمت
@@ -1922,7 +1922,7 @@ const GeneralSupervisorDashboard: React.FC = () => {
         <Dialog open={showDeleteModal} onOpenChange={handleCloseModals}>
           <DialogContent className="sm:max-w-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xl">
             <DialogHeader>
-              <DialogTitle className={`flex items-center gap-2 ${selectedCourse.is_hidden ? 'text-green-600 dark:text-green-400' : 'text-amber-600 dark:text-amber-400'}`}>
+              <DialogTitle className={`flex items-center gap-2 ${selectedCourse.is_hidden ? 'text-blue-600 dark:text-blue-400' : 'text-amber-600 dark:text-amber-400'}`}>
                 <Eye className="w-5 h-5" />
                 {selectedCourse.is_hidden ? 'إظهار الدورة' : 'إخفاء الدورة'}
               </DialogTitle>
@@ -1935,11 +1935,11 @@ const GeneralSupervisorDashboard: React.FC = () => {
 
             <div className="space-y-4">
               <Alert className={selectedCourse.is_hidden 
-                ? "border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20"
+                ? "border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/20"
                 : "border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-900/20"}>
                 <Eye className="h-4 w-4 text-amber-600 dark:text-amber-400" />
                 <AlertDescription className={selectedCourse.is_hidden 
-                  ? "text-green-800 dark:text-green-300"
+                  ? "text-blue-800 dark:text-blue-300"
                   : "text-amber-800 dark:text-amber-300"}>
                   <strong>ملاحظة:</strong> {selectedCourse.is_hidden 
                     ? 'الدورة مخفية حالياً. سيتم إظهارها للطلاب بعد التأكيد.'
@@ -1965,7 +1965,7 @@ const GeneralSupervisorDashboard: React.FC = () => {
                   disabled={isDeleting}
                   variant={selectedCourse.is_hidden ? "default" : "destructive"}
                   className={`flex-1 ${selectedCourse.is_hidden 
-                    ? 'bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800 text-white'
+                    ? 'bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800 text-white'
                     : 'bg-amber-600 hover:bg-amber-700 dark:bg-amber-700 dark:hover:bg-amber-800 text-white'}`}
                 >
                   {isDeleting ? (

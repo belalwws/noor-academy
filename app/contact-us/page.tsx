@@ -87,7 +87,7 @@ export default function ContactUsPage() {
             <Card className="shadow-lg border-2 border-gray-200 dark:border-slate-700">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-2xl">
-                  <MessageSquare className="w-6 h-6 text-[#0A5734] dark:text-[#4A8F5C]" />
+                  <MessageSquare className="w-6 h-6 text-[#1e40af] dark:text-blue-400" />
                   أرسل لنا رسالة
                 </CardTitle>
               </CardHeader>
@@ -159,7 +159,7 @@ export default function ContactUsPage() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-[#0A5734] to-[#4A8F5C] hover:from-[#073D24] hover:to-[#3A7148] text-white"
+                    className="w-full bg-gradient-to-r from-[#1e40af] to-[#2563eb] hover:from-[#1e3a8a] hover:to-[#1e40af] text-white"
                     size="lg"
                   >
                     {isSubmitting ? (
@@ -190,14 +190,14 @@ export default function ContactUsPage() {
               <CardContent className="space-y-6">
                 {/* Email */}
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-[#0A5734]/10 dark:bg-[#0A5734]/30 rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-[#0A5734] dark:text-[#4A8F5C]" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-[#1e40af]/10 dark:bg-blue-500/30 rounded-lg flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-[#1e40af] dark:text-blue-400" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white mb-1">البريد الإلكتروني</h3>
                     <a
                       href="mailto:info@nour.academy"
-                      className="text-[#0A5734] dark:text-[#4A8F5C] hover:underline"
+                      className="text-[#1e40af] dark:text-blue-400 hover:underline"
                     >
                       info@nour.academy
                     </a>
@@ -206,8 +206,8 @@ export default function ContactUsPage() {
 
                 {/* Working Hours */}
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-[#4A8F5C]/10 dark:bg-[#4A8F5C]/30 rounded-lg flex items-center justify-center">
-                    <Clock className="w-6 h-6 text-[#4A8F5C] dark:text-[#5BA86D]" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-[#2563eb]/10 dark:bg-blue-500/30 rounded-lg flex items-center justify-center">
+                    <Clock className="w-6 h-6 text-[#2563eb] dark:text-blue-400" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white mb-1">ساعات العمل</h3>
@@ -219,7 +219,7 @@ export default function ContactUsPage() {
                 </div>
 
                 {/* Response Time */}
-                <div className="bg-gradient-to-r from-[#0A5734]/5 to-[#4A8F5C]/5 dark:from-[#0A5734]/20 dark:to-[#4A8F5C]/20 rounded-lg p-4 border border-[#0A5734]/20 dark:border-[#4A8F5C]/30">
+                <div className="bg-gradient-to-r from-[#1e40af]/5 to-[#2563eb]/5 dark:from-blue-500/20 dark:to-blue-400/20 rounded-lg p-4 border border-[#1e40af]/20 dark:border-blue-400/30">
                   <p className="text-sm text-gray-700 dark:text-gray-300">
                     <strong>ملاحظة:</strong> نحن نسعى للرد على جميع الرسائل خلال 24-48 ساعة خلال أيام العمل.
                   </p>
@@ -233,19 +233,19 @@ export default function ContactUsPage() {
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-3">كيف يمكننا مساعدتك؟</h3>
                 <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                   <li className="flex items-start gap-2">
-                    <span className="text-[#0A5734] dark:text-[#4A8F5C] mt-1">•</span>
+                    <span className="text-[#1e40af] dark:text-blue-400 mt-1">•</span>
                     <span>استفسارات حول الدورات والبرامج التعليمية</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#0A5734] dark:text-[#4A8F5C] mt-1">•</span>
+                    <span className="text-[#1e40af] dark:text-blue-400 mt-1">•</span>
                     <span>مشاكل تقنية أو دعم فني</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#0A5734] dark:text-[#4A8F5C] mt-1">•</span>
+                    <span className="text-[#1e40af] dark:text-blue-400 mt-1">•</span>
                     <span>اقتراحات وتحسينات للمنصة</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#0A5734] dark:text-[#4A8F5C] mt-1">•</span>
+                    <span className="text-[#1e40af] dark:text-blue-400 mt-1">•</span>
                     <span>شراكات تعليمية</span>
                   </li>
                 </ul>

@@ -59,9 +59,9 @@ export const WhyRushdSection: React.FC = () => {
       title: 'مزايا إسلامية متكاملة',
       description: 'أدوات إسلامية شاملة: أذكار الصباح والمساء، مسبحة رقمية، قارئ القرآن الكريم، مواقيت الصلاة الدقيقة، والحديث اليومي',
       icon: Award,
-      color: 'from-green-500 to-emerald-500',
-      bgColor: 'from-green-50 to-emerald-50',
-      borderColor: 'border-green-100',
+      color: 'from-blue-500 to-blue-500',
+      bgColor: 'from-blue-50 to-blue-50',
+      borderColor: 'border-blue-100',
     },
   ];
 
@@ -103,7 +103,7 @@ export const WhyRushdSection: React.FC = () => {
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary dark:text-slate-50 mb-6 leading-tight">
-            <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">لماذا أكاديمية رُشد؟</span>
+            <span className="text-[#1e40af] dark:text-blue-400 font-extrabold">لماذا أكاديمية رُشد؟</span>
           </h2>
           <p className="text-lg md:text-xl text-text-secondary dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
             نقدم لك تجربة تعليمية متكاملة تجمع بين الجودة والابتكار في بيئة تفاعلية وآمنة. 

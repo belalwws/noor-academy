@@ -221,14 +221,14 @@ export default function CourseEditRequestModal({
           </div>
           
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-0 left-0 w-24 h-24 bg-green-300/20 rounded-full blur-xl"></div>
+          <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-300/20 rounded-full blur-xl"></div>
           
           <div className="p-6 relative z-10">
             <DialogHeader className="text-center">
               <DialogTitle className="text-4xl font-bold text-white mb-4 drop-shadow-lg">
                 ✏️ طلب تعديل الدورة
               </DialogTitle>
-              <DialogDescription className="text-green-100 text-lg mb-6 max-w-2xl mx-auto">
+              <DialogDescription className="text-blue-100 text-lg mb-6 max-w-2xl mx-auto">
                 تعديل الدورة: <span className="font-semibold text-white">{course.title}</span>
               </DialogDescription>
             </DialogHeader>
@@ -279,11 +279,11 @@ export default function CourseEditRequestModal({
             </Card>
 
             {/* Course Data - Same as API */}
-            <Card className="shadow-xl border-green-200 bg-white/90 backdrop-blur-xl rounded-2xl overflow-hidden border-2">
-              <CardHeader className="bg-gradient-to-r from-green-50 via-emerald-50 to-green-50">
-                <CardTitle className="flex items-center gap-3 text-green-800 text-xl font-bold">
-                  <div className="p-2 bg-gradient-to-br from-green-100 to-emerald-100 rounded-xl shadow-md">
-                    <BookOpen className="w-5 h-5 text-green-600" />
+            <Card className="shadow-xl border-blue-200 bg-white/90 backdrop-blur-xl rounded-2xl overflow-hidden border-2">
+              <CardHeader className="bg-gradient-to-r from-blue-50 via-blue-50 to-blue-50">
+                <CardTitle className="flex items-center gap-3 text-blue-800 text-xl font-bold">
+                  <div className="p-2 bg-gradient-to-br from-blue-100 to-blue-100 rounded-xl shadow-md">
+                    <BookOpen className="w-5 h-5 text-blue-600" />
                   </div>
                   ✏️ بيانات الدورة للتعديل
                 </CardTitle>
@@ -302,7 +302,7 @@ export default function CourseEditRequestModal({
                     onChange={(e) => handleInputChange('title', e.target.value)}
                     placeholder="عنوان الدورة"
                     required
-                    className="text-lg p-4 rounded-xl border-2 border-green-200 focus:border-green-400 focus:ring-green-400 shadow-md"
+                    className="text-lg p-4 rounded-xl border-2 border-blue-200 focus:border-blue-400 focus:ring-blue-400 shadow-md"
                   />
                 </div>
 
@@ -317,7 +317,7 @@ export default function CourseEditRequestModal({
                     placeholder="وصف الدورة"
                     rows={5}
                     required
-                    className="text-lg p-4 rounded-xl border-2 border-green-200 focus:border-green-400 focus:ring-green-400 shadow-md resize-none"
+                    className="text-lg p-4 rounded-xl border-2 border-blue-200 focus:border-blue-400 focus:ring-blue-400 shadow-md resize-none"
                   />
                 </div>
 
@@ -331,7 +331,7 @@ export default function CourseEditRequestModal({
                     onChange={(e) => handleInputChange('learning_outcomes', e.target.value)}
                     placeholder="نواتج التعلم"
                     rows={4}
-                    className="text-lg p-4 rounded-xl border-2 border-green-200 focus:border-green-400 focus:ring-green-400 shadow-md resize-none"
+                    className="text-lg p-4 rounded-xl border-2 border-blue-200 focus:border-blue-400 focus:ring-blue-400 shadow-md resize-none"
                   />
                 </div>
 
@@ -345,7 +345,7 @@ export default function CourseEditRequestModal({
                     onChange={(e) => handleInputChange('subjects', e.target.value)}
                     placeholder="مواضيع الدورة"
                     required
-                    className="text-lg p-4 rounded-xl border-2 border-green-200 focus:border-green-400 focus:ring-green-400 shadow-md"
+                    className="text-lg p-4 rounded-xl border-2 border-blue-200 focus:border-blue-400 focus:ring-blue-400 shadow-md"
                   />
                 </div>
 
@@ -359,7 +359,7 @@ export default function CourseEditRequestModal({
                     value={formData.trial_session_url}
                     onChange={(e) => handleInputChange('trial_session_url', e.target.value)}
                     placeholder="رابط الحصة التجريبية"
-                    className="text-lg p-4 rounded-xl border-2 border-green-200 focus:border-green-400 focus:ring-green-400 shadow-md"
+                    className="text-lg p-4 rounded-xl border-2 border-blue-200 focus:border-blue-400 focus:ring-blue-400 shadow-md"
                   />
                 </div>
 
@@ -369,7 +369,7 @@ export default function CourseEditRequestModal({
                     🎯 course_type
                   </Label>
                   <Select value={formData.course_type} onValueChange={(value) => handleInputChange('course_type', value)}>
-                    <SelectTrigger className="text-right text-lg p-4 rounded-xl border-2 border-green-200 focus:border-green-400 shadow-md">
+                    <SelectTrigger className="text-right text-lg p-4 rounded-xl border-2 border-blue-200 focus:border-blue-400 shadow-md">
                       <SelectValue placeholder="اختر نوع الدورة" />
                     </SelectTrigger>
                     <SelectContent>
@@ -391,7 +391,7 @@ export default function CourseEditRequestModal({
                     placeholder="عدد الأسابيع"
                     value={formData.duration_weeks}
                     onChange={(e) => handleInputChange('duration_weeks', parseInt(e.target.value) || 0)}
-                    className="text-lg p-4 rounded-xl border-2 border-green-200 focus:border-green-400 focus:ring-green-400 shadow-md"
+                    className="text-lg p-4 rounded-xl border-2 border-blue-200 focus:border-blue-400 focus:ring-blue-400 shadow-md"
                     min="1"
                     required
                   />
@@ -407,7 +407,7 @@ export default function CourseEditRequestModal({
                     placeholder="مدة الجلسة بالدقائق"
                     value={formData.session_duration}
                     onChange={(e) => handleInputChange('session_duration', parseInt(e.target.value) || 0)}
-                    className="text-lg p-4 rounded-xl border-2 border-green-200 focus:border-green-400 focus:ring-green-400 shadow-md"
+                    className="text-lg p-4 rounded-xl border-2 border-blue-200 focus:border-blue-400 focus:ring-blue-400 shadow-md"
                     min="1"
                     required
                   />
@@ -491,7 +491,7 @@ export default function CourseEditRequestModal({
               <Button 
                 type="submit" 
                 disabled={isSubmitting || !formData.edit_reason.trim() || !formData.title.trim() || !formData.description.trim()}
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 {isSubmitting ? (
                   <>

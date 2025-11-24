@@ -260,7 +260,7 @@ function CoursePlayerPage() {
                   )}
                   <div className="flex items-center gap-3">
                     <Button
-                      className="bg-green-600 hover:bg-green-700 text-white"
+                      className="bg-blue-600 hover:bg-blue-700 text-white"
                       size="lg"
                     >
                       <CheckCircle className="w-5 h-5 ml-2" />
@@ -299,7 +299,7 @@ function CoursePlayerPage() {
                   )}
                   <div className="bg-slate-700/50 rounded-lg p-4">
                     <p className="text-sm text-slate-400 mb-1">الحالة</p>
-                    <Badge className={lesson.is_completed ? 'bg-green-600' : 'bg-slate-600'}>
+                    <Badge className={lesson.is_completed ? 'bg-blue-600' : 'bg-slate-600'}>
                       {lesson.is_completed ? 'مكتمل' : 'جاري المشاهدة'}
                     </Badge>
                   </div>

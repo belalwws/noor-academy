@@ -104,7 +104,7 @@ const CommunityInfiniteScroll = ({
       <div className="text-center py-8">
         <p className="text-red-600 mb-4">{error}</p>
         <button 
-          className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors"
+          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
           onClick={() => loadTopics(1)}
         >
           إعادة المحاولة
@@ -141,7 +141,7 @@ const CommunityInfiniteScroll = ({
       {hasMore && (
         <div className="text-center py-4">
           <button
-            className="px-4 py-2 bg-green-100 text-green-800 rounded hover:bg-green-200 transition-colors"
+            className="px-4 py-2 bg-blue-100 text-blue-800 rounded hover:bg-blue-200 transition-colors"
             onClick={loadMore}
             disabled={loading}
           >

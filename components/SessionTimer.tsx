@@ -75,7 +75,7 @@ export default function SessionTimer({ endTime, sessionDuration, onSessionEnd }:
     if (timeRemaining.isExpired) return 'text-red-600';
     if (timeRemaining.totalMinutes <= 5) return 'text-red-500';
     if (timeRemaining.totalMinutes <= 10) return 'text-orange-500';
-    return 'text-green-600';
+    return 'text-blue-600';
   };
 
   const getProgressPercentage = () => {
@@ -125,7 +125,7 @@ export default function SessionTimer({ endTime, sessionDuration, onSessionEnd }:
                     ? 'bg-red-500' 
                     : timeRemaining.totalMinutes <= 10 
                     ? 'bg-orange-500' 
-                    : 'bg-green-500'
+                    : 'bg-blue-500'
                 }`}
                 style={{ width: `${getProgressPercentage()}%` }}
               />

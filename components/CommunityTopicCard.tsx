@@ -91,7 +91,7 @@ const CommunityTopicCard = ({ topic, onTopicClick, onReloadTopics }: TopicCardPr
 
   return (
     <Card 
-      className="cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-[1.01] group bg-white/95 backdrop-blur-sm border border-slate-200 hover:border-emerald-300"
+      className="cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-[1.01] group bg-white/95 backdrop-blur-sm border border-slate-200 hover:border-blue-300"
       onClick={() => onTopicClick(topic.id)}
     >
       <CardContent className="p-5">
@@ -99,9 +99,9 @@ const CommunityTopicCard = ({ topic, onTopicClick, onReloadTopics }: TopicCardPr
           {/* Header with Author Info */}
           <div className="flex items-start justify-between gap-3">
             <div className="flex items-center gap-3 flex-1 min-w-0">
-              <Avatar className="w-10 h-10 border-2 border-emerald-100">
+              <Avatar className="w-10 h-10 border-2 border-blue-100">
                 <AvatarImage src={topic.author?.avatar} />
-                <AvatarFallback className="bg-gradient-to-br from-emerald-100 to-green-100 text-emerald-700 font-semibold">
+                <AvatarFallback className="bg-gradient-to-br from-blue-100 to-blue-100 text-blue-700 font-semibold">
                   {topic.author?.username?.charAt(0) || 'م'}
                 </AvatarFallback>
               </Avatar>
@@ -234,7 +234,7 @@ const CommunityTopicCard = ({ topic, onTopicClick, onReloadTopics }: TopicCardPr
           {/* Topic Title and Content */}
           <div className="space-y-2">
             <div className="flex items-start gap-2">
-              <h3 className="font-bold text-lg text-slate-800 group-hover:text-emerald-700 transition-colors flex-1 text-right leading-tight">
+              <h3 className="font-bold text-lg text-slate-800 group-hover:text-blue-700 transition-colors flex-1 text-right leading-tight">
                 {topic.title}
               </h3>
               <div className="flex gap-1 flex-shrink-0">
@@ -281,7 +281,7 @@ const CommunityTopicCard = ({ topic, onTopicClick, onReloadTopics }: TopicCardPr
                     description: isUpvoted ? 'تم إلغاء إعجابك بالموضوع' : 'تم تسجيل إعجابك بالموضوع'
                   })
                 }}
-                className={`h-8 px-3 ${isUpvoted ? 'text-emerald-600 bg-emerald-50' : 'text-slate-500 hover:text-emerald-600 hover:bg-emerald-50'}`}
+                className={`h-8 px-3 ${isUpvoted ? 'text-blue-600 bg-blue-50' : 'text-slate-500 hover:text-blue-600 hover:bg-blue-50'}`}
               >
                 <ChevronUp className={`w-4 h-4 ml-1 ${isUpvoted ? 'fill-current' : ''}`} />
                 <span className="text-xs font-medium">{formatNumber(topic.likes_count || 0)}</span>

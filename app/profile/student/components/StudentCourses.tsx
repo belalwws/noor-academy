@@ -49,7 +49,7 @@ export default function StudentCourses({ courses, onRefresh }: StudentCoursesPro
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'active':
-        return <Badge className="bg-green-100 text-green-800">نشط</Badge>
+        return <Badge className="bg-blue-100 text-blue-800">نشط</Badge>
       case 'completed':
         return <Badge className="bg-blue-100 text-blue-800">مكتمل</Badge>
       case 'paused':
@@ -128,11 +128,11 @@ export default function StudentCourses({ courses, onRefresh }: StudentCoursesPro
 
       {/* Course Statistics */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <div className="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-xl border border-green-200">
-          <div className="text-2xl font-bold text-green-700">
+        <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl border border-blue-200">
+          <div className="text-2xl font-bold text-blue-700">
             {courses.filter(c => c.status === 'active').length}
           </div>
-          <div className="text-sm text-green-600">دورات نشطة</div>
+          <div className="text-sm text-blue-600">دورات نشطة</div>
         </div>
         
         <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl border border-blue-200">
@@ -247,7 +247,7 @@ export default function StudentCourses({ courses, onRefresh }: StudentCoursesPro
                 {/* Action Buttons */}
                 <div className="flex gap-2 pt-4 border-t">
                   {course.status === 'active' && (
-                    <Button size="sm" className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700">
+                    <Button size="sm" className="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700">
                       <Play className="w-4 h-4 ml-2" />
                       متابعة الدراسة
                     </Button>

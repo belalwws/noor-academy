@@ -48,7 +48,7 @@ export default function QuizHeader({ quiz }: QuizHeaderProps) {
                   ⏱️ {Math.round(quiz.time_limit / 60)} دقيقة
                 </span>
               )}
-              <span className="flex items-center gap-2 px-3 py-1.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-lg text-sm font-semibold">
+              <span className="flex items-center gap-2 px-3 py-1.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-lg text-sm font-semibold">
                 ✅ {quiz.passing_score}% للنجاح
               </span>
             </div>

@@ -184,7 +184,7 @@ export default function TeacherCourseDetailPage({ course, onBack, onAddNote }: T
   const getStudentStatusBadge = (status: string) => {
     switch (status) {
       case 'active':
-        return <Badge className="bg-green-100 text-green-800 border-green-200">نشط</Badge>
+        return <Badge className="bg-blue-100 text-blue-800 border-blue-200">نشط</Badge>
       case 'inactive':
         return <Badge className="bg-yellow-100 text-yellow-800 border-yellow-200">غير نشط</Badge>
       case 'completed':
@@ -197,7 +197,7 @@ export default function TeacherCourseDetailPage({ course, onBack, onAddNote }: T
   const getSessionStatusBadge = (status: string) => {
     switch (status) {
       case 'completed':
-        return <Badge className="bg-green-100 text-green-800 border-green-200">مكتمل</Badge>
+        return <Badge className="bg-blue-100 text-blue-800 border-blue-200">مكتمل</Badge>
       case 'upcoming':
         return <Badge className="bg-blue-100 text-blue-800 border-blue-200">قادم</Badge>
       case 'live':
@@ -222,7 +222,7 @@ export default function TeacherCourseDetailPage({ course, onBack, onAddNote }: T
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50/30 to-emerald-50/20 p-6" dir="rtl">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-blue-50/20 p-6" dir="rtl">
         <div className="max-w-6xl mx-auto">
           <div className="animate-pulse space-y-6">
             <div className="h-8 bg-gray-200 rounded w-1/4"></div>
@@ -235,7 +235,7 @@ export default function TeacherCourseDetailPage({ course, onBack, onAddNote }: T
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50/30 to-emerald-50/20 p-6" dir="rtl">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-blue-50/20 p-6" dir="rtl">
       <div className="max-w-6xl mx-auto space-y-6">
         {/* Header */}
         <div className="flex items-center gap-4">
@@ -283,17 +283,17 @@ export default function TeacherCourseDetailPage({ course, onBack, onAddNote }: T
             </CardContent>
           </Card>
 
-          <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-200">
+          <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200">
             <CardContent className="p-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center">
                   <CheckCircle className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-green-700">
+                  <p className="text-2xl font-bold text-blue-700">
                     {students.filter(s => s.status === 'active').length}
                   </p>
-                  <p className="text-sm text-green-600">طالب نشط</p>
+                  <p className="text-sm text-blue-600">طالب نشط</p>
                 </div>
               </div>
             </CardContent>
@@ -404,7 +404,7 @@ export default function TeacherCourseDetailPage({ course, onBack, onAddNote }: T
                       <div className="flex items-center gap-3">
                         {getSessionStatusBadge(session.status)}
                         {session.status === 'upcoming' && (
-                          <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white">
+                          <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
                             بدء الجلسة
                           </Button>
                         )}

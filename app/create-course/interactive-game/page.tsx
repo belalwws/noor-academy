@@ -41,8 +41,8 @@ const gameTypes = [
     name: 'مجموعة أسئلة',
     description: 'عدة أسئلة متتالية في اختبار واحد',
     icon: ListChecks,
-    color: 'bg-green-500 hover:bg-green-600',
-    iconColor: 'text-green-500'
+    color: 'bg-blue-500 hover:bg-blue-600',
+    iconColor: 'text-blue-500'
   },
   {
     id: 'H5P.DragQuestion',
@@ -869,7 +869,7 @@ function CreateInteractiveGameContent() {
                                   newQuestions[qIdx].answers[aIdx].correct = !newQuestions[qIdx].answers[aIdx].correct;
                                   setSimpleFormData({ ...simpleFormData, questions: newQuestions });
                                 }}
-                                className={answer.correct ? "bg-green-600 hover:bg-green-700" : ""}
+                                className={answer.correct ? "bg-blue-600 hover:bg-blue-700" : ""}
                               >
                                 {answer.correct ? '✓ صحيح' : 'خاطئ'}
                               </Button>
@@ -909,7 +909,7 @@ function CreateInteractiveGameContent() {
               )}
 
               {selectedGameType === 'H5P.QuestionSet' && (
-                <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30 border-4 border-green-200 dark:border-green-800 rounded-2xl p-6 md:p-8 space-y-6 shadow-lg">
+                <div className="bg-gradient-to-br from-blue-50 to-blue-50 dark:from-blue-950/30 dark:to-blue-950/30 border-4 border-blue-200 dark:border-blue-800 rounded-2xl p-6 md:p-8 space-y-6 shadow-lg">
                   <h3 className="font-bold text-lg">📝 تصميم مجموعة الأسئلة</h3>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -960,9 +960,9 @@ function CreateInteractiveGameContent() {
 
                     <div className="space-y-4">
                       {simpleFormData.questionSetQuestions.map((q: any, qIdx: number) => (
-                        <div key={qIdx} className="bg-white rounded-lg p-4 border border-green-200 space-y-4">
+                        <div key={qIdx} className="bg-white rounded-lg p-4 border border-blue-200 space-y-4">
                           <div className="flex items-center justify-between mb-2">
-                            <span className="text-sm font-semibold text-green-600">السؤال {qIdx + 1}</span>
+                            <span className="text-sm font-semibold text-blue-600">السؤال {qIdx + 1}</span>
                             <Button
                               type="button"
                               variant="ghost"
@@ -1045,7 +1045,7 @@ function CreateInteractiveGameContent() {
                                       newQuestions[qIdx].answers[aIdx].correct = !newQuestions[qIdx].answers[aIdx].correct;
                                       setSimpleFormData({ ...simpleFormData, questionSetQuestions: newQuestions });
                                     }}
-                                    className={answer.correct ? "bg-green-600 hover:bg-green-700" : ""}
+                                    className={answer.correct ? "bg-blue-600 hover:bg-blue-700" : ""}
                                   >
                                     {answer.correct ? '✓ صحيح' : 'خاطئ'}
                                   </Button>
@@ -1094,7 +1094,7 @@ function CreateInteractiveGameContent() {
                                   newQuestions[qIdx].correct = true;
                                   setSimpleFormData({ ...simpleFormData, questionSetQuestions: newQuestions });
                                 }}
-                                className={q.correct === true ? "bg-green-600 hover:bg-green-700" : ""}
+                                className={q.correct === true ? "bg-blue-600 hover:bg-blue-700" : ""}
                               >
                                 ✓ صحيح
                               </Button>
@@ -1215,7 +1215,7 @@ function CreateInteractiveGameContent() {
                               }}
                               className={`flex-1 py-3 text-lg font-bold rounded-xl transition-all ${
                                 q.correct === true 
-                                  ? "bg-green-600 hover:bg-green-700 text-white border-2 border-green-700 shadow-lg" 
+                                  ? "bg-blue-600 hover:bg-blue-700 text-white border-2 border-blue-700 shadow-lg" 
                                   : "border-2 border-gray-300 dark:border-slate-600"
                               }`}
                             >

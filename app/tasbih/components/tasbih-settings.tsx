@@ -110,7 +110,7 @@ export function TasbihSettings() {
             />
             <button
               onClick={handleDailyGoalSave}
-              className="px-6 py-3 bg-emerald-500/20 text-emerald-300 rounded-xl hover:bg-emerald-500/30 transition-all duration-300"
+              className="px-6 py-3 bg-blue-500/20 text-blue-300 rounded-xl hover:bg-blue-500/30 transition-all duration-300"
             >
               حفظ
             </button>
@@ -144,7 +144,7 @@ export function TasbihSettings() {
               <button
                 onClick={toggleSound}
                 className={`w-12 h-6 rounded-full transition-all duration-300 ${
-                  soundEnabled ? 'bg-emerald-500' : 'bg-white/20'
+                  soundEnabled ? 'bg-blue-500' : 'bg-white/20'
                 }`}
               >
                 <div className={`w-5 h-5 bg-white rounded-full transition-all duration-300 ${
@@ -179,7 +179,7 @@ export function TasbihSettings() {
               <button
                 onClick={toggleVibration}
                 className={`w-12 h-6 rounded-full transition-all duration-300 ${
-                  vibrationEnabled ? 'bg-emerald-500' : 'bg-white/20'
+                  vibrationEnabled ? 'bg-blue-500' : 'bg-white/20'
                 }`}
               >
                 <div className={`w-5 h-5 bg-white rounded-full transition-all duration-300 ${
@@ -211,7 +211,7 @@ export function TasbihSettings() {
             <button
               onClick={toggleAutoReset}
               className={`w-12 h-6 rounded-full transition-all duration-300 ${
-                autoReset ? 'bg-emerald-500' : 'bg-white/20'
+                autoReset ? 'bg-blue-500' : 'bg-white/20'
               }`}
             >
               <div className={`w-5 h-5 bg-white rounded-full transition-all duration-300 ${
@@ -231,12 +231,12 @@ export function TasbihSettings() {
                   onBlur={handleResetThresholdSave}
                   min="1"
                   max="1000"
-                  className="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                  className="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="أدخل حد الإعادة"
                 />
                 <button
                   onClick={handleResetThresholdSave}
-                  className="px-6 py-3 bg-emerald-500/20 text-emerald-300 rounded-xl hover:bg-emerald-500/30 transition-all duration-300"
+                  className="px-6 py-3 bg-blue-500/20 text-blue-300 rounded-xl hover:bg-blue-500/30 transition-all duration-300"
                 >
                   حفظ
                 </button>
@@ -265,7 +265,7 @@ export function TasbihSettings() {
               }}
               className={`p-3 rounded-xl transition-all duration-300 ${
                 dailyGoal === goal
-                  ? 'bg-emerald-500/30 text-emerald-300 border border-emerald-500/50'
+                  ? 'bg-blue-500/30 text-blue-300 border border-blue-500/50'
                   : 'bg-white/10 text-white hover:bg-white/20'
               }`}
             >

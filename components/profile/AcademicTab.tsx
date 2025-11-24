@@ -108,11 +108,11 @@ const AcademicTab: React.FC<AcademicTabProps> = ({
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-center p-6 bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/20 dark:to-emerald-800/20 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+                className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-xl shadow-md hover:shadow-lg transition-shadow"
               >
-                <Award className="w-10 h-10 mx-auto mb-3 text-emerald-600 dark:text-emerald-400" />
-                <p className="text-3xl font-bold text-emerald-800 dark:text-emerald-300">{userStats.certificates_earned}</p>
-                <p className="text-sm text-emerald-600 dark:text-emerald-400 mt-1">الشهادات المحصلة</p>
+                <Award className="w-10 h-10 mx-auto mb-3 text-blue-600 dark:text-blue-400" />
+                <p className="text-3xl font-bold text-blue-800 dark:text-blue-300">{userStats.certificates_earned}</p>
+                <p className="text-sm text-blue-600 dark:text-blue-400 mt-1">الشهادات المحصلة</p>
               </motion.div>
 
               <motion.div

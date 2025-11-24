@@ -536,7 +536,7 @@ export default function PostsList({
                           {session.title || 'جلسة مباشرة'}
                         </h4>
                         {isLive && (
-                          <Badge className="bg-green-500 text-white text-xs px-2 py-0.5">
+                          <Badge className="bg-blue-500 text-white text-xs px-2 py-0.5">
                             <span className="flex items-center gap-1">
                               <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
                               مباشر

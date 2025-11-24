@@ -245,7 +245,7 @@ export function Step3Units({ formData, updateFormData }: StepProps) {
           قسّم دورتك إلى وحدات منظمة ومترابطة
         </p>
         {courseId && (
-          <div className="mt-2 text-sm text-green-600 dark:text-green-400">
+          <div className="mt-2 text-sm text-blue-600 dark:text-blue-400">
             ✓ الدورة محفوظة - يمكنك حفظ الوحدات مباشرة
           </div>
         )}
@@ -268,7 +268,7 @@ export function Step3Units({ formData, updateFormData }: StepProps) {
               animate={{ opacity: 1, y: 0 }}
               className={`p-4 border-2 rounded-lg bg-white dark:bg-slate-800 ${
                 isSaved 
-                  ? 'border-green-200 dark:border-green-800' 
+                  ? 'border-blue-200 dark:border-blue-800' 
                   : 'border-slate-200 dark:border-slate-700'
               }`}
             >
@@ -279,7 +279,7 @@ export function Step3Units({ formData, updateFormData }: StepProps) {
                   </span>
                   <h3 className="font-semibold text-lg">الوحدة {index + 1}</h3>
                   {isSaved && (
-                    <span className="text-xs bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 px-2 py-1 rounded">
+                    <span className="text-xs bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 px-2 py-1 rounded">
                       محفوظة
                     </span>
                   )}
@@ -293,7 +293,7 @@ export function Step3Units({ formData, updateFormData }: StepProps) {
                           size="sm"
                           onClick={() => saveUnit(unit)}
                           disabled={unit.isSaving}
-                          className="text-green-500 hover:text-green-700 hover:bg-green-50"
+                          className="text-blue-500 hover:text-blue-700 hover:bg-blue-50"
                         >
                           {unit.isSaving ? (
                             <Spinner className="w-4 h-4" />
@@ -362,7 +362,7 @@ export function Step3Units({ formData, updateFormData }: StepProps) {
                       size="sm"
                       onClick={() => saveUnit(unit)}
                       disabled={unit.isSaving || !unit.title || !unit.description}
-                      className="bg-green-500 hover:bg-green-600"
+                      className="bg-blue-500 hover:bg-blue-600"
                     >
                       {unit.isSaving ? (
                         <>

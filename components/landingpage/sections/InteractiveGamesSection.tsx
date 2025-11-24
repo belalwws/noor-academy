@@ -50,12 +50,12 @@ export const InteractiveGamesSection: React.FC = () => {
       <div className="absolute inset-0 gradient-hero pattern-dots opacity-30 -z-10" />
       
       {/* Color Effect Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0A5734]/10 via-[#0A5734]/5 to-transparent pointer-events-none -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#1e40af]/10 via-[#1e40af]/5 to-transparent pointer-events-none -z-10" />
 
       {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-[#0A5734]/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute top-20 left-10 w-32 h-32 bg-[#1e40af]/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-[#C5A15A]/10 rounded-full blur-3xl animate-pulse delay-700" />
-      <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-[#4A8F5C]/10 rounded-full blur-2xl animate-pulse delay-1000" />
+      <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-[#2563eb]/10 rounded-full blur-2xl animate-pulse delay-1000" />
 
       <div className="container mx-auto px-4 lg:px-8 py-8 relative z-10">
         {/* Header Section - Centered */}
@@ -72,7 +72,7 @@ export const InteractiveGamesSection: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#0A5734]/10 to-[#C5A15A]/10 text-[#0A5734] dark:text-[#4A8F5C] px-4 py-2.5 rounded-full text-sm font-semibold border border-[#0A5734]/20 dark:border-[#4A8F5C]/30 shadow-sm mb-6"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#1e40af]/10 to-[#C5A15A]/10 text-[#1e40af] dark:text-blue-400 px-4 py-2.5 rounded-full text-sm font-semibold border border-[#1e40af]/20 dark:border-blue-400/30 shadow-sm mb-6"
           >
             <Gamepad2 size={18} />
             <span>ألعاب تفاعلية</span>
@@ -84,9 +84,9 @@ export const InteractiveGamesSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary dark:text-slate-50 leading-tight mb-6"
+            className="text-base sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-text-primary dark:text-slate-50 leading-tight mb-3 sm:mb-6"
           >
-            <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">
+            <span className="text-[#1e40af] dark:text-blue-400 font-extrabold">
               تعلم ممتع
             </span>
             <br />
@@ -99,7 +99,7 @@ export const InteractiveGamesSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-text-secondary dark:text-slate-300 leading-relaxed max-w-3xl mx-auto mb-8"
+            className="hidden sm:block text-lg md:text-xl text-text-secondary dark:text-slate-300 leading-relaxed max-w-3xl mx-auto mb-4 sm:mb-8"
           >
             حوّل تعلمك إلى مغامرة تفاعلية ممتعة! استمتع بألعاب تعليمية مبتكرة تجمع بين المتعة والفائدة. 
             اختبر معلوماتك من خلال تمارين متنوعة تشمل الاختيار من متعدد، صواب وخطأ، والتوصيل. 
@@ -117,7 +117,7 @@ export const InteractiveGamesSection: React.FC = () => {
             transition={{ duration: 0.3, delay: 0.15 }}
             className="relative w-full max-w-md mx-auto mb-8"
           >
-            <div className="relative h-[400px] flex items-center justify-center">
+            <div className="relative h-[200px] sm:h-[300px] md:h-[400px] flex items-center justify-center">
               <motion.div
                 animate={{
                   y: [0, -20, 0],
@@ -143,12 +143,12 @@ export const InteractiveGamesSection: React.FC = () => {
               </motion.div>
 
               {/* Central Glow Effect */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-[#0A5734] to-[#C5A15A] rounded-full blur-3xl opacity-10 animate-pulse -z-10" />
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-[#1e40af] to-[#C5A15A] rounded-full blur-3xl opacity-10 animate-pulse -z-10" />
             </div>
           </motion.div>
 
           {/* Features Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-4 sm:mb-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -156,15 +156,15 @@ export const InteractiveGamesSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.6 + index * 0.1 }}
-                className="bg-gradient-to-br from-[#0A5734]/5 to-[#C5A15A]/5 dark:from-slate-800 dark:to-slate-900 rounded-2xl p-6 border border-[#0A5734]/20 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all hover:scale-105"
+                className="bg-gradient-to-br from-[#1e40af]/5 to-[#C5A15A]/5 dark:from-slate-800 dark:to-slate-900 rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 border border-[#1e40af]/20 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all hover:scale-105"
               >
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#0A5734]/10 to-[#C5A15A]/10 flex items-center justify-center border border-[#0A5734]/20 dark:border-[#4A8F5C]/30 shadow-sm mb-4">
-                  <feature.icon className="text-[#0A5734] dark:text-[#4A8F5C]" size={28} />
+                <div className="w-10 h-10 sm:w-12 sm:h-14 md:h-14 rounded-xl bg-gradient-to-br from-[#1e40af]/10 to-[#C5A15A]/10 flex items-center justify-center border border-[#1e40af]/20 dark:border-blue-400/30 shadow-sm mb-2 sm:mb-4">
+                  <feature.icon className="text-[#1e40af] dark:text-blue-400" size={20} style={{ width: '20px', height: '20px' }} />
                 </div>
-                <h3 className="text-lg font-bold text-text-primary dark:text-slate-50 mb-2">
+                <h3 className="text-xs sm:text-sm md:text-lg font-bold text-text-primary dark:text-slate-50 mb-1 sm:mb-2">
                   {feature.text}
                 </h3>
-                <p className="text-sm text-text-secondary dark:text-slate-300 leading-relaxed">
+                <p className="text-[10px] sm:text-xs md:text-sm text-text-secondary dark:text-slate-300 leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>
@@ -180,9 +180,9 @@ export const InteractiveGamesSection: React.FC = () => {
             className="flex justify-center"
           >
             <Link href="/interactive-learning">
-              <Button variant="primary" size="lg" className="group shadow-lg hover:shadow-xl transition-all">
-                <span className="text-lg">تعلم الآن</span>
-                <ArrowLeft className="mr-2 group-hover:translate-x-1 transition-transform" size={22} />
+              <Button variant="primary" size="lg" className="group shadow-lg hover:shadow-xl transition-all px-4 sm:px-6 py-2 sm:py-3">
+                <span className="text-xs sm:text-base md:text-lg">تعلم الآن</span>
+                <ArrowLeft className="mr-2 group-hover:translate-x-1 transition-transform" size={16} style={{ width: '16px', height: '16px' }} />
               </Button>
             </Link>
           </motion.div>

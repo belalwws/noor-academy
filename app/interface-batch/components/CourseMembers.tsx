@@ -110,7 +110,7 @@ export default function CourseMembers({ courseId }: CourseMembersProps) {
       case 'academic_supervisor':
         return <Shield className="w-4 h-4 text-blue-600" />
       case 'teacher':
-        return <GraduationCap className="w-4 h-4 text-green-600" />
+        return <GraduationCap className="w-4 h-4 text-blue-600" />
       default:
         return <Users className="w-4 h-4 text-gray-600" />
     }
@@ -136,7 +136,7 @@ export default function CourseMembers({ courseId }: CourseMembersProps) {
       case 'academic_supervisor':
         return 'bg-blue-100 text-blue-800 border-blue-200'
       case 'teacher':
-        return 'bg-green-100 text-green-800 border-green-200'
+        return 'bg-blue-100 text-blue-800 border-blue-200'
       default:
         return 'bg-gray-100 text-gray-800 border-gray-200'
     }
@@ -186,7 +186,7 @@ export default function CourseMembers({ courseId }: CourseMembersProps) {
               </AvatarFallback>
             </Avatar>
             {member.isOnline && (
-              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-2 border-white rounded-full"></div>
+              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-blue-500 border-2 border-white rounded-full"></div>
             )}
           </div>
 

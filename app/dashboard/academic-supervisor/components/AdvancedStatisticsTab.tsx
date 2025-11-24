@@ -88,7 +88,7 @@ const AdvancedStatisticsTab: React.FC = () => {
   };
 
   const getProgressColor = (percentage: number) => {
-    if (percentage >= 80) return "bg-green-500";
+    if (percentage >= 80) return "bg-blue-500";
     if (percentage >= 60) return "bg-blue-500";
     if (percentage >= 40) return "bg-yellow-500";
     return "bg-red-500";
@@ -185,10 +185,10 @@ const AdvancedStatisticsTab: React.FC = () => {
       {/* Main Statistics Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6">
         {/* Teachers Statistics */}
-        <Card className="border border-emerald-200 hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-emerald-50 to-green-50">
+        <Card className="border border-blue-200 hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-blue-50 to-blue-50">
           <CardContent className="p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
                 <Users className="w-6 h-6 text-white" />
               </div>
               <div className="text-right">
@@ -199,7 +199,7 @@ const AdvancedStatisticsTab: React.FC = () => {
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
                 <span className="text-gray-600">معتمد</span>
-                <span className="font-medium text-green-700">{statistics?.teachers?.approved || 0}</span>
+                <span className="font-medium text-blue-700">{statistics?.teachers?.approved || 0}</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-gray-600">معلق</span>
@@ -240,7 +240,7 @@ const AdvancedStatisticsTab: React.FC = () => {
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
                 <span className="text-gray-600">معتمد</span>
-                <span className="font-medium text-green-700">{statistics?.courses?.approved || 0}</span>
+                <span className="font-medium text-blue-700">{statistics?.courses?.approved || 0}</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-gray-600">معلق</span>
@@ -281,7 +281,7 @@ const AdvancedStatisticsTab: React.FC = () => {
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
                 <span className="text-gray-600">نشط</span>
-                <span className="font-medium text-green-700">{statistics?.students?.active_enrollments || 0}</span>
+                <span className="font-medium text-blue-700">{statistics?.students?.active_enrollments || 0}</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-gray-600">غير نشط</span>
@@ -318,7 +318,7 @@ const AdvancedStatisticsTab: React.FC = () => {
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
                 <span className="text-gray-600">الجلسات النشطة</span>
-                <span className="font-medium text-green-700">{statistics?.summary?.active_sessions || 0}</span>
+                <span className="font-medium text-blue-700">{statistics?.summary?.active_sessions || 0}</span>
               </div>
               <div className="flex items-center gap-1 text-sm">
                 <Star className="w-4 h-4 text-yellow-500 fill-current" />
@@ -348,7 +348,7 @@ const AdvancedStatisticsTab: React.FC = () => {
         <Card className="border border-gray-200 hover:shadow-lg transition-all duration-300">
           <CardContent className="p-6">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-green-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
                 <Users className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -360,12 +360,12 @@ const AdvancedStatisticsTab: React.FC = () => {
             <div className="space-y-4">
               <div className="relative">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm font-medium text-green-700">معتمد</span>
+                  <span className="text-sm font-medium text-blue-700">معتمد</span>
                   <span className="text-sm text-gray-600">{statistics?.teachers?.approved || 0} معلم</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-3">
                   <div 
-                    className="h-3 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full transition-all duration-700"
+                    className="h-3 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full transition-all duration-700"
                     style={{ width: `${getPercentage(statistics?.teachers?.approved || 0, statistics?.teachers?.total_assigned || 0)}%` }}
                   ></div>
                 </div>
@@ -416,12 +416,12 @@ const AdvancedStatisticsTab: React.FC = () => {
             <div className="space-y-4">
               <div className="relative">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm font-medium text-green-700">معتمد</span>
+                  <span className="text-sm font-medium text-blue-700">معتمد</span>
                   <span className="text-sm text-gray-600">{statistics?.courses?.approved || 0} دورة</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-3">
                   <div 
-                    className="h-3 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full transition-all duration-700"
+                    className="h-3 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full transition-all duration-700"
                     style={{ width: `${getPercentage(statistics?.courses?.approved || 0, statistics?.courses?.total || 0)}%` }}
                   ></div>
                 </div>
@@ -472,8 +472,8 @@ const AdvancedStatisticsTab: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center p-4 bg-white rounded-xl border border-gray-200">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-emerald-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Activity className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Activity className="w-6 h-6 text-blue-600" />
               </div>
               <div className="text-2xl font-bold text-gray-800 mb-1">{teacherApprovalRate}%</div>
               <div className="text-sm text-gray-600">معدل اعتماد المعلمين</div>

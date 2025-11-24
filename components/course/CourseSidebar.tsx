@@ -251,7 +251,7 @@ export default function CourseSidebar({ units, currentLessonId, onLessonClick, i
                                   {/* رقم أو أيقونة الدرس - على اليمين */}
                                   <div className={`w-6 h-6 rounded flex items-center justify-center shrink-0 transition-all ${
                                     lesson.is_completed
-                                      ? 'bg-green-500/20 text-green-600 dark:text-green-400'
+                                      ? 'bg-blue-500/20 text-blue-600 dark:text-blue-400'
                                       : currentLessonId === lesson.id
                                         ? 'bg-primary/20 text-primary'
                                         : 'bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400'

@@ -91,9 +91,9 @@ export default function VerifyEmailPage() {
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ type: 'spring', stiffness: 200 }}
-                  className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30"
+                  className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-blue-100 dark:bg-blue-900/30"
                 >
-                  <CheckCircle2 className="w-10 h-10 text-green-600 dark:text-green-400" />
+                  <CheckCircle2 className="w-10 h-10 text-blue-600 dark:text-blue-400" />
                 </motion.div>
               )}
               {status === 'error' && (

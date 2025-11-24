@@ -1098,7 +1098,7 @@ const [selectedCourseForAnnouncement, setSelectedCourseForAnnouncement] = useSta
         <motion.div
           animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.3, 0.2] }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-green-200/20 to-emerald-200/20 dark:from-green-900/10 dark:to-emerald-900/10 rounded-full blur-3xl"
+          className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-blue-200/20 to-blue-200/20 dark:from-blue-900/10 dark:to-blue-900/10 rounded-full blur-3xl"
         ></motion.div>
         <motion.div
           animate={{ scale: [1, 1.1, 1], opacity: [0.15, 0.25, 0.15] }}
@@ -1457,7 +1457,7 @@ const [selectedCourseForAnnouncement, setSelectedCourseForAnnouncement] = useSta
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl md:rounded-2xl border border-green-200 dark:border-green-700/50 p-4 md:p-6 shadow-sm"
+                  className="bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20 rounded-xl md:rounded-2xl border border-blue-200 dark:border-blue-700/50 p-4 md:p-6 shadow-sm"
                   dir="rtl"
                 >
                   <div className="text-center mb-4 md:mb-6">
@@ -1467,7 +1467,7 @@ const [selectedCourseForAnnouncement, setSelectedCourseForAnnouncement] = useSta
                   
                   <div className="max-w-2xl mx-auto">
                     <div className="relative">
-                      <BookOpen className="absolute left-3 top-1/2 transform -translate-y-1/2 z-10 w-4 h-4 md:w-5 md:h-5 text-green-600 dark:text-green-400" />
+                      <BookOpen className="absolute left-3 top-1/2 transform -translate-y-1/2 z-10 w-4 h-4 md:w-5 md:h-5 text-blue-600 dark:text-blue-400" />
                       
                       <Input
                         type="text"
@@ -1489,7 +1489,7 @@ const [selectedCourseForAnnouncement, setSelectedCourseForAnnouncement] = useSta
                             setCourses(allCourses.filter(c => c.source === 'live_education' || c.learning_path === 'live_education'));
                           }
                         }}
-                        className="w-full h-10 md:h-12 pr-10 md:pr-12 pl-3 md:pl-4 text-xs md:text-sm border-2 border-green-300 dark:border-green-600 rounded-xl focus:border-green-500 focus:ring-2 focus:ring-green-200 dark:focus:ring-green-800 bg-white dark:bg-slate-800 shadow-sm"
+                        className="w-full h-10 md:h-12 pr-10 md:pr-12 pl-3 md:pl-4 text-xs md:text-sm border-2 border-blue-300 dark:border-blue-600 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 bg-white dark:bg-slate-800 shadow-sm"
                       />
 
                       {searchQuery && (
@@ -1499,16 +1499,16 @@ const [selectedCourseForAnnouncement, setSelectedCourseForAnnouncement] = useSta
                             setSearchQuery("")
                             setCourses(allCourses.filter(c => c.source === 'live_education' || c.learning_path === 'live_education'))
                           }}
-                          className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 p-1 h-6 w-6 md:h-8 md:w-8 hover:bg-green-100 dark:hover:bg-green-900/50 rounded-lg"
+                          className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 p-1 h-6 w-6 md:h-8 md:w-8 hover:bg-blue-100 dark:hover:bg-blue-900/50 rounded-lg"
                         >
-                          <X className="w-3 h-3 md:w-4 md:h-4 text-green-600 dark:text-green-400" />
+                          <X className="w-3 h-3 md:w-4 md:h-4 text-blue-600 dark:text-blue-400" />
                         </Button>
                       )}
                     </div>
 
                     {searchQuery && (
                       <div className="mt-3 md:mt-4 text-center">
-                        <p className="text-xs md:text-sm text-green-700 dark:text-green-300">
+                        <p className="text-xs md:text-sm text-blue-700 dark:text-blue-300">
                           عدد النتائج: {courses.filter(c => c.source === 'live_education' || c.learning_path === 'live_education').length} دورة
                         </p>
                       </div>
@@ -1548,13 +1548,13 @@ const [selectedCourseForAnnouncement, setSelectedCourseForAnnouncement] = useSta
                     transition={{ duration: 0.3 }}
                     className="text-center py-16 md:py-20 bg-white dark:bg-slate-800/90 backdrop-blur-sm rounded-2xl border-0 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
                   >
-                    <div className="bg-gradient-to-br from-slate-50 to-green-50/30 dark:from-slate-800/50 dark:to-green-900/10 backdrop-blur-sm p-12 md:p-16">
+                    <div className="bg-gradient-to-br from-slate-50 to-blue-50/30 dark:from-slate-800/50 dark:to-blue-900/10 backdrop-blur-sm p-12 md:p-16">
                       <motion.div
                         initial={{ scale: 0, rotate: -180 }}
                         animate={{ scale: 1, rotate: 0 }}
                         transition={{ type: 'spring', stiffness: 200 }}
                         whileHover={{ scale: 1.1, rotate: 5 }}
-                        className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30 rounded-xl md:rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6 shadow-lg border border-green-200/50 dark:border-green-700/50"
+                        className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-blue-100 to-blue-100 dark:from-blue-900/30 dark:to-blue-900/30 rounded-xl md:rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6 shadow-lg border border-blue-200/50 dark:border-blue-700/50"
                       >
                         <motion.div
                           animate={{ 
@@ -1563,7 +1563,7 @@ const [selectedCourseForAnnouncement, setSelectedCourseForAnnouncement] = useSta
                           }}
                           transition={{ duration: 2, repeat: Infinity }}
                         >
-                          <BookOpen className="w-8 h-8 md:w-10 md:h-10 text-green-400 dark:text-green-500" />
+                          <BookOpen className="w-8 h-8 md:w-10 md:h-10 text-blue-400 dark:text-blue-500" />
                         </motion.div>
                       </motion.div>
                       
@@ -1591,7 +1591,7 @@ const [selectedCourseForAnnouncement, setSelectedCourseForAnnouncement] = useSta
                         transition={{ delay: 0.4 }}
                       >
                         <Link href="/knowledge-lab/create">
-                          <Button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-6 md:px-8 lg:px-10 py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-xs md:text-sm lg:text-base font-medium">
+                          <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 md:px-8 lg:px-10 py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-xs md:text-sm lg:text-base font-medium">
                             <Plus className="w-4 h-4 md:w-5 md:h-5 ml-2" />
                             إنشاء مختبر معرفة جديد
                           </Button>
@@ -1816,7 +1816,7 @@ const [selectedCourseForAnnouncement, setSelectedCourseForAnnouncement] = useSta
                   <div className="flex justify-between items-center">
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white">ألعابي التفاعلية</h2>
                     <Link href="/create-course/interactive-game">
-                      <Button className="bg-green-600 hover:bg-green-700">
+                      <Button className="bg-blue-600 hover:bg-blue-700">
                         <Plus className="w-4 h-4 ml-2" />
                         إنشاء لعبة تفاعلية
                       </Button>
@@ -1836,7 +1836,7 @@ const [selectedCourseForAnnouncement, setSelectedCourseForAnnouncement] = useSta
                       </h3>
                       <p className="text-gray-500 mb-6">ابدأ بإنشاء لعبة تفاعلية جديدة</p>
                       <Link href="/create-course/interactive-game">
-                        <Button className="bg-green-600 hover:bg-green-700">
+                        <Button className="bg-blue-600 hover:bg-blue-700">
                           <Plus className="w-4 h-4 ml-2" />
                           إنشاء لعبة تفاعلية
                         </Button>
@@ -2052,7 +2052,7 @@ const [selectedCourseForAnnouncement, setSelectedCourseForAnnouncement] = useSta
                             <Badge 
                               className={`ml-2 ${
                                 lab.status === 'approved' 
-                                  ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400'
+                                  ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400'
                                   : lab.status === 'pending'
                                   ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400'
                                   : 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400'

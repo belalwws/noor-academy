@@ -80,7 +80,7 @@ export const CourseComparisonModal: React.FC<CourseComparisonModalProps> = ({
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'pending': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-      case 'approved': return 'bg-green-100 text-green-800 border-green-200';
+      case 'approved': return 'bg-blue-100 text-blue-800 border-blue-200';
       case 'rejected': return 'bg-red-100 text-red-800 border-red-200';
       default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
@@ -315,36 +315,36 @@ export const CourseComparisonModal: React.FC<CourseComparisonModalProps> = ({
             </div>
 
             {/* New Values */}
-            <div className="bg-gradient-to-br from-green-50 to-green-100 border border-green-200 rounded-2xl p-6 h-fit sticky top-4 shadow-lg">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-2xl p-6 h-fit sticky top-4 shadow-lg">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-5 h-5 bg-gradient-to-r from-green-500 to-green-600 rounded-full shadow-md"></div>
-                <h3 className="text-xl font-bold text-green-900">القيم الجديدة</h3>
+                <div className="w-5 h-5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full shadow-md"></div>
+                <h3 className="text-xl font-bold text-blue-900">القيم الجديدة</h3>
               </div>
               
               <div className="space-y-5">
-                <div className="bg-white rounded-lg p-4 border border-green-100">
-                  <p className="text-sm text-green-700 mb-2 font-medium">عنوان الدورة</p>
-                  <p className="text-green-900 font-semibold text-lg">{safeString(editRequestDetails.title) || 'غير محدد'}</p>
+                <div className="bg-white rounded-lg p-4 border border-blue-100">
+                  <p className="text-sm text-blue-700 mb-2 font-medium">عنوان الدورة</p>
+                  <p className="text-blue-900 font-semibold text-lg">{safeString(editRequestDetails.title) || 'غير محدد'}</p>
                 </div>
                 
-                <div className="bg-white rounded-lg p-4 border border-green-100">
-                  <p className="text-sm text-green-700 mb-2 font-medium">وصف الدورة</p>
-                  <p className="text-green-900 text-sm leading-relaxed">
+                <div className="bg-white rounded-lg p-4 border border-blue-100">
+                  <p className="text-sm text-blue-700 mb-2 font-medium">وصف الدورة</p>
+                  <p className="text-blue-900 text-sm leading-relaxed">
                     {safeString(editRequestDetails.description) || 'لا يوجد وصف متاح'}
                   </p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <p className="text-sm text-green-700 mb-1">نوع الدورة</p>
-                    <p className="text-green-900 flex items-center gap-1">
+                    <p className="text-sm text-blue-700 mb-1">نوع الدورة</p>
+                    <p className="text-blue-900 flex items-center gap-1">
                       <BookOpen className="w-4 h-4" />
                       {editRequestDetails.course_type || 'غير محدد'}
                     </p>
                   </div>
                   <div>
-                    <p className="text-sm text-green-700 mb-1">مدة الدورة</p>
-                    <p className="text-green-900 flex items-center gap-1">
+                    <p className="text-sm text-blue-700 mb-1">مدة الدورة</p>
+                    <p className="text-blue-900 flex items-center gap-1">
                       <Clock className="w-4 h-4" />
                       {editRequestDetails.duration_weeks || 0} أسبوع
                     </p>
@@ -353,15 +353,15 @@ export const CourseComparisonModal: React.FC<CourseComparisonModalProps> = ({
 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <p className="text-sm text-green-700 mb-1">مدة الجلسة</p>
-                    <p className="text-green-900 flex items-center gap-1">
+                    <p className="text-sm text-blue-700 mb-1">مدة الجلسة</p>
+                    <p className="text-blue-900 flex items-center gap-1">
                       <Clock className="w-4 h-4" />
                       {editRequestDetails.session_duration || 60} دقيقة
                     </p>
                   </div>
                   <div>
-                    <p className="text-sm text-green-700 mb-1">السعر</p>
-                    <p className="text-green-900 flex items-center gap-1">
+                    <p className="text-sm text-blue-700 mb-1">السعر</p>
+                    <p className="text-blue-900 flex items-center gap-1">
                       <Award className="w-4 h-4" />
                       {editRequestDetails.price || 'غير محدد'}
                     </p>
@@ -370,8 +370,8 @@ export const CourseComparisonModal: React.FC<CourseComparisonModalProps> = ({
 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <p className="text-sm text-green-700 mb-1">حالة الطلب</p>
-                    <p className="text-green-900 flex items-center gap-1">
+                    <p className="text-sm text-blue-700 mb-1">حالة الطلب</p>
+                    <p className="text-blue-900 flex items-center gap-1">
                       <Award className="w-4 h-4" />
                       {editRequestDetails.status === 'pending' ? 'معلق' : 
                        editRequestDetails.status === 'approved' ? 'موافق عليه' :
@@ -379,8 +379,8 @@ export const CourseComparisonModal: React.FC<CourseComparisonModalProps> = ({
                     </p>
                   </div>
                   <div>
-                    <p className="text-sm text-green-700 mb-1">تاريخ الطلب</p>
-                    <p className="text-green-900 flex items-center gap-1">
+                    <p className="text-sm text-blue-700 mb-1">تاريخ الطلب</p>
+                    <p className="text-blue-900 flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
                       {formatDate(editRequestDetails.created_at)}
                     </p>
@@ -389,8 +389,8 @@ export const CourseComparisonModal: React.FC<CourseComparisonModalProps> = ({
 
                 {editRequestDetails.learning_outcomes && (
                   <div>
-                    <p className="text-sm text-green-700 mb-1">نواتج التعلم</p>
-                    <p className="text-green-900 text-sm leading-relaxed">
+                    <p className="text-sm text-blue-700 mb-1">نواتج التعلم</p>
+                    <p className="text-blue-900 text-sm leading-relaxed">
                       {safeString(editRequestDetails.learning_outcomes)}
                     </p>
                   </div>
@@ -398,19 +398,19 @@ export const CourseComparisonModal: React.FC<CourseComparisonModalProps> = ({
 
                 {editRequestDetails.subjects && (
                   <div>
-                    <p className="text-sm text-green-700 mb-1">المواضيع</p>
-                    <p className="text-green-900 text-sm">{safeString(editRequestDetails.subjects)}</p>
+                    <p className="text-sm text-blue-700 mb-1">المواضيع</p>
+                    <p className="text-blue-900 text-sm">{safeString(editRequestDetails.subjects)}</p>
                   </div>
                 )}
 
                 {editRequestDetails.trial_session_url && (
                   <div>
-                    <p className="text-sm text-green-700 mb-1">رابط الحصة التجريبية</p>
+                    <p className="text-sm text-blue-700 mb-1">رابط الحصة التجريبية</p>
                     <a 
                       href={editRequestDetails.trial_session_url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-green-600 hover:text-green-800 text-sm underline break-all"
+                      className="text-blue-600 hover:text-blue-800 text-sm underline break-all"
                     >
                       {editRequestDetails.trial_session_url}
                     </a>
@@ -527,22 +527,22 @@ export const CourseComparisonModal: React.FC<CourseComparisonModalProps> = ({
                   </div>
 
                   {/* New Lessons Data */}
-                  <div className="bg-green-50 border border-green-200 rounded-xl p-4">
-                    <h4 className="font-bold text-green-900 mb-3 flex items-center gap-2">
-                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
+                    <h4 className="font-bold text-blue-900 mb-3 flex items-center gap-2">
+                      <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
                       بيانات الدروس الجديدة
                     </h4>
                     {editRequestDetails.lessons_data ? (
                       <div className="bg-white rounded-lg p-4">
-                        <p className="text-green-800 text-sm mb-2">بيانات الدروس المحدثة:</p>
-                        <pre className="text-xs text-green-700 bg-green-100 p-3 rounded overflow-x-auto">
+                        <p className="text-blue-800 text-sm mb-2">بيانات الدروس المحدثة:</p>
+                        <pre className="text-xs text-blue-700 bg-blue-100 p-3 rounded overflow-x-auto">
                           {typeof editRequestDetails.lessons_data === 'string' 
                             ? editRequestDetails.lessons_data 
                             : JSON.stringify(editRequestDetails.lessons_data, null, 2)}
                         </pre>
                       </div>
                     ) : (
-                      <p className="text-green-700 text-sm">لا توجد تغييرات على الدروس</p>
+                      <p className="text-blue-700 text-sm">لا توجد تغييرات على الدروس</p>
                     )}
                   </div>
                 </div>
@@ -552,21 +552,21 @@ export const CourseComparisonModal: React.FC<CourseComparisonModalProps> = ({
 
           {/* Approval/Rejection Forms */}
           {showApprovalForm && (
-            <div className="bg-gradient-to-br from-green-50 to-green-100 border border-green-200 rounded-2xl p-6 mb-8 shadow-lg">
-              <h3 className="text-xl font-bold text-green-900 mb-6 flex items-center gap-3">
-                <div className="p-3 bg-gradient-to-r from-green-200 to-green-300 rounded-xl shadow-md">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-2xl p-6 mb-8 shadow-lg">
+              <h3 className="text-xl font-bold text-blue-900 mb-6 flex items-center gap-3">
+                <div className="p-3 bg-gradient-to-r from-blue-200 to-blue-300 rounded-xl shadow-md">
+                  <CheckCircle className="w-5 h-5 text-blue-600" />
                 </div>
                 الموافقة على التعديل
               </h3>
               <div className="mb-4">
-                <label className="block text-sm font-medium text-green-700 mb-2">
+                <label className="block text-sm font-medium text-blue-700 mb-2">
                   ملاحظات الموافقة (اختياري)
                 </label>
                 <textarea
                   value={approvalNotes}
                   onChange={(e) => setApprovalNotes(e.target.value)}
-                  className="w-full px-4 py-3 border border-green-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                  className="w-full px-4 py-3 border border-blue-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   rows={3}
                   placeholder="أضف أي ملاحظات أو توجيهات للمعلم..."
                 />
@@ -575,14 +575,14 @@ export const CourseComparisonModal: React.FC<CourseComparisonModalProps> = ({
                 <Button
                   onClick={handleApprove}
                   disabled={isLoading}
-                  className="bg-green-600 hover:bg-green-700 text-white"
+                  className="bg-blue-600 hover:bg-blue-700 text-white"
                 >
                   {isLoading ? 'جاري الموافقة...' : 'تأكيد الموافقة'}
                 </Button>
                 <Button
                   onClick={() => setShowApprovalForm(false)}
                   variant="outline"
-                  className="border-green-300 text-green-700 hover:bg-green-50"
+                  className="border-blue-300 text-blue-700 hover:bg-blue-50"
                 >
                   إلغاء
                 </Button>
@@ -646,7 +646,7 @@ export const CourseComparisonModal: React.FC<CourseComparisonModalProps> = ({
               </Button>
               <Button
                 onClick={() => setShowApprovalForm(true)}
-                className="bg-green-600 hover:bg-green-700 text-white"
+                className="bg-blue-600 hover:bg-blue-700 text-white"
               >
                 الموافقة على التعديل
               </Button>

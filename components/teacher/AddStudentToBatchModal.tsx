@@ -146,7 +146,7 @@ export default function AddStudentToBatchModal({
                               </div>
                             </div>
                             {student.payment_status === 'approved' && (
-                              <Badge className="bg-green-100 text-green-800 text-xs">
+                              <Badge className="bg-blue-100 text-blue-800 text-xs">
                                 <CheckCircle className="w-3 h-3 ml-1" />
                                 مدفوع
                               </Badge>

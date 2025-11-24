@@ -70,7 +70,7 @@ export default function AboutPage() {
       className="min-h-screen bg-gradient-to-br from-background-light via-white to-background-light text-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 dark:text-slate-100"
     >
       <section className="relative overflow-hidden pb-20 pt-28">
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#0A5734]/25 via-transparent to-[#4A8F5C]/40 blur-3xl dark:from-[#0A5734]/30 dark:to-[#4A8F5C]/25" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#1e40af]/25 via-transparent to-[#2563eb]/40 blur-3xl dark:from-blue-500/30 dark:to-blue-400/25" />
         <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-10 px-6 text-center">
           <motion.div
             initial={fadeUp.hidden}
@@ -78,10 +78,10 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="flex flex-wrap items-center justify-center gap-3"
           >
-            <Badge className="rounded-full bg-[#0A5734]/10 px-4 py-2 text-[#0A5734] dark:bg-[#4A8F5C]/20 dark:text-[#4A8F5C]">
+            <Badge className="rounded-full bg-[#1e40af]/10 px-4 py-2 text-[#1e40af] dark:bg-blue-500/20 dark:text-blue-400">
               {aboutData.hero.badges.vision}
             </Badge>
-            <Badge variant="outline" className="rounded-full border-[#0A5734]/40 px-4 py-2 text-[#0A5734] dark:border-[#4A8F5C]/40 dark:text-[#4A8F5C]">
+            <Badge variant="outline" className="rounded-full border-[#1e40af]/40 px-4 py-2 text-[#1e40af] dark:border-blue-400/40 dark:text-blue-400">
               {aboutData.hero.badges.academy}
             </Badge>
           </motion.div>
@@ -113,7 +113,7 @@ export default function AboutPage() {
             <Button
               variant="secondary"
               size="lg"
-              className="border border-[#0A5734] bg-transparent text-[#0A5734] hover:bg-[#0A5734]/10 dark:border-[#4A8F5C] dark:text-[#4A8F5C] dark:hover:bg-[#4A8F5C]/10"
+              className="border border-[#1e40af] bg-transparent text-[#1e40af] hover:bg-[#1e40af]/10 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400/10"
               onClick={() => router.push('/programs')}
             >
               {aboutData.hero.buttons.programs}
@@ -134,9 +134,9 @@ export default function AboutPage() {
               whileInView={fadeUp.visible}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: index * 0.05 }}
-              className="rounded-3xl border border-[#0A5734]/20 bg-white/80 p-6 text-right shadow-sm backdrop-blur-sm dark:border-[#0A5734]/30 dark:bg-slate-900/60"
+              className="rounded-3xl border border-[#1e40af]/20 bg-white/80 p-6 text-right shadow-sm backdrop-blur-sm dark:border-blue-400/30 dark:bg-slate-900/60"
             >
-              <p className="text-4xl font-bold text-[#0A5734] dark:text-[#4A8F5C]">{metric.value}</p>
+              <p className="text-4xl font-bold text-[#1e40af] dark:text-blue-400">{metric.value}</p>
               <p className="mt-2 text-lg font-semibold">{metric.label}</p>
               <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">{metric.caption}</p>
             </motion.div>
@@ -162,10 +162,10 @@ export default function AboutPage() {
           {features.map(({ icon: Icon, title, description }, index) => (
             <Card
               key={title}
-              className="group border-transparent bg-white/85 p-6 text-right shadow-sm ring-1 ring-slate-200/70 backdrop-blur-sm transition hover:-translate-y-1 hover:ring-[#0A5734]/60 dark:bg-slate-900/70 dark:ring-slate-800"
+              className="group border-transparent bg-white/85 p-6 text-right shadow-sm ring-1 ring-slate-200/70 backdrop-blur-sm transition hover:-translate-y-1 hover:ring-[#1e40af]/60 dark:bg-slate-900/70 dark:ring-slate-800"
             >
               <CardContent className="space-y-5 p-0">
-                <span className="inline-flex h-12 w-12 items-center justify-center self-end rounded-2xl bg-[#0A5734]/10 text-[#0A5734] transition group-hover:bg-[#0A5734]/20 dark:bg-[#4A8F5C]/20 dark:text-[#4A8F5C] dark:group-hover:bg-[#4A8F5C]/30">
+                <span className="inline-flex h-12 w-12 items-center justify-center self-end rounded-2xl bg-[#1e40af]/10 text-[#1e40af] transition group-hover:bg-[#1e40af]/20 dark:bg-blue-500/20 dark:text-blue-400 dark:group-hover:bg-[#2563eb]/30">
                   <Icon className="h-6 w-6" />
                 </span>
                 <CardTitle className="text-xl">{title}</CardTitle>
@@ -197,14 +197,14 @@ export default function AboutPage() {
             {aboutData.pillars.items.map((pillar, index) => (
               <Card
                 key={pillar.title}
-                className="border-[#0A5734]/10 bg-gradient-to-br from-white via-white to-[#0A5734]/5 text-right dark:from-slate-900 dark:via-slate-900 dark:to-[#0A5734]/10"
+                className="border-[#1e40af]/10 bg-gradient-to-br from-white via-white to-[#1e40af]/5 text-right dark:from-slate-900 dark:via-slate-900 dark:to-blue-500/10"
               >
                 <CardContent className="space-y-4 p-6">
-                  <Badge className="ml-auto w-fit rounded-full bg-[#0A5734]/15 px-3 py-1 text-xs font-medium text-[#0A5734] dark:bg-[#4A8F5C]/20 dark:text-[#4A8F5C]">
+                  <Badge className="ml-auto w-fit rounded-full bg-[#1e40af]/15 px-3 py-1 text-xs font-medium text-[#1e40af] dark:bg-blue-500/20 dark:text-blue-400">
                     {index + 1}
                   </Badge>
                   <CardTitle className="text-2xl">{pillar.title}</CardTitle>
-                  <p className="text-sm font-semibold text-[#0A5734] dark:text-[#4A8F5C]">{pillar.summary}</p>
+                  <p className="text-sm font-semibold text-[#1e40af] dark:text-blue-400">{pillar.summary}</p>
                   <CardDescription className="leading-7 text-slate-600 dark:text-slate-300">
                     {pillar.detail}
                   </CardDescription>
@@ -223,7 +223,7 @@ export default function AboutPage() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-12 max-w-3xl text-center"
         >
-          <Badge variant="outline" className="rounded-full border-[#0A5734]/40 px-4 py-2 text-[#0A5734] dark:border-[#4A8F5C]/40 dark:text-[#4A8F5C]">
+          <Badge variant="outline" className="rounded-full border-[#1e40af]/40 px-4 py-2 text-[#1e40af] dark:border-blue-400/40 dark:text-blue-400">
             {aboutData.journey.badge}
           </Badge>
           <h2 className="mt-4 text-3xl font-semibold md:text-4xl">{aboutData.journey.title}</h2>
@@ -240,10 +240,10 @@ export default function AboutPage() {
             >
               <CardContent className="space-y-4 p-6">
                 <div className="flex items-center justify-between">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0A5734] text-base font-semibold text-white">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1e40af] text-base font-semibold text-white">
                     {index + 1}
                   </span>
-                  <Sparkles className="h-5 w-5 text-[#0A5734]/70 dark:text-[#4A8F5C]/70" />
+                  <Sparkles className="h-5 w-5 text-[#1e40af]/70 dark:text-blue-400/70" />
                 </div>
                 <CardTitle className="text-2xl">{step.title}</CardTitle>
                 <CardDescription className="leading-7 text-slate-600 dark:text-slate-300">
@@ -255,7 +255,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-[#0A5734] via-[#0A5734] to-[#4A8F5C] py-20 text-white">
+      <section className="bg-gradient-to-br from-[#1e40af] via-[#1e40af] to-[#2563eb] py-20 text-white">
         <div className="mx-auto max-w-4xl px-6">
           <Card className="border-none bg-white/10 p-8 text-right backdrop-blur-md">
             <CardContent className="space-y-6 p-0">
@@ -275,7 +275,7 @@ export default function AboutPage() {
       </section>
 
       <section className="pb-24 pt-20">
-        <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 rounded-3xl border border-[#0A5734]/30 bg-white/90 px-8 py-16 text-center shadow-lg backdrop-blur-sm dark:border-[#0A5734]/40 dark:bg-slate-900/70">
+        <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 rounded-3xl border border-[#1e40af]/30 bg-white/90 px-8 py-16 text-center shadow-lg backdrop-blur-sm dark:border-blue-400/40 dark:bg-slate-900/70">
           <motion.h2
             initial={fadeUp.hidden}
             whileInView={fadeUp.visible}

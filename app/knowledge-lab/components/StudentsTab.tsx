@@ -298,7 +298,7 @@ export function StudentsTab({ labId }: StudentsTabProps) {
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-green-500" />
+                        <CheckCircle2 className="w-4 h-4 text-blue-500" />
                         <div>
                           <p className="text-xs text-gray-500 dark:text-gray-400">مكتملة</p>
                           <p className="text-sm font-semibold text-gray-900 dark:text-white">
@@ -332,7 +332,7 @@ export function StudentsTab({ labId }: StudentsTabProps) {
                     <Badge 
                       className={`${
                         student.average_score >= 80 
-                          ? 'bg-green-500' 
+                          ? 'bg-blue-500' 
                           : student.average_score >= 60 
                           ? 'bg-yellow-500' 
                           : 'bg-red-500'

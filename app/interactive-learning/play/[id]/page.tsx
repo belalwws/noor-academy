@@ -18,7 +18,7 @@ const H5PPlayer = dynamic(() => import('@/components/H5PPlayer'), {
   ssr: false,
   loading: () => (
     <div className="p-8 text-center">
-      <Loader2 className="w-8 h-8 animate-spin mx-auto text-green-600" />
+      <Loader2 className="w-8 h-8 animate-spin mx-auto text-blue-600" />
       <p className="mt-4 text-gray-600">جاري تحميل المحتوى...</p>
     </div>
   )
@@ -129,7 +129,7 @@ function PlayGameContent() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
-          <Loader2 className="w-12 h-12 animate-spin mx-auto text-green-600 mb-4" />
+          <Loader2 className="w-12 h-12 animate-spin mx-auto text-blue-600 mb-4" />
           <p className="text-gray-600">جاري تحميل اللعبة...</p>
         </div>
       </div>

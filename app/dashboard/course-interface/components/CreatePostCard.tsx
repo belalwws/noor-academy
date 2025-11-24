@@ -66,7 +66,7 @@ export default function CreatePostCard({
         <div className="flex items-start gap-4">
           <Avatar className="w-12 h-12 border-2 border-gray-100">
             <AvatarImage src={userAvatar} />
-            <AvatarFallback className="bg-gradient-to-br from-green-500 to-green-600 text-white font-medium">
+            <AvatarFallback className="bg-gradient-to-br from-blue-500 to-blue-600 text-white font-medium">
               {userName.charAt(0)}
             </AvatarFallback>
           </Avatar>
@@ -78,7 +78,7 @@ export default function CreatePostCard({
               onChange={(e) => setContent(e.target.value)}
               onFocus={() => setIsExpanded(true)}
               placeholder={placeholder}
-              className="min-h-[60px] resize-none border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              className="min-h-[60px] resize-none border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               rows={isExpanded ? 4 : 2}
             />
 
@@ -170,7 +170,7 @@ export default function CreatePostCard({
                   <Button 
                     onClick={handleSubmit}
                     disabled={!content.trim() && attachments.length === 0}
-                    className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-6 py-2 rounded-lg shadow-sm hover:shadow-md transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-2 rounded-lg shadow-sm hover:shadow-md transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Send className="w-4 h-4 ml-2" />
                     نشر

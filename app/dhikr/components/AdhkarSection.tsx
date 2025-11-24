@@ -292,13 +292,13 @@ export default function AdhkarSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.05 }}
           >
-            <Card className={`relative h-full overflow-hidden border-0 bg-white/80 shadow-lg transition-all hover:shadow-xl dark:bg-slate-900/70 ${dhikr.completed ? 'ring-2 ring-emerald-500' : ''}`}>
+            <Card className={`relative h-full overflow-hidden border-0 bg-white/80 shadow-lg transition-all hover:shadow-xl dark:bg-slate-900/70 ${dhikr.completed ? 'ring-2 ring-blue-500' : ''}`}>
               <CardHeader className="flex items-start justify-between">
                 <Badge variant="outline" className="bg-[#0A5734]/10 text-[#0A5734] dark:bg-[#4A8F5C]/20 dark:text-[#4A8F5C]">
                   تكرار: {dhikr.count} ×
                 </Badge>
                 {dhikr.completed && (
-                  <CheckCircle className="h-5 w-5 text-emerald-500" />
+                  <CheckCircle className="h-5 w-5 text-blue-500" />
                 )}
               </CardHeader>
               <CardContent className="space-y-4 text-right">
@@ -341,7 +341,7 @@ export default function AdhkarSection() {
             transition={{ duration: 0.4 }}
             className="mt-10"
           >
-            <Card className="mx-auto max-w-2xl bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 text-white shadow-2xl">
+            <Card className="mx-auto max-w-2xl bg-gradient-to-r from-blue-500 via-teal-500 to-blue-600 text-white shadow-2xl">
               <CardContent className="space-y-4 p-8 text-center">
                 <motion.div
                   animate={{ rotate: [0, 6, -6, 0] }}
@@ -353,7 +353,7 @@ export default function AdhkarSection() {
                 <h3 className="text-2xl font-bold">
                   أحسنت! أتممت وردك لهذا الوقت.
                 </h3>
-                <p className="text-emerald-100">
+                <p className="text-blue-100">
                   اجعل قلبك معلَّقاً بذكر الله، فبذكره تطمئن القلوب.
                 </p>
               </CardContent>

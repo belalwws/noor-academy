@@ -93,7 +93,7 @@ export default function LessonsSection({
             <div 
               key={lesson.id} 
               className={`border-b border-gray-200 dark:border-slate-700 last:border-b-0 transition-colors duration-300 ${
-                isSelected ? 'bg-green-50 dark:bg-orange-900/20' : 'hover:bg-gray-50 dark:hover:bg-slate-800'
+                isSelected ? 'bg-blue-50 dark:bg-orange-900/20' : 'hover:bg-gray-50 dark:hover:bg-slate-800'
               }`}
             >
               {/* Lesson Header */}
@@ -103,7 +103,7 @@ export default function LessonsSection({
               >
                 <div className="flex items-center gap-4">
                   {/* Lesson Number */}
-                  <div className="w-8 h-8 bg-green-600 dark:bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
+                  <div className="w-8 h-8 bg-blue-600 dark:bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
                     {lesson.order || index + 1}
                   </div>
                   
@@ -196,7 +196,7 @@ export default function LessonsSection({
                           e.stopPropagation();
                           onLessonClick(lesson.id);
                         }}
-                        className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 text-sm"
+                        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 text-sm"
                       >
                         <Eye className="w-4 h-4 ml-1" />
                         عرض التفاصيل
@@ -212,10 +212,10 @@ export default function LessonsSection({
 
       {/* Selected Lesson Details */}
       {selectedLesson && (
-        <div className="bg-green-50 border border-green-200 rounded-lg p-6 mt-6">
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-6">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+              <div className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
                 {selectedLesson.order || lessons.findIndex(l => l.id === selectedLesson.id) + 1}
               </div>
               <h3 className="text-xl font-semibold text-gray-900">
@@ -248,29 +248,29 @@ export default function LessonsSection({
             <div className="flex items-center gap-6 text-sm text-gray-600 flex-wrap">
               {selectedLesson.duration_minutes && (
                 <div className="flex items-center gap-1">
-                  <Clock className="w-4 h-4 text-green-600" />
+                  <Clock className="w-4 h-4 text-blue-600" />
                   <span>{selectedLesson.duration_minutes} دقيقة</span>
                 </div>
               )}
               {selectedLesson.sessions_count && (
                 <div className="flex items-center gap-1">
-                  <BookOpen className="w-4 h-4 text-green-600" />
+                  <BookOpen className="w-4 h-4 text-blue-600" />
                   <span>{selectedLesson.sessions_count} جلسة</span>
                 </div>
               )}
               <div className="flex items-center gap-1">
-                <Calendar className="w-4 h-4 text-green-600" />
+                <Calendar className="w-4 h-4 text-blue-600" />
                 <span>{new Date(selectedLesson.created_at).toLocaleDateString('ar-SA')}</span>
               </div>
             </div>
             
             {(selectedLesson.objectives || selectedLesson.materials || selectedLesson.homework) && (
-              <div className="pt-4 border-t border-green-200 space-y-3">
+              <div className="pt-4 border-t border-blue-200 space-y-3">
                 {selectedLesson.objectives && (
                   <div className="bg-white p-4 rounded-lg">
                     <div className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
-                      <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
-                        <span className="text-green-600 text-xs">🎯</span>
+                      <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                        <span className="text-blue-600 text-xs">🎯</span>
                       </div>
                       أهداف الدرس
                     </div>
@@ -304,7 +304,7 @@ export default function LessonsSection({
               </div>
             )}
             
-            <div className="pt-4 border-t border-green-200">
+            <div className="pt-4 border-t border-blue-200">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                 <div className="bg-white p-3 rounded-lg">
                   <div className="font-medium text-gray-900 mb-1">رقم الدرس</div>

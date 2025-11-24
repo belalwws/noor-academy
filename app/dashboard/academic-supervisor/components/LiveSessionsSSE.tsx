@@ -33,7 +33,7 @@ const LiveSessionsSSE: React.FC = () => {
                   </div>
                   <div>
                     <div className="text-base font-semibold">حصص مباشرة الآن</div>
-                    <div className="text-xs text-green-100 mt-0.5">
+                    <div className="text-xs text-blue-100 mt-0.5">
                       {liveSessions.length > 0 ? `${liveSessions.length} جلسة نشطة` : 'لا توجد جلسات'}
                     </div>
                   </div>
@@ -42,18 +42,18 @@ const LiveSessionsSSE: React.FC = () => {
                   {/* Connection Status */}
                   <div className="flex items-center gap-1">
                     {connected ? (
-                      <Wifi className="w-4 h-4 text-green-200" />
+                      <Wifi className="w-4 h-4 text-blue-200" />
                     ) : (
                       <WifiOff className="w-4 h-4 text-red-300" />
                     )}
-                    <span className="text-xs text-green-100">
+                    <span className="text-xs text-blue-100">
                       {connected ? 'متصل' : 'غير متصل'}
                     </span>
                   </div>
                   {liveSessions.length > 0 && (
                     <div className="flex items-center gap-1">
                       <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
-                      <span className="text-xs text-green-100">مباشر</span>
+                      <span className="text-xs text-blue-100">مباشر</span>
                     </div>
                   )}
                 </div>
@@ -80,13 +80,13 @@ const LiveSessionsSSE: React.FC = () => {
               
               {loading ? (
                 <div className="text-center py-6">
-                  <div className="w-10 h-10 border-2 border-green-200 border-t-green-600 rounded-full animate-spin mx-auto mb-3"></div>
+                  <div className="w-10 h-10 border-2 border-blue-200 border-t-blue-600 rounded-full animate-spin mx-auto mb-3"></div>
                   <p className="text-xs text-gray-500">جاري الاتصال بالخادم...</p>
                 </div>
               ) : liveSessions.length > 0 ? (
                 <div className="space-y-3">
                   {liveSessions.slice(0, 3).map((s: any) => (
-                    <div key={s.session_id} className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-3 border border-green-200 hover:shadow-md transition-all duration-300">
+                    <div key={s.session_id} className="bg-gradient-to-br from-blue-50 to-blue-50 rounded-lg p-3 border border-blue-200 hover:shadow-md transition-all duration-300">
                       <div className="space-y-2">
                         <div className="flex items-start justify-between">
                           <h4 className="font-medium text-gray-800 text-sm line-clamp-1">{s.title || 'جلسة مباشرة'}</h4>
@@ -99,7 +99,7 @@ const LiveSessionsSSE: React.FC = () => {
                         <div className="text-xs text-gray-600 space-y-1">
                           {s.course_title && (
                             <div className="flex items-center gap-2">
-                              <BookOpen className="w-3 h-3 text-green-600 flex-shrink-0" />
+                              <BookOpen className="w-3 h-3 text-blue-600 flex-shrink-0" />
                               <span className="line-clamp-1">{s.course_title}</span>
                             </div>
                           )}
@@ -121,7 +121,7 @@ const LiveSessionsSSE: React.FC = () => {
 
                         <Button
                           size="sm"
-                          className="w-full h-8 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-md hover:shadow-lg transition-all duration-300"
+                          className="w-full h-8 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-md hover:shadow-lg transition-all duration-300"
                           onClick={() => router.push(`/join/${s.session_id}`)}
                           disabled={!s.can_join}
                         >
@@ -135,7 +135,7 @@ const LiveSessionsSSE: React.FC = () => {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="w-full text-green-600 border-green-200 hover:bg-green-50 h-8"
+                      className="w-full text-blue-600 border-blue-200 hover:bg-blue-50 h-8"
                     >
                       عرض جميع الجلسات ({liveSessions.length})
                     </Button>

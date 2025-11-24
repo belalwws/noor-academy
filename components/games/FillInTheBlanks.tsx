@@ -154,8 +154,8 @@ export default function FillInTheBlanks({
     const percentage = (correctCount / totalBlanks) * 100;
 
     return (
-      <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 rounded-xl shadow-xl">
-        <div className="p-8 pb-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-t-xl">
+      <div className="bg-gradient-to-br from-blue-50 to-blue-50 dark:from-blue-900/30 dark:to-blue-900/30 rounded-xl shadow-xl">
+        <div className="p-8 pb-6 bg-gradient-to-r from-blue-500 to-blue-500 rounded-t-xl">
           <h2 className="text-center text-4xl md:text-5xl font-black text-white drop-shadow-lg">
             النتيجة النهائية: {correctCount} / {totalBlanks}
           </h2>
@@ -181,13 +181,13 @@ export default function FillInTheBlanks({
                       transition={{ delay: (qIdx * 10 + idx) * 0.1 }}
                       className={`p-6 md:p-8 rounded-xl shadow-md ${
                         isCorrect 
-                          ? 'bg-green-100 dark:bg-green-900/30' 
+                          ? 'bg-blue-100 dark:bg-blue-900/30' 
                           : 'bg-red-100 dark:bg-red-900/30'
                       }`}
                     >
                       <div className="flex items-start gap-4">
                         {isCorrect ? (
-                          <CheckCircle className="w-8 h-8 md:w-10 md:h-10 text-green-600 dark:text-green-400 flex-shrink-0 mt-1" />
+                          <CheckCircle className="w-8 h-8 md:w-10 md:h-10 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" />
                         ) : (
                           <XCircle className="w-8 h-8 md:w-10 md:h-10 text-red-600 dark:text-red-400 flex-shrink-0 mt-1" />
                         )}
@@ -197,7 +197,7 @@ export default function FillInTheBlanks({
                           </p>
                           {!isCorrect && (
                             <p className="text-base md:text-lg text-gray-700 dark:text-gray-300">
-                              الإجابة الصحيحة: <strong className="text-green-700 dark:text-green-400 text-lg md:text-xl">{blank.content}</strong>
+                              الإجابة الصحيحة: <strong className="text-blue-700 dark:text-blue-400 text-lg md:text-xl">{blank.content}</strong>
                             </p>
                           )}
                         </div>
@@ -289,7 +289,7 @@ export default function FillInTheBlanks({
                         shadow-sm
                         ${showResult 
                           ? isCorrect 
-                            ? 'ring-2 ring-green-500 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300' 
+                            ? 'ring-2 ring-blue-500 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300' 
                             : 'ring-2 ring-red-500 bg-red-50 dark:bg-red-900/30 text-red-700 dark:text-red-300'
                           : submitted 
                             ? 'bg-gray-100 dark:bg-gray-800 cursor-not-allowed'
@@ -307,7 +307,7 @@ export default function FillInTheBlanks({
                       </span>
                     )}
                     {showResult && isCorrect && (
-                      <span className="text-green-600 dark:text-green-400 text-base md:text-lg font-bold inline-block">
+                      <span className="text-blue-600 dark:text-blue-400 text-base md:text-lg font-bold inline-block">
                         ✓
                       </span>
                     )}
@@ -340,15 +340,15 @@ export default function FillInTheBlanks({
             transition={{ duration: 0.3 }}
             className={`mt-6 p-6 rounded-xl shadow-lg ${
               currentQuestionCorrect 
-                ? 'bg-green-50 dark:bg-green-900/30 ring-2 ring-green-500' 
+                ? 'bg-blue-50 dark:bg-blue-900/30 ring-2 ring-blue-500' 
                 : 'bg-red-50 dark:bg-red-900/30 ring-2 ring-red-500'
             }`}
           >
             <div className="flex items-center gap-3 mb-4">
               {currentQuestionCorrect ? (
                 <>
-                  <CheckCircle className="w-8 h-8 text-green-600 dark:text-green-400" />
-                  <h3 className="text-2xl md:text-3xl font-bold text-green-700 dark:text-green-300">
+                  <CheckCircle className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+                  <h3 className="text-2xl md:text-3xl font-bold text-blue-700 dark:text-blue-300">
                     إجابة صحيحة! 🎉
                   </h3>
                 </>
@@ -382,7 +382,7 @@ export default function FillInTheBlanks({
                           إجابتك: <span className="font-bold text-red-600 dark:text-red-400">{answers[key] || '(فارغ)'}</span>
                         </p>
                         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300">
-                          الإجابة الصحيحة: <span className="font-bold text-green-600 dark:text-green-400">{blank.content}</span>
+                          الإجابة الصحيحة: <span className="font-bold text-blue-600 dark:text-blue-400">{blank.content}</span>
                         </p>
                       </div>
                     );
@@ -398,7 +398,7 @@ export default function FillInTheBlanks({
                 <Button 
                   onClick={handleNextQuestion}
                   size="lg"
-                  className="px-8 py-4 text-lg md:text-xl font-bold rounded-xl shadow-lg hover:shadow-xl transition-all bg-green-600 hover:bg-green-700"
+                  className="px-8 py-4 text-lg md:text-xl font-bold rounded-xl shadow-lg hover:shadow-xl transition-all bg-blue-600 hover:bg-blue-700"
                 >
                   السؤال التالي →
                 </Button>
@@ -406,7 +406,7 @@ export default function FillInTheBlanks({
                 <Button 
                   onClick={handleNextQuestion}
                   size="lg"
-                  className="px-8 py-4 text-lg md:text-xl font-bold rounded-xl shadow-lg hover:shadow-xl transition-all bg-green-600 hover:bg-green-700"
+                  className="px-8 py-4 text-lg md:text-xl font-bold rounded-xl shadow-lg hover:shadow-xl transition-all bg-blue-600 hover:bg-blue-700"
                 >
                   عرض النتيجة النهائية
                 </Button>

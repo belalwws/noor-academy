@@ -23,7 +23,7 @@ export const ProfessionalInfoForm: React.FC<ProfessionalInfoFormProps> = ({
   return (
     <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8">
       <h3 className="text-xl font-bold text-gray-900 mb-8 flex items-center gap-3">
-        <div className="p-2 bg-gradient-to-r from-green-600 to-green-700 rounded-lg">
+        <div className="p-2 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg">
           <Briefcase className="w-5 h-5 text-white" />
         </div>
         البيانات المهنية
@@ -40,7 +40,7 @@ export const ProfessionalInfoForm: React.FC<ProfessionalInfoFormProps> = ({
             value={data.department || ''}
             onChange={handleInputChange('department')}
             disabled={disabled}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
             placeholder="اسم القسم"
             required
           />
@@ -56,7 +56,7 @@ export const ProfessionalInfoForm: React.FC<ProfessionalInfoFormProps> = ({
             value={data.specialization || ''}
             onChange={handleInputChange('specialization')}
             disabled={disabled}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
             placeholder="تخصصك"
             required
           />
@@ -72,7 +72,7 @@ export const ProfessionalInfoForm: React.FC<ProfessionalInfoFormProps> = ({
             onChange={handleInputChange('areas_of_responsibility')}
             disabled={disabled}
             rows={2}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
             placeholder="اكتب مجالات مسؤوليتك (مثل: مراجعة الدورات، إدارة المعلمين، إلخ)"
             required
           />
@@ -88,7 +88,7 @@ export const ProfessionalInfoForm: React.FC<ProfessionalInfoFormProps> = ({
             onChange={handleInputChange('experience')}
             disabled={disabled}
             rows={3}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
             placeholder="اكتب خبرتك المهنية وتفاصيلها"
             required
           />
@@ -104,7 +104,7 @@ export const ProfessionalInfoForm: React.FC<ProfessionalInfoFormProps> = ({
             onChange={handleInputChange('achievements')}
             disabled={disabled}
             rows={3}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
             placeholder="اكتب إنجازاتك المهنية والأكاديمية"
             required
           />

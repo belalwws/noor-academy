@@ -341,7 +341,7 @@ const CoursesTab: React.FC<CoursesTabProps> = ({ onShowCourseDetails, onShowAppr
       case 'pending':
         return 'bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 border-amber-200 dark:border-amber-700';
       case 'approved':
-        return 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 border-green-200 dark:border-green-700';
+        return 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 border-blue-200 dark:border-blue-700';
       case 'rejected':
         return 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 border-red-200 dark:border-red-700';
       case 'under_review':
@@ -399,7 +399,7 @@ const CoursesTab: React.FC<CoursesTabProps> = ({ onShowCourseDetails, onShowAppr
           course.approval_status === 'pending' 
             ? 'bg-gradient-to-r from-amber-400 via-orange-500 to-amber-400' 
             : course.approval_status === 'approved'
-            ? 'bg-gradient-to-r from-green-400 via-emerald-500 to-green-400'
+            ? 'bg-gradient-to-r from-blue-400 via-blue-500 to-blue-400'
             : 'bg-gradient-to-r from-red-400 via-rose-500 to-red-400'
         }`} />
         
@@ -457,10 +457,10 @@ const CoursesTab: React.FC<CoursesTabProps> = ({ onShowCourseDetails, onShowAppr
               
               <motion.div 
                 whileHover={{ scale: 1.03, y: -2 }}
-                className="bg-gray-50/80 dark:bg-slate-800/80 backdrop-blur-sm p-3.5 rounded-xl border border-gray-200/40 dark:border-slate-700/40 hover:border-green-300/60 dark:hover:border-green-700/40 transition-colors duration-200"
+                className="bg-gray-50/80 dark:bg-slate-800/80 backdrop-blur-sm p-3.5 rounded-xl border border-gray-200/40 dark:border-slate-700/40 hover:border-blue-300/60 dark:hover:border-blue-700/40 transition-colors duration-200"
               >
                 <div className="flex items-center gap-2 mb-1.5">
-                  <Users className="w-4 h-4 text-green-600 dark:text-green-400" />
+                  <Users className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                   <span className="text-xs text-gray-500 dark:text-slate-400 font-medium">الحد الأقصى</span>
                 </div>
                 <p className="text-sm font-semibold text-gray-900 dark:text-slate-100 leading-tight">{course.max_students} طالب</p>
@@ -499,7 +499,7 @@ const CoursesTab: React.FC<CoursesTabProps> = ({ onShowCourseDetails, onShowAppr
                 transition={{ duration: 2, repeat: course.is_published ? Infinity : 0 }}
                 className={`w-2 h-2 rounded-full ${
                   course.is_published 
-                    ? 'bg-green-500 dark:bg-green-400 shadow-sm shadow-green-500/50' 
+                    ? 'bg-blue-500 dark:bg-blue-400 shadow-sm shadow-blue-500/50' 
                     : 'bg-gray-400 dark:bg-gray-500'
                 }`}
               />
@@ -528,7 +528,7 @@ const CoursesTab: React.FC<CoursesTabProps> = ({ onShowCourseDetails, onShowAppr
                     <Button
                       variant="outline"
                       size="sm"
-                      className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 dark:from-green-600 dark:to-emerald-700 text-white border-0 shadow-md hover:shadow-lg text-xs px-3 py-1.5 h-auto font-semibold"
+                      className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 dark:from-blue-600 dark:to-blue-700 text-white border-0 shadow-md hover:shadow-lg text-xs px-3 py-1.5 h-auto font-semibold"
                       onClick={() => onShowApproval(course)}
                     >
                       <CheckCircle className="w-3.5 h-3.5 ml-1.5" />
@@ -555,7 +555,7 @@ const CoursesTab: React.FC<CoursesTabProps> = ({ onShowCourseDetails, onShowAppr
                   variant="outline" 
                   size="sm"
                   className={course.is_hidden 
-                    ? "border-green-300 dark:border-green-700 text-green-600 dark:text-green-400 hover:bg-green-50 dark:hover:bg-green-900/20 hover:border-green-400 dark:hover:border-green-600 text-xs px-3 py-1.5 h-auto"
+                    ? "border-blue-300 dark:border-blue-700 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:border-blue-400 dark:hover:border-blue-600 text-xs px-3 py-1.5 h-auto"
                     : "border-amber-300 dark:border-amber-700 text-amber-600 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-900/20 hover:border-amber-400 dark:hover:border-amber-600 text-xs px-3 py-1.5 h-auto"}
                   onClick={() => onShowDelete(course)}
                 >
@@ -584,7 +584,7 @@ const CoursesTab: React.FC<CoursesTabProps> = ({ onShowCourseDetails, onShowAppr
           </TabsTrigger>
           <TabsTrigger 
             value="approved" 
-            className="flex-1 h-full data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500 data-[state=active]:via-emerald-600 data-[state=active]:to-green-600 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold data-[state=inactive]:text-gray-600 dark:data-[state=inactive]:text-gray-400 data-[state=inactive]:bg-transparent data-[state=inactive]:hover:bg-green-50/60 dark:data-[state=inactive]:hover:bg-green-950/30 data-[state=inactive]:hover:text-green-700 dark:data-[state=inactive]:hover:text-green-400"
+            className="flex-1 h-full data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-500 data-[state=active]:via-blue-600 data-[state=active]:to-blue-600 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold data-[state=inactive]:text-gray-600 dark:data-[state=inactive]:text-gray-400 data-[state=inactive]:bg-transparent data-[state=inactive]:hover:bg-blue-50/60 dark:data-[state=inactive]:hover:bg-blue-950/30 data-[state=inactive]:hover:text-blue-700 dark:data-[state=inactive]:hover:text-blue-400"
           >
             <CheckCircle className="w-4 h-4 shrink-0" />
             <span className="whitespace-nowrap text-xs sm:text-sm">مقبولة ({approvedCourses.length})</span>
@@ -686,10 +686,10 @@ const CoursesTab: React.FC<CoursesTabProps> = ({ onShowCourseDetails, onShowAppr
           <motion.div 
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="flex items-center justify-between bg-gradient-to-r from-green-50/80 to-emerald-50/60 dark:from-green-900/20 dark:to-emerald-900/10 p-4 rounded-2xl border border-green-200/50 dark:border-green-700/30 shadow-md"
+            className="flex items-center justify-between bg-gradient-to-r from-blue-50/80 to-blue-50/60 dark:from-blue-900/20 dark:to-blue-900/10 p-4 rounded-2xl border border-blue-200/50 dark:border-blue-700/30 shadow-md"
           >
             <h3 className="text-lg font-bold text-gray-900 dark:text-slate-100 flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 dark:from-green-600 dark:to-emerald-700 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-600 dark:to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
                 <CheckCircle className="w-5 h-5 text-white" />
               </div>
               الدورات المقبولة ({approvedCourses.length})
@@ -702,7 +702,7 @@ const CoursesTab: React.FC<CoursesTabProps> = ({ onShowCourseDetails, onShowAppr
                 }}
                 variant="outline"
                 size="sm"
-                className="bg-white dark:bg-slate-800 border-2 border-green-300 dark:border-green-700 text-green-700 dark:text-green-400 hover:bg-green-50 dark:hover:bg-green-900/20 shadow-sm"
+                className="bg-white dark:bg-slate-800 border-2 border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 shadow-sm"
                 disabled={approvedLoading}
               >
                 <RefreshCw className={`w-4 h-4 ml-1 ${approvedLoading ? 'animate-spin' : ''}`} />
@@ -721,9 +721,9 @@ const CoursesTab: React.FC<CoursesTabProps> = ({ onShowCourseDetails, onShowAppr
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-emerald-400/20 dark:from-green-600/20 dark:to-emerald-700/20 rounded-full blur-2xl"
+                  className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-blue-400/20 dark:from-blue-600/20 dark:to-blue-700/20 rounded-full blur-2xl"
                 />
-                <RefreshCw className="w-12 h-12 animate-spin text-green-600 dark:text-green-400 mx-auto mb-4 relative z-10" />
+                <RefreshCw className="w-12 h-12 animate-spin text-blue-600 dark:text-blue-400 mx-auto mb-4 relative z-10" />
               </div>
               <p className="text-gray-600 dark:text-slate-400 font-medium">جاري تحميل الدورات المقبولة...</p>
             </motion.div>
@@ -742,7 +742,7 @@ const CoursesTab: React.FC<CoursesTabProps> = ({ onShowCourseDetails, onShowAppr
                     transition={{ duration: 2, repeat: Infinity }}
                     className="inline-block mb-4"
                   >
-                    <CheckCircle className="w-16 h-16 text-green-500 dark:text-green-400 mx-auto" />
+                    <CheckCircle className="w-16 h-16 text-blue-500 dark:text-blue-400 mx-auto" />
                   </motion.div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-slate-100 mb-2">لا توجد دورات مقبولة</h3>
                   <p className="text-gray-600 dark:text-slate-400">لا توجد دورات تم قبولها حالياً</p>

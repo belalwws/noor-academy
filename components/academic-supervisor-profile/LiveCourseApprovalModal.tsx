@@ -139,7 +139,7 @@ export const LiveCourseApprovalModal: React.FC<LiveCourseApprovalModalProps> = (
                 <div className="grid grid-cols-2 gap-3 pt-4">
                   <Button
                     onClick={() => setAction('approve')}
-                    className="bg-green-600 hover:bg-green-700 text-white"
+                    className="bg-blue-600 hover:bg-blue-700 text-white"
                   >
                     <CheckCircle className="w-4 h-4 ml-2" />
                     قبول الدورة
@@ -192,7 +192,7 @@ export const LiveCourseApprovalModal: React.FC<LiveCourseApprovalModalProps> = (
                   <Button
                     onClick={action === 'approve' ? handleApprove : handleReject}
                     className={action === 'approve' 
-                      ? 'bg-green-600 hover:bg-green-700 text-white' 
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white' 
                       : 'bg-red-600 hover:bg-red-700 text-white'
                     }
                     disabled={submitting}

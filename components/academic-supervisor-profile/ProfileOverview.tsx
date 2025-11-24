@@ -65,7 +65,7 @@ const ProfileOverview: React.FC<ProfileOverviewProps> = ({
                 size="lg"
                 className="w-24 h-24 rounded-2xl shadow-lg"
               />
-              <div className="absolute -bottom-2 -right-2 p-2 bg-gradient-to-r from-green-600 to-green-700 rounded-full shadow-lg">
+              <div className="absolute -bottom-2 -right-2 p-2 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full shadow-lg">
                 <User className="w-4 h-4 text-white" />
               </div>
             </div>
@@ -79,11 +79,11 @@ const ProfileOverview: React.FC<ProfileOverviewProps> = ({
                   {displayData.full_name || `${displayData.first_name} ${displayData.last_name}`.trim() || displayData.username || 'المشرف الأكاديمي'}
                 </h2>
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="px-3 py-1 bg-gradient-to-r from-green-600 to-green-700 text-white text-sm font-medium rounded-full">
+                  <span className="px-3 py-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-sm font-medium rounded-full">
                     {displayData.role_display}
                   </span>
                   {displayData.is_verified && (
-                    <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-green-600 text-white text-sm font-medium rounded-full flex items-center gap-1">
+                    <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-sm font-medium rounded-full flex items-center gap-1">
                       <CheckCircle className="w-3 h-3" />
                       موثق
                     </span>
@@ -98,11 +98,11 @@ const ProfileOverview: React.FC<ProfileOverviewProps> = ({
               <div className="bg-gradient-to-r from-blue-50 to-blue-50 border border-blue-200 rounded-xl p-4 min-w-[200px]">
                 <div className="flex items-center gap-2 mb-2">
                   {isComplete ? (
-                    <Star className="w-5 h-5 text-green-600" />
+                    <Star className="w-5 h-5 text-blue-600" />
                   ) : (
-                    <TrendingUp className="w-5 h-5 text-green-600" />
+                    <TrendingUp className="w-5 h-5 text-blue-600" />
                   )}
-                  <span className="font-medium text-green-900">
+                  <span className="font-medium text-blue-900">
                     {isComplete ? 'مكتمل' : 'غير مكتمل'}
                   </span>
                 </div>
@@ -118,7 +118,7 @@ const ProfileOverview: React.FC<ProfileOverviewProps> = ({
                     </div>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium text-green-700">
+                    <span className="text-sm font-medium text-blue-700">
                       {completionPercentage}%
                     </span>
                     <div className="flex gap-1">
@@ -144,7 +144,7 @@ const ProfileOverview: React.FC<ProfileOverviewProps> = ({
       {/* Personal Information Card */}
       <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-6 mb-6">
           <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-            <div className="p-2 bg-gradient-to-r from-green-600 to-green-700 rounded-lg">
+            <div className="p-2 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg">
               <User className="w-5 h-5 text-white" />
             </div>
             المعلومات الشخصية
@@ -153,7 +153,7 @@ const ProfileOverview: React.FC<ProfileOverviewProps> = ({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* البريد الإلكتروني */}
             <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl">
-              <Mail className="w-5 h-5 text-green-600" />
+              <Mail className="w-5 h-5 text-blue-600" />
               <div className="min-w-0 flex-1">
                 <p className="text-sm text-gray-500">البريد الإلكتروني</p>
                 <p className="font-medium text-gray-900 truncate">{displayData.email}</p>
@@ -162,7 +162,7 @@ const ProfileOverview: React.FC<ProfileOverviewProps> = ({
             
             {/* رقم الهاتف */}
             <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl">
-              <Phone className="w-5 h-5 text-green-600" />
+              <Phone className="w-5 h-5 text-blue-600" />
               <div className="min-w-0 flex-1">
                 <p className="text-sm text-gray-500">رقم الهاتف</p>
                 <p className="font-medium text-gray-900 truncate">
@@ -176,7 +176,7 @@ const ProfileOverview: React.FC<ProfileOverviewProps> = ({
             
             {/* العمر */}
             <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl">
-              <Calendar className="w-5 h-5 text-green-600" />
+              <Calendar className="w-5 h-5 text-blue-600" />
               <div className="min-w-0 flex-1">
                 <p className="text-sm text-gray-500">العمر</p>
                 <p className="font-medium text-gray-900">
@@ -187,7 +187,7 @@ const ProfileOverview: React.FC<ProfileOverviewProps> = ({
             
             {/* الجنس */}
             <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl">
-              <User className="w-5 h-5 text-green-600" />
+              <User className="w-5 h-5 text-blue-600" />
               <div className="min-w-0 flex-1">
                 <p className="text-sm text-gray-500">الجنس</p>
                 <p className="font-medium text-gray-900">
@@ -202,7 +202,7 @@ const ProfileOverview: React.FC<ProfileOverviewProps> = ({
       {/* System Information Card */}
       <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-6">
         <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-          <div className="p-2 bg-gradient-to-r from-green-600 to-green-700 rounded-lg">
+          <div className="p-2 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg">
             <Clock className="w-5 h-5 text-white" />
           </div>
           معلومات النظام

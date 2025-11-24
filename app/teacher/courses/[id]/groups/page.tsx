@@ -104,9 +104,9 @@ export default function CourseGroupsPage() {
   if (loading) {
     return (
       <ProtectedRoute allowedRoles={['teacher']}>
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50/30 to-emerald-50/20 flex items-center justify-center">
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-blue-50/20 flex items-center justify-center">
           <div className="text-center">
-            <div className="w-16 h-16 border-4 border-green-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
             <p className="text-gray-600 text-lg">جاري تحميل المجموعات...</p>
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function CourseGroupsPage() {
 
   return (
     <ProtectedRoute allowedRoles={['teacher']}>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50/30 to-emerald-50/20 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-blue-50/20 pt-20">
         <div className="max-w-7xl mx-auto px-6 py-8">
           
           {/* Header */}
@@ -146,7 +146,7 @@ export default function CourseGroupsPage() {
                 </Button>
                 <Button
                   onClick={() => setShowCreateModal(true)}
-                  className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white gap-2"
+                  className="bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 text-white gap-2"
                 >
                   <Plus className="w-5 h-5" />
                   إضافة مجموعة جديدة
@@ -156,10 +156,10 @@ export default function CourseGroupsPage() {
 
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              <Card className="p-4 bg-white/80 backdrop-blur-sm border-2 border-green-200">
+              <Card className="p-4 bg-white/80 backdrop-blur-sm border-2 border-blue-200">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                    <Users className="w-6 h-6 text-green-600" />
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <Users className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
                     <p className="text-sm text-gray-600">عدد المجموعات</p>
@@ -214,7 +214,7 @@ export default function CourseGroupsPage() {
             {/* Active Batches */}
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <Users className="w-6 h-6 text-green-600" />
+                <Users className="w-6 h-6 text-blue-600" />
                 المجموعات النشطة
               </h2>
               
@@ -231,7 +231,7 @@ export default function CourseGroupsPage() {
                   </p>
                   <Button
                     onClick={() => setShowCreateModal(true)}
-                    className="bg-green-600 hover:bg-green-700"
+                    className="bg-blue-600 hover:bg-blue-700"
                   >
                     <Plus className="w-4 h-4 ml-2" />
                     إنشاء مجموعة
@@ -246,9 +246,9 @@ export default function CourseGroupsPage() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1 }}
                     >
-                      <Card className="p-6 bg-white/80 backdrop-blur-sm border-2 border-green-200 hover:shadow-xl transition-all duration-300 relative overflow-hidden group">
+                      <Card className="p-6 bg-white/80 backdrop-blur-sm border-2 border-blue-200 hover:shadow-xl transition-all duration-300 relative overflow-hidden group">
                         {/* Background Decoration */}
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-400/10 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500" />
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-400/10 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500" />
                         
                         <div className="relative z-10">
                           {/* Header */}
@@ -317,7 +317,7 @@ export default function CourseGroupsPage() {
                           <div className="flex gap-2">
                             <Button
                               onClick={() => router.push(`/teacher/courses/${courseId}/groups/${batch.id}`)}
-                              className="flex-1 bg-green-600 hover:bg-green-700 text-white gap-2"
+                              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white gap-2"
                             >
                               <Eye className="w-4 h-4" />
                               عرض
@@ -328,7 +328,7 @@ export default function CourseGroupsPage() {
                                 setShowAddStudentModal(true);
                               }}
                               variant="outline"
-                              className="border-green-600 text-green-600 hover:bg-green-50"
+                              className="border-blue-600 text-blue-600 hover:bg-blue-50"
                               disabled={batch.is_full}
                             >
                               <UserPlus className="w-4 h-4" />
@@ -381,7 +381,7 @@ export default function CourseGroupsPage() {
                         </div>
 
                         {student.payment_status === 'approved' && (
-                          <Badge className="bg-green-100 text-green-800 mb-3">
+                          <Badge className="bg-blue-100 text-blue-800 mb-3">
                             <CheckCircle className="w-3 h-3 ml-1" />
                             تم الدفع
                           </Badge>
@@ -394,7 +394,7 @@ export default function CourseGroupsPage() {
                               // Open modal to select batch
                               setShowAddStudentModal(true);
                             }}
-                            className="flex-1 bg-green-600 hover:bg-green-700 text-sm"
+                            className="flex-1 bg-blue-600 hover:bg-blue-700 text-sm"
                           >
                             <UserPlus className="w-3 h-3 ml-1" />
                             إضافة لمجموعة

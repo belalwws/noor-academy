@@ -126,7 +126,7 @@ export default function CourseBatchesPage() {
           <motion.div
             animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.3, 0.2] }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-green-200/20 to-emerald-200/20 dark:from-green-900/10 dark:to-emerald-900/10 rounded-full blur-3xl"
+            className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-blue-200/20 to-blue-200/20 dark:from-blue-900/10 dark:to-blue-900/10 rounded-full blur-3xl"
           />
         </div>
 
@@ -306,7 +306,7 @@ export default function CourseBatchesPage() {
                     <div className="flex items-center gap-2 mb-4">
                       <Badge className={
                         knowledgeLab.status === 'approved' 
-                          ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' 
+                          ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400' 
                           : knowledgeLab.status === 'pending'
                           ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400'
                           : 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400'
@@ -384,14 +384,14 @@ export default function CourseBatchesPage() {
               className="h-full"
             >
               <Card 
-                className="h-full hover:shadow-2xl transition-all duration-300 cursor-pointer group border-2 border-green-200/50 dark:border-green-800/50 hover:border-green-400 dark:hover:border-green-600 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm flex flex-col"
+                className="h-full hover:shadow-2xl transition-all duration-300 cursor-pointer group border-2 border-blue-200/50 dark:border-blue-800/50 hover:border-blue-400 dark:hover:border-blue-600 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm flex flex-col"
                 onClick={(e) => handleManageCommunities(e)}
               >
                 <CardHeader className="pb-4 relative overflow-hidden flex-shrink-0">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-100/50 to-emerald-200/30 dark:from-green-900/20 dark:to-emerald-800/10 rounded-full blur-2xl" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100/50 to-blue-200/30 dark:from-blue-900/20 dark:to-blue-800/10 rounded-full blur-2xl" />
                   <div className="relative z-10 flex items-center gap-4 mb-2">
                     <motion.div 
-                      className="w-16 h-16 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 dark:from-green-600 dark:to-emerald-700 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform flex-shrink-0"
+                      className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-600 dark:to-blue-700 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform flex-shrink-0"
                       whileHover={{ rotate: 5 }}
                     >
                       <MessageSquare className="w-8 h-8 text-white" />
@@ -411,7 +411,7 @@ export default function CourseBatchesPage() {
                     أنشئ مجتمعات للطلاب للتفاعل والمناقشة حول هذه الدورة مع إمكانية إدارة الأعضاء والأنشطة.
                   </p>
                   <Button 
-                    className="w-full bg-gradient-to-r from-green-600 to-emerald-700 hover:from-green-700 hover:to-emerald-800 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300"
                     onClick={(e) => {
                       e.preventDefault()
                       e.stopPropagation()

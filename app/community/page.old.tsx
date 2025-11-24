@@ -213,38 +213,38 @@ const CommunityPage = () => {
   return (
     <AuthGuard requireAuth={true}>
       <ErrorBoundary fallback={<ErrorFallback />}>
-        <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 p-4 md:p-6" dir="rtl">
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-50 to-teal-50 p-4 md:p-6" dir="rtl">
           <div className="max-w-7xl mx-auto">
             {/* Islamic Header */}
             <div className="mb-8 text-center">
-              <div className="mb-4 p-4 bg-gradient-to-r from-emerald-100 to-green-100 rounded-lg border border-emerald-200">
-                <div className="text-2xl font-bold text-emerald-800 mb-2" style={{ fontFamily: 'Amiri, serif' }}>
+              <div className="mb-4 p-4 bg-gradient-to-r from-blue-100 to-blue-100 rounded-lg border border-blue-200">
+                <div className="text-2xl font-bold text-blue-800 mb-2" style={{ fontFamily: 'Amiri, serif' }}>
                   ﴿وَقُل رَّبِّ زِدْنِي عِلْمًا﴾
                 </div>
-                <div className="text-sm text-emerald-600">
+                <div className="text-sm text-blue-600">
                   سورة طه - آية 114
                 </div>
               </div>
-              <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-emerald-800 to-green-800 bg-clip-text text-transparent mb-2">
+              <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-800 to-blue-800 bg-clip-text text-transparent mb-2">
                 المجتمع التعليمي - لسان الحكمة
               </h1>
               <p className="text-slate-600 max-w-2xl mx-auto">
                 انضم إلى النقاشات وشارك في تبادل المعرفة مع زملائك في التعلم
               </p>
               <div className="flex justify-center items-center gap-2 mt-4">
-                <div className="h-px bg-gradient-to-r from-transparent via-emerald-300 to-transparent flex-1 max-w-32"></div>
-                <div className="text-emerald-600 text-sm">✦</div>
-                <div className="h-px bg-gradient-to-r from-transparent via-emerald-300 to-transparent flex-1 max-w-32"></div>
+                <div className="h-px bg-gradient-to-r from-transparent via-blue-300 to-transparent flex-1 max-w-32"></div>
+                <div className="text-blue-600 text-sm">✦</div>
+                <div className="h-px bg-gradient-to-r from-transparent via-blue-300 to-transparent flex-1 max-w-32"></div>
               </div>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
               {/* Forums Sidebar - Fixed RTL positioning */}
               <div className="lg:col-span-1 order-2 lg:order-1 space-y-4">
-                <Card className="bg-white/90 backdrop-blur-sm shadow-lg border-emerald-100 sticky top-4">
-                  <CardHeader className="bg-gradient-to-l from-emerald-50 to-green-50 rounded-t-lg pb-3 border-b border-emerald-100">
-                    <CardTitle className="text-lg bg-gradient-to-l from-emerald-700 to-green-700 bg-clip-text text-transparent flex items-center gap-2 justify-start">
-                      <div className="p-2 rounded-lg bg-gradient-to-l from-emerald-500 to-green-500 text-white shadow-sm">
+                <Card className="bg-white/90 backdrop-blur-sm shadow-lg border-blue-100 sticky top-4">
+                  <CardHeader className="bg-gradient-to-l from-blue-50 to-blue-50 rounded-t-lg pb-3 border-b border-blue-100">
+                    <CardTitle className="text-lg bg-gradient-to-l from-blue-700 to-blue-700 bg-clip-text text-transparent flex items-center gap-2 justify-start">
+                      <div className="p-2 rounded-lg bg-gradient-to-l from-blue-500 to-blue-500 text-white shadow-sm">
                         <Users className="w-4 h-4" />
                       </div>
                       <div>
@@ -258,7 +258,7 @@ const CommunityPage = () => {
                       {loading ? (
                         <div className="space-y-3">
                           {[1, 2, 3, 4].map(i => (
-                            <div key={i} className="animate-pulse h-20 bg-gradient-to-l from-emerald-100 to-green-100 rounded-lg"></div>
+                            <div key={i} className="animate-pulse h-20 bg-gradient-to-l from-blue-100 to-blue-100 rounded-lg"></div>
                           ))}
                         </div>
                       ) : error ? (
@@ -283,8 +283,8 @@ const CommunityPage = () => {
                               variant={selectedForum === null ? "default" : "outline"}
                               className={`w-full justify-start text-right h-auto p-4 ${
                                 selectedForum === null 
-                                  ? 'bg-gradient-to-l from-emerald-600 to-green-600 text-white shadow-md hover:shadow-lg' 
-                                  : 'border-emerald-200 hover:bg-emerald-50 text-emerald-700'
+                                  ? 'bg-gradient-to-l from-blue-600 to-blue-600 text-white shadow-md hover:shadow-lg' 
+                                  : 'border-blue-200 hover:bg-blue-50 text-blue-700'
                               }`}
                               onClick={() => {
                                 setSelectedForum(null)
@@ -295,7 +295,7 @@ const CommunityPage = () => {
                                 <div className={`p-2.5 rounded-lg ${
                                   selectedForum === null 
                                     ? 'bg-white/20 text-white' 
-                                    : 'bg-gradient-to-l from-emerald-500 to-green-500 text-white'
+                                    : 'bg-gradient-to-l from-blue-500 to-blue-500 text-white'
                                 } shadow-sm`}>
                                   <Globe className="w-5 h-5" />
                                 </div>
@@ -314,9 +314,9 @@ const CommunityPage = () => {
                           
                           {/* Divider */}
                           <div className="flex items-center gap-2 my-4">
-                            <div className="h-px bg-gradient-to-r from-transparent via-emerald-200 to-transparent flex-1"></div>
-                            <div className="text-emerald-600 text-xs font-medium px-2">المنتديات المتخصصة</div>
-                            <div className="h-px bg-gradient-to-r from-transparent via-emerald-200 to-transparent flex-1"></div>
+                            <div className="h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent flex-1"></div>
+                            <div className="text-blue-600 text-xs font-medium px-2">المنتديات المتخصصة</div>
+                            <div className="h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent flex-1"></div>
                           </div>
                           
                           {forums.map(forum => (
@@ -339,21 +339,21 @@ const CommunityPage = () => {
 
                 {/* Stats Card */}
                 {selectedForum && forumStats && (
-                  <Card className="bg-gradient-to-bl from-emerald-50 to-green-50 border-emerald-200 shadow-lg">
+                  <Card className="bg-gradient-to-bl from-blue-50 to-blue-50 border-blue-200 shadow-lg">
                     <CardContent className="p-4">
                       <div className="flex items-center gap-2 mb-3">
-                        <BarChart3 className="w-5 h-5 text-emerald-700" />
-                        <h3 className="font-semibold text-emerald-800">إحصائيات المنتدى</h3>
+                        <BarChart3 className="w-5 h-5 text-blue-700" />
+                        <h3 className="font-semibold text-blue-800">إحصائيات المنتدى</h3>
                       </div>
                       <div className="space-y-3 text-sm">
                         <div className="flex justify-between items-center p-2 bg-white/60 rounded-lg">
-                          <span className="text-emerald-700 font-medium">المواضيع:</span>
-                          <Badge variant="secondary" className="bg-emerald-100 text-emerald-800">
+                          <span className="text-blue-700 font-medium">المواضيع:</span>
+                          <Badge variant="secondary" className="bg-blue-100 text-blue-800">
                             {forumStats.topics_count}
                           </Badge>
                         </div>
                         <div className="flex justify-between items-center p-2 bg-white/60 rounded-lg">
-                          <span className="text-emerald-700 font-medium">المشاركات:</span>
+                          <span className="text-blue-700 font-medium">المشاركات:</span>
                           <Badge variant="secondary" className="bg-blue-100 text-blue-800">
                             {forumStats.posts_count}
                           </Badge>
@@ -367,7 +367,7 @@ const CommunityPage = () => {
               {/* Topics Content - Fixed RTL positioning */}
               <div className="lg:col-span-3 order-1 lg:order-2 space-y-6">
                 {/* Enhanced Search and Create */}
-                <Card className="bg-white/90 backdrop-blur-sm shadow-lg border-emerald-100">
+                <Card className="bg-white/90 backdrop-blur-sm shadow-lg border-blue-100">
                   <CardContent className="p-4">
                     <div className="flex flex-col sm:flex-row gap-4">
                       {/* Enhanced Search Bar */}
@@ -389,12 +389,12 @@ const CommunityPage = () => {
                           placeholder="ابحث في المواضيع والمشاركات..."
                           value={searchQuery}
                           onChange={(e) => setSearchQuery(e.target.value)}
-                          className="pr-16 pl-4 h-12 border-emerald-200 focus:border-emerald-400 focus:ring-emerald-200 text-right bg-white/80 backdrop-blur-sm"
+                          className="pr-16 pl-4 h-12 border-blue-200 focus:border-blue-400 focus:ring-blue-200 text-right bg-white/80 backdrop-blur-sm"
                           dir="rtl"
                         />
                         {searchQuery && (
                           <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
-                            <Badge variant="secondary" className="bg-emerald-100 text-emerald-700 text-xs">
+                            <Badge variant="secondary" className="bg-blue-100 text-blue-700 text-xs">
                               <Sparkles className="w-3 h-3 ml-1" />
                               بحث نشط
                             </Badge>
@@ -405,7 +405,7 @@ const CommunityPage = () => {
                       {/* Sorting and Filtering Controls */}
                       <div className="flex gap-2">
                         <Select value={sortBy} onValueChange={setSortBy}>
-                          <SelectTrigger className="text-right border-emerald-200 focus:border-emerald-400 w-[120px]">
+                          <SelectTrigger className="text-right border-blue-200 focus:border-blue-400 w-[120px]">
                             <SelectValue placeholder="ترتيب حسب" />
                           </SelectTrigger>
                           <SelectContent>
@@ -417,7 +417,7 @@ const CommunityPage = () => {
                         </Select>
                         
                         <Select value={filterBy} onValueChange={setFilterBy}>
-                          <SelectTrigger className="text-right border-emerald-200 focus:border-emerald-400 w-[120px]">
+                          <SelectTrigger className="text-right border-blue-200 focus:border-blue-400 w-[120px]">
                             <SelectValue placeholder="التصنيف" />
                           </SelectTrigger>
                           <SelectContent>
@@ -433,14 +433,14 @@ const CommunityPage = () => {
                       <PermissionGate permission="canCreateTopics">
                         <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
                           <DialogTrigger asChild>
-                            <Button className="bg-gradient-to-l from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-200 whitespace-nowrap h-12 px-6">
+                            <Button className="bg-gradient-to-l from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-200 whitespace-nowrap h-12 px-6">
                               <Plus className="w-5 h-5 ml-2" />
                               موضوع جديد
                             </Button>
                           </DialogTrigger>
-                          <DialogContent dir="rtl" className="border-emerald-100 max-w-md sm:max-w-lg">
+                          <DialogContent dir="rtl" className="border-blue-100 max-w-md sm:max-w-lg">
                             <DialogHeader>
-                              <DialogTitle className="bg-gradient-to-l from-emerald-700 to-green-700 bg-clip-text text-transparent text-right">
+                              <DialogTitle className="bg-gradient-to-l from-blue-700 to-blue-700 bg-clip-text text-transparent text-right">
                                 إنشاء موضوع جديد
                               </DialogTitle>
                               <DialogDescription className="text-slate-600 text-right">
@@ -452,7 +452,7 @@ const CommunityPage = () => {
                                 <div>
                                   <label className="text-sm font-medium mb-2 block text-slate-700 text-right">اختر المنتدى</label>
                                   <Select value={newTopic.forum} onValueChange={(value) => setNewTopic({...newTopic, forum: value})}>
-                                    <SelectTrigger className="text-right border-emerald-200 focus:border-emerald-400">
+                                    <SelectTrigger className="text-right border-blue-200 focus:border-blue-400">
                                       <SelectValue placeholder="اختر منتدى للموضوع" />
                                     </SelectTrigger>
                                     <SelectContent>
@@ -471,7 +471,7 @@ const CommunityPage = () => {
                                   placeholder="عنوان الموضوع"
                                   value={newTopic.title}
                                   onChange={(e) => setNewTopic({...newTopic, title: e.target.value})}
-                                  className="border-emerald-200 focus:border-emerald-400 focus:ring-emerald-200 text-right"
+                                  className="border-blue-200 focus:border-blue-400 focus:ring-blue-200 text-right"
                                   dir="rtl"
                                 />
                               </div>
@@ -482,7 +482,7 @@ const CommunityPage = () => {
                                   value={newTopic.content}
                                   onChange={(e) => setNewTopic({...newTopic, content: e.target.value})}
                                   rows={4}
-                                  className="border-emerald-200 focus:border-emerald-400 focus:ring-emerald-200 resize-none text-right"
+                                  className="border-blue-200 focus:border-blue-400 focus:ring-blue-200 resize-none text-right"
                                   dir="rtl"
                                 />
                               </div>
@@ -490,14 +490,14 @@ const CommunityPage = () => {
                                 <Button 
                                   variant="outline" 
                                   onClick={() => setShowCreateDialog(false)}
-                                  className="border-emerald-200 hover:bg-emerald-50 hover:border-emerald-300"
+                                  className="border-blue-200 hover:bg-blue-50 hover:border-blue-300"
                                 >
                                   إلغاء
                                 </Button>
                                 <Button 
                                   onClick={handleCreateTopic}
                                   disabled={!newTopic.title.trim() || !newTopic.content.trim() || submitting}
-                                  className="bg-gradient-to-l from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-200"
+                                  className="bg-gradient-to-l from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-200"
                                 >
                                   {submitting && <Spinner size="sm" tone="contrast" className="ml-2" />}
                                   إنشاء
@@ -514,12 +514,12 @@ const CommunityPage = () => {
                 {/* Topics List */}
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <MessageSquare className="w-5 h-5 text-emerald-600" />
-                    <h2 className="text-xl font-semibold bg-gradient-to-l from-emerald-700 to-green-700 bg-clip-text text-transparent">
+                    <MessageSquare className="w-5 h-5 text-blue-600" />
+                    <h2 className="text-xl font-semibold bg-gradient-to-l from-blue-700 to-blue-700 bg-clip-text text-transparent">
                       {selectedForum ? `المواضيع في ${forums.find(f => f.id === selectedForum)?.name}` : 'جميع المواضيع'}
                     </h2>
                     {totalTopics > 0 && (
-                      <Badge variant="secondary" className="bg-emerald-100 text-emerald-700">
+                      <Badge variant="secondary" className="bg-blue-100 text-blue-700">
                         {totalTopics} موضوع
                       </Badge>
                     )}

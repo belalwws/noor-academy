@@ -28,7 +28,7 @@ export const CourseCategoriesSection: React.FC = () => {
       title: 'الجلسات المباشرة',
       description: 'بث حي للمحاضرات مع إمكانية التفاعل المباشر',
       icon: Users,
-      color: 'bg-green-500/10 text-green-600',
+      color: 'bg-blue-500/10 text-blue-600',
     },
     {
       title: 'تتبع التقدم',
@@ -60,7 +60,7 @@ export const CourseCategoriesSection: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">محتوى الدورات والتعليم</span>
+            <span className="text-[#1e40af] dark:text-blue-400 font-extrabold">محتوى الدورات والتعليم</span>
           </h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
             محتوى تعليمي شامل بأنواع مختلفة ينسجم مع احتياجات الطلاب

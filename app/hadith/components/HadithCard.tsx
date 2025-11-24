@@ -59,7 +59,7 @@ export default function HadithCard({ hadith }: HadithCardProps) {
               <span className="text-slate-400 dark:text-slate-500">•</span>
               <span className="flex items-center gap-1.5">
                 <span className="font-medium">الحكم:</span>
-                <Badge variant="outline" className="border-green-300 dark:border-green-600 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs px-2 py-0.5">
+                <Badge variant="outline" className="border-blue-300 dark:border-blue-600 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs px-2 py-0.5">
                   {hadith.grade}
                 </Badge>
               </span>

@@ -109,9 +109,9 @@ export default function BatchDetailsPage() {
   if (loading) {
     return (
       <ProtectedRoute allowedRoles={['teacher']}>
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50/30 to-emerald-50/20 flex items-center justify-center">
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-blue-50/20 flex items-center justify-center">
           <div className="text-center">
-            <div className="w-16 h-16 border-4 border-green-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
             <p className="text-gray-600 text-lg">جاري تحميل المجموعة...</p>
           </div>
         </div>
@@ -121,7 +121,7 @@ export default function BatchDetailsPage() {
 
   return (
     <ProtectedRoute allowedRoles={['teacher']}>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50/30 to-emerald-50/20 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-blue-50/20 pt-20">
         
         {/* Header */}
         <div className="bg-white border-b sticky top-16 z-40">
@@ -170,9 +170,9 @@ export default function BatchDetailsPage() {
             <div className="p-6 space-y-6">
               
               {/* Course Info */}
-              <Card className="p-4 bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200">
+              <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-50 border-2 border-blue-200">
                 <h3 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                  <FileText className="w-5 h-5 text-green-600" />
+                  <FileText className="w-5 h-5 text-blue-600" />
                   معلومات الدورة
                 </h3>
                 <div className="space-y-2 text-sm">
@@ -214,7 +214,7 @@ export default function BatchDetailsPage() {
                     <p className="text-sm text-gray-600">لا توجد جلسة نشطة حالياً</p>
                     <Button 
                       onClick={handleStartSession}
-                      className="w-full bg-green-600 hover:bg-green-700 text-white"
+                      className="w-full bg-blue-600 hover:bg-blue-700 text-white"
                     >
                       <Play className="w-4 h-4 ml-2" />
                       ابدأ حصة جديدة
@@ -274,7 +274,7 @@ export default function BatchDetailsPage() {
               {/* Post Announcement */}
               <Card className="p-6 bg-white">
                 <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <MessageSquare className="w-5 h-5 text-green-600" />
+                  <MessageSquare className="w-5 h-5 text-blue-600" />
                   نشر إعلان للطلاب
                 </h3>
                 <Textarea
@@ -282,7 +282,7 @@ export default function BatchDetailsPage() {
                   onChange={(e) => setAnnouncement(e.target.value)}
                   placeholder="اكتب إعلاناً أو رسالة للطلاب..."
                   rows={4}
-                  className="mb-3 resize-none border-2 border-gray-200 focus:border-green-500 rounded-xl"
+                  className="mb-3 resize-none border-2 border-gray-200 focus:border-blue-500 rounded-xl"
                 />
                 <div className="flex justify-end gap-2">
                   <Button
@@ -295,7 +295,7 @@ export default function BatchDetailsPage() {
                   <Button
                     onClick={handlePostAnnouncement}
                     disabled={!announcement.trim() || isPosting}
-                    className="bg-green-600 hover:bg-green-700"
+                    className="bg-blue-600 hover:bg-blue-700"
                   >
                     {isPosting ? 'جاري النشر...' : 'نشر الإعلان'}
                   </Button>
@@ -308,8 +308,8 @@ export default function BatchDetailsPage() {
                 <div className="space-y-4">
                   <div className="p-4 bg-gray-50 rounded-lg">
                     <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <User className="w-5 h-5 text-green-600" />
+                      <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <User className="w-5 h-5 text-blue-600" />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
@@ -324,7 +324,7 @@ export default function BatchDetailsPage() {
                   </div>
 
                   <div className="text-center py-4">
-                    <Button variant="ghost" className="text-green-600">
+                    <Button variant="ghost" className="text-blue-600">
                       عرض المزيد
                     </Button>
                   </div>
@@ -356,7 +356,7 @@ export default function BatchDetailsPage() {
                 <div className="sticky top-0 bg-white z-10 p-4 border-b">
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="font-bold text-gray-900 flex items-center gap-2">
-                      <Users className="w-5 h-5 text-green-600" />
+                      <Users className="w-5 h-5 text-blue-600" />
                       الطلاب ({students.length})
                     </h3>
                     <Button
@@ -367,7 +367,7 @@ export default function BatchDetailsPage() {
                       <X className="w-4 h-4" />
                     </Button>
                   </div>
-                  <Button className="w-full bg-green-600 hover:bg-green-700 text-sm">
+                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-sm">
                     <Plus className="w-4 h-4 ml-2" />
                     إضافة طالب
                   </Button>
@@ -386,7 +386,7 @@ export default function BatchDetailsPage() {
                         className="p-3 hover:shadow-md transition-shadow group"
                       >
                         <div className="flex items-start gap-3">
-                          <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
+                          <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
                             <span className="text-white font-bold text-sm">
                               {student.student_name.charAt(0)}
                             </span>
@@ -399,7 +399,7 @@ export default function BatchDetailsPage() {
                               {student.student_email}
                             </p>
                             <Badge className={`mt-1 text-xs ${
-                              student.status === 'active' ? 'bg-green-100 text-green-800' :
+                              student.status === 'active' ? 'bg-blue-100 text-blue-800' :
                               student.status === 'pending' ? 'bg-yellow-100 text-yellow-800' :
                               student.status === 'suspended' ? 'bg-red-100 text-red-800' :
                               'bg-gray-100 text-gray-800'
@@ -431,7 +431,7 @@ export default function BatchDetailsPage() {
           {!sidebarOpen && (
             <Button
               onClick={() => setSidebarOpen(true)}
-              className="fixed left-4 bottom-4 rounded-full w-12 h-12 bg-green-600 hover:bg-green-700 shadow-lg z-50"
+              className="fixed left-4 bottom-4 rounded-full w-12 h-12 bg-blue-600 hover:bg-blue-700 shadow-lg z-50"
             >
               <Users className="w-5 h-5" />
             </Button>

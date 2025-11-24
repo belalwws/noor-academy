@@ -278,7 +278,7 @@ export default function ReminderSettingsPage() {
               )}
               
               {notificationPermission === 'granted' && (
-                <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400">
+                <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400">
                   <CheckCircle2 className="w-4 h-4" />
                   <span className="text-sm">تم تفعيل الإشعارات بنجاح</span>
                 </div>
@@ -404,7 +404,7 @@ export default function ReminderSettingsPage() {
                       <p className="text-xs text-amber-600 dark:text-amber-400">
                         سيتم عرض التذكير كل {localSettings.dailyHadithRepeatInterval ?? 180} دقيقة ({Math.round((localSettings.dailyHadithRepeatInterval ?? 180) / 60)} ساعة) من وقت البدء حتى نهاية اليوم
                       </p>
-                      <p className="text-xs text-green-600 dark:text-green-400 mt-2">
+                      <p className="text-xs text-blue-600 dark:text-blue-400 mt-2">
                         ✨ <strong>ملاحظة:</strong> يتم تغيير الحديث تلقائياً في كل مرة
                       </p>
                     </div>
@@ -485,7 +485,7 @@ export default function ReminderSettingsPage() {
                       <p className="text-xs text-amber-600 dark:text-amber-400">
                         سيتم عرض آية قرآنية كل {localSettings.dailyQuranVerseRepeatInterval ?? 240} دقيقة ({Math.round((localSettings.dailyQuranVerseRepeatInterval ?? 240) / 60)} ساعة) من وقت البدء حتى نهاية اليوم
                       </p>
-                      <p className="text-xs text-green-600 dark:text-green-400 mt-2">
+                      <p className="text-xs text-blue-600 dark:text-blue-400 mt-2">
                         ✨ <strong>ملاحظة:</strong> يتم تغيير الآية القرآنية تلقائياً في كل مرة
                       </p>
                     </div>
@@ -562,15 +562,15 @@ export default function ReminderSettingsPage() {
               </div>
               
               {localSettings.dailyDhikr && (
-                <div className="p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800">
-                  <p className="text-sm text-green-800 dark:text-green-200 mb-2">
+                <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+                  <p className="text-sm text-blue-800 dark:text-blue-200 mb-2">
                     ✨ <strong>التوقيتات الثابتة:</strong>
                   </p>
-                  <ul className="text-xs text-green-700 dark:text-green-300 space-y-1">
+                  <ul className="text-xs text-blue-700 dark:text-blue-300 space-y-1">
                     <li>🌅 أذكار الصباح: 6:00 صباحاً (بعد الفجر)</li>
                     <li>🌆 أذكار المساء: 5:00 مساءً (بعد العصر)</li>
                   </ul>
-                  <p className="text-xs text-green-600 dark:text-green-400 mt-2">
+                  <p className="text-xs text-blue-600 dark:text-blue-400 mt-2">
                     💡 مرتان يومياً فقط - لا تكرار
                   </p>
                 </div>

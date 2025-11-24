@@ -36,9 +36,9 @@ interface ModalProps {
 const ResponseModal: React.FC<ModalProps> = ({ isOpen, onClose, type, message }) => {
   if (!isOpen) return null;
 
-  const bgColor = type === 'success' ? 'bg-green-50' : type === 'error' ? 'bg-red-50' : 'bg-blue-50';
-  const textColor = type === 'success' ? 'text-green-800' : type === 'error' ? 'text-red-800' : 'text-blue-800';
-  const borderColor = type === 'success' ? 'border-green-200' : type === 'error' ? 'border-red-200' : 'border-blue-200';
+  const bgColor = type === 'success' ? 'bg-blue-50' : type === 'error' ? 'bg-red-50' : 'bg-blue-50';
+  const textColor = type === 'success' ? 'text-blue-800' : type === 'error' ? 'text-red-800' : 'text-blue-800';
+  const borderColor = type === 'success' ? 'border-blue-200' : type === 'error' ? 'border-red-200' : 'border-blue-200';
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
@@ -214,10 +214,10 @@ const AdminProfilePage: React.FC = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-gray-600">حالة النظام</p>
-                  <p className="text-2xl font-bold text-green-600">99.9%</p>
+                  <p className="text-2xl font-bold text-blue-600">99.9%</p>
                 </div>
-                <div className="bg-green-100 p-3 rounded-full">
-                  <Activity className="h-6 w-6 text-green-600" />
+                <div className="bg-blue-100 p-3 rounded-full">
+                  <Activity className="h-6 w-6 text-blue-600" />
                 </div>
               </div>
             </div>

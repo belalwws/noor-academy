@@ -75,7 +75,7 @@ const NotificationPreferencesPage: React.FC = () => {
       <AuthGuard>
         <div className="container mx-auto p-6">
           <div className="flex items-center justify-center h-64">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-600"></div>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
           </div>
         </div>
       </AuthGuard>
@@ -95,7 +95,7 @@ const NotificationPreferencesPage: React.FC = () => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <AlertCircle className="h-5 w-5 text-emerald-600" />
+                <AlertCircle className="h-5 w-5 text-blue-600" />
                 الإعدادات العامة
               </CardTitle>
               <CardDescription>
@@ -194,7 +194,7 @@ const NotificationPreferencesPage: React.FC = () => {
 
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <Calendar className="h-5 w-5 text-green-600" />
+                  <Calendar className="h-5 w-5 text-blue-600" />
                   <div>
                     <label className="text-sm font-medium">إشعارات الاجتماعات</label>
                     <p className="text-sm text-gray-500">مواعيد الاجتماعات والجلسات المباشرة</p>
@@ -208,7 +208,7 @@ const NotificationPreferencesPage: React.FC = () => {
 
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <Users className="h-5 w-5 text-emerald-600" />
+                  <Users className="h-5 w-5 text-blue-600" />
                   <div>
                     <label className="text-sm font-medium">إشعارات المجتمع</label>
                     <p className="text-sm text-gray-500">المواضيع الجديدة والردود في المنتديات</p>
@@ -255,7 +255,7 @@ const NotificationPreferencesPage: React.FC = () => {
             <Button 
               onClick={handleSave} 
               disabled={isSaving}
-              className="bg-emerald-600 hover:bg-emerald-700"
+              className="bg-blue-600 hover:bg-blue-700"
             >
               {isSaving ? 'جاري الحفظ...' : 'حفظ التغييرات'}
             </Button>

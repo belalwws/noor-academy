@@ -126,7 +126,7 @@ function SortableItem({ id, item, isDragging, isCorrect, isIncorrect }: Sortable
       whileHover={!isCorrect && !isIncorrect ? { scale: 1.05 } : {}}
       className={`
         flex items-center gap-3 p-4 rounded-lg border-2 bg-white dark:bg-slate-800
-        ${isCorrect ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : ''}
+        ${isCorrect ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20' : ''}
         ${isIncorrect ? 'border-red-500 bg-red-50 dark:bg-red-900/20' : ''}
         ${!isCorrect && !isIncorrect ? 'border-gray-300 dark:border-slate-600 hover:border-primary cursor-move' : 'cursor-default'}
         ${isDragging || isSortableDragging ? 'shadow-lg' : 'shadow-sm'}
@@ -151,7 +151,7 @@ function SortableItem({ id, item, isDragging, isCorrect, isIncorrect }: Sortable
         <p className="text-gray-900 dark:text-gray-100 font-medium">{item.content}</p>
       </div>
       {isCorrect && (
-        <CheckCircle2 className="w-5 h-5 text-green-500" />
+        <CheckCircle2 className="w-5 h-5 text-blue-500" />
       )}
       {isIncorrect && (
         <XCircle className="w-5 h-5 text-red-500" />

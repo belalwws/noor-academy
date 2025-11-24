@@ -170,7 +170,7 @@ const AdvancedSearchFilter = ({ onFiltersChange, initialFilters, className }: Ad
   return (
     <div className={`space-y-4 ${className}`}>
       {/* Main Search Bar */}
-      <Card className="bg-white/80 backdrop-blur-sm shadow-lg border-emerald-100">
+      <Card className="bg-white/80 backdrop-blur-sm shadow-lg border-blue-100">
         <CardContent className="p-4">
           <div className="flex gap-3">
             <div className="relative flex-1">
@@ -179,21 +179,21 @@ const AdvancedSearchFilter = ({ onFiltersChange, initialFilters, className }: Ad
                 placeholder="ابحث في المواضيع والمشاركات..."
                 value={filters.query}
                 onChange={(e) => updateFilters({ query: e.target.value })}
-                className="pr-10 border-emerald-200 focus:border-emerald-400 focus:ring-emerald-200"
+                className="pr-10 border-blue-200 focus:border-blue-400 focus:ring-blue-200"
               />
             </div>
             
             <Button
               variant="outline"
               onClick={() => setIsAdvancedOpen(!isAdvancedOpen)}
-              className={`border-emerald-200 hover:bg-emerald-50 ${
-                getActiveFiltersCount() > 0 ? 'bg-emerald-50 border-emerald-300' : ''
+              className={`border-blue-200 hover:bg-blue-50 ${
+                getActiveFiltersCount() > 0 ? 'bg-blue-50 border-blue-300' : ''
               }`}
             >
               <SlidersHorizontal className="h-4 w-4 ml-2" />
               فلترة متقدمة
               {getActiveFiltersCount() > 0 && (
-                <Badge className="mr-2 bg-emerald-500 text-white">
+                <Badge className="mr-2 bg-blue-500 text-white">
                   {getActiveFiltersCount()}
                 </Badge>
               )}
@@ -256,9 +256,9 @@ const AdvancedSearchFilter = ({ onFiltersChange, initialFilters, className }: Ad
       {/* Advanced Filters */}
       <Collapsible open={isAdvancedOpen} onOpenChange={setIsAdvancedOpen}>
         <CollapsibleContent>
-          <Card className="bg-white/90 backdrop-blur-sm shadow-lg border-emerald-100">
+          <Card className="bg-white/90 backdrop-blur-sm shadow-lg border-blue-100">
             <CardHeader className="pb-4">
-              <CardTitle className="text-lg text-emerald-800 flex items-center gap-2">
+              <CardTitle className="text-lg text-blue-800 flex items-center gap-2">
                 <Filter className="h-5 w-5" />
                 الفلترة المتقدمة
               </CardTitle>
@@ -381,7 +381,7 @@ const AdvancedSearchFilter = ({ onFiltersChange, initialFilters, className }: Ad
                       <Badge
                         key={tag}
                         variant={filters.tags.includes(tag) ? 'default' : 'outline'}
-                        className="cursor-pointer hover:bg-emerald-100"
+                        className="cursor-pointer hover:bg-blue-100"
                         onClick={() => {
                           if (filters.tags.includes(tag)) {
                             updateFilters({ tags: filters.tags.filter(t => t !== tag) })
@@ -540,27 +540,27 @@ const AdvancedSearchFilter = ({ onFiltersChange, initialFilters, className }: Ad
 
       {/* Active Filters Display */}
       {getActiveFiltersCount() > 0 && (
-        <Card className="bg-emerald-50 border-emerald-200">
+        <Card className="bg-blue-50 border-blue-200">
           <CardContent className="p-3">
             <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-sm font-medium text-emerald-800">الفلاتر النشطة:</span>
+              <span className="text-sm font-medium text-blue-800">الفلاتر النشطة:</span>
               {filters.forums.length > 0 && (
-                <Badge variant="secondary" className="bg-emerald-100 text-emerald-800">
+                <Badge variant="secondary" className="bg-blue-100 text-blue-800">
                   المنتديات: {filters.forums.length}
                 </Badge>
               )}
               {filters.tags.length > 0 && (
-                <Badge variant="secondary" className="bg-emerald-100 text-emerald-800">
+                <Badge variant="secondary" className="bg-blue-100 text-blue-800">
                   العلامات: {filters.tags.length}
                 </Badge>
               )}
               {filters.authorRole !== 'all' && (
-                <Badge variant="secondary" className="bg-emerald-100 text-emerald-800">
+                <Badge variant="secondary" className="bg-blue-100 text-blue-800">
                   الدور: {filters.authorRole}
                 </Badge>
               )}
               {(filters.dateRange.from || filters.dateRange.to) && (
-                <Badge variant="secondary" className="bg-emerald-100 text-emerald-800">
+                <Badge variant="secondary" className="bg-blue-100 text-blue-800">
                   التاريخ
                 </Badge>
               )}

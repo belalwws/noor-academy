@@ -235,16 +235,16 @@ export function AnalyticsTab({ labId }: AnalyticsTabProps) {
           </CardContent>
         </Card>
 
-        <Card className="border-green-100">
+        <Card className="border-blue-100">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">متوسط الدرجة</p>
-                <p className="text-2xl font-bold text-green-600">
+                <p className="text-2xl font-bold text-blue-600">
                   {analytics.averageScore.toFixed(1)}%
                 </p>
               </div>
-              <TrendingUp className="w-8 h-8 text-green-500" />
+              <TrendingUp className="w-8 h-8 text-blue-500" />
             </div>
           </CardContent>
         </Card>
@@ -278,12 +278,12 @@ export function AnalyticsTab({ labId }: AnalyticsTabProps) {
               </div>
               <span className="text-lg font-bold text-amber-600">{analytics.totalPoints}</span>
             </div>
-            <div className="flex items-center justify-between p-4 bg-green-50 dark:bg-green-950/20 rounded-lg">
+            <div className="flex items-center justify-between p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg">
               <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-green-500" />
+                <CheckCircle2 className="w-5 h-5 text-blue-500" />
                 <span className="text-gray-700 dark:text-gray-300">المحاولات المكتملة</span>
               </div>
-              <span className="text-lg font-bold text-green-600">{analytics.completedAttempts}</span>
+              <span className="text-lg font-bold text-blue-600">{analytics.completedAttempts}</span>
             </div>
             <div className="flex items-center justify-between p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg">
               <div className="flex items-center gap-3">
@@ -351,7 +351,7 @@ export function AnalyticsTab({ labId }: AnalyticsTabProps) {
                     </div>
                     <Badge className={`${
                       student.average_score >= 80 
-                        ? 'bg-green-500' 
+                        ? 'bg-blue-500' 
                         : student.average_score >= 60 
                         ? 'bg-yellow-500' 
                         : 'bg-red-500'

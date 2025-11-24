@@ -75,7 +75,7 @@ const CourseManagement: React.FC<CourseManagementProps> = ({
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active':
-        return 'bg-green-100 text-green-800';
+        return 'bg-blue-100 text-blue-800';
       case 'inactive':
         return 'bg-red-100 text-red-800';
       case 'pending':
@@ -105,7 +105,7 @@ const CourseManagement: React.FC<CourseManagementProps> = ({
   const getLevelColor = (level: string) => {
     switch (level) {
       case 'beginner':
-        return 'bg-green-100 text-green-800';
+        return 'bg-blue-100 text-blue-800';
       case 'intermediate':
         return 'bg-yellow-100 text-yellow-800';
       case 'advanced':
@@ -244,10 +244,10 @@ const CourseManagement: React.FC<CourseManagementProps> = ({
                 
                 <div className="text-center p-2 bg-gray-50 rounded-lg">
                   <div className="flex items-center justify-center mb-1">
-                    <BookOpen className="h-4 w-4 text-green-600 ml-1" />
+                    <BookOpen className="h-4 w-4 text-blue-600 ml-1" />
                     <span className="text-xs text-gray-600">الدروس</span>
                   </div>
-                  <p className="font-bold text-green-600">{course.lessonsCount}</p>
+                  <p className="font-bold text-blue-600">{course.lessonsCount}</p>
                 </div>
               </div>
 
@@ -268,7 +268,7 @@ const CourseManagement: React.FC<CourseManagementProps> = ({
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
                   <div 
-                    className="bg-gradient-to-r from-blue-500 to-green-500 h-2 rounded-full" 
+                    className="bg-gradient-to-r from-blue-500 to-blue-500 h-2 rounded-full" 
                     style={{ width: `${course.progress}%` }}
                   ></div>
                 </div>
@@ -299,7 +299,7 @@ const CourseManagement: React.FC<CourseManagementProps> = ({
                 </button>
                 <button
                   onClick={() => onEditCourse(course.id)}
-                  className="flex-1 bg-green-50 text-green-600 py-2 px-3 rounded-lg hover:bg-green-100 transition-colors flex items-center justify-center text-sm"
+                  className="flex-1 bg-blue-50 text-blue-600 py-2 px-3 rounded-lg hover:bg-blue-100 transition-colors flex items-center justify-center text-sm"
                 >
                   <Edit className="h-4 w-4 ml-1" />
                   تحرير
@@ -309,7 +309,7 @@ const CourseManagement: React.FC<CourseManagementProps> = ({
                   className={`flex-1 py-2 px-3 rounded-lg transition-colors flex items-center justify-center text-sm ${
                     course.status === 'active' 
                       ? 'bg-red-50 text-red-600 hover:bg-red-100' 
-                      : 'bg-green-50 text-green-600 hover:bg-green-100'
+                      : 'bg-blue-50 text-blue-600 hover:bg-blue-100'
                   }`}
                 >
                   {course.status === 'active' ? (

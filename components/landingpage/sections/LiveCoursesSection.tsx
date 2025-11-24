@@ -36,12 +36,12 @@ export const LiveCoursesSection: React.FC = () => {
       <div className="absolute inset-0 gradient-hero pattern-dots opacity-30 -z-10" />
       
       {/* Color Effect Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0A5734]/10 via-[#0A5734]/5 to-transparent pointer-events-none -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#1e40af]/10 via-[#1e40af]/5 to-transparent pointer-events-none -z-10" />
 
       {/* Floating Elements */}
-      <div className="absolute top-20 right-10 w-32 h-32 bg-[#0A5734]/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 left-10 w-40 h-40 bg-[#4A8F5C]/10 rounded-full blur-3xl animate-pulse delay-700" />
-      <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-[#0A5734]/10 rounded-full blur-2xl animate-pulse delay-1000" />
+      <div className="absolute top-20 right-10 w-32 h-32 bg-[#1e40af]/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-20 left-10 w-40 h-40 bg-[#2563eb]/10 rounded-full blur-3xl animate-pulse delay-700" />
+      <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-[#1e40af]/10 rounded-full blur-2xl animate-pulse delay-1000" />
 
       <div className="container mx-auto px-4 lg:px-8 py-0 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -57,7 +57,7 @@ export const LiveCoursesSection: React.FC = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#0A5734]/10 to-[#4A8F5C]/10 text-[#0A5734] dark:text-[#4A8F5C] px-4 py-2.5 rounded-full text-sm font-semibold border border-[#0A5734]/20 dark:border-[#4A8F5C]/30 shadow-sm"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#1e40af]/10 to-[#2563eb]/10 text-[#1e40af] dark:text-blue-400 px-4 py-2.5 rounded-full text-sm font-semibold border border-[#1e40af]/20 dark:border-blue-400/30 shadow-sm"
             >
               <Video size={18} />
               <span>دورات مباشرة</span>
@@ -70,7 +70,7 @@ export const LiveCoursesSection: React.FC = () => {
               transition={{ delay: 0.3 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary dark:text-slate-50 leading-tight"
             >
-              <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">
+              <span className="text-[#1e40af] dark:text-blue-400 font-extrabold">
                 تعلم مباشر
               </span>
               <br />
@@ -102,10 +102,10 @@ export const LiveCoursesSection: React.FC = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6 + index * 0.1 }}
-                  className="flex items-center gap-3 p-3 rounded-xl hover:bg-[#0A5734]/5 dark:hover:bg-slate-800/50 transition-colors"
+                  className="flex items-center gap-3 p-3 rounded-xl hover:bg-[#1e40af]/5 dark:hover:bg-slate-800/50 transition-colors"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#0A5734]/10 to-[#4A8F5C]/10 flex items-center justify-center border border-[#0A5734]/20 dark:border-[#4A8F5C]/30 shadow-sm flex-shrink-0">
-                    <feature.icon className="text-[#0A5734] dark:text-[#4A8F5C]" size={22} />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1e40af]/10 to-[#2563eb]/10 flex items-center justify-center border border-[#1e40af]/20 dark:border-blue-400/30 shadow-sm flex-shrink-0">
+                    <feature.icon className="text-[#1e40af] dark:text-blue-400" size={22} />
                   </div>
                   <span className="text-text-primary dark:text-slate-200 font-medium text-sm md:text-base">
                     {feature.text}
@@ -161,7 +161,7 @@ export const LiveCoursesSection: React.FC = () => {
               <motion.div
                 animate={{ y: [0, -15, 0], rotate: [0, 5, -5, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-48 right-16 bg-gradient-to-br from-[#0A5734] to-[#4A8F5C] text-white p-5 rounded-2xl shadow-glow z-10"
+                className="absolute top-48 right-16 bg-gradient-to-br from-[#1e40af] to-[#2563eb] text-white p-5 rounded-2xl shadow-glow z-10"
               >
                 <Video size={36} />
               </motion.div>
@@ -173,8 +173,8 @@ export const LiveCoursesSection: React.FC = () => {
                 className="absolute top-60 left-16 bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-glow w-64 z-10 border border-gray-100 dark:border-slate-700"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-[#0A5734]/10 dark:bg-[#0A5734]/20 rounded-xl flex items-center justify-center">
-                    <Users className="text-[#0A5734] dark:text-[#4A8F5C]" size={24} />
+                  <div className="w-12 h-12 bg-[#1e40af]/10 dark:bg-blue-500/20 rounded-xl flex items-center justify-center">
+                    <Users className="text-[#1e40af] dark:text-blue-400" size={24} />
                   </div>
                   <div>
                     <h4 className="font-bold text-text-primary dark:text-slate-100">تعلم تفاعلي</h4>
@@ -184,7 +184,7 @@ export const LiveCoursesSection: React.FC = () => {
               </motion.div>
 
               {/* Central Glow Effect */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-[#0A5734] to-[#4A8F5C] rounded-full blur-3xl opacity-10 animate-pulse -z-10" />
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-[#1e40af] to-[#2563eb] rounded-full blur-3xl opacity-10 animate-pulse -z-10" />
             </div>
           </motion.div>
         </div>

@@ -67,7 +67,7 @@ export default function PostCard({
       case 'assignment':
         return 'bg-red-100 text-red-800 border-red-200'
       case 'discussion':
-        return 'bg-green-100 text-green-800 border-green-200'
+        return 'bg-blue-100 text-blue-800 border-blue-200'
       case 'resource':
         return 'bg-purple-100 text-purple-800 border-purple-200'
       default:
@@ -92,7 +92,7 @@ export default function PostCard({
 
   const getRoleColor = (role: string) => {
     return role === 'teacher' 
-      ? 'bg-green-100 text-green-800 border-green-200' 
+      ? 'bg-blue-100 text-blue-800 border-blue-200' 
       : 'bg-blue-100 text-blue-800 border-blue-200'
   }
 
@@ -108,7 +108,7 @@ export default function PostCard({
           <div className="flex items-start gap-3">
             <Avatar className="w-12 h-12 border-2 border-gray-100">
               <AvatarImage src={author.avatar} />
-              <AvatarFallback className="bg-gradient-to-br from-green-500 to-green-600 text-white font-medium">
+              <AvatarFallback className="bg-gradient-to-br from-blue-500 to-blue-600 text-white font-medium">
                 {author.name.charAt(0)}
               </AvatarFallback>
             </Avatar>
@@ -119,7 +119,7 @@ export default function PostCard({
                   {getRoleLabel(author.role)}
                 </Badge>
                 {isPinned && (
-                  <Pin className="w-4 h-4 text-green-600" />
+                  <Pin className="w-4 h-4 text-blue-600" />
                 )}
               </div>
               <div className="flex items-center gap-2">

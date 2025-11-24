@@ -23,7 +23,7 @@ export const PersonalInfoForm: React.FC<PersonalInfoFormProps> = ({
   return (
     <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8">
       <h3 className="text-xl font-bold text-gray-900 mb-8 flex items-center gap-3">
-        <div className="p-2 bg-gradient-to-r from-green-600 to-green-700 rounded-lg">
+        <div className="p-2 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg">
           <User className="w-5 h-5 text-white" />
         </div>
         البيانات الشخصية
@@ -40,7 +40,7 @@ export const PersonalInfoForm: React.FC<PersonalInfoFormProps> = ({
             value={data.first_name}
             onChange={handleInputChange('first_name')}
             disabled={disabled}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
             placeholder="الاسم الأول"
             required
           />
@@ -56,7 +56,7 @@ export const PersonalInfoForm: React.FC<PersonalInfoFormProps> = ({
             value={data.last_name}
             onChange={handleInputChange('last_name')}
             disabled={disabled}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
             placeholder="الاسم الأخير"
             required
           />
@@ -72,7 +72,7 @@ export const PersonalInfoForm: React.FC<PersonalInfoFormProps> = ({
             value={data.username}
             onChange={handleInputChange('username')}
             disabled={disabled}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
             placeholder="اسم المستخدم"
             required
           />
@@ -88,7 +88,7 @@ export const PersonalInfoForm: React.FC<PersonalInfoFormProps> = ({
             value={data.phone_number}
             onChange={handleInputChange('phone_number')}
             disabled={disabled}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
             placeholder="05xxxxxxxx"
             required
           />
@@ -103,7 +103,7 @@ export const PersonalInfoForm: React.FC<PersonalInfoFormProps> = ({
             value={data.country_code}
             onChange={handleInputChange('country_code')}
             disabled={disabled}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
             required
           >
             <option value="+966">+966 (السعودية)</option>
@@ -126,7 +126,7 @@ export const PersonalInfoForm: React.FC<PersonalInfoFormProps> = ({
             value={data.gender}
             onChange={handleInputChange('gender')}
             disabled={disabled}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
             required
           >
             <option value="male">ذكر</option>
@@ -144,7 +144,7 @@ export const PersonalInfoForm: React.FC<PersonalInfoFormProps> = ({
             value={data.age || ''}
             onChange={handleInputChange('age')}
             disabled={disabled}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
             placeholder="العمر"
             min="18"
             max="100"
@@ -162,7 +162,7 @@ export const PersonalInfoForm: React.FC<PersonalInfoFormProps> = ({
             onChange={handleInputChange('bio')}
             disabled={disabled}
             rows={3}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200"
             placeholder="اكتب نبذة مختصرة عن نفسك وخبرتك"
             required
           />

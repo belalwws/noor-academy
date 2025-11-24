@@ -72,7 +72,7 @@ export default function QuickTestPage() {
         <Card className="p-6">
           <h1 className="text-3xl font-bold mb-4">🔔 اختبار سريع للتذكيرات</h1>
           <p className="text-slate-600 dark:text-slate-400 mb-4">
-            عدد التذكيرات القادمة: <span className="font-bold text-2xl text-green-600">{remindersCount}</span>
+            عدد التذكيرات القادمة: <span className="font-bold text-2xl text-blue-600">{remindersCount}</span>
           </p>
           
           <div className="flex gap-3 mb-6">
@@ -87,7 +87,7 @@ export default function QuickTestPage() {
             </Button>
           </div>
 
-          <div className="bg-slate-900 text-green-400 p-4 rounded-lg font-mono text-sm max-h-96 overflow-y-auto">
+          <div className="bg-slate-900 text-blue-400 p-4 rounded-lg font-mono text-sm max-h-96 overflow-y-auto">
             {logs.length === 0 ? (
               <p className="text-slate-500">جاري التحميل...</p>
             ) : (

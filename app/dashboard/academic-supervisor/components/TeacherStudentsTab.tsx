@@ -73,8 +73,8 @@ const TeacherStudentsTab: React.FC = () => {
     switch (status) {
       case 'approved':
         return (
-          <div className="flex items-center gap-1 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-semibold border border-green-200">
-            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+          <div className="flex items-center gap-1 px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-semibold border border-blue-200">
+            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
             مقبول
           </div>
         );
@@ -120,8 +120,8 @@ const TeacherStudentsTab: React.FC = () => {
     return (
       <div className="flex items-center justify-center py-12">
         <div className="text-center space-y-4">
-          <div className="w-12 h-12 border-4 border-emerald-200 border-t-emerald-600 rounded-full animate-spin mx-auto"></div>
-          <p className="text-sm text-emerald-700 font-medium">جارٍ تحميل بيانات الطلاب...</p>
+          <div className="w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mx-auto"></div>
+          <p className="text-sm text-blue-700 font-medium">جارٍ تحميل بيانات الطلاب...</p>
         </div>
       </div>
     );
@@ -209,14 +209,14 @@ const TeacherStudentsTab: React.FC = () => {
                   </div>
                   
                   <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <Calendar className="w-4 h-4 text-green-500" />
+                    <Calendar className="w-4 h-4 text-blue-500" />
                     <span className="font-medium">تاريخ التسجيل:</span>
                     <span className="text-gray-800">{new Date(student.enrolled_at).toLocaleDateString('ar-SA')}</span>
                   </div>
                   
                   {student.approved_at && (
                     <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <Users className="w-4 h-4 text-green-500" />
+                      <Users className="w-4 h-4 text-blue-500" />
                       <span className="font-medium">تم القبول:</span>
                       <span className="text-gray-800">{new Date(student.approved_at).toLocaleDateString('ar-SA')}</span>
                     </div>
@@ -262,7 +262,7 @@ const TeacherStudentsTab: React.FC = () => {
                   <div className="flex items-center justify-end text-xs text-gray-500">
                     <div className="flex items-center gap-2">
                       <div className="flex items-center gap-1">
-                        <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                        <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                         <span>نشط</span>
                       </div>
                       <span className="text-purple-600 font-medium">

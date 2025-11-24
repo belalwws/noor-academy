@@ -275,7 +275,7 @@ const TeachersTab: React.FC<TeachersTabProps> = () => {
           </TabsTrigger>
           <TabsTrigger 
             value="approved" 
-            className="flex-1 h-full data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500 data-[state=active]:via-emerald-600 data-[state=active]:to-green-600 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold data-[state=inactive]:text-gray-600 dark:data-[state=inactive]:text-gray-400 data-[state=inactive]:bg-transparent data-[state=inactive]:hover:bg-green-50/60 dark:data-[state=inactive]:hover:bg-green-950/30 data-[state=inactive]:hover:text-green-700 dark:data-[state=inactive]:hover:text-green-400"
+            className="flex-1 h-full data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-500 data-[state=active]:via-blue-600 data-[state=active]:to-blue-600 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold data-[state=inactive]:text-gray-600 dark:data-[state=inactive]:text-gray-400 data-[state=inactive]:bg-transparent data-[state=inactive]:hover:bg-blue-50/60 dark:data-[state=inactive]:hover:bg-blue-950/30 data-[state=inactive]:hover:text-blue-700 dark:data-[state=inactive]:hover:text-blue-400"
           >
             <CheckCircle className="w-4 h-4 shrink-0" />
             <span className="whitespace-nowrap">مدرسين معتمدين ({approvedSummary})</span>
@@ -382,7 +382,7 @@ const TeachersTab: React.FC<TeachersTabProps> = () => {
                   <Button 
                     onClick={handleActivateApprovedTeachers}
                     disabled={isActivating || approvedTeachers.length === 0}
-                    className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 dark:from-green-600 dark:to-emerald-700 dark:hover:from-green-700 dark:hover:to-emerald-800 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 dark:from-blue-600 dark:to-blue-700 dark:hover:from-blue-700 dark:hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300"
                   >
                     {isActivating ? (
                       <>

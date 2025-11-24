@@ -528,7 +528,7 @@ function StudentDashboard() {
   const getStatusBadgeStyle = useCallback((status: string) => {
     switch (status?.toLowerCase()) {
       case 'approved':
-        return 'text-green-600 bg-green-50 border-green-200'
+        return 'text-blue-600 bg-blue-50 border-blue-200'
       case 'pending':
         return 'text-yellow-600 bg-yellow-50 border-yellow-200'
       case 'rejected':
@@ -913,7 +913,7 @@ function StudentDashboard() {
                     size="sm"
                     disabled={refreshing}
                     className={`bg-white/30 border-white/40 text-white hover:bg-white/40 backdrop-blur-md h-9 md:h-10 px-4 md:px-5 shadow-lg hover:shadow-xl transition-all duration-300 text-xs md:text-sm ${
-                      refreshSuccess ? 'ring-2 ring-green-300 ring-offset-2 ring-offset-amber-500' : ''
+                      refreshSuccess ? 'ring-2 ring-blue-300 ring-offset-2 ring-offset-amber-500' : ''
                     }`}
                   >
                     {refreshing ? (
@@ -1581,7 +1581,7 @@ function StudentDashboard() {
                                               ? 'bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-200 border-amber-300'
                                               : app.status === 'rejected'
                                               ? 'bg-red-100 text-red-800 dark:bg-red-900/50 dark:text-red-200 border-red-300'
-                                              : 'bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-200 border-green-300'
+                                              : 'bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200 border-blue-300'
                                           }
                                         >
                                           {app.status_display || app.status}
@@ -1655,7 +1655,7 @@ function StudentDashboard() {
                                             app.status === 'pending_review' 
                                               ? 'bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-200 border-orange-300' 
                                               : app.status === 'approved'
-                                              ? 'bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-200 border-green-300'
+                                              ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200 border-blue-300'
                                               : 'bg-red-100 text-red-800 dark:bg-red-900/50 dark:text-red-200 border-red-300'
                                           }
                                         >
@@ -1681,7 +1681,7 @@ function StudentDashboard() {
                                       )}
 
                                       {app.status === 'approved' && (
-                                        <p className="text-xs text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-900/20 p-2 rounded border border-green-200 dark:border-green-800">
+                                        <p className="text-xs text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 p-2 rounded border border-blue-200 dark:border-blue-800">
                                           ✅ تم قبول طلبك! سيتم منحك الوصول للدورة قريباً
                                         </p>
                                       )}

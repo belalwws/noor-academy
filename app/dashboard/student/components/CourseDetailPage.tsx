@@ -111,7 +111,7 @@ export default function CourseDetailPage({ courseId, onBack }: CourseDetailPageP
   const getMeetingStatusBadge = (status: string) => {
     switch (status) {
       case 'completed':
-        return <Badge className="bg-green-100 text-green-800 border-green-200">مكتمل</Badge>
+        return <Badge className="bg-blue-100 text-blue-800 border-blue-200">مكتمل</Badge>
       case 'upcoming':
         return <Badge className="bg-blue-100 text-blue-800 border-blue-200">قادم</Badge>
       case 'live':
@@ -136,7 +136,7 @@ export default function CourseDetailPage({ courseId, onBack }: CourseDetailPageP
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50/30 to-emerald-50/20 p-6" dir="rtl">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-blue-50/20 p-6" dir="rtl">
         <div className="max-w-6xl mx-auto">
           <div className="animate-pulse space-y-6">
             <div className="h-8 bg-gray-200 rounded w-1/4"></div>
@@ -149,7 +149,7 @@ export default function CourseDetailPage({ courseId, onBack }: CourseDetailPageP
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50/30 to-emerald-50/20 p-6" dir="rtl">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-blue-50/20 p-6" dir="rtl">
       <div className="max-w-6xl mx-auto space-y-6">
         {/* Header */}
         <div className="flex items-center gap-4">

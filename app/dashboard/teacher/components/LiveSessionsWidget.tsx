@@ -129,8 +129,8 @@ export default function LiveSessionsWidget() {
   }
 
   return (
-    <Card className="border-0 shadow-xl bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 overflow-hidden">
-      <CardHeader className="pb-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white">
+    <Card className="border-0 shadow-xl bg-gradient-to-br from-blue-50 via-teal-50 to-cyan-50 overflow-hidden">
+      <CardHeader className="pb-4 bg-gradient-to-r from-blue-500 to-teal-600 text-white">
         <CardTitle className="flex items-center gap-3 text-lg">
           <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
             <Video className="w-5 h-5 text-white" />
@@ -143,7 +143,7 @@ export default function LiveSessionsWidget() {
                 مباشر
               </Badge>
             </div>
-            <p className="text-emerald-100 text-sm mt-1">
+            <p className="text-blue-100 text-sm mt-1">
               {liveSessions.length} جلسة نشطة
             </p>
           </div>
@@ -155,14 +155,14 @@ export default function LiveSessionsWidget() {
           {liveSessions.map((session, index) => (
             <div 
               key={session.id} 
-              className={`p-6 border-b border-emerald-100 last:border-b-0 hover:bg-white/50 transition-all duration-200 ${
+              className={`p-6 border-b border-blue-100 last:border-b-0 hover:bg-white/50 transition-all duration-200 ${
                 index === 0 ? 'bg-white/30' : ''
               }`}
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-lg">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-lg">
                       <BookOpen className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -170,7 +170,7 @@ export default function LiveSessionsWidget() {
                         {session.title}
                       </h4>
                       {session.course_title && (
-                        <p className="text-sm text-emerald-700 font-medium">
+                        <p className="text-sm text-blue-700 font-medium">
                           {session.course_title}
                         </p>
                       )}
@@ -179,7 +179,7 @@ export default function LiveSessionsWidget() {
                   
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <Clock className="w-4 h-4 text-emerald-600" />
+                      <Clock className="w-4 h-4 text-blue-600" />
                       <span>{formatTimeAgo(session.started_at)}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -202,7 +202,7 @@ export default function LiveSessionsWidget() {
                     <Link href={`/join/${session.session_id}`}>
                       <Button 
                         size="sm" 
-                        className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+                        className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
                       >
                         <Play className="w-4 h-4 ml-2" />
                         انضم للجلسة
@@ -222,7 +222,7 @@ export default function LiveSessionsWidget() {
                   
                   <Badge 
                     variant="outline" 
-                    className="text-xs bg-emerald-50 text-emerald-700 border-emerald-200 justify-center"
+                    className="text-xs bg-blue-50 text-blue-700 border-blue-200 justify-center"
                   >
                     <Sparkles className="w-3 h-3 ml-1" />
                     نشط
@@ -234,17 +234,17 @@ export default function LiveSessionsWidget() {
         </div>
         
         {/* Footer */}
-        <div className="p-4 bg-gradient-to-r from-emerald-100 to-teal-100 border-t border-emerald-200">
+        <div className="p-4 bg-gradient-to-r from-blue-100 to-teal-100 border-t border-blue-200">
           <div className="flex items-center justify-between text-sm">
-            <div className="flex items-center gap-2 text-emerald-700">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+            <div className="flex items-center gap-2 text-blue-700">
+              <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
               <span>يتم التحديث كل 15 ثانية</span>
             </div>
             <Button 
               onClick={fetchLiveSessions} 
               size="sm" 
               variant="ghost"
-              className="text-emerald-700 hover:bg-emerald-200"
+              className="text-blue-700 hover:bg-blue-200"
             >
               <Sparkles className="w-4 h-4 ml-1" />
               تحديث

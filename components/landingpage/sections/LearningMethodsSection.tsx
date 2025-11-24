@@ -32,7 +32,7 @@ export const LearningMethodsSection: React.FC = () => {
       title: 'تعلم تفاعلي',
       description: 'استمتع بتجربة تعليمية ممتعة من خلال الألعاب والتمارين التفاعلية',
       icon: Gamepad2,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-blue-500 to-blue-500',
       href: '/interactive-learning',
     },
     {
@@ -63,7 +63,7 @@ export const LearningMethodsSection: React.FC = () => {
           <div className="inline-flex items-center gap-3 mb-4">
             <Sparkles className="w-10 h-10 text-primary dark:text-primary" />
             <h2 className="text-4xl md:text-5xl font-bold">
-              <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">
+              <span className="text-[#1e40af] dark:text-blue-400 font-extrabold">
                 طرق التعلم
               </span>
             </h2>

@@ -179,7 +179,7 @@ const KnowledgeLabManagePage = () => {
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'approved':
-        return <Badge className="bg-green-500">مُعتمد</Badge>;
+        return <Badge className="bg-blue-500">مُعتمد</Badge>;
       case 'pending':
         return <Badge className="bg-yellow-500">قيد المراجعة</Badge>;
       case 'rejected':

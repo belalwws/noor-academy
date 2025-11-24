@@ -193,7 +193,7 @@ export function Step5Review({ formData, courseType }: Step5ReviewProps) {
 
                 {/* Course Type Badge */}
                 <div className="flex items-center gap-3">
-                  <Badge className="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-3 py-1 text-sm font-medium">
+                  <Badge className="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-3 py-1 text-sm font-medium">
                     <Shield className="w-3 h-3 ml-1" />
                     {courseForDisplay.course_type_display}
                   </Badge>
@@ -210,13 +210,13 @@ export function Step5Review({ formData, courseType }: Step5ReviewProps) {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       {learningOutcomes.slice(0, 6).map((outcome, index) => (
                         <div key={index} className="flex items-start gap-3">
-                          <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
                           <span className="text-gray-700 dark:text-slate-300 text-sm">{outcome}</span>
                         </div>
                       ))}
                     </div>
                     {learningOutcomes.length > 6 && (
-                      <button className="text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 text-sm font-medium">
+                      <button className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm font-medium">
                         عرض المزيد ({learningOutcomes.length - 6} عنصر إضافي)
                       </button>
                     )}
@@ -227,7 +227,7 @@ export function Step5Review({ formData, courseType }: Step5ReviewProps) {
                 <div className="border-t border-gray-200 dark:border-slate-700 pt-6">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">المعلم</h3>
                   <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-full flex items-center justify-center">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-600 rounded-full flex items-center justify-center">
                       <span className="text-xl font-bold text-white">{teacherName.charAt(0)}</span>
                     </div>
                     <div>
@@ -342,7 +342,7 @@ export function Step5Review({ formData, courseType }: Step5ReviewProps) {
               {courseType === 'recorded' && (
                 <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-gray-200 dark:border-slate-700 p-6">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                    <Play className="w-5 h-5 text-green-600" />
+                    <Play className="w-5 h-5 text-blue-600" />
                     الفيديوهات المرفوعة
                   </h3>
                   
@@ -369,11 +369,11 @@ export function Step5Review({ formData, courseType }: Step5ReviewProps) {
                     
                     return (
                       <div className="space-y-4">
-                        <div className="flex items-center justify-between p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                          <span className="text-sm font-medium text-green-700 dark:text-green-400">
+                        <div className="flex items-center justify-between p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                          <span className="text-sm font-medium text-blue-700 dark:text-blue-400">
                             تم رفع {uploadedLessons.length} من {totalLessons} درس
                           </span>
-                          <span className="text-xs text-green-600 dark:text-green-400">
+                          <span className="text-xs text-blue-600 dark:text-blue-400">
                             {totalLessons > 0 ? Math.round((uploadedLessons.length / totalLessons) * 100) : 0}%
                           </span>
                         </div>
@@ -384,7 +384,7 @@ export function Step5Review({ formData, courseType }: Step5ReviewProps) {
                             <div className="space-y-1">
                               {uploadedLessons.map((lesson: any) => (
                                 <div key={lesson.id} className="flex items-center gap-2 p-2 bg-gray-50 dark:bg-slate-700 rounded">
-                                  <CheckCircle className="w-4 h-4 text-green-600" />
+                                  <CheckCircle className="w-4 h-4 text-blue-600" />
                                   <span className="text-sm text-gray-700 dark:text-gray-300">{lesson.title}</span>
                                   {lesson.videoFileName && (
                                     <span className="text-xs text-gray-500 dark:text-gray-400">

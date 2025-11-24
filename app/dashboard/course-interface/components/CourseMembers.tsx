@@ -78,7 +78,7 @@ export default function CourseMembers({ members }: CourseMembersProps) {
             </AvatarFallback>
           </Avatar>
           {member.isOnline && (
-            <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-2 border-white rounded-full"></div>
+            <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-blue-500 border-2 border-white rounded-full"></div>
           )}
         </div>
         

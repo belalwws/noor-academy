@@ -20,8 +20,8 @@ function Tabs(props: React.PropsWithChildren<{}>) {
       <button
         className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
           tabIndex === index
-            ? 'bg-gradient-to-r from-green-600 to-green-700 text-white shadow-lg'
-            : 'bg-white text-green-700 border border-green-200 hover:bg-green-50'
+            ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg'
+            : 'bg-white text-blue-700 border border-blue-200 hover:bg-blue-50'
         }`}
         onClick={() => {
           if (onTabSelected) {
@@ -87,9 +87,9 @@ function DemoMeetingTab(props: { label: string }) {
   };
   
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-8 border border-green-100">
+    <div className="bg-white rounded-2xl shadow-xl p-8 border border-blue-100">
       <div className="text-center mb-8">
-        <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+        <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
           <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
           </svg>
@@ -99,15 +99,15 @@ function DemoMeetingTab(props: { label: string }) {
       </div>
       
       <div className="space-y-6">
-        <div className="bg-green-50 rounded-xl p-6">
-          <label htmlFor="duration" className="block text-sm font-medium text-green-800 mb-3">
+        <div className="bg-blue-50 rounded-xl p-6">
+          <label htmlFor="duration" className="block text-sm font-medium text-blue-800 mb-3">
             مدة الجلسة:
           </label>
           <select
             id="duration"
             value={duration}
             onChange={(ev) => setDuration(Number(ev.target.value))}
-            className="w-full px-4 py-3 rounded-lg border border-green-200 bg-white text-gray-800 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+            className="w-full px-4 py-3 rounded-lg border border-blue-200 bg-white text-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
           >
             <option value={2}>دقيقتان</option>
             <option value={5}>5 دقائق</option>
@@ -119,7 +119,7 @@ function DemoMeetingTab(props: { label: string }) {
         <button 
           onClick={startMeeting}
           disabled={isLoading}
-          className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+          className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
         >
           {isLoading ? (
             <>
@@ -136,14 +136,14 @@ function DemoMeetingTab(props: { label: string }) {
           )}
         </button>
         
-        <div className="border-t border-green-100 pt-6">
+        <div className="border-t border-blue-100 pt-6">
           <div className="flex items-center gap-3 mb-4">
             <input
               id="use-e2ee"
               type="checkbox"
               checked={e2ee}
               onChange={(ev) => setE2ee(ev.target.checked)}
-              className="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500"
+              className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
             />
             <label htmlFor="use-e2ee" className="text-sm font-medium text-gray-700">
               تفعيل التشفير من طرف إلى طرف
@@ -191,7 +191,7 @@ function CustomConnectionTab(props: { label: string }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-8 border border-green-100">
+    <div className="bg-white rounded-2xl shadow-xl p-8 border border-blue-100">
       <div className="text-center mb-8">
         <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
           <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -279,9 +279,9 @@ function CustomConnectionTab(props: { label: string }) {
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100" dir="rtl">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100" dir="rtl">
       {/* Header */}
-      <div className="bg-gradient-to-r from-green-600 to-green-700 text-white py-8">
+      <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
@@ -300,7 +300,7 @@ export default function Page() {
       <main className="container mx-auto px-4 py-12">
         <Suspense fallback={
           <div className="flex items-center justify-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
           </div>
         }>
           <Tabs>
@@ -314,7 +314,7 @@ export default function Page() {
       <footer className="bg-gray-800 text-white py-8 mt-16">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
               <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" />
               </svg>
@@ -323,11 +323,11 @@ export default function Page() {
           </div>
           <p className="text-gray-400 mb-4">
             مستضاف على{' '}
-            <a href="https://livekit.io/cloud?ref=meet" className="text-green-400 hover:text-green-300 transition-colors" rel="noopener">
+            <a href="https://livekit.io/cloud?ref=meet" className="text-blue-400 hover:text-blue-300 transition-colors" rel="noopener">
               LiveKit Cloud
             </a>
             {' '}• الكود المصدري على{' '}
-            <a href="https://github.com/livekit/meet?ref=meet" className="text-green-400 hover:text-green-300 transition-colors" rel="noopener">
+            <a href="https://github.com/livekit/meet?ref=meet" className="text-blue-400 hover:text-blue-300 transition-colors" rel="noopener">
               GitHub
             </a>
           </p>

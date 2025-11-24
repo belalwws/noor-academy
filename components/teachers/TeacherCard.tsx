@@ -88,14 +88,14 @@ export const TeacherCard: React.FC<TeacherCardProps> = ({
             </div>
           </div>
           <Badge 
-            variant={statusColor === 'green' ? 'default' : statusColor === 'yellow' ? 'secondary' : 'destructive'}
+            variant={statusColor === 'blue' ? 'default' : statusColor === 'yellow' ? 'secondary' : 'destructive'}
             className={`
-              ${statusColor === 'green' ? 'bg-green-100 text-green-800 hover:bg-green-200' : ''}
+              ${statusColor === 'blue' ? 'bg-blue-100 text-blue-800 hover:bg-blue-200' : ''}
               ${statusColor === 'yellow' ? 'bg-yellow-100 text-yellow-800 hover:bg-yellow-200' : ''}
               ${statusColor === 'red' ? 'bg-red-100 text-red-800 hover:bg-red-200' : ''}
             `}
           >
-            {statusColor === 'green' && <CheckCircle className="w-3 h-3 ml-1" />}
+            {statusColor === 'blue' && <CheckCircle className="w-3 h-3 ml-1" />}
             {statusColor === 'yellow' && <Clock className="w-3 h-3 ml-1" />}
             {statusColor === 'red' && <XCircle className="w-3 h-3 ml-1" />}
             {statusLabel}
@@ -126,7 +126,7 @@ export const TeacherCard: React.FC<TeacherCardProps> = ({
             <span>{teacher.years_of_experience} سنة</span>
           </div>
           <div className="flex items-center gap-2 text-sm">
-            <User className="w-4 h-4 text-green-600" />
+            <User className="w-4 h-4 text-blue-600" />
             <span className="font-medium" dir="rtl">لغة التدريس:</span>
             <span>{teacher.primary_teaching_language === 'ar' ? 'العربية' : 'الإنجليزية'}</span>
           </div>
@@ -175,7 +175,7 @@ export const TeacherCard: React.FC<TeacherCardProps> = ({
                     size="sm"
                     onClick={() => onApprove(teacher.id)}
                     disabled={isApproving || isRejecting}
-                    className="flex-1 bg-green-600 hover:bg-green-700"
+                    className="flex-1 bg-blue-600 hover:bg-blue-700"
                   >
                     <UserCheck className="w-4 h-4 ml-2" />
                     {isApproving ? 'جاري الاعتماد...' : 'اعتماد'}

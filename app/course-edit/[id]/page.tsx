@@ -405,9 +405,9 @@ export default function CourseEditPage({ params }: CourseEditPageProps) {
   if (loading) {
     return (
       <ProtectedRoute allowedRoles={["teacher"]}>
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50/30 to-emerald-50/20 flex items-center justify-center">
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-blue-50/20 flex items-center justify-center">
           <div className="text-center bg-white/80 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20">
-            <div className="w-16 h-16 border-4 border-green-500 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
+            <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
             <h2 className="text-2xl font-bold text-gray-800 mb-2">جاري تحميل بيانات الدورة</h2>
             <p className="text-gray-600 text-lg">يرجى الانتظار...</p>
           </div>
@@ -437,7 +437,7 @@ export default function CourseEditPage({ params }: CourseEditPageProps) {
             <div className="space-y-3">
               <Button 
                 onClick={() => router.push('/dashboard/teacher')} 
-                className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 العودة إلى لوحة التحكم
               </Button>
@@ -457,18 +457,18 @@ export default function CourseEditPage({ params }: CourseEditPageProps) {
 
   return (
     <ProtectedRoute allowedRoles={["teacher"]}>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50/30 to-emerald-50/20" dir="rtl">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-blue-50/20" dir="rtl">
         {/* Background Decorative Elements */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-green-400/10 to-emerald-400/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-teal-400/10 to-green-400/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-teal-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative z-10 p-8">
           {/* Header */}
-          <div className="bg-gradient-to-r from-[#2d7d32] via-[#4caf50] to-[#1b5e20] rounded-3xl p-8 text-white shadow-2xl border border-green-200 relative overflow-hidden mb-8">
+          <div className="bg-gradient-to-r from-[#2d7d32] via-[#4caf50] to-[#1b5e20] rounded-3xl p-8 text-white shadow-2xl border border-blue-200 relative overflow-hidden mb-8">
             <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-green-300/20 rounded-full blur-xl"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-300/20 rounded-full blur-xl"></div>
             
             <div className="relative z-10">
               <div className="flex items-center justify-between">
@@ -478,7 +478,7 @@ export default function CourseEditPage({ params }: CourseEditPageProps) {
                   </div>
                   <div>
                     <h1 className="text-4xl font-bold mb-2">تعديل الدورة</h1>
-                    <p className="text-green-100 text-lg">
+                    <p className="text-blue-100 text-lg">
                       تعديل الدورة: <span className="font-semibold text-white">{course.title}</span>
                     </p>
                     <div className="mt-2 flex gap-2 flex-wrap">
@@ -487,7 +487,7 @@ export default function CourseEditPage({ params }: CourseEditPageProps) {
                       </span>
                       <span className={`px-3 py-1 rounded-full text-sm ${
                         course.approval_status === 'approved' 
-                          ? 'bg-green-500/30 text-white' 
+                          ? 'bg-blue-500/30 text-white' 
                           : course.approval_status === 'rejected'
                           ? 'bg-red-500/30 text-white'
                           : 'bg-yellow-500/30 text-white'
@@ -556,11 +556,11 @@ export default function CourseEditPage({ params }: CourseEditPageProps) {
               </Card>
 
               {/* Course Data */}
-              <Card className="shadow-xl border-green-200 bg-white/90 backdrop-blur-xl rounded-2xl overflow-hidden border-2">
-                <CardHeader className="bg-gradient-to-r from-green-50 via-emerald-50 to-green-50">
-                  <CardTitle className="flex items-center gap-3 text-green-800 text-xl font-bold">
-                    <div className="p-2 bg-gradient-to-br from-green-100 to-emerald-100 rounded-xl shadow-md">
-                      <BookOpen className="w-5 h-5 text-green-600" />
+              <Card className="shadow-xl border-blue-200 bg-white/90 backdrop-blur-xl rounded-2xl overflow-hidden border-2">
+                <CardHeader className="bg-gradient-to-r from-blue-50 via-blue-50 to-blue-50">
+                  <CardTitle className="flex items-center gap-3 text-blue-800 text-xl font-bold">
+                    <div className="p-2 bg-gradient-to-br from-blue-100 to-blue-100 rounded-xl shadow-md">
+                      <BookOpen className="w-5 h-5 text-blue-600" />
                     </div>
                     ✏️ بيانات الدورة للتعديل
                   </CardTitle>
@@ -579,7 +579,7 @@ export default function CourseEditPage({ params }: CourseEditPageProps) {
                       onChange={(e) => handleInputChange('title', e.target.value)}
                       placeholder="عنوان الدورة"
                       required
-                      className="text-lg p-4 rounded-xl border-2 border-green-200 focus:border-green-400 focus:ring-green-400 shadow-md"
+                      className="text-lg p-4 rounded-xl border-2 border-blue-200 focus:border-blue-400 focus:ring-blue-400 shadow-md"
                     />
                   </div>
 
@@ -594,7 +594,7 @@ export default function CourseEditPage({ params }: CourseEditPageProps) {
                       placeholder="وصف الدورة"
                       rows={5}
                       required
-                      className="text-lg p-4 rounded-xl border-2 border-green-200 focus:border-green-400 focus:ring-green-400 shadow-md resize-none"
+                      className="text-lg p-4 rounded-xl border-2 border-blue-200 focus:border-blue-400 focus:ring-blue-400 shadow-md resize-none"
                     />
                   </div>
 
@@ -608,7 +608,7 @@ export default function CourseEditPage({ params }: CourseEditPageProps) {
                       onChange={(e) => handleInputChange('learning_outcomes', e.target.value)}
                       placeholder="نواتج التعلم"
                       rows={4}
-                      className="text-lg p-4 rounded-xl border-2 border-green-200 focus:border-green-400 focus:ring-green-400 shadow-md resize-none"
+                      className="text-lg p-4 rounded-xl border-2 border-blue-200 focus:border-blue-400 focus:ring-blue-400 shadow-md resize-none"
                     />
                   </div>
 
@@ -622,7 +622,7 @@ export default function CourseEditPage({ params }: CourseEditPageProps) {
                       onChange={(e) => handleInputChange('subjects', e.target.value)}
                       placeholder="مواضيع الدورة"
                       required
-                      className="text-lg p-4 rounded-xl border-2 border-green-200 focus:border-green-400 focus:ring-green-400 shadow-md"
+                      className="text-lg p-4 rounded-xl border-2 border-blue-200 focus:border-blue-400 focus:ring-blue-400 shadow-md"
                     />
                   </div>
 
@@ -636,7 +636,7 @@ export default function CourseEditPage({ params }: CourseEditPageProps) {
                       value={formData.trial_session_url}
                       onChange={(e) => handleInputChange('trial_session_url', e.target.value)}
                       placeholder="رابط الحصة التجريبية"
-                      className="text-lg p-4 rounded-xl border-2 border-green-200 focus:border-green-400 focus:ring-green-400 shadow-md"
+                      className="text-lg p-4 rounded-xl border-2 border-blue-200 focus:border-blue-400 focus:ring-blue-400 shadow-md"
                     />
                   </div>
 
@@ -646,7 +646,7 @@ export default function CourseEditPage({ params }: CourseEditPageProps) {
                       🎯 نوع الدورة
                     </Label>
                     <Select value={formData.course_type} onValueChange={(value) => handleInputChange('course_type', value)}>
-                      <SelectTrigger className="text-right text-lg p-4 rounded-xl border-2 border-green-200 focus:border-green-400 shadow-md">
+                      <SelectTrigger className="text-right text-lg p-4 rounded-xl border-2 border-blue-200 focus:border-blue-400 shadow-md">
                         <SelectValue placeholder="اختر نوع الدورة" />
                       </SelectTrigger>
                       <SelectContent>
@@ -668,7 +668,7 @@ export default function CourseEditPage({ params }: CourseEditPageProps) {
                       placeholder="عدد الأسابيع"
                       value={formData.duration_weeks}
                       onChange={(e) => handleInputChange('duration_weeks', parseInt(e.target.value) || 0)}
-                      className="text-lg p-4 rounded-xl border-2 border-green-200 focus:border-green-400 focus:ring-green-400 shadow-md"
+                      className="text-lg p-4 rounded-xl border-2 border-blue-200 focus:border-blue-400 focus:ring-blue-400 shadow-md"
                       min="1"
                       required
                     />
@@ -684,7 +684,7 @@ export default function CourseEditPage({ params }: CourseEditPageProps) {
                       placeholder="مدة الجلسة بالدقائق"
                       value={formData.session_duration}
                       onChange={(e) => handleInputChange('session_duration', parseInt(e.target.value) || 0)}
-                      className="text-lg p-4 rounded-xl border-2 border-green-200 focus:border-green-400 focus:ring-green-400 shadow-md"
+                      className="text-lg p-4 rounded-xl border-2 border-blue-200 focus:border-blue-400 focus:ring-blue-400 shadow-md"
                       min="30"
                       required
                     />
@@ -767,7 +767,7 @@ export default function CourseEditPage({ params }: CourseEditPageProps) {
                 <Button 
                   type="submit" 
                   disabled={isSubmitting || !formData.edit_reason.trim() || !formData.title.trim() || !formData.description.trim()}
-                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   {isSubmitting ? (
                     <>

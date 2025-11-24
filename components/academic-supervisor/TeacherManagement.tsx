@@ -64,7 +64,7 @@ const TeacherManagement: React.FC<TeacherManagementProps> = ({
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active':
-        return 'bg-green-100 text-green-800';
+        return 'bg-blue-100 text-blue-800';
       case 'inactive':
         return 'bg-red-100 text-red-800';
       case 'pending':
@@ -155,7 +155,7 @@ const TeacherManagement: React.FC<TeacherManagementProps> = ({
             {/* Header */}
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-center space-x-3 space-x-reverse">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-600 rounded-full flex items-center justify-center text-white font-bold">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
                   {teacher.name.charAt(0).toUpperCase()}
                 </div>
                 <div>
@@ -190,10 +190,10 @@ const TeacherManagement: React.FC<TeacherManagementProps> = ({
               
               <div className="text-center">
                 <div className="flex items-center justify-center mb-1">
-                  <Users className="h-4 w-4 text-green-600 ml-1" />
+                  <Users className="h-4 w-4 text-blue-600 ml-1" />
                   <span className="text-sm text-gray-600">الطلاب</span>
                 </div>
-                <p className="font-bold text-green-600">{teacher.studentsCount}</p>
+                <p className="font-bold text-blue-600">{teacher.studentsCount}</p>
               </div>
             </div>
 
@@ -214,7 +214,7 @@ const TeacherManagement: React.FC<TeacherManagementProps> = ({
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div 
-                  className="bg-gradient-to-r from-blue-500 to-green-500 h-2 rounded-full" 
+                  className="bg-gradient-to-r from-blue-500 to-blue-500 h-2 rounded-full" 
                   style={{ width: `${teacher.performance}%` }}
                 ></div>
               </div>
@@ -237,7 +237,7 @@ const TeacherManagement: React.FC<TeacherManagementProps> = ({
               </button>
               <button
                 onClick={() => onEditTeacher(teacher.id)}
-                className="flex-1 bg-green-50 text-green-600 py-2 px-3 rounded-lg hover:bg-green-100 transition-colors flex items-center justify-center text-sm"
+                className="flex-1 bg-blue-50 text-blue-600 py-2 px-3 rounded-lg hover:bg-blue-100 transition-colors flex items-center justify-center text-sm"
               >
                 <Edit className="h-4 w-4 ml-1" />
                 تحرير

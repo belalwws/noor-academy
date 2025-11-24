@@ -140,7 +140,7 @@ export const RequiredFieldsModal: React.FC<RequiredFieldsModalProps> = ({
           <div className="flex gap-3">
             <Button
               onClick={onFillFields}
-              className="flex-1 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white"
+              className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white"
             >
               <User className="w-4 h-4 mr-2" />
               اذهب لإكمال البيانات

@@ -27,7 +27,7 @@ export const LearningToolsSection: React.FC = () => {
       description: 'تتبع المهام والواجبات الدراسية',
       icon: CheckSquare,
       status: 'متاح',
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-blue-500 to-blue-500',
     },
     {
       title: 'لوحة متابعة التقدم',
@@ -62,7 +62,7 @@ export const LearningToolsSection: React.FC = () => {
       description: 'اختبر معرفتك وتقييم مستواك',
       icon: BarChart,
       status: 'قيد التطوير',
-      color: 'from-teal-500 to-green-500',
+      color: 'from-teal-500 to-blue-500',
     },
     {
       title: 'لوحة إنجازات الطالب',
@@ -83,7 +83,7 @@ export const LearningToolsSection: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 dark:text-slate-50">
-            <span className="text-[#0A5734] dark:text-[#4A8F5C] font-extrabold">أدوات تعليمية تفاعلية</span>
+            <span className="text-[#1e40af] dark:text-blue-400 font-extrabold">أدوات تعليمية تفاعلية</span>
           </h2>
           <p className="text-lg text-text-secondary dark:text-slate-300 max-w-2xl mx-auto">
             مجموعة متكاملة من الأدوات لتحسين تجربتك التعليمية وتحقيق أهدافك
@@ -98,7 +98,7 @@ export const LearningToolsSection: React.FC = () => {
                 <div className="absolute -top-2 -left-2">
                   <div className={`px-3 py-1 rounded-full text-xs font-semibold ${
                     tool.status === 'متاح'
-                      ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300'
+                      ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300'
                       : 'bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300'
                   }`}>
                     {tool.status === 'متاح' ? (

@@ -38,7 +38,7 @@ export default function PrayerTimesPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 pt-28 pb-16 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
         <div className="fixed inset-0 pointer-events-none overflow-hidden">
           <div className="absolute top-[-5rem] right-[-6rem] h-96 w-96 rounded-full bg-cyan-200/25 blur-3xl dark:bg-cyan-500/10" />
-          <div className="absolute bottom-[-5rem] left-[-6rem] h-80 w-80 rounded-full bg-emerald-200/20 blur-3xl dark:bg-emerald-500/10" />
+          <div className="absolute bottom-[-5rem] left-[-6rem] h-80 w-80 rounded-full bg-blue-200/20 blur-3xl dark:bg-blue-500/10" />
         </div>
 
         <Layout>
@@ -89,7 +89,7 @@ export default function PrayerTimesPage() {
             <section className="lg:col-span-2 space-y-4">
               <div className="rounded-3xl border border-white/30 bg-white/85 p-8 shadow-2xl backdrop-blur dark:border-white/5 dark:bg-slate-900/60">
                 <header className="mb-6 flex items-center justify-end gap-3 text-2xl font-bold text-slate-900 dark:text-white">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-[#0A5734] to-[#4A8F5C] text-sm text-white">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-[#1e40af] to-[#2563eb] text-sm text-white">
                     ⏱️
                   </span>
                   جدول الأذان اليومي
@@ -101,7 +101,7 @@ export default function PrayerTimesPage() {
             <aside className="space-y-6">
               <div className="rounded-3xl border border-white/30 bg-white/85 p-6 shadow-2xl backdrop-blur dark:border-white/5 dark:bg-slate-900/60">
                 <header className="mb-4 flex items-center justify-end gap-2 text-xl font-semibold text-slate-900 dark:text-white">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#0A5734] to-[#4A8F5C] text-xs text-white">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#1e40af] to-[#2563eb] text-xs text-white">
                     📌
                   </span>
                   ملخص اليوم
@@ -111,7 +111,7 @@ export default function PrayerTimesPage() {
 
               <div className="rounded-3xl border border-white/30 bg-white/85 p-6 shadow-2xl backdrop-blur dark:border-white/5 dark:bg-slate-900/60">
                 <header className="mb-4 flex items-center justify-end gap-2 text-xl font-semibold text-slate-900 dark:text-white">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#0A5734] to-[#4A8F5C] text-xs text-white">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#1e40af] to-[#2563eb] text-xs text-white">
                     📍
                   </span>
                   موقعك الحالي
@@ -121,14 +121,14 @@ export default function PrayerTimesPage() {
 
               <div className="rounded-3xl border border-white/30 bg-white/85 p-6 shadow-2xl backdrop-blur dark:border-white/5 dark:bg-slate-900/60">
                 <header className="mb-4 flex items-center justify-end gap-2 text-xl font-semibold text-slate-900 dark:text-white">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#0A5734] to-[#4A8F5C] text-xs text-white">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#1e40af] to-[#2563eb] text-xs text-white">
                     🔔
                   </span>
                   التذكيرات والإشعارات
                 </header>
                 <Button
                   onClick={() => setShowSettings(true)}
-                  className="w-full bg-gradient-to-r from-[#0A5734] to-[#4A8F5C] text-white hover:from-[#073D24] hover:to-[#3A7148]"
+                  className="w-full bg-gradient-to-r from-[#1e40af] to-[#2563eb] text-white hover:from-[#1e3a8a] hover:to-[#1e40af]"
                 >
                   إدارة التنبيهات والإعدادات
                 </Button>

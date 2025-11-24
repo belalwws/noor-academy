@@ -365,7 +365,7 @@ export function ProfileEditForm({
 
         {/* Success Indicator */}
         {!isDirty && !loading && Object.keys(errors).length === 0 && formData.first_name && (
-          <div className="flex items-center gap-2 text-green-600 dark:text-green-400 text-sm bg-green-50 dark:bg-green-950/30 px-4 py-2 rounded-lg">
+          <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-sm bg-blue-50 dark:bg-blue-950/30 px-4 py-2 rounded-lg">
             <CheckCircle2 className="w-4 h-4" />
             <span>تم حفظ جميع التغييرات</span>
           </div>

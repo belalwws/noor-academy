@@ -537,7 +537,7 @@ export default function BatchMeetings({ batchId, courseId, userRole, onActiveSes
                           منتهي
                         </Badge>
                       ) : isSessionLive(meeting) ? (
-                        <Badge variant="default" className="bg-green-500">
+                        <Badge variant="default" className="bg-blue-500">
                           <span className="flex items-center gap-1">
                             <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
                             مباشر
@@ -668,7 +668,7 @@ export default function BatchMeetings({ batchId, courseId, userRole, onActiveSes
                   case 'uploading':
                     return <Badge className="bg-blue-500">قيد الرفع</Badge>
                   case 'available':
-                    return <Badge className="bg-green-500">متاح</Badge>
+                    return <Badge className="bg-blue-500">متاح</Badge>
                   case 'failed':
                     return <Badge className="bg-red-500">فشل</Badge>
                   case 'expired':

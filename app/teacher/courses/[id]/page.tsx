@@ -106,7 +106,7 @@ export default function TeacherCourseDetailPage() {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'published': return 'bg-green-100 text-green-800'
+      case 'published': return 'bg-blue-100 text-blue-800'
       case 'pending_review': return 'bg-yellow-100 text-yellow-800'
       case 'draft': return 'bg-gray-100 text-gray-800'
       case 'archived': return 'bg-red-100 text-red-800'
@@ -137,7 +137,7 @@ export default function TeacherCourseDetailPage() {
       <ProtectedRoute allowedRoles={['teacher']}>
         <div className="flex items-center justify-center min-h-screen">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-green-600 mx-auto"></div>
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"></div>
             <p className="mt-4 text-gray-600">جاري تحميل تفاصيل الدورة...</p>
           </div>
         </div>

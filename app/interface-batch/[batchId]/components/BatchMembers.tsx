@@ -57,7 +57,7 @@ export default function BatchMembers({ batch, students }: BatchMembersProps) {
     
     switch (status) {
       case 'active':
-        return <Badge className="bg-green-100 text-green-800 border-green-200 text-xs">نشط</Badge>
+        return <Badge className="bg-blue-100 text-blue-800 border-blue-200 text-xs">نشط</Badge>
       case 'suspended':
         return <Badge className="bg-yellow-100 text-yellow-800 border-yellow-200 text-xs">موقوف</Badge>
       case 'completed':
@@ -115,7 +115,7 @@ export default function BatchMembers({ batch, students }: BatchMembersProps) {
                   </span>
                 </div>
                 {member.isOnline && (
-                  <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-white dark:border-slate-800"></div>
+                  <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-blue-500 rounded-full border-2 border-white dark:border-slate-800"></div>
                 )}
               </div>
               

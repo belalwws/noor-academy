@@ -88,7 +88,7 @@ export default function CourseMembers({ courseId }: CourseMembersProps) {
                 </span>
               </div>
               {member.isOnline && (
-                <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white dark:border-slate-800"></div>
+                <div className="absolute bottom-0 right-0 w-3 h-3 bg-blue-500 rounded-full border-2 border-white dark:border-slate-800"></div>
               )}
             </div>
             <div className="flex-1 min-w-0">

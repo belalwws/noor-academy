@@ -131,7 +131,7 @@ export default function BatchStudentsManager({ batchId, courseId, onStudentsUpda
     const statusConfig = {
       active: {
         label: 'نشط',
-        className: 'bg-green-100 text-green-800 border-green-300 dark:bg-green-900 dark:text-green-200 dark:border-green-700',
+        className: 'bg-blue-100 text-blue-800 border-blue-300 dark:bg-blue-900 dark:text-blue-200 dark:border-blue-700',
         icon: UserCheck
       },
       suspended: {
@@ -263,7 +263,7 @@ export default function BatchStudentsManager({ batchId, courseId, onStudentsUpda
                           variant="outline"
                           onClick={() => handleActivate(student.id)}
                           disabled={actionLoading === student.id}
-                          className="h-7 w-7 p-0 border-green-300 text-green-600 hover:bg-green-50"
+                          className="h-7 w-7 p-0 border-blue-300 text-blue-600 hover:bg-blue-50"
                           title="تفعيل"
                         >
                           {actionLoading === student.id ? (

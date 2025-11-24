@@ -58,9 +58,9 @@ export default function DashboardPage() {
   // Show loading while redirecting
   if (isRedirecting || (isAuthenticated && user?.role)) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-green-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-gray-600 text-lg">جاري التوجيه إلى لوحة التحكم...</p>
         </div>
       </div>

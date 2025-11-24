@@ -50,7 +50,7 @@ export default function TeacherCourseEditRequests() {
       case 'pending':
         return <Badge variant="secondary" className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400">في الانتظار</Badge>;
       case 'approved':
-        return <Badge variant="default" className="bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">موافق عليه</Badge>;
+        return <Badge variant="default" className="bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400">موافق عليه</Badge>;
       case 'rejected':
         return <Badge variant="destructive" className="bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400">مرفوض</Badge>;
       default:
@@ -323,10 +323,10 @@ export default function TeacherCourseEditRequests() {
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ delay: 0.3 }}
                               whileHover={{ scale: 1.02, y: -2 }}
-                              className="bg-green-50 dark:bg-green-900/30 p-3 md:p-4 rounded-lg md:rounded-xl border border-green-200 dark:border-green-700"
+                              className="bg-blue-50 dark:bg-blue-900/30 p-3 md:p-4 rounded-lg md:rounded-xl border border-blue-200 dark:border-blue-700"
                             >
-                              <h5 className="font-semibold text-green-800 dark:text-green-300 mb-1 text-sm md:text-base">تاريخ البداية</h5>
-                              <p className="text-green-700 dark:text-green-400 text-xs md:text-sm">{newData.start_date}</p>
+                              <h5 className="font-semibold text-blue-800 dark:text-blue-300 mb-1 text-sm md:text-base">تاريخ البداية</h5>
+                              <p className="text-blue-700 dark:text-blue-400 text-xs md:text-sm">{newData.start_date}</p>
                             </motion.div>
                           )}
                         </div>
@@ -518,10 +518,10 @@ export default function TeacherCourseEditRequests() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5 }}
                         whileHover={{ scale: 1.02, y: -2 }}
-                        className="bg-green-50 dark:bg-green-900/30 p-4 md:p-5 rounded-lg md:rounded-xl border border-green-200 dark:border-green-700"
+                        className="bg-blue-50 dark:bg-blue-900/30 p-4 md:p-5 rounded-lg md:rounded-xl border border-blue-200 dark:border-blue-700"
                       >
-                        <h4 className="font-semibold text-green-800 dark:text-green-300 mb-3 text-sm md:text-base">القيم الجديدة</h4>
-                        <div className="space-y-2 text-xs md:text-sm text-green-700 dark:text-green-400">
+                        <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-3 text-sm md:text-base">القيم الجديدة</h4>
+                        <div className="space-y-2 text-xs md:text-sm text-blue-700 dark:text-blue-400">
                           {newData.title && <div><strong>العنوان:</strong> {newData.title}</div>}
                           {newData.description && <div><strong>الوصف:</strong> {newData.description.substring(0, 100)}...</div>}
                           {newData.start_date && <div><strong>تاريخ البداية:</strong> {newData.start_date}</div>}

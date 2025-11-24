@@ -87,7 +87,7 @@ export default function CourseFiles({
       case 'doc':
         return <FileText className="w-5 h-5 text-red-600" />
       case 'image':
-        return <Image className="w-5 h-5 text-green-600" />
+        return <Image className="w-5 h-5 text-blue-600" />
       case 'video':
         return <Video className="w-5 h-5 text-blue-600" />
       case 'audio':
@@ -121,7 +121,7 @@ export default function CourseFiles({
       case 'assignment':
         return 'bg-red-100 text-red-800 border-red-200'
       case 'resource':
-        return 'bg-green-100 text-green-800 border-green-200'
+        return 'bg-blue-100 text-blue-800 border-blue-200'
       case 'reference':
         return 'bg-purple-100 text-purple-800 border-purple-200'
       default:

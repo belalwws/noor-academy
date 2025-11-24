@@ -168,7 +168,7 @@ export function ProfileImageUploader({
 
         {/* Success Indicator */}
         {currentImageUrl && !loading && (
-          <div className="absolute top-2 right-2 bg-green-500 rounded-full p-1">
+          <div className="absolute top-2 right-2 bg-blue-500 rounded-full p-1">
             <CheckCircle2 className="w-5 h-5 text-white" />
           </div>
         )}

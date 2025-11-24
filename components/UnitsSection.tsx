@@ -241,7 +241,7 @@ export default function UnitsSection({
                       <div 
                         key={lesson.id}
                         className={`px-4 py-3 border-b border-gray-200 dark:border-slate-700 last:border-b-0 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors ${
-                          isSelected ? 'bg-green-50 dark:bg-orange-900/20' : ''
+                          isSelected ? 'bg-blue-50 dark:bg-orange-900/20' : ''
                         }`}
                       >
                         <div className="flex items-center justify-between gap-4">
@@ -250,7 +250,7 @@ export default function UnitsSection({
                             {/* Video Icon / Play Icon / Lock Icon */}
                             <div className="flex-shrink-0">
                               {hasVideo ? (
-                                <Video className="w-4 h-4 text-green-600 dark:text-orange-500" />
+                                <Video className="w-4 h-4 text-blue-600 dark:text-orange-500" />
                               ) : lesson.duration_minutes ? (
                                 <Play className="w-4 h-4 text-gray-600 dark:text-slate-400" />
                               ) : (
@@ -261,7 +261,7 @@ export default function UnitsSection({
                             {/* Lesson Title */}
                             <div className="flex-1 min-w-0">
                               <h4 
-                                className="text-sm font-medium text-gray-900 dark:text-slate-100 cursor-pointer hover:text-green-600 dark:hover:text-orange-400 transition-colors"
+                                className="text-sm font-medium text-gray-900 dark:text-slate-100 cursor-pointer hover:text-blue-600 dark:hover:text-orange-400 transition-colors"
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   onLessonClick(lesson.id);
@@ -307,9 +307,9 @@ export default function UnitsSection({
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               {(selectedLesson.video_url || selectedLesson.bunny_video_id) ? (
-                <Video className="w-5 h-5 text-green-600 dark:text-orange-500" />
+                <Video className="w-5 h-5 text-blue-600 dark:text-orange-500" />
               ) : (
-                <Play className="w-5 h-5 text-green-600 dark:text-orange-500" />
+                <Play className="w-5 h-5 text-blue-600 dark:text-orange-500" />
               )}
               <h3 className="text-lg font-semibold text-gray-900 dark:text-slate-100">
                 {selectedLesson.title}

@@ -55,7 +55,7 @@ export const ProfileActions: React.FC<ProfileActionsProps> = ({
         <Button
           onClick={onSave}
           disabled={isSaving || isLoading}
-          className="flex items-center gap-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+          className="flex items-center gap-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
         >
           {isSaving ? (
             <>
@@ -75,7 +75,7 @@ export const ProfileActions: React.FC<ProfileActionsProps> = ({
           <Button
             onClick={onComplete}
             disabled={isSaving || isLoading}
-            className="flex items-center gap-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            className="flex items-center gap-3 bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             {isSaving ? (
               <>
@@ -96,7 +96,7 @@ export const ProfileActions: React.FC<ProfileActionsProps> = ({
           onClick={onRefresh}
           disabled={isLoading || isSaving}
           variant="outline"
-          className="flex items-center gap-3 bg-white border-2 border-gray-300 hover:border-green-500 text-gray-700 hover:text-green-700 px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+          className="flex items-center gap-3 bg-white border-2 border-gray-300 hover:border-blue-500 text-gray-700 hover:text-blue-700 px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
         >
           <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
           تحديث البيانات
@@ -105,12 +105,12 @@ export const ProfileActions: React.FC<ProfileActionsProps> = ({
 
       {/* Status Message */}
       {isComplete && (
-        <div className="mt-8 bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl p-6 text-center shadow-lg">
+        <div className="mt-8 bg-gradient-to-r from-blue-50 to-blue-50 border-2 border-blue-200 rounded-2xl p-6 text-center shadow-lg">
           <div className="flex items-center justify-center gap-3">
-            <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-              <CheckCircle className="w-6 h-6 text-green-600" />
+            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+              <CheckCircle className="w-6 h-6 text-blue-600" />
             </div>
-            <span className="text-green-800 font-bold text-lg">
+            <span className="text-blue-800 font-bold text-lg">
               البروفايل مكتمل بنجاح! 🎉
             </span>
           </div>

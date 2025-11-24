@@ -146,7 +146,7 @@ export function SessionsTab() {
                     <Button 
                       onClick={() => handleJoinSession(session.id)} 
                       size="sm"
-                      className="bg-green-600 hover:bg-green-700"
+                      className="bg-blue-600 hover:bg-blue-700"
                     >
                       <PlayCircle className="w-4 h-4 ml-1" />
                       انضم

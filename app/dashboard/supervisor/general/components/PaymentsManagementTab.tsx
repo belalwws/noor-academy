@@ -227,7 +227,7 @@ const PaymentsManagementTab: React.FC = () => {
   const getStatusBadge = (status: string) => {
     const statusConfig = {
       pending_review: { label: 'قيد المراجعة', className: 'bg-yellow-100 text-yellow-800 border-yellow-300', icon: Clock },
-      paid: { label: 'مقبول ✓', className: 'bg-green-100 text-green-800 border-green-300', icon: CheckCircle },
+      paid: { label: 'مقبول ✓', className: 'bg-blue-100 text-blue-800 border-blue-300', icon: CheckCircle },
       rejected: { label: 'مرفوض ✗', className: 'bg-red-100 text-red-800 border-red-300', icon: XCircle }
     };
 
@@ -303,14 +303,14 @@ const PaymentsManagementTab: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-xl border-2 border-green-200"
+          className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl border-2 border-blue-200"
         >
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-green-600 font-semibold">مقبول</p>
-              <p className="text-3xl font-bold text-green-900">{stats.approved}</p>
+              <p className="text-sm text-blue-600 font-semibold">مقبول</p>
+              <p className="text-3xl font-bold text-blue-900">{stats.approved}</p>
             </div>
-            <CheckCircle className="w-10 h-10 text-green-600" />
+            <CheckCircle className="w-10 h-10 text-blue-600" />
           </div>
         </motion.div>
 
@@ -362,7 +362,7 @@ const PaymentsManagementTab: React.FC = () => {
             <Button
               variant={filterStatus === 'paid' ? 'default' : 'outline'}
               onClick={() => setFilterStatus('paid')}
-              className={filterStatus === 'paid' ? 'bg-green-600 hover:bg-green-700' : ''}
+              className={filterStatus === 'paid' ? 'bg-blue-600 hover:bg-blue-700' : ''}
             >
               مقبول
             </Button>
@@ -465,13 +465,13 @@ const PaymentsManagementTab: React.FC = () => {
 
                     {/* Payment Status Details */}
                     {payment.status === 'paid' && (
-                      <div className="bg-green-50 p-3 rounded-lg border border-green-200">
-                        <p className="text-sm text-green-700 font-medium flex items-center gap-2">
+                      <div className="bg-blue-50 p-3 rounded-lg border border-blue-200">
+                        <p className="text-sm text-blue-700 font-medium flex items-center gap-2">
                           <CheckCircle className="w-4 h-4" />
                           تم التحقق من الدفع بنجاح
                         </p>
                         {payment.reviewed_by_name && (
-                          <p className="text-xs text-green-600 mt-1">
+                          <p className="text-xs text-blue-600 mt-1">
                             تمت المراجعة بواسطة: {payment.reviewed_by_name}
                           </p>
                         )}
@@ -697,7 +697,7 @@ const PaymentsManagementTab: React.FC = () => {
             <Button
               onClick={handleApprovePayment}
               disabled={isReviewing}
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white w-full sm:w-auto"
+              className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white w-full sm:w-auto"
             >
               <CheckCircle className="w-4 h-4 ml-2" />
               {isReviewing ? 'جاري القبول...' : 'قبول الدفع'}

@@ -71,18 +71,18 @@ export default function StudentStats({ profile, courses }: StudentStatsProps) {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-200 shadow-lg">
+        <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200 shadow-lg">
           <CardContent className="p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="bg-green-500 p-3 rounded-xl">
+              <div className="bg-blue-500 p-3 rounded-xl">
                 <CheckCircle className="w-6 h-6 text-white" />
               </div>
-              <div className="text-xs text-green-600 font-medium">
+              <div className="text-xs text-blue-600 font-medium">
                 {completionRate.toFixed(0)}%
               </div>
             </div>
-            <div className="text-3xl font-bold text-green-700 mb-1">{completedCourses}</div>
-            <div className="text-sm text-green-600">دورات مكتملة</div>
+            <div className="text-3xl font-bold text-blue-700 mb-1">{completedCourses}</div>
+            <div className="text-sm text-blue-600">دورات مكتملة</div>
           </CardContent>
         </Card>
 
@@ -161,7 +161,7 @@ export default function StudentStats({ profile, courses }: StudentStatsProps) {
                 <div className="text-xs text-gray-500">قيد التقدم</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-green-600">{completedCourses}</div>
+                <div className="text-2xl font-bold text-blue-600">{completedCourses}</div>
                 <div className="text-xs text-gray-500">مكتملة</div>
               </div>
               <div className="text-center">
@@ -216,8 +216,8 @@ export default function StudentStats({ profile, courses }: StudentStatsProps) {
         <Card className="shadow-lg border-0">
           <CardHeader>
             <div className="flex items-center gap-3">
-              <div className="bg-green-100 p-2 rounded-lg">
-                <Calendar className="w-5 h-5 text-green-600" />
+              <div className="bg-blue-100 p-2 rounded-lg">
+                <Calendar className="w-5 h-5 text-blue-600" />
               </div>
               <CardTitle>النشاط الأخير</CardTitle>
             </div>
@@ -241,7 +241,7 @@ export default function StudentStats({ profile, courses }: StudentStatsProps) {
                     <Badge 
                       variant="secondary" 
                       className={
-                        course.status === 'active' ? 'bg-green-100 text-green-800' :
+                        course.status === 'active' ? 'bg-blue-100 text-blue-800' :
                         course.status === 'completed' ? 'bg-blue-100 text-blue-800' :
                         'bg-yellow-100 text-yellow-800'
                       }

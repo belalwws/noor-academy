@@ -122,7 +122,7 @@ const ApplicationsManagementTab: React.FC = () => {
   const getStatusBadge = (status: string) => {
     const statusConfig = {
       pending: { label: 'قيد المراجعة', className: 'bg-yellow-100 text-yellow-800 border-yellow-300' },
-      approved: { label: 'مقبول', className: 'bg-green-100 text-green-800 border-green-300' },
+      approved: { label: 'مقبول', className: 'bg-blue-100 text-blue-800 border-blue-300' },
       rejected: { label: 'مرفوض', className: 'bg-red-100 text-red-800 border-red-300' }
     };
 
@@ -196,14 +196,14 @@ const ApplicationsManagementTab: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-xl border-2 border-green-200"
+          className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl border-2 border-blue-200"
         >
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-green-600 font-semibold">مقبول</p>
-              <p className="text-3xl font-bold text-green-900">{stats.approved}</p>
+              <p className="text-sm text-blue-600 font-semibold">مقبول</p>
+              <p className="text-3xl font-bold text-blue-900">{stats.approved}</p>
             </div>
-            <CheckCircle className="w-10 h-10 text-green-600" />
+            <CheckCircle className="w-10 h-10 text-blue-600" />
           </div>
         </motion.div>
 
@@ -256,7 +256,7 @@ const ApplicationsManagementTab: React.FC = () => {
             <Button
               variant={filterStatus === 'approved' ? 'default' : 'outline'}
               onClick={() => setFilterStatus('approved')}
-              className={filterStatus === 'approved' ? 'bg-green-600 hover:bg-green-700' : ''}
+              className={filterStatus === 'approved' ? 'bg-blue-600 hover:bg-blue-700' : ''}
             >
               مقبول
             </Button>
@@ -376,7 +376,7 @@ const ApplicationsManagementTab: React.FC = () => {
                       <div className="flex gap-2 pt-2">
                         <Button
                           onClick={() => handleApprove(application.id)}
-                          className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white"
+                          className="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white"
                         >
                           <CheckCircle className="w-4 h-4 ml-2" />
                           قبول

@@ -139,7 +139,7 @@ export default function BatchBadges({
       case 'achievement':
         return 'bg-gradient-to-br from-blue-400 to-indigo-500'
       case 'participation':
-        return 'bg-gradient-to-br from-green-400 to-emerald-500'
+        return 'bg-gradient-to-br from-blue-400 to-blue-500'
       case 'excellence':
         return 'bg-gradient-to-br from-purple-400 to-pink-500'
       default:

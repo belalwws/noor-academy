@@ -70,7 +70,7 @@ export default function SupervisorCourseEditRequests({ onShowComparison, isActiv
       case 'pending':
         return <Badge variant="secondary" className="bg-yellow-100 text-yellow-800">في الانتظار</Badge>;
       case 'approved':
-        return <Badge variant="default" className="bg-green-100 text-green-800">موافق عليه</Badge>;
+        return <Badge variant="default" className="bg-blue-100 text-blue-800">موافق عليه</Badge>;
       case 'rejected':
         return <Badge variant="destructive" className="bg-red-100 text-red-800">مرفوض</Badge>;
       default:
@@ -260,9 +260,9 @@ export default function SupervisorCourseEditRequests({ onShowComparison, isActiv
                           </div>
                         )}
                         {newData.start_date && (
-                          <div className="bg-green-50 p-3 rounded-lg">
-                            <h5 className="font-semibold text-green-800 mb-1">تاريخ البداية</h5>
-                            <p className="text-green-700 text-sm">{newData.start_date}</p>
+                          <div className="bg-blue-50 p-3 rounded-lg">
+                            <h5 className="font-semibold text-blue-800 mb-1">تاريخ البداية</h5>
+                            <p className="text-blue-700 text-sm">{newData.start_date}</p>
                           </div>
                         )}
                       </div>
@@ -384,8 +384,8 @@ export default function SupervisorCourseEditRequests({ onShowComparison, isActiv
                           </div>
                         </div>
 
-                        <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                          <h4 className="font-semibold text-green-800 mb-3">القيم الجديدة</h4>
+                        <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                          <h4 className="font-semibold text-blue-800 mb-3">القيم الجديدة</h4>
                           <div className="space-y-2 text-sm">
                             {newData.title && <div><strong>العنوان:</strong> {newData.title}</div>}
                             {newData.description && <div><strong>الوصف:</strong> {newData.description}</div>}
@@ -406,9 +406,9 @@ export default function SupervisorCourseEditRequests({ onShowComparison, isActiv
                               </div>
                             )}
                             {newData.learning_outcomes && (
-                              <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                                <h4 className="font-semibold text-green-800 mb-2">نواتج التعلم (الجديدة)</h4>
-                                <p className="text-green-700 text-sm whitespace-pre-line">{newData.learning_outcomes}</p>
+                              <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <h4 className="font-semibold text-blue-800 mb-2">نواتج التعلم (الجديدة)</h4>
+                                <p className="text-blue-700 text-sm whitespace-pre-line">{newData.learning_outcomes}</p>
                               </div>
                             )}
                           </div>
@@ -423,9 +423,9 @@ export default function SupervisorCourseEditRequests({ onShowComparison, isActiv
                               </div>
                             )}
                             {newData.topics && (
-                              <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                                <h4 className="font-semibold text-green-800 mb-2">المواضيع (الجديدة)</h4>
-                                <p className="text-green-700 text-sm">{newData.topics}</p>
+                              <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <h4 className="font-semibold text-blue-800 mb-2">المواضيع (الجديدة)</h4>
+                                <p className="text-blue-700 text-sm">{newData.topics}</p>
                               </div>
                             )}
                           </div>
@@ -460,7 +460,7 @@ export default function SupervisorCourseEditRequests({ onShowComparison, isActiv
                         <Button
                           onClick={handleApprove}
                           disabled={actionLoading}
-                          className="bg-green-600 hover:bg-green-700 text-white flex items-center gap-2"
+                          className="bg-blue-600 hover:bg-blue-700 text-white flex items-center gap-2"
                         >
                           <Check className="w-4 h-4" />
                           موافقة

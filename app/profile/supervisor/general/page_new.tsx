@@ -135,7 +135,7 @@ export default function SupervisorProfilePage() {
                   name="full_name"
                   value={profileData.full_name}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="أدخل اسمك الكامل"
                 />
               </div>
@@ -150,7 +150,7 @@ export default function SupervisorProfilePage() {
                   name="email"
                   value={profileData.email}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="your@email.com"
                 />
               </div>
@@ -165,7 +165,7 @@ export default function SupervisorProfilePage() {
                   name="phone"
                   value={profileData.phone}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="05xxxxxxxx"
                 />
               </div>
@@ -180,7 +180,7 @@ export default function SupervisorProfilePage() {
                   name="department"
                   value={profileData.department}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="اسم القسم"
                 />
               </div>
@@ -195,7 +195,7 @@ export default function SupervisorProfilePage() {
                   name="specialization"
                   value={profileData.specialization}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="تخصصك"
                 />
               </div>
@@ -205,7 +205,7 @@ export default function SupervisorProfilePage() {
             {message && (
               <div className={`mt-4 p-3 rounded-md ${
                 message.includes('نجاح') 
-                  ? 'bg-green-100 text-green-800 border border-green-200' 
+                  ? 'bg-blue-100 text-blue-800 border border-blue-200' 
                   : 'bg-red-100 text-red-800 border border-red-200'
               }`}>
                 {message}
@@ -217,7 +217,7 @@ export default function SupervisorProfilePage() {
               <button
                 onClick={handleSave}
                 disabled={isLoading}
-                className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoading ? 'جاري الحفظ...' : 'حفظ البيانات'}
               </button>

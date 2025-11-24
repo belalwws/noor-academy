@@ -87,10 +87,10 @@ export default function ProfileStats({ profile }: ProfileStatsProps) {
       title: 'إجمالي الطلاب',
       value: profile.students_count || 0,
       icon: Users,
-      color: 'green',
-      bgColor: 'bg-green-50',
-      iconColor: 'text-green-600',
-      textColor: 'text-green-800'
+      color: 'blue',
+      bgColor: 'bg-blue-50',
+      iconColor: 'text-blue-600',
+      textColor: 'text-blue-800'
     },
     {
       title: 'ساعات التدريس',
@@ -115,16 +115,16 @@ export default function ProfileStats({ profile }: ProfileStatsProps) {
   return (
     <div className="space-y-6">
       {/* Section Header */}
-      <div className="flex bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl">
-        <Card className="border-green-300/40 shadow-lg bg-white/60 backdrop-blur-sm">
+      <div className="flex bg-gradient-to-r from-blue-50 to-blue-50 border border-blue-200 rounded-xl">
+        <Card className="border-blue-300/40 shadow-lg bg-white/60 backdrop-blur-sm">
           <CardContent className="p-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
                 <Edit3 className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h2 className="text-xl font-bold text-green-800">البيانات المهنية للمعلم</h2>
-                <p className="text-green-600 text-sm">ملفك المهني والتعليمي</p>
+                <h2 className="text-xl font-bold text-blue-800">البيانات المهنية للمعلم</h2>
+                <p className="text-blue-600 text-sm">ملفك المهني والتعليمي</p>
               </div>
             </div>
           </CardContent>
@@ -145,7 +145,7 @@ export default function ProfileStats({ profile }: ProfileStatsProps) {
             <div className="space-y-3">
               <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                 <span className="text-sm text-gray-600">حالة الحساب</span>
-                <Badge className={profile.is_approved ? 'bg-green-500' : 'bg-yellow-500'}>
+                <Badge className={profile.is_approved ? 'bg-blue-500' : 'bg-yellow-500'}>
                   {profile.is_approved ? 'معتمد' : 'قيد المراجعة'}
                 </Badge>
               </div>

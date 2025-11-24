@@ -48,7 +48,7 @@ export const ProfileActions: React.FC<ProfileActionsProps> = ({
         <button
           onClick={onSave}
           disabled={isSaving || isLoading}
-          className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 text-white font-medium rounded-xl hover:from-green-700 hover:to-green-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+          className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-xl hover:from-blue-700 hover:to-blue-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
         >
           {isSaving ? (
             <>
@@ -68,7 +68,7 @@ export const ProfileActions: React.FC<ProfileActionsProps> = ({
           <button
             onClick={onComplete}
             disabled={isSaving || isLoading}
-            className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 text-white font-medium rounded-xl hover:from-green-700 hover:to-green-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+            className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-xl hover:from-blue-700 hover:to-blue-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             <CheckCircle className="w-4 h-4" />
             إكمال الملف الشخصي
@@ -79,11 +79,11 @@ export const ProfileActions: React.FC<ProfileActionsProps> = ({
         <button
           onClick={onRefresh}
           disabled={isLoading || isSaving}
-          className="px-6 py-3 border-2 border-green-300 text-green-700 font-medium rounded-xl hover:border-green-500 hover:text-green-800 hover:bg-green-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center gap-2"
+          className="px-6 py-3 border-2 border-blue-300 text-blue-700 font-medium rounded-xl hover:border-blue-500 hover:text-blue-800 hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center gap-2"
         >
           {isLoading ? (
             <>
-              <div className="w-4 h-4 border-2 border-green-600 border-t-transparent rounded-full animate-spin"></div>
+              <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
               جاري التحديث...
             </>
           ) : (
@@ -97,11 +97,11 @@ export const ProfileActions: React.FC<ProfileActionsProps> = ({
 
       {/* Completion Status */}
       {isComplete && (
-        <div className="mt-4 p-4 bg-gradient-to-r from-green-50 to-green-50 border border-green-200 rounded-xl flex items-center gap-3">
-          <CheckCircle className="w-5 h-5 text-green-600" />
+        <div className="mt-4 p-4 bg-gradient-to-r from-blue-50 to-blue-50 border border-blue-200 rounded-xl flex items-center gap-3">
+          <CheckCircle className="w-5 h-5 text-blue-600" />
           <div>
-            <p className="text-green-800 font-medium">تم إكمال الملف الشخصي</p>
-            <p className="text-green-700 text-sm">جميع المعلومات المطلوبة متوفرة</p>
+            <p className="text-blue-800 font-medium">تم إكمال الملف الشخصي</p>
+            <p className="text-blue-700 text-sm">جميع المعلومات المطلوبة متوفرة</p>
           </div>
         </div>
       )}

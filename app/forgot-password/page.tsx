@@ -86,11 +86,11 @@ export default function ForgotPasswordPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center p-4">
       <div className="relative w-full max-w-md">
         {/* Logo/Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-600 to-green-700 rounded-2xl mb-4 shadow-lg">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl mb-4 shadow-lg">
             <Shield className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900 mb-2">استعادة كلمة المرور</h1>
@@ -113,13 +113,13 @@ export default function ForgotPasswordPage() {
             {isSuccess ? (
               // Success State
               <div className="text-center space-y-4">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                  <CheckCircle className="w-8 h-8 text-green-600" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
+                  <CheckCircle className="w-8 h-8 text-blue-600" />
                 </div>
 
-                <Alert className="border-green-200 bg-green-50">
-                  <Mail className="h-4 w-4 text-green-600" />
-                  <AlertDescription className="text-green-800">
+                <Alert className="border-blue-200 bg-blue-50">
+                  <Mail className="h-4 w-4 text-blue-600" />
+                  <AlertDescription className="text-blue-800">
                     <strong>تم إرسال الرابط بنجاح!</strong>
                     <br />
                     تحقق من بريدك الإلكتروني: <strong>{email}</strong>
@@ -157,7 +157,7 @@ export default function ForgotPasswordPage() {
 
                   <Button
                     onClick={() => router.push('/login')}
-                    className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800"
+                    className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
                   >
                     <ArrowLeft className="w-4 h-4 mr-2" />
                     العودة لتسجيل الدخول
@@ -198,7 +198,7 @@ export default function ForgotPasswordPage() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-medium py-2.5"
+                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium py-2.5"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
@@ -217,7 +217,7 @@ export default function ForgotPasswordPage() {
                 <div className="text-center">
                   <Link
                     href="/login"
-                    className="inline-flex items-center text-sm text-green-600 hover:text-green-700 font-medium transition-colors"
+                    className="inline-flex items-center text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors"
                   >
                     <ArrowLeft className="w-4 h-4 mr-1" />
                     العودة لتسجيل الدخول
@@ -233,7 +233,7 @@ export default function ForgotPasswordPage() {
           <p>تحتاج مساعدة؟</p>
           <Link
             href="mailto:support@lisan-alhekma.com"
-            className="text-green-600 hover:text-green-700 font-medium"
+            className="text-blue-600 hover:text-blue-700 font-medium"
           >
             تواصل مع الدعم الفني
           </Link>

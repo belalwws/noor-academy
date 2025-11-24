@@ -205,10 +205,10 @@ export default function PendingStudentsPage() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-            <Card className="p-6 bg-gradient-to-br from-white to-green-50/50 border-2 border-green-200">
+            <Card className="p-6 bg-gradient-to-br from-white to-blue-50/50 border-2 border-blue-200">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                  <Users className="w-6 h-6 text-green-600" />
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                  <Users className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">عدد المجموعات</p>
@@ -275,7 +275,7 @@ export default function PendingStudentsPage() {
                           <Badge className="bg-blue-100 text-blue-800 border-blue-200">
                             {application.preferred_type === 'individual' ? 'فردي 👤' : 'جماعي 👥'}
                           </Badge>
-                          <Badge className="bg-green-100 text-green-800 border-green-200">
+                          <Badge className="bg-blue-100 text-blue-800 border-blue-200">
                             <CheckCircle className="w-3 h-3 mr-1" />
                             تم الدفع
                           </Badge>

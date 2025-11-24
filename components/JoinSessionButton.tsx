@@ -60,7 +60,7 @@ export default function JoinSessionButton({
         className={`
           inline-flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-200
           ${canJoin 
-            ? 'bg-green-600 hover:bg-green-700 text-white shadow-md hover:shadow-lg transform hover:-translate-y-0.5' 
+            ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg transform hover:-translate-y-0.5' 
             : isFull 
               ? 'bg-gray-400 text-gray-200 cursor-not-allowed'
               : 'bg-gray-300 text-gray-500 cursor-not-allowed'

@@ -189,7 +189,7 @@ const InvitationsTab: React.FC<InvitationsTabProps> = () => {
             <Button variant="outline" onClick={loadPendingInvitations} className="border-gray-300 text-gray-700 hover:bg-gray-50" disabled={isLoading}>
               <RefreshCw className="w-4 h-4 mr-2" /> تحديث
             </Button>
-            <Button onClick={() => setInviteDialogOpen(true)} className="bg-emerald-600 text-white hover:bg-emerald-700">
+            <Button onClick={() => setInviteDialogOpen(true)} className="bg-blue-600 text-white hover:bg-blue-700">
               <Mail className="w-4 h-4 mr-2" /> دعوة مشرف أكاديمي
             </Button>
           </div>
@@ -198,7 +198,7 @@ const InvitationsTab: React.FC<InvitationsTabProps> = () => {
       <CardContent className="p-6 space-y-6">
 
         {success && (
-          <div className="rounded-lg border bg-green-50 border-green-200 text-green-800 p-3 flex items-center gap-2">
+          <div className="rounded-lg border bg-blue-50 border-blue-200 text-blue-800 p-3 flex items-center gap-2">
             <CheckCircle className="w-4 h-4" /> {success}
           </div>
         )}

@@ -18,8 +18,8 @@ const iconMap = {
 const colorMap = {
   prayer: { bg: 'from-amber-500 to-orange-600', icon: 'bg-amber-100 text-amber-700' },
   hadith: { bg: 'from-amber-500 to-orange-600', icon: 'bg-amber-100 text-amber-700' },
-  quran: { bg: 'from-emerald-500 to-teal-600', icon: 'bg-emerald-100 text-emerald-700' },
-  'quran-verse': { bg: 'from-emerald-500 to-teal-600', icon: 'bg-emerald-100 text-emerald-700' },
+  quran: { bg: 'from-blue-500 to-teal-600', icon: 'bg-blue-100 text-blue-700' },
+  'quran-verse': { bg: 'from-blue-500 to-teal-600', icon: 'bg-blue-100 text-blue-700' },
   dhikr: { bg: 'from-amber-500 to-orange-600', icon: 'bg-amber-100 text-amber-700' },
   friday: { bg: 'from-amber-500 to-orange-600', icon: 'bg-amber-100 text-amber-700' },
 };
@@ -119,7 +119,7 @@ export function ReminderNotification() {
                               📚 {currentReminder.data.hadith.source || 'مصدر الحديث'}
                             </span>
                             {currentReminder.data.hadith.grade && (
-                              <span className="text-green-700 dark:text-green-400 font-semibold px-2 py-1 bg-green-50 dark:bg-green-900/20 rounded">
+                              <span className="text-blue-700 dark:text-blue-400 font-semibold px-2 py-1 bg-blue-50 dark:bg-blue-900/20 rounded">
                                 ✓ {currentReminder.data.hadith.grade}
                               </span>
                             )}
@@ -141,7 +141,7 @@ export function ReminderNotification() {
                       {currentReminder.data?.verse ? (
                         <>
                           {/* Arabic Text */}
-                          <div className="p-4 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 rounded-lg border border-emerald-200/50 dark:border-emerald-800/40 shadow-sm">
+                          <div className="p-4 bg-gradient-to-br from-blue-50 to-teal-50 dark:from-blue-950/30 dark:to-teal-950/30 rounded-lg border border-blue-200/50 dark:border-blue-800/40 shadow-sm">
                             <p className="text-lg leading-loose text-right text-slate-900 dark:text-slate-100 font-arabic" style={{ fontFamily: "'Amiri', 'Noto Naskh Arabic', serif" }}>
                               {currentReminder.data.verse.arabic}
                             </p>
@@ -159,14 +159,14 @@ export function ReminderNotification() {
                           {/* Reference */}
                           {currentReminder.data.verse.reference && (
                             <div className="flex items-center justify-center text-sm pt-1">
-                              <span className="text-emerald-700 dark:text-emerald-400 font-medium px-3 py-1.5 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg">
+                              <span className="text-blue-700 dark:text-blue-400 font-medium px-3 py-1.5 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
                                 � {currentReminder.data.verse.reference}
                               </span>
                             </div>
                           )}
                         </>
                       ) : (
-                        <div className="p-4 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 rounded-lg border border-emerald-200/50 dark:border-emerald-800/40">
+                        <div className="p-4 bg-gradient-to-br from-blue-50 to-teal-50 dark:from-blue-950/30 dark:to-teal-950/30 rounded-lg border border-blue-200/50 dark:border-blue-800/40">
                           <p className="text-lg leading-loose text-right text-slate-900 dark:text-slate-100 font-arabic" style={{ fontFamily: "'Amiri', 'Noto Naskh Arabic', serif" }}>
                             {currentReminder.message || 'آية قرآنية'}
                           </p>
@@ -225,8 +225,8 @@ export function ReminderNotification() {
                         </div>
 
                         {/* Hadith about reading Al-Kahf */}
-                        <div className="p-3 bg-white dark:bg-slate-800 rounded-lg border border-emerald-100 dark:border-emerald-900/30">
-                          <p className="text-sm text-emerald-800 dark:text-emerald-200 mb-2 font-semibold">✨ فضل قراءة سورة الكهف:</p>
+                        <div className="p-3 bg-white dark:bg-slate-800 rounded-lg border border-blue-100 dark:border-blue-900/30">
+                          <p className="text-sm text-blue-800 dark:text-blue-200 mb-2 font-semibold">✨ فضل قراءة سورة الكهف:</p>
                           <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                             "من قرأ سورة الكهف في يوم الجمعة أضاء له من النور ما بين الجمعتين"
                           </p>

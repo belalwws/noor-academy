@@ -262,7 +262,7 @@ export default function LiveCoursePage() {
                                       variant="outline"
                                       className={`text-xs ${
                                         batch.batch_details.status === 'active'
-                                          ? 'bg-green-50 text-green-700 dark:bg-green-900/30 dark:text-green-300 border-green-200 dark:border-green-700'
+                                          ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 border-blue-200 dark:border-blue-700'
                                           : 'bg-gray-50 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300 border-gray-200 dark:border-gray-700'
                                       }`}
                                     >
@@ -369,8 +369,8 @@ export default function LiveCoursePage() {
               <Card className="h-full hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-primary/50">
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-12 h-12 rounded-xl bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
-                      <MessageSquare className="w-6 h-6 text-green-600 dark:text-green-400" />
+                    <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                      <MessageSquare className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                     </div>
                     <CardTitle className="text-xl">المجتمعات</CardTitle>
                   </div>
@@ -388,7 +388,7 @@ export default function LiveCoursePage() {
                           whileTap={{ scale: 0.98 }}
                         >
                           <Card
-                            className="p-4 hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors cursor-pointer border border-green-200 dark:border-green-800"
+                            className="p-4 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors cursor-pointer border border-blue-200 dark:border-blue-800"
                             onClick={() => handleOpenCommunity(community.id)}
                           >
                             <div className="flex items-start justify-between">
@@ -406,7 +406,7 @@ export default function LiveCoursePage() {
                                     variant="outline"
                                     className={`text-xs ${
                                       community.status === 'active'
-                                        ? 'bg-green-50 text-green-700 dark:bg-green-900/30 dark:text-green-300 border-green-200 dark:border-green-700'
+                                        ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 border-blue-200 dark:border-blue-700'
                                         : 'bg-gray-50 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300 border-gray-200 dark:border-gray-700'
                                     }`}
                                   >

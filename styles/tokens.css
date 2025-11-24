@@ -3,19 +3,19 @@
    CSS-first Design Tokens for Nour Academy System
    ============================================ */
 
-/* ========== Default Theme (Nour Academy - Islamic Green & Gold) ========== */
+/* ========== Default Theme (Nour Academy - Blue & Gold) ========== */
 :root {
   /* ========== Brand Colors ========== */
-  --color-primary: #0A5734;
-  --color-primary-dark: #073D24;
-  --color-primary-light: #0D6B42;
+  --color-primary: #1e40af;
+  --color-primary-dark: #1e3a8a;
+  --color-primary-light: #3b82f6;
   
-  --color-secondary: #4A8F5C;
-  --color-secondary-dark: #3A7148;
-  --color-secondary-light: #5BA86D;
+  --color-secondary: #2563eb;
+  --color-secondary-dark: #1e40af;
+  --color-secondary-light: #60a5fa;
   
   --color-accent: #C5A15A;
-  --color-accent-cool: #4A8F5C;
+  --color-accent-cool: #2563eb;
   
   /* ========== Text Colors ========== */
   --color-text-primary: #222222;
@@ -40,10 +40,10 @@
   --color-info: #3b82f6;
   
   /* ========== Gradients ========== */
-  --gradient-primary: linear-gradient(90deg, #0A5734 0%, #4A8F5C 100%);
-  --gradient-hero: linear-gradient(135deg, rgba(10, 87, 52, 0.05) 0%, rgba(74, 143, 92, 0.05) 100%);
-  --gradient-navbar: linear-gradient(135deg, #0A5734 0%, #4A8F5C 100%);
-  --gradient-card-header: linear-gradient(135deg, #4A8F5C 0%, #0A5734 100%);
+  --gradient-primary: linear-gradient(90deg, #1e40af 0%, #2563eb 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(30, 64, 175, 0.05) 0%, rgba(37, 99, 235, 0.05) 100%);
+  --gradient-navbar: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+  --gradient-card-header: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
   
   /* ========== Fonts ========== */
   --font-sans: "Cairo", "Tajawal", sans-serif;
@@ -72,7 +72,7 @@
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  --shadow-glow: 0 4px 16px rgba(10, 87, 52, 0.15);
+  --shadow-glow: 0 4px 16px rgba(30, 64, 175, 0.15);
   --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.06);
   
   /* ========== Transitions ========== */
@@ -83,7 +83,7 @@
   /* ========== Legacy Support (for existing code) ========== */
   --primary-green: var(--color-secondary);
   --dark-green: var(--color-secondary-dark);
-  --light-green: #a5d6a7;
+  --light-green: #93c5fd;
   --border-radius: var(--radius-lg);
 }
 
@@ -96,7 +96,7 @@
   --color-bg-secondary: #334155;
   --color-bg-hover: #334155;
   
-  /* Text Colors */
+  /* Text Colors - Improved contrast */
   --color-text-primary: #F1F5F9;
   --color-text-secondary: #CBD5E1;
   --color-text-tertiary: #94A3B8;
@@ -106,26 +106,37 @@
   --color-border-light: #475569;
   --color-border-dark: #475569;
   
-  /* Shadows */
-  --shadow-glow: 0 10px 40px rgba(10, 87, 52, 0.2), 0 0 20px rgba(10, 87, 52, 0.1);
+  /* Primary colors for dark mode - lighter for better visibility */
+  --color-primary: #60a5fa;
+  --color-primary-dark: #3b82f6;
+  --color-primary-light: #93c5fd;
+  --color-secondary: #3b82f6;
+  --color-secondary-dark: #60a5fa;
+  --color-secondary-light: #93c5fd;
+  
+  /* Shadows - Enhanced glow for dark mode */
+  --shadow-glow: 0 10px 40px rgba(96, 165, 250, 0.25), 0 0 20px rgba(96, 165, 250, 0.15);
   --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.5);
   
-  /* Gradients */
-  --gradient-hero: linear-gradient(135deg, rgba(10, 87, 52, 0.1) 0%, rgba(74, 143, 92, 0.1) 100%);
+  /* Gradients - Brighter for dark mode */
+  --gradient-primary: linear-gradient(90deg, #60a5fa 0%, #3b82f6 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(96, 165, 250, 0.15) 0%, rgba(59, 130, 246, 0.12) 100%);
+  --gradient-navbar: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  --gradient-card-header: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
 }
 
-/* ========== Theme 2: Islamic Green ========== */
+/* ========== Theme 2: Islamic Blue ========== */
 :root[data-theme="islamic-green"] {
-  --color-primary: #2d7d32;
-  --color-primary-dark: #1b5e20;
-  --color-primary-light: #4caf50;
-  --gradient-primary: linear-gradient(90deg, #2d7d32 0%, #4caf50 100%);
-  --gradient-navbar: linear-gradient(135deg, #2d7d32 0%, #1b5e20 100%);
-  --shadow-glow: 0 4px 16px rgba(45, 125, 50, 0.15);
+  --color-primary: #1e40af;
+  --color-primary-dark: #1e3a8a;
+  --color-primary-light: #3b82f6;
+  --gradient-primary: linear-gradient(90deg, #1e40af 0%, #3b82f6 100%);
+  --gradient-navbar: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  --shadow-glow: 0 4px 16px rgba(30, 64, 175, 0.15);
 }
 
 :root[data-theme="islamic-green"].dark {
-  --shadow-glow: 0 10px 40px rgba(45, 125, 50, 0.2), 0 0 20px rgba(45, 125, 50, 0.1);
+  --shadow-glow: 0 10px 40px rgba(30, 64, 175, 0.2), 0 0 20px rgba(30, 64, 175, 0.1);
 }
 
 /* ========== Theme 3: Blue Ocean ========== */

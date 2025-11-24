@@ -239,7 +239,7 @@ export default function IndividualBatchesPage() {
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'active':
-        return <Badge className="bg-green-100 text-green-800 border-green-200">نشط</Badge>
+        return <Badge className="bg-blue-100 text-blue-800 border-blue-200">نشط</Badge>
       case 'closed':
         return <Badge className="bg-gray-100 text-gray-800 border-gray-200">مغلق</Badge>
       default:
@@ -260,7 +260,7 @@ export default function IndividualBatchesPage() {
           <motion.div
             animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.3, 0.2] }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-green-200/20 to-emerald-200/20 dark:from-green-900/10 dark:to-emerald-900/10 rounded-full blur-3xl"
+            className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-blue-200/20 to-blue-200/20 dark:from-blue-900/10 dark:to-blue-900/10 rounded-full blur-3xl"
           />
         </div>
 

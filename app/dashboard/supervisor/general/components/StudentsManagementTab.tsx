@@ -83,7 +83,7 @@ const ManageStudentsTab: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-slate-50/60 via-white/80 to-slate-50/60 rounded-xl" />
         <div className="relative flex items-center justify-between p-6 rounded-xl border border-slate-200/50 backdrop-blur-sm">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-green-600 rounded-lg flex items-center justify-center shadow-md">
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center shadow-md">
               <UserMinus className="w-5 h-5 text-white" />
             </div>
             <div>
@@ -94,7 +94,7 @@ const ManageStudentsTab: React.FC = () => {
           <Button 
             onClick={loadStudents} 
             variant="outline" 
-            className="flex items-center gap-2 border-emerald-200 text-emerald-700 hover:bg-emerald-50 hover:border-emerald-300 transition-all duration-200" 
+            className="flex items-center gap-2 border-blue-200 text-blue-700 hover:bg-blue-50 hover:border-blue-300 transition-all duration-200" 
             disabled={studentsLoading}
           >
             <RefreshCw className={`w-4 h-4 ${studentsLoading ? 'animate-spin' : ''}`} />
@@ -110,8 +110,8 @@ const ManageStudentsTab: React.FC = () => {
           <div className="relative flex items-center justify-center py-16 rounded-xl border border-slate-200/50 backdrop-blur-sm">
             <div className="text-center">
               <div className="relative mb-6">
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/20 to-green-500/20 rounded-full blur-xl animate-pulse" />
-                <div className="relative w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-blue-500/20 rounded-full blur-xl animate-pulse" />
+                <div className="relative w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto shadow-lg">
                   <div className="animate-spin rounded-full h-8 w-8 border-2 border-white border-t-transparent" />
                 </div>
               </div>
@@ -161,7 +161,7 @@ const ManageStudentsTab: React.FC = () => {
                   <div className="flex items-center gap-3">
                     <div className={`px-3 py-1.5 rounded-full text-xs font-medium shadow-sm ${
                       student.enrollment_status === 'Approved' 
-                        ? 'bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 border border-emerald-200' :
+                        ? 'bg-gradient-to-r from-blue-100 to-blue-100 text-blue-800 border border-blue-200' :
                       student.enrollment_status === 'Pending Approval' 
                         ? 'bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-800 border border-amber-200' :
                         'bg-gradient-to-r from-red-100 to-rose-100 text-red-800 border border-red-200'

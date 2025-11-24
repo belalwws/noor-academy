@@ -234,14 +234,14 @@ export default function TeamsStyleCoursesView({ courses, applications = [], batc
                         <div className="p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
                           <div className="flex items-start gap-2">
                             {studentBatch ? (
-                              <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                              <CheckCircle className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
                             ) : (
                               <AlertCircle className="w-4 h-4 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
                             )}
                             <div className="flex-1">
                               <p className={`text-xs leading-relaxed ${
                                 studentBatch 
-                                  ? 'text-green-800 dark:text-green-200 font-medium'
+                                  ? 'text-blue-800 dark:text-blue-200 font-medium'
                                   : 'text-amber-800 dark:text-amber-200'
                               }`}>
                                 {studentBatch 

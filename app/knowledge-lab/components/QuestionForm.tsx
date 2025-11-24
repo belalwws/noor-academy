@@ -414,7 +414,7 @@ export function QuestionForm({
                       key={opt.id}
                       className={`p-3 rounded-lg border-2 ${
                         correctAnswer === opt.id
-                          ? 'border-green-500 bg-green-50'
+                          ? 'border-blue-500 bg-blue-50'
                           : 'border-gray-200 bg-white'
                       }`}
                     >
@@ -422,7 +422,7 @@ export function QuestionForm({
                         <span className="font-bold text-orange-600">{opt.label}.</span>
                         <span>{opt.text || 'نص الخيار...'}</span>
                         {correctAnswer === opt.id && (
-                          <Badge className="bg-green-500 text-white mr-auto">✓ الإجابة الصحيحة</Badge>
+                          <Badge className="bg-blue-500 text-white mr-auto">✓ الإجابة الصحيحة</Badge>
                         )}
                       </div>
                     </div>
@@ -433,7 +433,7 @@ export function QuestionForm({
                   <div
                     className={`p-3 rounded-lg border-2 ${
                       trueFalseAnswer === 'true'
-                        ? 'border-green-500 bg-green-50'
+                        ? 'border-blue-500 bg-blue-50'
                         : 'border-gray-200 bg-white'
                     }`}
                   >
@@ -441,14 +441,14 @@ export function QuestionForm({
                       <span className="font-bold text-orange-600">أ.</span>
                       <span>صح</span>
                       {trueFalseAnswer === 'true' && (
-                        <Badge className="bg-green-500 text-white mr-auto">✓ الإجابة الصحيحة</Badge>
+                        <Badge className="bg-blue-500 text-white mr-auto">✓ الإجابة الصحيحة</Badge>
                       )}
                     </div>
                   </div>
                   <div
                     className={`p-3 rounded-lg border-2 ${
                       trueFalseAnswer === 'false'
-                        ? 'border-green-500 bg-green-50'
+                        ? 'border-blue-500 bg-blue-50'
                         : 'border-gray-200 bg-white'
                     }`}
                   >
@@ -456,7 +456,7 @@ export function QuestionForm({
                       <span className="font-bold text-orange-600">ب.</span>
                       <span>خطأ</span>
                       {trueFalseAnswer === 'false' && (
-                        <Badge className="bg-green-500 text-white mr-auto">✓ الإجابة الصحيحة</Badge>
+                        <Badge className="bg-blue-500 text-white mr-auto">✓ الإجابة الصحيحة</Badge>
                       )}
                     </div>
                   </div>
@@ -620,7 +620,7 @@ export function QuestionForm({
                   onClick={() => setTrueFalseAnswer('true')}
                   className={`p-4 rounded-lg border-2 transition-all ${
                     trueFalseAnswer === 'true'
-                      ? 'border-green-500 bg-green-50 text-green-700'
+                      ? 'border-blue-500 bg-blue-50 text-blue-700'
                       : 'border-gray-200 bg-white hover:border-orange-300'
                   }`}
                 >
@@ -634,7 +634,7 @@ export function QuestionForm({
                   onClick={() => setTrueFalseAnswer('false')}
                   className={`p-4 rounded-lg border-2 transition-all ${
                     trueFalseAnswer === 'false'
-                      ? 'border-green-500 bg-green-50 text-green-700'
+                      ? 'border-blue-500 bg-blue-50 text-blue-700'
                       : 'border-gray-200 bg-white hover:border-orange-300'
                   }`}
                 >

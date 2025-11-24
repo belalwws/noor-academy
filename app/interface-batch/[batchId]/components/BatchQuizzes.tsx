@@ -232,7 +232,7 @@ export default function BatchQuizzes({ batchId, userRole, onPendingQuizzesChange
                   {/* Status Badge - Top Right */}
                   <div className="absolute top-3 right-3 z-10">
                     {quiz.is_active ? (
-                      <Badge className="bg-green-500 text-white border-0 shadow-lg">
+                      <Badge className="bg-blue-500 text-white border-0 shadow-lg">
                         <CheckCircle className="w-3 h-3 mr-1" />
                         نشط
                       </Badge>
@@ -279,11 +279,11 @@ export default function BatchQuizzes({ batchId, userRole, onPendingQuizzesChange
                     </div>
 
                     {/* Time Limit */}
-                    <div className="flex items-center gap-1.5 px-2.5 py-1 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                      <svg className="w-3.5 h-3.5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="flex items-center gap-1.5 px-2.5 py-1 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                      <svg className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      <span className="text-xs font-semibold text-green-700 dark:text-green-300">
+                      <span className="text-xs font-semibold text-blue-700 dark:text-blue-300">
                         {quiz.time_limit ? `${Math.round(quiz.time_limit / 60)} دقيقة` : 'بدون توقيت'}
                       </span>
                     </div>

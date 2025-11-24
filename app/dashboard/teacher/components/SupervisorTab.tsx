@@ -83,9 +83,9 @@ export default function SupervisorTab({
               animate={{ opacity: 1, scale: 1 }}
               transition={{ type: 'spring', stiffness: 200 }}
             >
-              <Alert className="bg-green-50 dark:bg-green-900/30 border-green-200 dark:border-green-700">
-                <CheckCircle className="h-4 w-4 text-green-600 dark:text-green-400" />
-                <AlertDescription className="text-green-800 dark:text-green-200">
+              <Alert className="bg-blue-50 dark:bg-blue-900/30 border-blue-200 dark:border-blue-700">
+                <CheckCircle className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                <AlertDescription className="text-blue-800 dark:text-blue-200">
                   تم إرسال طلب الانضمام بنجاح! سيتم مراجعة طلبك من قبل المشرف العام.
                 </AlertDescription>
               </Alert>

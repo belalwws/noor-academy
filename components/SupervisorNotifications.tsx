@@ -28,7 +28,7 @@ export default function SupervisorNotifications({ className = '' }: SupervisorNo
         return <BookOpen className="w-5 h-5 text-blue-600" />;
       case 'teacher_approved':
       case 'teacher_rejected':
-        return <Users className="w-5 h-5 text-green-600" />;
+        return <Users className="w-5 h-5 text-blue-600" />;
       case 'system':
         return <AlertCircle className="w-5 h-5 text-gray-600" />;
       case 'message':
@@ -47,7 +47,7 @@ export default function SupervisorNotifications({ className = '' }: SupervisorNo
       case 'medium':
         return 'border-r-4 border-yellow-500 bg-yellow-50';
       case 'low':
-        return 'border-r-4 border-green-500 bg-green-50';
+        return 'border-r-4 border-blue-500 bg-blue-50';
       default:
         return 'border-r-4 border-gray-300 bg-gray-50';
     }
@@ -60,7 +60,7 @@ export default function SupervisorNotifications({ className = '' }: SupervisorNo
       case 'medium':
         return 'bg-yellow-500 text-white';
       case 'low':
-        return 'bg-green-500 text-white';
+        return 'bg-blue-500 text-white';
       default:
         return 'bg-gray-500 text-white';
     }
@@ -112,7 +112,7 @@ export default function SupervisorNotifications({ className = '' }: SupervisorNo
                 onClick={handleMarkAllAsRead}
                 size="sm"
                 disabled={isLoading}
-                className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white"
+                className="bg-gradient-to-r from-blue-500 to-blue-500 hover:from-blue-600 hover:to-blue-600 text-white"
               >
                 <Check className="w-4 h-4 ml-2" />
                 تعليم الكل كمقروء
@@ -184,7 +184,7 @@ export default function SupervisorNotifications({ className = '' }: SupervisorNo
                       size="sm"
                       variant="ghost"
                       disabled={isLoading}
-                      className="text-green-600 hover:bg-green-50 p-1"
+                      className="text-blue-600 hover:bg-blue-50 p-1"
                     >
                       <Check className="w-4 h-4" />
                     </Button>

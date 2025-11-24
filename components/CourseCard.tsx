@@ -82,10 +82,10 @@ const CourseCard: React.FC<CourseCardProps> = ({
           title: 'مباشر عائلي',
           subtitle: 'Family or Friends (2-5 people)',
           icon: '👨‍👩‍👧‍👦',
-          color: 'from-green-500 to-emerald-600',
-          bgColor: 'from-green-50 to-emerald-100',
-          borderColor: 'border-green-200',
-          textColor: 'text-green-700'
+          color: 'from-blue-500 to-blue-600',
+          bgColor: 'from-blue-50 to-blue-100',
+          borderColor: 'border-blue-200',
+          textColor: 'text-blue-700'
         };
       case 'private-group':
         return {
@@ -166,7 +166,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
       <CardContent className="relative p-4 flex flex-col h-full">
         {/* Course Title - في الوسط */}
         <div className="text-center mb-3">
-          <h3 className="text-lg font-semibold text-gray-900 leading-tight line-clamp-2 group-hover:text-green-600 transition-colors duration-200">
+          <h3 className="text-lg font-semibold text-gray-900 leading-tight line-clamp-2 group-hover:text-blue-600 transition-colors duration-200">
             {course.title}
           </h3>
         </div>
@@ -204,8 +204,8 @@ const CourseCard: React.FC<CourseCardProps> = ({
         {/* Status Indicator */}
         <div className="mt-auto">
           {isEnrolled ? (
-            <div className="flex items-center gap-2 text-sm text-green-600 font-medium">
-              <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+            <div className="flex items-center gap-2 text-sm text-blue-600 font-medium">
+              <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
               مسجل بالفعل
             </div>
           ) : isFull ? (

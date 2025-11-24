@@ -59,10 +59,10 @@ const KnowledgeLabActionModals: React.FC<KnowledgeLabActionModalsProps> = ({
     <>
       {/* 🎯 Approval Modal - مخصص لمختبرات المعرفة */}
       <Dialog open={showApprovalModal} onOpenChange={handleCloseModals}>
-        <DialogContent className="sm:max-w-[600px] bg-gradient-to-br from-white to-green-50/30 dark:from-slate-900 dark:to-green-900/10 border-green-200 dark:border-green-700">
+        <DialogContent className="sm:max-w-[600px] bg-gradient-to-br from-white to-blue-50/30 dark:from-slate-900 dark:to-blue-900/10 border-blue-200 dark:border-blue-700">
           <DialogHeader>
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg">
                 <CheckCircle className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -161,7 +161,7 @@ const KnowledgeLabActionModals: React.FC<KnowledgeLabActionModalsProps> = ({
             <Button
               onClick={handleLabApproval}
               disabled={isApproving || !isValidCommission()}
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white gap-2"
+              className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white gap-2"
             >
               {isApproving ? (
                 <>

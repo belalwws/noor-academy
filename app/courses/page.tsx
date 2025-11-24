@@ -83,15 +83,15 @@ export default function CoursesPage() {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <Card
-              className="group cursor-pointer h-full transition-all duration-300 hover:shadow-2xl hover:scale-105 border-2 hover:border-green-500 dark:hover:border-green-400 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20"
+              className="group cursor-pointer h-full transition-all duration-300 hover:shadow-2xl hover:scale-105 border-2 hover:border-blue-500 dark:hover:border-blue-400 bg-gradient-to-br from-blue-50 to-blue-50 dark:from-blue-950/20 dark:to-blue-950/20"
               onClick={() => handleCardClick("/recorded-courses")}
             >
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-4 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="p-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <BookOpen className="w-8 h-8 text-white" />
                   </div>
-                  <ArrowLeft className="w-6 h-6 text-gray-400 group-hover:text-green-500 group-hover:translate-x-2 transition-all duration-300" />
+                  <ArrowLeft className="w-6 h-6 text-gray-400 group-hover:text-blue-500 group-hover:translate-x-2 transition-all duration-300" />
                 </div>
                 <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
                   الدورات المسجلة
@@ -103,15 +103,15 @@ export default function CoursesPage() {
               <CardContent>
                 <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                     <span>تعلم في أي وقت يناسبك</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                     <span>إمكانية إعادة المشاهدة</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                     <span>محتوى مسجل عالي الجودة</span>
                   </div>
                 </div>

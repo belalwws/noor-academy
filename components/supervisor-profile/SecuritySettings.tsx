@@ -37,7 +37,7 @@ export const SecuritySettings: React.FC = () => {
     <div className="space-y-8">
       <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
-          <div className="p-2 bg-gradient-to-r from-green-600 to-green-700 rounded-lg">
+          <div className="p-2 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg">
             <Shield className="w-6 h-6 text-white" />
           </div>
           إعدادات الأمان
@@ -61,7 +61,7 @@ export const SecuritySettings: React.FC = () => {
                   type={showCurrentPassword ? 'text' : 'password'}
                   value={currentPassword}
                   onChange={(e) => setCurrentPassword(e.target.value)}
-                  className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="أدخل كلمة المرور الحالية"
                 />
                 <button
@@ -84,7 +84,7 @@ export const SecuritySettings: React.FC = () => {
                   type={showNewPassword ? 'text' : 'password'}
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
-                  className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="أدخل كلمة المرور الجديدة"
                 />
                 <button
@@ -107,7 +107,7 @@ export const SecuritySettings: React.FC = () => {
                   type={showConfirmPassword ? 'text' : 'password'}
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="أعد إدخال كلمة المرور الجديدة"
                 />
                 <button
@@ -136,7 +136,7 @@ export const SecuritySettings: React.FC = () => {
           <Button
             onClick={handleChangePassword}
             disabled={isLoading || !currentPassword || !newPassword || !confirmPassword}
-            className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold"
+            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-semibold"
           >
             {isLoading ? (
               <>

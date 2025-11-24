@@ -202,7 +202,7 @@ export function ExerciseDetailsDialog({
                                   key={optIdx}
                                   className={`p-2 rounded text-sm ${
                                     isCorrect
-                                      ? 'bg-green-100 text-green-800 font-medium border border-green-300'
+                                      ? 'bg-blue-100 text-blue-800 font-medium border border-blue-300'
                                       : 'bg-white border border-gray-200'
                                   }`}
                                 >
@@ -211,7 +211,7 @@ export function ExerciseDetailsDialog({
                                   </span>
                                   {option}
                                   {isCorrect && (
-                                    <span className="mr-2 text-green-600">✓</span>
+                                    <span className="mr-2 text-blue-600">✓</span>
                                   )}
                                 </div>
                               );
@@ -226,7 +226,7 @@ export function ExerciseDetailsDialog({
                           <p className="text-xs font-medium text-gray-600 mb-1">
                             الإجابة الصحيحة:
                           </p>
-                          <p className="text-sm font-semibold text-green-700">
+                          <p className="text-sm font-semibold text-blue-700">
                             {correctAnswers.map((ans: any, idx: number) => {
                               const ansStr = String(ans);
                               const optionIdx = parseInt(ansStr);

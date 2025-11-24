@@ -208,10 +208,10 @@ export default function CourseEnrollmentPage() {
       } else if (application.status === 'approved') {
             return {
               icon: CheckCircle,
-              color: 'green',
-              bgColor: 'bg-green-50',
-              borderColor: 'border-green-300',
-              textColor: 'text-green-800',
+              color: 'blue',
+              bgColor: 'bg-blue-50',
+              borderColor: 'border-blue-300',
+              textColor: 'text-blue-800',
               title: 'تم قبول طلبك! 🎉',
           description: 'تمت الموافقة على إيصال الدفع وطلب الانضمام. سيتم إضافتك للمجموعة المناسبة قريباً'
             };
@@ -420,13 +420,13 @@ export default function CourseEnrollmentPage() {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.02, x: 5 }}
                     whileTap={{ scale: 0.98 }}
-                    className="flex items-center gap-3 p-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all shadow-md hover:shadow-lg group"
+                    className="flex items-center gap-3 p-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl hover:from-blue-600 hover:to-blue-700 transition-all shadow-md hover:shadow-lg group"
                   >
                     <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center group-hover:bg-white/30 transition-colors">
                       <MessageCircle className="w-5 h-5 text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs text-green-100 mb-0.5">تواصل عبر واتساب</p>
+                      <p className="text-xs text-blue-100 mb-0.5">تواصل عبر واتساب</p>
                       <p className="text-sm font-bold text-white">
                         {supervisor?.whatsapp || 'جاري التحميل...'}
                       </p>
@@ -629,8 +629,8 @@ export default function CourseEnrollmentPage() {
                     </Button>
                   </motion.div>
                 ) : application.status === 'approved' ? (
-                  <motion.div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-                    <p className="text-sm text-green-800 dark:text-green-300 font-medium flex items-center justify-center gap-2">
+                  <motion.div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
+                    <p className="text-sm text-blue-800 dark:text-blue-300 font-medium flex items-center justify-center gap-2">
                       <CheckCircle className="w-4 h-4" />
                       تم قبول طلبك! سيتم إضافتك للمجموعة المناسبة قريباً
                     </p>

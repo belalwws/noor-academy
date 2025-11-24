@@ -168,7 +168,7 @@ const RecordedCoursesTab: React.FC<RecordedCoursesTabProps> = ({
         );
       case 'approved':
         return (
-          <Badge className="bg-emerald-100 text-emerald-800 border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-300 dark:border-emerald-700">
+          <Badge className="bg-blue-100 text-blue-800 border-blue-200 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-700">
             <CheckCircle className="w-3 h-3 mr-1" />
             معتمدة
           </Badge>
@@ -270,7 +270,7 @@ const RecordedCoursesTab: React.FC<RecordedCoursesTabProps> = ({
                   <span className="text-xs font-bold text-amber-900 dark:text-amber-300">{course.price} ر.س</span>
                 </motion.div>
               ) : (
-                <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 px-2.5 py-1">مجاني</span>
+                <span className="text-xs font-bold text-blue-700 dark:text-blue-400 px-2.5 py-1">مجاني</span>
               )}
             </div>
 
@@ -305,7 +305,7 @@ const RecordedCoursesTab: React.FC<RecordedCoursesTabProps> = ({
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => onShowApproval(course)}
-                  className="flex-1 py-2 px-2 bg-emerald-50 hover:bg-emerald-100 dark:bg-emerald-900/20 dark:hover:bg-emerald-900/40 text-emerald-700 dark:text-emerald-400 rounded-lg font-semibold text-xs transition-all border border-emerald-200/50 dark:border-emerald-700/50 flex items-center justify-center gap-1.5"
+                  className="flex-1 py-2 px-2 bg-blue-50 hover:bg-blue-100 dark:bg-blue-900/20 dark:hover:bg-blue-900/40 text-blue-700 dark:text-blue-400 rounded-lg font-semibold text-xs transition-all border border-blue-200/50 dark:border-blue-700/50 flex items-center justify-center gap-1.5"
                 >
                   <CheckCircle className="w-4 h-4" />
                   اعتماد
@@ -529,7 +529,7 @@ const RecordedCoursesTab: React.FC<RecordedCoursesTabProps> = ({
             </TabsTrigger>
             <TabsTrigger 
               value="approved"
-              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-emerald-400 data-[state=active]:to-teal-500 data-[state=active]:text-white transition-all flex items-center gap-1.5"
+              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-400 data-[state=active]:to-teal-500 data-[state=active]:text-white transition-all flex items-center gap-1.5"
             >
               <CheckCircle className="w-4 h-4" />
               <span className="hidden sm:inline">معتمدة</span>

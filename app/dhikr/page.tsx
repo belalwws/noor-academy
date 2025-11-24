@@ -49,7 +49,7 @@ export default function DhikrPage() {
             opacity: [0.2, 0.3, 0.2]
           }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-[-5rem] right-[-6rem] h-96 w-96 rounded-full bg-gradient-to-br from-[#0A5734]/25 to-[#4A8F5C]/20 blur-3xl dark:from-[#0A5734]/10 dark:to-[#4A8F5C]/8"
+          className="absolute top-[-5rem] right-[-6rem] h-96 w-96 rounded-full bg-gradient-to-br from-[#1e40af]/25 to-[#2563eb]/20 blur-3xl dark:from-blue-500/10 dark:to-blue-400/8"
         />
         <motion.div
           animate={{
@@ -57,7 +57,7 @@ export default function DhikrPage() {
             opacity: [0.2, 0.3, 0.2]
           }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute bottom-[-6rem] left-[-6rem] h-80 w-80 rounded-full bg-gradient-to-br from-[#4A8F5C]/20 to-[#0A5734]/15 blur-3xl dark:from-[#4A8F5C]/8 dark:to-[#0A5734]/6"
+          className="absolute bottom-[-6rem] left-[-6rem] h-80 w-80 rounded-full bg-gradient-to-br from-[#2563eb]/20 to-[#1e40af]/15 blur-3xl dark:from-blue-400/8 dark:to-blue-500/6"
         />
       </div>
 
@@ -67,7 +67,7 @@ export default function DhikrPage() {
           initial={{ opacity: 0, y: -24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-8 overflow-hidden rounded-3xl bg-gradient-to-br from-[#0A5734] via-[#4A8F5C] to-[#0A5734] text-white shadow-2xl shadow-[#0A5734]/20 dark:from-[#0A5734] dark:via-[#4A8F5C] dark:to-[#0A5734]"
+          className="mb-8 overflow-hidden rounded-3xl bg-gradient-to-br from-[#1e40af] via-[#2563eb] to-[#1e40af] text-white shadow-2xl shadow-[#1e40af]/20 dark:from-blue-500 dark:via-blue-400 dark:to-blue-500"
         >
           <div className="relative p-8 md:p-10">
             {/* Floating Icons */}
@@ -149,12 +149,12 @@ export default function DhikrPage() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`w-full rounded-2xl p-6 transition-all duration-300 ${
                     isActive
-                      ? 'bg-gradient-to-br from-[#0A5734] via-[#4A8F5C] to-[#0A5734] text-white shadow-xl shadow-[#0A5734]/30'
+                      ? 'bg-gradient-to-br from-[#1e40af] via-[#2563eb] to-[#1e40af] text-white shadow-xl shadow-[#1e40af]/30'
                       : 'bg-white/80 dark:bg-slate-900/70 text-slate-700 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-900 shadow-lg'
                   }`}
                 >
                   <div className="flex flex-col items-center gap-3">
-                    <Icon className={`w-8 h-8 ${isActive ? 'text-white' : 'text-[#0A5734] dark:text-[#4A8F5C]'}`} />
+                    <Icon className={`w-8 h-8 ${isActive ? 'text-white' : 'text-[#1e40af] dark:text-blue-400'}`} />
                     <div className="text-center">
                       <h3 className="text-lg font-bold mb-1">{tab.label}</h3>
                       <p className={`text-sm ${isActive ? 'text-white/90' : 'text-slate-600 dark:text-slate-400'}`}>

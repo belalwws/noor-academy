@@ -26,11 +26,11 @@ interface AuthGuardProps {
 
 const CommunityLoginPrompt = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 p-4 md:p-6" dir="rtl">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-50 to-teal-50 p-4 md:p-6" dir="rtl">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-l from-emerald-800 to-green-800 bg-clip-text text-transparent mb-2">
+          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-l from-blue-800 to-blue-800 bg-clip-text text-transparent mb-2">
             المجتمع التعليمي
           </h1>
           <p className="text-slate-600 max-w-2xl mx-auto">
@@ -40,12 +40,12 @@ const CommunityLoginPrompt = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Login Card */}
-          <Card className="bg-white/90 backdrop-blur-sm shadow-xl border-emerald-200">
-            <CardHeader className="bg-gradient-to-l from-emerald-50 to-green-50 rounded-t-lg text-center">
-              <div className="w-16 h-16 bg-gradient-to-l from-emerald-600 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+          <Card className="bg-white/90 backdrop-blur-sm shadow-xl border-blue-200">
+            <CardHeader className="bg-gradient-to-l from-blue-50 to-blue-50 rounded-t-lg text-center">
+              <div className="w-16 h-16 bg-gradient-to-l from-blue-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Lock className="w-8 h-8 text-white" />
               </div>
-              <CardTitle className="text-2xl bg-gradient-to-l from-emerald-700 to-green-700 bg-clip-text text-transparent">
+              <CardTitle className="text-2xl bg-gradient-to-l from-blue-700 to-blue-700 bg-clip-text text-transparent">
                 تسجيل الدخول مطلوب
               </CardTitle>
             </CardHeader>
@@ -56,7 +56,7 @@ const CommunityLoginPrompt = () => {
               
               <div className="space-y-4">
                 <Button 
-                  className="w-full bg-gradient-to-l from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-200 h-12"
+                  className="w-full bg-gradient-to-l from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-200 h-12"
                   onClick={() => window.location.href = '/login'}
                 >
                   <LogIn className="w-5 h-5 ml-2" />
@@ -65,7 +65,7 @@ const CommunityLoginPrompt = () => {
                 
                 <Button 
                   variant="outline"
-                  className="w-full border-emerald-200 text-emerald-700 hover:bg-emerald-50 hover:border-emerald-300 h-12"
+                  className="w-full border-blue-200 text-blue-700 hover:bg-blue-50 hover:border-blue-300 h-12"
                   onClick={() => window.location.href = '/register'}
                 >
                   <UserPlus className="w-5 h-5 ml-2" />
@@ -77,7 +77,7 @@ const CommunityLoginPrompt = () => {
                 <p className="text-sm text-slate-500">
                   هل لديك حساب بالفعل؟ 
                   <button 
-                    className="text-emerald-600 hover:text-emerald-700 font-medium mr-1"
+                    className="text-blue-600 hover:text-blue-700 font-medium mr-1"
                     onClick={() => window.location.href = '/login'}
                   >
                     سجل دخولك هنا
@@ -88,7 +88,7 @@ const CommunityLoginPrompt = () => {
           </Card>
 
           {/* Features Preview */}
-          <Card className="bg-white/90 backdrop-blur-sm shadow-xl border-emerald-200">
+          <Card className="bg-white/90 backdrop-blur-sm shadow-xl border-blue-200">
             <CardHeader className="bg-gradient-to-l from-blue-50 to-indigo-50 rounded-t-lg">
               <CardTitle className="text-xl bg-gradient-to-l from-blue-700 to-indigo-700 bg-clip-text text-transparent flex items-center gap-2">
                 <Star className="w-6 h-6 text-yellow-500" />
@@ -98,8 +98,8 @@ const CommunityLoginPrompt = () => {
             <CardContent className="p-6">
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="p-2 bg-gradient-to-l from-emerald-100 to-green-100 rounded-lg">
-                    <BookOpen className="w-5 h-5 text-emerald-600" />
+                  <div className="p-2 bg-gradient-to-l from-blue-100 to-blue-100 rounded-lg">
+                    <BookOpen className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-800 mb-1">منتديات تعليمية متخصصة</h3>
@@ -139,7 +139,7 @@ const CommunityLoginPrompt = () => {
               </div>
 
               <div className="mt-6 pt-6 border-t border-slate-200">
-                <Badge className="bg-gradient-to-l from-emerald-100 to-green-100 text-emerald-800 border-emerald-200 w-full justify-center py-2">
+                <Badge className="bg-gradient-to-l from-blue-100 to-blue-100 text-blue-800 border-blue-200 w-full justify-center py-2">
                   <Star className="w-4 h-4 ml-1" />
                   انضم إلى أكثر من 1000+ طالب ومعلم
                 </Badge>
@@ -152,7 +152,7 @@ const CommunityLoginPrompt = () => {
         <div className="text-center mt-8">
           <Button 
             variant="ghost"
-            className="text-slate-600 hover:text-emerald-600"
+            className="text-slate-600 hover:text-blue-600"
             onClick={() => window.location.href = '/'}
           >
             <ArrowLeft className="w-4 h-4 ml-2" />
@@ -174,9 +174,9 @@ const AuthGuard: React.FC<AuthGuardProps> = ({
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-50 to-teal-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-slate-600">جاري التحميل...</p>
         </div>
       </div>

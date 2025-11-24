@@ -176,9 +176,9 @@ export default function CourseReview() {
   if (isLoading) {
     return (
       <ProtectedRoute allowedRoles={['supervisor', 'admin']}>
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center">
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto mb-4"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
             <p className="text-gray-600">جاري تحميل بيانات الدورة...</p>
           </div>
         </div>
@@ -189,14 +189,14 @@ export default function CourseReview() {
   if (!courseData) {
     return (
       <ProtectedRoute allowedRoles={['supervisor', 'admin']}>
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center">
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center">
           <div className="text-center">
             <i className="fas fa-exclamation-triangle text-red-500 text-4xl mb-4"></i>
             <h2 className="text-xl font-bold text-gray-800 mb-2">لم يتم العثور على الدورة</h2>
             <p className="text-gray-600 mb-4">الدورة المطلوبة غير موجودة أو تم حذفها</p>
             <button
               onClick={() => router.push('/dashboard/supervisor')}
-              className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg"
             >
               العودة للوحة التحكم
             </button>
@@ -208,7 +208,7 @@ export default function CourseReview() {
 
   return (
     <ProtectedRoute allowedRoles={['supervisor', 'admin']}>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 p-4" dir="rtl">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 p-4" dir="rtl">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
@@ -240,10 +240,10 @@ export default function CourseReview() {
           )}
 
           {success && (
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
               <div className="flex items-center">
-                <i className="fas fa-check-circle text-green-500 me-3"></i>
-                <div className="text-green-700">{success}</div>
+                <i className="fas fa-check-circle text-blue-500 me-3"></i>
+                <div className="text-blue-700">{success}</div>
               </div>
             </div>
           )}
@@ -251,7 +251,7 @@ export default function CourseReview() {
           {/* Course Details */}
           <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
             <h3 className="text-xl font-bold text-gray-800 mb-4">
-              <i className="fas fa-info-circle me-3 text-green-600"></i>
+              <i className="fas fa-info-circle me-3 text-blue-600"></i>
               تفاصيل الدورة
             </h3>
             
@@ -345,7 +345,7 @@ export default function CourseReview() {
                       </div>
                       <div className="text-left">
                         <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${
-                          lesson.is_published ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'
+                          lesson.is_published ? 'bg-blue-100 text-blue-800' : 'bg-yellow-100 text-yellow-800'
                         }`}>
                           {lesson.is_published ? 'منشور' : 'مسودة'}
                         </span>
@@ -405,7 +405,7 @@ export default function CourseReview() {
               <button
                 onClick={handleApprove}
                 disabled={isSubmitting || lessons.length === 0}
-                className="bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white px-8 py-3 rounded-lg flex items-center gap-2 font-semibold"
+                className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-8 py-3 rounded-lg flex items-center gap-2 font-semibold"
               >
                 {isSubmitting ? (
                   <>

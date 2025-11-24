@@ -7,7 +7,7 @@
 /* Card Header Fix - Enhanced Gradient Background */
 /* Note: Colors now use Design System tokens from tokens.css */
 :root {
-  --light-green: #a5d6a7;
+  --light-green: #93c5fd;
   --border-radius: var(--radius-lg);
 }
 

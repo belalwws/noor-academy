@@ -137,12 +137,12 @@ const NotificationCenter: React.FC = () => {
         return <BookOpen size={16} className="text-blue-600" />;
       case 'teacher_approved':
       case 'teacher_rejected':
-        return <Users size={16} className="text-green-600" />;
+        return <Users size={16} className="text-blue-600" />;
       case 'new_topic':
       case 'new_post':
       case 'post_reply':
       case 'message':
-        return <MessageSquare size={16} className="text-emerald-600" />;
+        return <MessageSquare size={16} className="text-blue-600" />;
       case 'topic_like':
       case 'post_like':
       case 'rating':
@@ -165,7 +165,7 @@ const NotificationCenter: React.FC = () => {
       case 'medium':
         return '#f59e0b'; // amber-500
       case 'low':
-        return '#10b981'; // emerald-500
+        return '#10b981'; // blue-500
       default:
         return 'transparent';
     }

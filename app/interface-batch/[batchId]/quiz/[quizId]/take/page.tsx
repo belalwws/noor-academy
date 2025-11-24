@@ -263,11 +263,11 @@ export default function TakeQuizPage() {
                     </div>
                   )}
                   
-                  <div className="text-center p-4 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/30 dark:to-green-800/30 rounded-xl border-2 border-green-200 dark:border-green-800">
-                    <div className="text-2xl font-black text-green-700 dark:text-green-300 mb-1">
+                  <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 rounded-xl border-2 border-blue-200 dark:border-blue-800">
+                    <div className="text-2xl font-black text-blue-700 dark:text-blue-300 mb-1">
                       {quiz.passing_score}%
                     </div>
-                    <div className="text-xs font-semibold text-green-600 dark:text-green-400">
+                    <div className="text-xs font-semibold text-blue-600 dark:text-blue-400">
                       للنجاح
                     </div>
                   </div>
@@ -389,7 +389,7 @@ export default function TakeQuizPage() {
                     <Button
                       onClick={handleSubmitQuiz}
                       disabled={quizState.isSubmitting}
-                      className="flex-1 flex items-center justify-center gap-2 h-12 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 dark:from-green-600 dark:to-emerald-700 dark:hover:from-green-700 dark:hover:to-emerald-800 text-white shadow-lg hover:shadow-xl transition-all"
+                      className="flex-1 flex items-center justify-center gap-2 h-12 bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 dark:from-blue-600 dark:to-blue-700 dark:hover:from-blue-700 dark:hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all"
                     >
                       {quizState.isSubmitting ? (
                         <>
@@ -433,7 +433,7 @@ export default function TakeQuizPage() {
                             isCurrent
                               ? 'bg-gradient-to-r from-amber-500 to-orange-600 dark:from-amber-600 dark:to-orange-700 text-white shadow-lg'
                               : isAnswered
-                              ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 border-2 border-green-300 dark:border-green-700 hover:bg-green-200 dark:hover:bg-green-900/40'
+                              ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border-2 border-blue-300 dark:border-blue-700 hover:bg-blue-200 dark:hover:bg-blue-900/40'
                               : 'bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 border-2 border-gray-200 dark:border-slate-600 hover:bg-gray-200 dark:hover:bg-slate-600 hover:border-amber-300 dark:hover:border-amber-600'
                           }`}
                         >

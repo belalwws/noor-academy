@@ -412,9 +412,9 @@ function InteractiveLearningContent() {
                         </div>
                       )}
                       {game.topic && (
-                        <div className="flex items-center gap-1.5 px-2.5 py-1 bg-green-50 dark:bg-green-900/30 rounded-lg border border-green-200 dark:border-green-800">
-                          <BookOpen className="w-3.5 h-3.5 text-green-600 dark:text-green-400" />
-                          <span className="text-green-700 dark:text-green-300 font-medium">{getTopicLabel(game.topic) || game.topic_display}</span>
+                        <div className="flex items-center gap-1.5 px-2.5 py-1 bg-blue-50 dark:bg-blue-900/30 rounded-lg border border-blue-200 dark:border-blue-800">
+                          <BookOpen className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
+                          <span className="text-blue-700 dark:text-blue-300 font-medium">{getTopicLabel(game.topic) || game.topic_display}</span>
                         </div>
                       )}
                     </div>

@@ -91,7 +91,7 @@ const AllCoursesTab: React.FC<AllCoursesTabProps> = () => {
         );
       case 'approved':
         return (
-          <Badge className="bg-emerald-100 text-emerald-800 border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-300 dark:border-emerald-700">
+          <Badge className="bg-blue-100 text-blue-800 border-blue-200 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-700">
             ✅ معتمدة
           </Badge>
         );
@@ -222,7 +222,7 @@ const AllCoursesTab: React.FC<AllCoursesTabProps> = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => handleAction(course, 'approve')}
-                  className="flex-1 py-2 px-2 bg-emerald-50 hover:bg-emerald-100 dark:bg-emerald-900/20 dark:hover:bg-emerald-900/40 text-emerald-700 dark:text-emerald-400 rounded-lg font-semibold text-xs transition-all border border-emerald-200/50 dark:border-emerald-700/50 flex items-center justify-center gap-1.5"
+                  className="flex-1 py-2 px-2 bg-blue-50 hover:bg-blue-100 dark:bg-blue-900/20 dark:hover:bg-blue-900/40 text-blue-700 dark:text-blue-400 rounded-lg font-semibold text-xs transition-all border border-blue-200/50 dark:border-blue-700/50 flex items-center justify-center gap-1.5"
                 >
                   <CheckCircle className="w-4 h-4" />
                   اعتماد
@@ -397,7 +397,7 @@ const AllCoursesTab: React.FC<AllCoursesTabProps> = () => {
               <Button
                 onClick={submitAction}
                 disabled={submitting || (action === 'reject' && !notes.trim())}
-                className={action === 'approve' ? 'bg-emerald-600 hover:bg-emerald-700' : ''}
+                className={action === 'approve' ? 'bg-blue-600 hover:bg-blue-700' : ''}
               >
                 {submitting ? (
                   <Spinner size="sm" className="mr-2" />

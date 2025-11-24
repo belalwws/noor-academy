@@ -116,7 +116,7 @@ export default function TeacherHeader({ profile, courses, loading, userEmail }: 
   };
   if (loading) {
     return (
-      <div className="bg-gradient-to-br from-[#2d7d32] via-[#4caf50] to-[#1b5e20] rounded-3xl p-8 text-white shadow-2xl border border-green-200 animate-pulse">
+      <div className="bg-gradient-to-br from-[#2d7d32] via-[#4caf50] to-[#1b5e20] rounded-3xl p-8 text-white shadow-2xl border border-blue-200 animate-pulse">
         <div className="flex items-center gap-6 mb-8">
           <div className="w-24 h-24 bg-white/20 rounded-full"></div>
           <div className="flex-1">
@@ -129,10 +129,10 @@ export default function TeacherHeader({ profile, courses, loading, userEmail }: 
   }
 
   return (
-    <div className="bg-gradient-to-br from-[#2d7d32] via-[#4caf50] to-[#1b5e20] rounded-3xl p-8 text-white shadow-2xl border border-green-200 relative overflow-hidden">
+    <div className="bg-gradient-to-br from-[#2d7d32] via-[#4caf50] to-[#1b5e20] rounded-3xl p-8 text-white shadow-2xl border border-blue-200 relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-br from-green-300/20 to-transparent rounded-full blur-2xl"></div>
+      <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-br from-blue-300/20 to-transparent rounded-full blur-2xl"></div>
       
       <div className="relative z-10">
         {/* Profile Section */}
@@ -158,7 +158,7 @@ export default function TeacherHeader({ profile, courses, loading, userEmail }: 
             <h1 className="text-3xl font-bold mb-2">
               مرحباً، {profile?.full_name || 'المعلم'}! 👋
             </h1>
-            <p className="text-green-100 text-lg mb-3">
+            <p className="text-blue-100 text-lg mb-3">
               الإدارة الشاملة لدوراتك وطلابك
             </p>
             <div className="flex items-center gap-3 flex-wrap">
@@ -188,9 +188,9 @@ export default function TeacherHeader({ profile, courses, loading, userEmail }: 
           <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-green-100 text-sm font-medium mb-1">إجمالي الدورات</p>
+                <p className="text-blue-100 text-sm font-medium mb-1">إجمالي الدورات</p>
                 <p className="text-2xl font-bold text-white">{courses.length}</p>
-                <p className="text-xs text-green-200 mt-1">دورة نشطة</p>
+                <p className="text-xs text-blue-200 mt-1">دورة نشطة</p>
               </div>
               <div className="bg-white/30 p-3 rounded-full">
                 <BookOpen className="w-5 h-5 text-white" />
@@ -202,11 +202,11 @@ export default function TeacherHeader({ profile, courses, loading, userEmail }: 
           <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-green-100 text-sm font-medium mb-1">مفعلة</p>
+                <p className="text-blue-100 text-sm font-medium mb-1">مفعلة</p>
                 <p className="text-2xl font-bold text-white">
                   {courses.filter(c => (c.is_approved === true) || (c.approval_status === 'approved')).length}
                 </p>
-                <p className="text-xs text-green-200 mt-1">دورة معتمدة</p>
+                <p className="text-xs text-blue-200 mt-1">دورة معتمدة</p>
               </div>
               <div className="bg-white/30 p-3 rounded-full">
                 <CheckCircle className="w-5 h-5 text-white" />
@@ -218,14 +218,14 @@ export default function TeacherHeader({ profile, courses, loading, userEmail }: 
           <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-green-100 text-sm font-medium mb-1">إجمالي الطلاب</p>
+                <p className="text-blue-100 text-sm font-medium mb-1">إجمالي الطلاب</p>
                 <p className="text-2xl font-bold text-white">
                   {courses.reduce((total, course) => {
                     const enrolled = Number(course.enrollment_count || course.enrolled_count || 0)
                     return total + enrolled
                   }, 0)}
                 </p>
-                <p className="text-xs text-green-200 mt-1">طالب مسجل</p>
+                <p className="text-xs text-blue-200 mt-1">طالب مسجل</p>
               </div>
               <div className="bg-white/30 p-3 rounded-full">
                 <TrendingUp className="w-5 h-5 text-white" />
@@ -237,11 +237,11 @@ export default function TeacherHeader({ profile, courses, loading, userEmail }: 
           <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-green-100 text-sm font-medium mb-1">قيد المراجعة</p>
+                <p className="text-blue-100 text-sm font-medium mb-1">قيد المراجعة</p>
                 <p className="text-2xl font-bold text-white">
                   {courses.filter(c => c.approval_status === 'pending' || c.approval_status === 'under_review').length}
                 </p>
-                <p className="text-xs text-green-200 mt-1">دورات تحتاج موافقة</p>
+                <p className="text-xs text-blue-200 mt-1">دورات تحتاج موافقة</p>
               </div>
               <div className="bg-white/30 p-3 rounded-full">
                 <Clock className="w-5 h-5 text-white" />

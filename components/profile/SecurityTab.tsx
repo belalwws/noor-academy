@@ -98,14 +98,14 @@ const SecurityTab: React.FC<SecurityTabProps> = ({
               transition={{ delay: 0.1 }}
               className={`flex flex-col lg:flex-row items-start lg:items-center justify-between p-6 rounded-xl border-2 ${
                 profileData?.is_verified
-                  ? 'bg-emerald-50 dark:bg-emerald-900/20 border-emerald-200 dark:border-emerald-700'
+                  ? 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-700'
                   : 'bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-700'
               }`}
             >
               <div className="flex items-center gap-4 mb-4 lg:mb-0">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
                   profileData?.is_verified
-                    ? 'bg-emerald-100 dark:bg-emerald-800 text-emerald-600 dark:text-emerald-300'
+                    ? 'bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-300'
                     : 'bg-yellow-100 dark:bg-yellow-800 text-yellow-600 dark:text-yellow-300'
                 }`}>
                   {profileData?.is_verified ? (
@@ -118,7 +118,7 @@ const SecurityTab: React.FC<SecurityTabProps> = ({
                   <h4 className="font-semibold text-slate-800 dark:text-slate-100 mb-1">تحقق البريد الإلكتروني</h4>
                   <p className={`text-sm ${
                     profileData?.is_verified
-                      ? 'text-emerald-700 dark:text-emerald-300'
+                      ? 'text-blue-700 dark:text-blue-300'
                       : 'text-yellow-700 dark:text-yellow-300'
                   }`}>
                     {profileData?.is_verified

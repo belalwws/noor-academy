@@ -143,7 +143,7 @@ const CourseApplicationsSection: React.FC = () => {
         label: 'مسجل',
         variant: 'default',
         icon: CheckCircle,
-        color: 'text-green-600 bg-green-50 border-green-200 dark:text-green-400 dark:bg-green-900/20 dark:border-green-800'
+        color: 'text-blue-600 bg-blue-50 border-blue-200 dark:text-blue-400 dark:bg-blue-900/20 dark:border-blue-800'
       }
     };
 

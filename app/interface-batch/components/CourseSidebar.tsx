@@ -62,7 +62,7 @@ export default function CourseSidebar({
         <Badge
           className={`${
             course.status === 'active'
-              ? 'bg-green-500/20 text-green-400 border-green-500/30'
+              ? 'bg-blue-500/20 text-blue-400 border-blue-500/30'
               : course.status === 'upcoming'
               ? 'bg-blue-500/20 text-blue-400 border-blue-500/30'
               : 'bg-gray-500/20 text-gray-400 border-gray-500/30'

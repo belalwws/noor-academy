@@ -167,7 +167,7 @@ export default function CourseTopBar({
               />
             )}
             {liveSessionsCount > 0 && activeTab === 'meetings' && (
-              <Badge className="bg-green-500 text-white text-xs px-2 py-0.5 ml-1">
+              <Badge className="bg-blue-500 text-white text-xs px-2 py-0.5 ml-1">
                 {liveSessionsCount}
               </Badge>
             )}

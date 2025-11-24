@@ -75,7 +75,7 @@ export default function AddLessonPage() {
           <Card className="w-full max-w-md">
             <CardContent className="pt-6">
               <div className="text-center">
-                <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                <CheckCircle className="w-16 h-16 text-blue-500 mx-auto mb-4" />
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">تم إضافة الدرس بنجاح!</h2>
                 <p className="text-gray-600 mb-4">الدرس متاح الآن للطلاب المسجلين</p>
                 <Button onClick={() => router.push('/dashboard/teacher')} className="w-full">

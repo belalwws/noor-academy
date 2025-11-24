@@ -333,8 +333,8 @@ function QuestionSetFallback({
   if (showResults) {
     const percentage = (score / questions.length) * 100;
     return (
-      <Card className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 border-0 shadow-2xl">
-        <CardHeader className="p-8 pb-6 bg-gradient-to-r from-green-500 to-emerald-500">
+      <Card className="bg-gradient-to-br from-blue-50 to-blue-50 dark:from-blue-900/30 dark:to-blue-900/30 border-0 shadow-2xl">
+        <CardHeader className="p-8 pb-6 bg-gradient-to-r from-blue-500 to-blue-500">
           <CardTitle className="text-center text-4xl md:text-5xl font-black text-white drop-shadow-lg">
             النتيجة: {score} / {questions.length}
           </CardTitle>
@@ -366,19 +366,19 @@ function QuestionSetFallback({
                   transition={{ delay: idx * 0.1 }}
                   className={`p-6 md:p-8 rounded-2xl border-4 shadow-lg ${
                     isCorrect 
-                      ? 'bg-green-100 dark:bg-green-900/30 border-green-500' 
+                      ? 'bg-blue-100 dark:bg-blue-900/30 border-blue-500' 
                       : 'bg-red-100 dark:bg-red-900/30 border-red-500'
                   }`}
                 >
                   <div className="flex items-start gap-4">
                     {isCorrect ? (
-                      <CheckCircle className="w-8 h-8 md:w-10 md:h-10 text-green-600 dark:text-green-400 flex-shrink-0 mt-1" />
+                      <CheckCircle className="w-8 h-8 md:w-10 md:h-10 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" />
                     ) : (
                       <XCircle className="w-8 h-8 md:w-10 md:h-10 text-red-600 dark:text-red-400 flex-shrink-0 mt-1" />
                     )}
                     <div className="flex-1">
                       <p className="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-2">{q.params?.question}</p>
-                      <p className={`text-base md:text-lg font-semibold ${isCorrect ? 'text-green-700 dark:text-green-300' : 'text-red-700 dark:text-red-300'}`}>
+                      <p className={`text-base md:text-lg font-semibold ${isCorrect ? 'text-blue-700 dark:text-blue-300' : 'text-red-700 dark:text-red-300'}`}>
                         {isCorrect ? '✓ إجابة صحيحة' : '✗ إجابة خاطئة'}
                       </p>
                       {questionType === 'H5P.TrueFalse' && selected !== undefined && (
@@ -457,12 +457,12 @@ function QuestionSetFallback({
               onClick={() => setAnswers({ ...answers, [currentIndex]: idx })}
               className={`w-full text-right p-6 md:p-8 rounded-2xl border-4 transition-all shadow-lg hover:shadow-xl ${
                 answers[currentIndex] === idx 
-                  ? 'border-green-500 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 shadow-green-200 dark:shadow-green-900/50' 
+                  ? 'border-blue-500 bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-900/30 dark:to-blue-900/30 shadow-blue-200 dark:shadow-blue-900/50' 
                   : 'border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 hover:border-primary hover:shadow-primary/20'
               }`}
             >
               <div className="flex items-center gap-4">
-                <Radio className={`w-6 h-6 ml-4 flex-shrink-0 ${answers[currentIndex] === idx ? 'text-green-600 dark:text-green-400' : 'text-gray-400'}`} />
+                <Radio className={`w-6 h-6 ml-4 flex-shrink-0 ${answers[currentIndex] === idx ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400'}`} />
                 <span className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white">{ans.text}</span>
               </div>
             </motion.button>
@@ -481,12 +481,12 @@ function QuestionSetFallback({
             onClick={() => setAnswers({ ...answers, [currentIndex]: 0 })}
             className={`w-full text-right p-6 md:p-8 rounded-2xl border-4 transition-all shadow-lg hover:shadow-xl ${
               answers[currentIndex] === 0 
-                ? 'border-green-500 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 shadow-green-200 dark:shadow-green-900/50' 
+                ? 'border-blue-500 bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-900/30 dark:to-blue-900/30 shadow-blue-200 dark:shadow-blue-900/50' 
                 : 'border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 hover:border-primary hover:shadow-primary/20'
             }`}
           >
             <div className="flex items-center gap-4">
-              <Radio className={`w-6 h-6 ml-4 flex-shrink-0 ${answers[currentIndex] === 0 ? 'text-green-600 dark:text-green-400' : 'text-gray-400'}`} />
+              <Radio className={`w-6 h-6 ml-4 flex-shrink-0 ${answers[currentIndex] === 0 ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400'}`} />
               <span className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white">✓ صحيح</span>
             </div>
           </motion.button>
@@ -560,7 +560,7 @@ function MultiChoiceFallback({
   if (submitted) {
     const isCorrect = selected !== null && answers[selected]?.correct;
     return (
-      <Card className={`border-0 shadow-2xl ${isCorrect ? 'bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30' : 'bg-gradient-to-br from-red-50 to-rose-50 dark:from-red-900/30 dark:to-rose-900/30'}`}>
+      <Card className={`border-0 shadow-2xl ${isCorrect ? 'bg-gradient-to-br from-blue-50 to-blue-50 dark:from-blue-900/30 dark:to-blue-900/30' : 'bg-gradient-to-br from-red-50 to-rose-50 dark:from-red-900/30 dark:to-rose-900/30'}`}>
         <CardContent className="text-center pt-12 pb-12 px-8">
           <motion.div
             initial={{ scale: 0 }}
@@ -568,7 +568,7 @@ function MultiChoiceFallback({
             transition={{ type: 'spring', stiffness: 200 }}
           >
             {isCorrect ? (
-              <CheckCircle className="w-24 h-24 md:w-32 md:h-32 text-green-600 dark:text-green-400 mx-auto mb-6" />
+              <CheckCircle className="w-24 h-24 md:w-32 md:h-32 text-blue-600 dark:text-blue-400 mx-auto mb-6" />
             ) : (
               <XCircle className="w-24 h-24 md:w-32 md:h-32 text-red-600 dark:text-red-400 mx-auto mb-6" />
             )}
@@ -606,12 +606,12 @@ function MultiChoiceFallback({
               onClick={() => setSelected(idx)}
               className={`w-full text-right p-6 md:p-8 rounded-2xl border-4 transition-all shadow-lg hover:shadow-xl ${
                 selected === idx 
-                  ? 'border-green-500 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 shadow-green-200 dark:shadow-green-900/50' 
+                  ? 'border-blue-500 bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-900/30 dark:to-blue-900/30 shadow-blue-200 dark:shadow-blue-900/50' 
                   : 'border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 hover:border-primary hover:shadow-primary/20'
               }`}
             >
               <div className="flex items-center gap-4">
-                <Radio className={`w-6 h-6 ml-4 flex-shrink-0 ${selected === idx ? 'text-green-600 dark:text-green-400' : 'text-gray-400'}`} />
+                <Radio className={`w-6 h-6 ml-4 flex-shrink-0 ${selected === idx ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400'}`} />
                 <span className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white">{ans.text}</span>
               </div>
             </motion.button>
@@ -666,7 +666,7 @@ function TrueFalseFallback({
   if (submitted) {
     const isCorrect = selected === correct;
     return (
-      <Card className={`border-0 shadow-2xl ${isCorrect ? 'bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30' : 'bg-gradient-to-br from-red-50 to-rose-50 dark:from-red-900/30 dark:to-rose-900/30'}`}>
+      <Card className={`border-0 shadow-2xl ${isCorrect ? 'bg-gradient-to-br from-blue-50 to-blue-50 dark:from-blue-900/30 dark:to-blue-900/30' : 'bg-gradient-to-br from-red-50 to-rose-50 dark:from-red-900/30 dark:to-rose-900/30'}`}>
         <CardContent className="text-center pt-12 pb-12 px-8">
           <motion.div
             initial={{ scale: 0 }}
@@ -674,7 +674,7 @@ function TrueFalseFallback({
             transition={{ type: 'spring', stiffness: 200 }}
           >
             {isCorrect ? (
-              <CheckCircle className="w-24 h-24 md:w-32 md:h-32 text-green-600 dark:text-green-400 mx-auto mb-6" />
+              <CheckCircle className="w-24 h-24 md:w-32 md:h-32 text-blue-600 dark:text-blue-400 mx-auto mb-6" />
             ) : (
               <XCircle className="w-24 h-24 md:w-32 md:h-32 text-red-600 dark:text-red-400 mx-auto mb-6" />
             )}
@@ -715,7 +715,7 @@ function TrueFalseFallback({
               size="lg"
               className={`w-full py-8 md:py-12 text-2xl md:text-3xl font-black rounded-2xl shadow-xl hover:shadow-2xl transition-all border-4 ${
                 selected === true 
-                  ? "bg-green-600 hover:bg-green-700 border-green-700 text-white" 
+                  ? "bg-blue-600 hover:bg-blue-700 border-blue-700 text-white" 
                   : "border-gray-300 dark:border-gray-600"
               }`}
             >
@@ -855,8 +855,8 @@ function DragTextFallback({
 
     const percentage = (correct / blankCount) * 100;
     return (
-      <Card className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 border-0 shadow-2xl">
-        <CardHeader className="p-8 pb-6 bg-gradient-to-r from-green-500 to-emerald-500">
+      <Card className="bg-gradient-to-br from-blue-50 to-blue-50 dark:from-blue-900/30 dark:to-blue-900/30 border-0 shadow-2xl">
+        <CardHeader className="p-8 pb-6 bg-gradient-to-r from-blue-500 to-blue-500">
           <CardTitle className="text-center text-4xl md:text-5xl font-black text-white drop-shadow-lg">
             النتيجة: {correct} / {blankCount}
           </CardTitle>
@@ -904,7 +904,7 @@ function DragTextFallback({
                     onDragOver={handleDragOver}
                     className={`inline-block min-w-[150px] md:min-w-[200px] h-12 md:h-16 border-4 border-dashed rounded-xl px-4 md:px-6 mx-2 align-middle transition-all text-lg md:text-xl font-bold ${
                       draggedWords[blankIdx] 
-                        ? 'bg-gradient-to-r from-green-100 to-emerald-100 dark:from-green-900/40 dark:to-emerald-900/40 border-green-500 text-green-700 dark:text-green-300 shadow-lg' 
+                        ? 'bg-gradient-to-r from-blue-100 to-blue-100 dark:from-blue-900/40 dark:to-blue-900/40 border-blue-500 text-blue-700 dark:text-blue-300 shadow-lg' 
                         : 'bg-white dark:bg-slate-700 border-gray-400 text-gray-500 dark:text-gray-400 hover:border-primary'
                     }`}
                   >
@@ -1181,8 +1181,8 @@ function DragQuestionFallback({
     const percentage = total > 0 ? (correct / total) * 100 : 0;
 
     return (
-      <Card className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 border-0 shadow-2xl">
-        <CardHeader className="p-8 pb-6 bg-gradient-to-r from-green-500 to-emerald-500">
+      <Card className="bg-gradient-to-br from-blue-50 to-blue-50 dark:from-blue-900/30 dark:to-blue-900/30 border-0 shadow-2xl">
+        <CardHeader className="p-8 pb-6 bg-gradient-to-r from-blue-500 to-blue-500">
           <CardTitle className="text-center text-4xl md:text-5xl font-black text-white drop-shadow-lg">
             النتيجة: {correct} / {total || normalizedDraggables.length}
           </CardTitle>
@@ -1203,7 +1203,7 @@ function DragQuestionFallback({
                   transition={{ delay: idx * 0.1 }}
                   className={`p-4 rounded-xl border-2 ${
                     isCorrect
-                      ? 'bg-green-100 dark:bg-green-900/30 border-green-500'
+                      ? 'bg-blue-100 dark:bg-blue-900/30 border-blue-500'
                       : isIncorrect
                       ? 'bg-red-100 dark:bg-red-900/30 border-red-500'
                       : 'bg-gray-100 dark:bg-gray-800 border-gray-300'
@@ -1211,7 +1211,7 @@ function DragQuestionFallback({
                 >
                   <div className="flex items-center gap-3">
                     {isCorrect ? (
-                      <CheckCircle className="w-6 h-6 text-green-600" />
+                      <CheckCircle className="w-6 h-6 text-blue-600" />
                     ) : isIncorrect ? (
                       <XCircle className="w-6 h-6 text-red-600" />
                     ) : null}

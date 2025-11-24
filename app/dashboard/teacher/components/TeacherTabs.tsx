@@ -1,13 +1,13 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { 
-  BookOpen, 
-  Users, 
+import { motion } from 'framer-motion'
+import {
+  BookOpen,
   Edit,
   FlaskConical,
-  Gamepad2
+  Gamepad2,
+  Users
 } from 'lucide-react'
 
 interface TeacherTabsProps {
@@ -18,8 +18,8 @@ interface TeacherTabsProps {
 export default function TeacherTabs({ activeTab, setActiveTab }: TeacherTabsProps) {
   const tabs = [
     { value: 'recorded-courses', label: 'الدورات المسجلة', icon: BookOpen, gradient: 'from-purple-600 to-purple-700', activeColor: 'purple' },
-    { value: 'live-courses', label: 'الدورات المباشرة', icon: Users, gradient: 'from-[#2d7d32] to-[#1b5e20]', activeColor: 'green' },
-    { value: 'interactive-games', label: 'الألعاب التفاعلية', icon: Gamepad2, gradient: 'from-green-600 to-emerald-600', activeColor: 'green' },
+    { value: 'live-courses', label: 'الدورات المباشرة', icon: Users, gradient: 'from-[#1e40af] to-[#1e3a8a]', activeColor: 'blue' },
+    { value: 'interactive-games', label: 'الألعاب التفاعلية', icon: Gamepad2, gradient: 'from-blue-600 to-blue-600', activeColor: 'blue' },
     { value: 'knowledge-labs', label: 'مختبراتي', icon: FlaskConical, gradient: 'from-yellow-600 to-amber-600', activeColor: 'yellow' },
     { value: 'edit-requests', label: 'طلبات التعديل', icon: Edit, gradient: 'from-orange-600 to-orange-700', activeColor: 'orange' },
   ]

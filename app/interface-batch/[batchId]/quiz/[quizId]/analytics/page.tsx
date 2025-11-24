@@ -172,8 +172,8 @@ export default function QuizAnalyticsPage() {
                       {uniqueStudents}
                     </p>
                   </div>
-                  <div className="p-3 bg-green-100 dark:bg-green-900/30 rounded-lg">
-                    <Users className="w-6 h-6 text-green-600 dark:text-green-400" />
+                  <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                    <Users className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                   </div>
                 </div>
               </CardContent>
@@ -218,12 +218,12 @@ export default function QuizAnalyticsPage() {
                     <p className="text-xs font-medium text-gray-500 dark:text-slate-400 mb-1">
                       نجح
                     </p>
-                    <p className="text-3xl font-bold text-green-600">
+                    <p className="text-3xl font-bold text-blue-600">
                       {passedAttempts}
                     </p>
                   </div>
-                  <div className="p-3 bg-green-100 dark:bg-green-900/30 rounded-lg">
-                    <CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400" />
+                  <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                    <CheckCircle className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                   </div>
                 </div>
               </CardContent>
@@ -350,7 +350,7 @@ export default function QuizAnalyticsPage() {
                             <div className="flex items-center gap-2">
                               <span className={`text-sm font-bold ${
                                 score >= quizDetails?.passing_score
-                                  ? 'text-green-600'
+                                  ? 'text-blue-600'
                                   : 'text-red-600'
                               }`}>
                                 {score.toFixed(2)}%
@@ -359,7 +359,7 @@ export default function QuizAnalyticsPage() {
                                 <div
                                   className={`h-1.5 rounded-full transition-all ${
                                     score >= quizDetails?.passing_score
-                                      ? 'bg-green-500'
+                                      ? 'bg-blue-500'
                                       : 'bg-red-500'
                                   }`}
                                   style={{ width: `${score}%` }}
@@ -369,7 +369,7 @@ export default function QuizAnalyticsPage() {
                           </td>
                           <td className="px-6 py-4">
                             {isPassed ? (
-                              <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 flex items-center gap-1 w-fit">
+                              <Badge className="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 flex items-center gap-1 w-fit">
                                 <CheckCircle className="w-3 h-3" />
                                 نجح
                               </Badge>

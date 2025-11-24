@@ -25,7 +25,7 @@ const LiveSessionsSSE: React.FC = () => {
       transition={{ delay: 0.7 }}
     >
       <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden bg-white dark:bg-slate-800">
-        <CardHeader className="bg-gradient-to-br from-emerald-500 via-green-600 to-teal-600 dark:from-emerald-700 dark:via-green-800 dark:to-teal-800 text-white rounded-t-2xl relative overflow-hidden p-5">
+        <CardHeader className="bg-gradient-to-br from-blue-500 via-blue-600 to-teal-600 dark:from-blue-700 dark:via-blue-800 dark:to-teal-800 text-white rounded-t-2xl relative overflow-hidden p-5">
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-3xl -translate-y-12 translate-x-12"></div>
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-teal-300/20 rounded-full blur-2xl translate-y-8 -translate-x-8"></div>
           <CardTitle className="flex items-center justify-between relative z-10">
@@ -38,7 +38,7 @@ const LiveSessionsSSE: React.FC = () => {
               </motion.div>
               <div>
                 <div className="text-lg font-bold">حصص مباشرة الآن</div>
-                <div className="text-xs text-emerald-100 dark:text-emerald-200 mt-1">
+                <div className="text-xs text-blue-100 dark:text-blue-200 mt-1">
                   {liveSessions.length > 0 ? `${liveSessions.length} جلسة نشطة` : 'لا توجد جلسات'}
                 </div>
               </div>
@@ -47,7 +47,7 @@ const LiveSessionsSSE: React.FC = () => {
               {/* Connection Status */}
               <div className="flex items-center gap-1.5 bg-white/20 px-2 py-1 rounded-lg backdrop-blur-sm">
                 {connected ? (
-                  <Wifi className="w-4 h-4 text-emerald-200" />
+                  <Wifi className="w-4 h-4 text-blue-200" />
                 ) : (
                   <WifiOff className="w-4 h-4 text-red-300" />
                 )}
@@ -68,7 +68,7 @@ const LiveSessionsSSE: React.FC = () => {
             </div>
           </CardTitle>
         </CardHeader>
-        <CardContent className="p-5 bg-gradient-to-br from-slate-50 to-emerald-50/30 dark:from-slate-800 dark:to-emerald-900/10">
+        <CardContent className="p-5 bg-gradient-to-br from-slate-50 to-blue-50/30 dark:from-slate-800 dark:to-blue-900/10">
         <div className="space-y-3">
           {/* Error Handling */}
           {error && (
@@ -97,7 +97,7 @@ const LiveSessionsSSE: React.FC = () => {
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-                className="w-12 h-12 border-3 border-emerald-200 dark:border-emerald-700 border-t-emerald-600 dark:border-t-emerald-400 rounded-full mx-auto mb-4"
+                className="w-12 h-12 border-3 border-blue-200 dark:border-blue-700 border-t-blue-600 dark:border-t-blue-400 rounded-full mx-auto mb-4"
               ></motion.div>
               <p className="text-sm text-slate-600 dark:text-slate-400">جاري فحص الجلسات...</p>
             </div>
@@ -110,7 +110,7 @@ const LiveSessionsSSE: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ scale: 1.02 }}
-                  className="bg-gradient-to-br from-white to-emerald-50/50 dark:from-slate-700 dark:to-emerald-900/20 rounded-xl p-4 border border-emerald-200 dark:border-emerald-700 hover:shadow-lg transition-all duration-300"
+                  className="bg-gradient-to-br from-white to-blue-50/50 dark:from-slate-700 dark:to-blue-900/20 rounded-xl p-4 border border-blue-200 dark:border-blue-700 hover:shadow-lg transition-all duration-300"
                 >
                   <div className="space-y-2">
                     <div className="flex items-start justify-between gap-2">
@@ -128,7 +128,7 @@ const LiveSessionsSSE: React.FC = () => {
                     <div className="text-xs text-slate-600 dark:text-slate-400 space-y-1.5">
                       {s.course_title && (
                         <div className="flex items-center gap-2">
-                          <BookOpen className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
+                          <BookOpen className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
                           <span className="line-clamp-1 font-medium">{s.course_title}</span>
                         </div>
                       )}
@@ -150,7 +150,7 @@ const LiveSessionsSSE: React.FC = () => {
 
                     <Button
                       size="sm"
-                      className="w-full h-9 bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 dark:from-emerald-700 dark:to-green-700 dark:hover:from-emerald-800 dark:hover:to-green-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 font-medium"
+                      className="w-full h-9 bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 dark:from-blue-700 dark:to-blue-700 dark:hover:from-blue-800 dark:hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 font-medium"
                       onClick={() => router.push(`/join/${s.session_id}`)}
                       disabled={!s.can_join}
                     >
@@ -164,7 +164,7 @@ const LiveSessionsSSE: React.FC = () => {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="w-full text-emerald-600 dark:text-emerald-400 border-emerald-300 dark:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 h-10 font-medium shadow-sm hover:shadow-md transition-all duration-300"
+                  className="w-full text-blue-600 dark:text-blue-400 border-blue-300 dark:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/30 h-10 font-medium shadow-sm hover:shadow-md transition-all duration-300"
                   onClick={() => router.push('/dashboard/student/sessions')}
                 >
                   عرض جميع الجلسات ({liveSessions.length})

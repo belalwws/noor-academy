@@ -37,9 +37,9 @@ interface ModalProps {
 const ResponseModal: React.FC<ModalProps> = ({ isOpen, onClose, type, message }) => {
   if (!isOpen) return null;
 
-  const bgColor = type === 'success' ? 'bg-green-50' : type === 'error' ? 'bg-red-50' : 'bg-blue-50';
-  const textColor = type === 'success' ? 'text-green-800' : type === 'error' ? 'text-red-800' : 'text-blue-800';
-  const borderColor = type === 'success' ? 'border-green-200' : type === 'error' ? 'border-red-200' : 'border-blue-200';
+  const bgColor = type === 'success' ? 'bg-blue-50' : type === 'error' ? 'bg-red-50' : 'bg-blue-50';
+  const textColor = type === 'success' ? 'text-blue-800' : type === 'error' ? 'text-red-800' : 'text-blue-800';
+  const borderColor = type === 'success' ? 'border-blue-200' : type === 'error' ? 'border-red-200' : 'border-blue-200';
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
@@ -47,7 +47,7 @@ const ResponseModal: React.FC<ModalProps> = ({ isOpen, onClose, type, message })
         <p className={`${textColor} text-center mb-4`}>{message}</p>
         <button
           onClick={onClose}
-          className="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors"
+          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
         >
           موافق
         </button>
@@ -151,16 +151,16 @@ const AcademicSupervisorProfilePage: React.FC = () => {
 
   return (
     <AuthGuard>
-      <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-100 py-8">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
             <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
               <div className="relative">
-                <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
                   {profileData.full_name ? profileData.full_name.charAt(0).toUpperCase() : 'M'}
                 </div>
-                <button className="absolute bottom-0 right-0 bg-green-600 text-white p-2 rounded-full hover:bg-green-700 transition-colors">
+                <button className="absolute bottom-0 right-0 bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors">
                   <Camera size={16} />
                 </button>
               </div>
@@ -168,9 +168,9 @@ const AcademicSupervisorProfilePage: React.FC = () => {
                 <h1 className="text-2xl font-bold text-gray-900 mb-1">
                   {profileData.full_name || 'المشرف الأكاديمي'}
                 </h1>
-                <p className="text-green-600 font-medium mb-2">مشرف أكاديمي</p>
+                <p className="text-blue-600 font-medium mb-2">مشرف أكاديمي</p>
                 <div className="flex flex-wrap justify-center md:justify-start gap-2">
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
                     <Shield size={14} className="inline ml-1" />
                     صلاحيات إشراف
                   </span>
@@ -193,10 +193,10 @@ const AcademicSupervisorProfilePage: React.FC = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-gray-600">المعلمين المشرف عليهم</p>
-                  <p className="text-2xl font-bold text-green-600">{profileData.supervised_teachers || 12}</p>
+                  <p className="text-2xl font-bold text-blue-600">{profileData.supervised_teachers || 12}</p>
                 </div>
-                <div className="bg-green-100 p-3 rounded-full">
-                  <Users className="h-6 w-6 text-green-600" />
+                <div className="bg-blue-100 p-3 rounded-full">
+                  <Users className="h-6 w-6 text-blue-600" />
                 </div>
               </div>
             </div>
@@ -255,7 +255,7 @@ const AcademicSupervisorProfilePage: React.FC = () => {
                     name="full_name"
                     value={profileData.full_name}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
 
@@ -266,7 +266,7 @@ const AcademicSupervisorProfilePage: React.FC = () => {
                     name="username"
                     value={profileData.username}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
 
@@ -277,7 +277,7 @@ const AcademicSupervisorProfilePage: React.FC = () => {
                     name="email"
                     value={profileData.email}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
 
@@ -288,7 +288,7 @@ const AcademicSupervisorProfilePage: React.FC = () => {
                     name="phone"
                     value={profileData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
 
@@ -300,7 +300,7 @@ const AcademicSupervisorProfilePage: React.FC = () => {
                       name="age"
                       value={profileData.age}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
 
@@ -310,7 +310,7 @@ const AcademicSupervisorProfilePage: React.FC = () => {
                       name="gender"
                       value={profileData.gender}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     >
                       <option value="male">ذكر</option>
                       <option value="female">أنثى</option>
@@ -334,7 +334,7 @@ const AcademicSupervisorProfilePage: React.FC = () => {
                     name="supervisor_level"
                     value={profileData.supervisor_level}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     <option value="senior_supervisor">مشرف أكاديمي أول</option>
                     <option value="supervisor">مشرف أكاديمي</option>
@@ -348,7 +348,7 @@ const AcademicSupervisorProfilePage: React.FC = () => {
                     name="department"
                     value={profileData.department}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     <option value="academic_affairs">الشؤون الأكاديمية</option>
                     <option value="curriculum_development">تطوير المناهج</option>
@@ -364,7 +364,7 @@ const AcademicSupervisorProfilePage: React.FC = () => {
                     name="specialization"
                     value={profileData.specialization}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     <option value="arabic_language">اللغة العربية</option>
                     <option value="islamic_studies">الدراسات الإسلامية</option>
@@ -382,7 +382,7 @@ const AcademicSupervisorProfilePage: React.FC = () => {
                     name="experience_years"
                     value={profileData.experience_years}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
 
@@ -400,19 +400,19 @@ const AcademicSupervisorProfilePage: React.FC = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">المسؤوليات الأكاديمية</label>
                   <div className="space-y-2">
                     <div className="flex items-center">
-                      <input type="checkbox" checked readOnly className="ml-2 h-4 w-4 text-green-600" />
+                      <input type="checkbox" checked readOnly className="ml-2 h-4 w-4 text-blue-600" />
                       <label className="text-sm text-gray-700">متابعة أداء المعلمين</label>
                     </div>
                     <div className="flex items-center">
-                      <input type="checkbox" checked readOnly className="ml-2 h-4 w-4 text-green-600" />
+                      <input type="checkbox" checked readOnly className="ml-2 h-4 w-4 text-blue-600" />
                       <label className="text-sm text-gray-700">مراجعة المناهج والمحتوى</label>
                     </div>
                     <div className="flex items-center">
-                      <input type="checkbox" checked readOnly className="ml-2 h-4 w-4 text-green-600" />
+                      <input type="checkbox" checked readOnly className="ml-2 h-4 w-4 text-blue-600" />
                       <label className="text-sm text-gray-700">إعداد التقارير الأكاديمية</label>
                     </div>
                     <div className="flex items-center">
-                      <input type="checkbox" checked readOnly className="ml-2 h-4 w-4 text-green-600" />
+                      <input type="checkbox" checked readOnly className="ml-2 h-4 w-4 text-blue-600" />
                       <label className="text-sm text-gray-700">تطوير البرامج التعليمية</label>
                     </div>
                   </div>
@@ -425,7 +425,7 @@ const AcademicSupervisorProfilePage: React.FC = () => {
                     value={profileData.bio}
                     onChange={handleInputChange}
                     rows={4}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="اكتب نبذة عن خبرتك الأكاديمية ومسؤولياتك في الإشراف..."
                   />
                 </div>
@@ -436,7 +436,7 @@ const AcademicSupervisorProfilePage: React.FC = () => {
                     name="is_profile_public"
                     checked={profileData.is_profile_public}
                     onChange={handleInputChange}
-                    className="ml-2 h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
+                    className="ml-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                   />
                   <label className="text-sm text-gray-700">جعل الملف الشخصي عام</label>
                 </div>
@@ -449,7 +449,7 @@ const AcademicSupervisorProfilePage: React.FC = () => {
             <button
               onClick={handleSaveProfile}
               disabled={isLoading}
-              className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center disabled:opacity-50"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center disabled:opacity-50"
             >
               {isLoading ? (
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white ml-2"></div>

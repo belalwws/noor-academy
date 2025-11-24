@@ -368,7 +368,7 @@ const KnowledgeLabStudentPage = () => {
                   <h1 className="text-3xl font-bold bg-gradient-to-r from-orange-600 via-amber-600 to-yellow-600 bg-clip-text text-transparent">
                     {lab.title}
                   </h1>
-                  <Badge className="bg-green-500 text-white">معتمد</Badge>
+                  <Badge className="bg-blue-500 text-white">معتمد</Badge>
                 </div>
                 <p className="text-gray-600">{lab.description}</p>
               </div>

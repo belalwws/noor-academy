@@ -413,7 +413,7 @@ export function CreateUnitExamForm({ labId, courseId, onSuccess, onCancel }: Cre
               </div>
             )}
             {selectedQuestions.length > 0 && (
-              <p className="text-sm text-green-600">
+              <p className="text-sm text-blue-600">
                 تم اختيار {selectedQuestions.length} سؤال
               </p>
             )}

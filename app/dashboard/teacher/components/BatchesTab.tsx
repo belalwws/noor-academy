@@ -154,7 +154,7 @@ export default function BatchesTab({ refreshKey = 0 }: BatchesTabProps) {
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'active':
-        return <Badge className="bg-green-100 text-green-800 border-green-200">نشط</Badge>
+        return <Badge className="bg-blue-100 text-blue-800 border-blue-200">نشط</Badge>
       case 'closed':
         return <Badge className="bg-gray-100 text-gray-800 border-gray-200">مغلق</Badge>
       default:

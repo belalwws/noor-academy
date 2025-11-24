@@ -20,9 +20,9 @@ export default function CourseStatusBadge({ status, className = '' }: CourseStat
         return {
           text: 'معتمدة',
           icon: 'fas fa-check-circle',
-          bgColor: 'bg-green-100',
-          textColor: 'text-green-800',
-          borderColor: 'border-green-200'
+          bgColor: 'bg-blue-100',
+          textColor: 'text-blue-800',
+          borderColor: 'border-blue-200'
         };
       case 'active':
         return {

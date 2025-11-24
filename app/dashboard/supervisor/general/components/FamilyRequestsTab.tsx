@@ -131,7 +131,7 @@ const FamilyRequestsTab: React.FC<FamilyRequestsTabProps> = () => {
               <div className="flex gap-3">
                 <Button
                   onClick={() => handleAction(request, 'approve')}
-                  className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <CheckCircle className="h-4 w-4 mr-2" />
                   قبول
@@ -183,7 +183,7 @@ const FamilyRequestsTab: React.FC<FamilyRequestsTabProps> = () => {
               <Button
                 onClick={submitAction}
                 disabled={submitting || (action === 'reject' && !notes.trim())}
-                className={action === 'approve' ? 'bg-green-600 hover:bg-green-700' : ''}
+                className={action === 'approve' ? 'bg-blue-600 hover:bg-blue-700' : ''}
               >
                 {submitting ? (
                   <Spinner size="sm" tone="contrast" className="mr-2" />

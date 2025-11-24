@@ -124,11 +124,11 @@ export default function ProfileInfo({ profile, user }: ProfileInfoProps) {
   return (
     <div className="space-y-4">
       {/* Essential Info Only */}
-      <Card className="border-0 shadow-xl bg-gradient-to-br from-white via-green-50/30 to-blue-50/20 overflow-hidden">
-        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
+      <Card className="border-0 shadow-xl bg-gradient-to-br from-white via-blue-50/30 to-blue-50/20 overflow-hidden">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
         <CardContent className="p-6 relative z-10">
           <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-blue-500 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-500 rounded-lg flex items-center justify-center">
               <User className="w-4 h-4 text-white" />
             </div>
             المعلومات الأساسية
@@ -145,13 +145,13 @@ export default function ProfileInfo({ profile, user }: ProfileInfoProps) {
               </div>
             </div>
 
-            <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-100 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 min-h-[80px]">
-              <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
+            <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-blue-50 to-blue-50 rounded-xl border border-blue-100 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 min-h-[80px]">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Mail className="w-5 h-5 text-white" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-xs text-green-600 font-medium mb-1">البريد الإلكتروني</p>
-                <p className="font-bold text-green-800 text-sm break-words overflow-wrap-anywhere" title={user.email}>{user.email}</p>
+                <p className="text-xs text-blue-600 font-medium mb-1">البريد الإلكتروني</p>
+                <p className="font-bold text-blue-800 text-sm break-words overflow-wrap-anywhere" title={user.email}>{user.email}</p>
               </div>
             </div>
 
@@ -244,7 +244,7 @@ export default function ProfileInfo({ profile, user }: ProfileInfoProps) {
           <div className="mt-4 pt-4 border-t border-gray-200">
             <div className="flex items-center gap-2 text-sm flex-wrap">
               <span className="text-gray-600">الحالة:</span>
-              <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">
+              <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">
                 👨‍🏫 معلم نشط
               </span>
               {user.gender && (
@@ -258,7 +258,7 @@ export default function ProfileInfo({ profile, user }: ProfileInfoProps) {
                 </span>
               )}
               {profile.has_ijazah && (
-                <span className="bg-emerald-100 text-emerald-800 px-2 py-1 rounded-full text-xs">
+                <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">
                   📜 حاصل على إجازة
                 </span>
               )}
@@ -301,14 +301,14 @@ export default function ProfileInfo({ profile, user }: ProfileInfoProps) {
                   href={profile.graduation_certificate_download_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200 hover:border-green-400 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 group"
+                  className="flex items-center gap-3 p-4 bg-gradient-to-r from-blue-50 to-blue-50 rounded-xl border border-blue-200 hover:border-blue-400 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                     <Award className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-bold text-green-800 mb-1">شهادة التخرج</p>
-                    <p className="text-xs text-green-600 flex items-center gap-1">
+                    <p className="text-sm font-bold text-blue-800 mb-1">شهادة التخرج</p>
+                    <p className="text-xs text-blue-600 flex items-center gap-1">
                       <Download className="w-3 h-3" />
                       تحميل المستند
                     </p>
@@ -362,11 +362,11 @@ export default function ProfileInfo({ profile, user }: ProfileInfoProps) {
 
       {/* Islamic Studies Info */}
       {(profile.has_ijazah || profile.islamic_specialization) && (
-        <Card className="border-0 shadow-xl bg-gradient-to-br from-white via-emerald-50/30 to-teal-50/20 overflow-hidden">
-          <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-emerald-400/10 to-teal-400/10 rounded-full blur-3xl"></div>
+        <Card className="border-0 shadow-xl bg-gradient-to-br from-white via-blue-50/30 to-teal-50/20 overflow-hidden">
+          <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-blue-400/10 to-teal-400/10 rounded-full blur-3xl"></div>
           <CardContent className="p-6 relative z-10">
             <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-teal-500 rounded-lg flex items-center justify-center">
                 <BookOpen className="w-4 h-4 text-white" />
               </div>
               المعلومات الإسلامية
@@ -374,13 +374,13 @@ export default function ProfileInfo({ profile, user }: ProfileInfoProps) {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {profile.has_ijazah && profile.ijazah_source && (
-                <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl border border-emerald-100">
-                  <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-blue-50 to-teal-50 rounded-xl border border-blue-100">
+                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Award className="w-5 h-5 text-white" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-xs text-emerald-600 font-medium mb-1">جهة الإجازة</p>
-                    <p className="font-bold text-emerald-800 break-words">{profile.ijazah_source}</p>
+                    <p className="text-xs text-blue-600 font-medium mb-1">جهة الإجازة</p>
+                    <p className="font-bold text-blue-800 break-words">{profile.ijazah_source}</p>
                   </div>
                 </div>
               )}

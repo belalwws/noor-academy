@@ -178,11 +178,11 @@ export function TasbihStats() {
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-1">
                     <span className="text-white text-sm">{session.dhikrType}</span>
-                    <span className="text-emerald-400 font-bold">{session.count}</span>
+                    <span className="text-blue-400 font-bold">{session.count}</span>
                   </div>
                   <div className="w-full bg-white/20 rounded-full h-2 overflow-hidden">
                     <div 
-                      className="h-full bg-gradient-to-r from-emerald-500 to-teal-500"
+                      className="h-full bg-gradient-to-r from-blue-500 to-teal-500"
                       style={{ width: `${(session.count / maxCount) * 100}%` }}
                     />
                   </div>

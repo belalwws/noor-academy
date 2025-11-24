@@ -399,7 +399,7 @@ export function QuestionsPracticeTab({ labId }: QuestionsPracticeTabProps) {
                     className={`p-4 rounded-lg border-2 transition-all ${
                       showResult
                         ? isCorrect
-                          ? 'bg-green-50 border-green-500'
+                          ? 'bg-blue-50 border-blue-500'
                           : 'bg-red-50 border-red-500'
                         : isCorrectOption
                         ? 'bg-blue-50 border-blue-400'
@@ -422,8 +422,8 @@ export function QuestionsPracticeTab({ labId }: QuestionsPracticeTabProps) {
                           <div className="mt-2 flex items-center gap-2">
                             {isCorrect ? (
                               <>
-                                <CheckCircle className="w-4 h-4 text-green-600" />
-                                <span className="text-sm text-green-700 font-medium">إجابة صحيحة ✓</span>
+                                <CheckCircle className="w-4 h-4 text-blue-600" />
+                                <span className="text-sm text-blue-700 font-medium">إجابة صحيحة ✓</span>
                               </>
                             ) : (
                               <>
@@ -496,7 +496,7 @@ export function QuestionsPracticeTab({ labId }: QuestionsPracticeTabProps) {
                 <Button
                   onClick={checkAnswers}
                   disabled={showResults}
-                  className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white"
+                  className="bg-gradient-to-r from-blue-500 to-blue-500 hover:from-blue-600 hover:to-blue-600 text-white"
                 >
                   <CheckCircle className="w-4 h-4 ml-2" />
                   التحقق من الإجابات
@@ -517,9 +517,9 @@ export function QuestionsPracticeTab({ labId }: QuestionsPracticeTabProps) {
 
       {/* Results Card */}
       {showResults && (
-        <Card className="border-2 border-green-200 bg-green-50">
+        <Card className="border-2 border-blue-200 bg-blue-50">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-green-700 flex items-center gap-2">
+            <CardTitle className="text-2xl font-bold text-blue-700 flex items-center gap-2">
               <CheckCircle className="w-6 h-6" />
               نتائج التدريب
             </CardTitle>
@@ -527,7 +527,7 @@ export function QuestionsPracticeTab({ labId }: QuestionsPracticeTabProps) {
           <CardContent className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="text-center p-4 bg-white rounded-lg">
-                <p className="text-3xl font-bold text-green-600">{score}</p>
+                <p className="text-3xl font-bold text-blue-600">{score}</p>
                 <p className="text-sm text-gray-600">النقاط المكتسبة</p>
               </div>
               <div className="text-center p-4 bg-white rounded-lg">

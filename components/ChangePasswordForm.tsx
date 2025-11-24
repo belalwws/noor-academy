@@ -58,7 +58,7 @@ export function ChangePasswordForm({
     } else if (score <= 4) {
       return { score, label: 'متوسطة', color: 'bg-yellow-500' };
     } else {
-      return { score, label: 'قوية', color: 'bg-green-500' };
+      return { score, label: 'قوية', color: 'bg-blue-500' };
     }
   };
 
@@ -186,7 +186,7 @@ export function ChangePasswordForm({
                 <span className={`font-semibold ${
                   passwordStrength.score <= 2 ? 'text-red-600' :
                   passwordStrength.score <= 4 ? 'text-yellow-600' :
-                  'text-green-600'
+                  'text-blue-600'
                 }`}>
                   {passwordStrength.label}
                 </span>
@@ -229,8 +229,8 @@ export function ChangePasswordForm({
             <div className="flex items-center gap-2 text-xs">
               {newPassword === confirmPassword ? (
                 <>
-                  <CheckCircle2 className="w-4 h-4 text-green-600" />
-                  <span className="text-green-600">كلمات المرور متطابقة</span>
+                  <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                  <span className="text-blue-600">كلمات المرور متطابقة</span>
                 </>
               ) : (
                 <>

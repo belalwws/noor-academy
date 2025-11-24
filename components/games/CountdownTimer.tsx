@@ -284,7 +284,7 @@ export function TimerStatus({
               ? 'bg-red-600'
               : isLow
               ? 'bg-orange-600'
-              : 'bg-green-600'
+              : 'bg-blue-600'
           }`}
         />
       </div>

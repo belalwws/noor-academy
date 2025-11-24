@@ -44,7 +44,7 @@ export default function BatchDetails({ batch, studentsCount: externalStudentsCou
     switch (batch.status) {
       case 'active':
         return (
-          <Badge className="bg-green-100 text-green-800 border-green-200 dark:bg-green-900/30 dark:text-green-300 dark:border-green-700 flex items-center gap-1">
+          <Badge className="bg-blue-100 text-blue-800 border-blue-200 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-700 flex items-center gap-1">
             <CheckCircle className="w-3 h-3" />
             نشط
           </Badge>
@@ -239,10 +239,10 @@ export default function BatchDetails({ batch, studentsCount: externalStudentsCou
           </CardContent>
         </Card>
 
-        <Card className="bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800">
+        <Card className="bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800">
           <CardContent className="p-2.5">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 bg-green-500 rounded-lg flex items-center justify-center shrink-0">
+              <div className="w-7 h-7 bg-blue-500 rounded-lg flex items-center justify-center shrink-0">
                 <CheckCircle className="w-3.5 h-3.5 text-white" />
               </div>
               <div className="min-w-0">

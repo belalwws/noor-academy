@@ -519,7 +519,7 @@ function CreateRecordedCourseFormContent() {
                     <Button
                       onClick={handleSubmit}
                       disabled={isSubmitting}
-                      className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 gap-2"
+                      className="bg-gradient-to-r from-blue-500 to-blue-500 hover:from-blue-600 hover:to-blue-600 gap-2"
                     >
                       {isSubmitting ? (
                         <>

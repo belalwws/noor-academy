@@ -204,7 +204,7 @@ export default function RecordedCoursesTab() {
       case 'pending_review':
         return <Badge className="bg-orange-100 text-orange-800 border-orange-300">قيد المراجعة</Badge>;
       case 'approved':
-        return <Badge className="bg-green-100 text-green-800 border-green-300">معتمد</Badge>;
+        return <Badge className="bg-blue-100 text-blue-800 border-blue-300">معتمد</Badge>;
       case 'rejected':
         return <Badge className="bg-red-100 text-red-800 border-red-300">مرفوض</Badge>;
       case 'active':
@@ -335,7 +335,7 @@ export default function RecordedCoursesTab() {
                           <>
                             <Button
                               size="sm"
-                              className="bg-green-600 hover:bg-green-700 text-white"
+                              className="bg-blue-600 hover:bg-blue-700 text-white"
                               onClick={() => setSelectedApp({ application: app, action: 'approved' })}
                             >
                               <CheckCircle className="w-4 h-4 ml-1" />
@@ -419,7 +419,7 @@ export default function RecordedCoursesTab() {
             <div className="p-6 border-b border-amber-200 dark:border-amber-800 bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/20">
               <div className="flex items-center gap-3">
                 {selectedApp.action === 'approved' && (
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg">
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                 )}
@@ -510,7 +510,7 @@ export default function RecordedCoursesTab() {
               {selectedApp.action !== 'view' && (
                 <Button
                   className={selectedApp.action === 'approved' 
-                    ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-lg' 
+                    ? 'bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg' 
                     : 'bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700 text-white shadow-lg'
                   }
                   onClick={() => handleReviewApplication(

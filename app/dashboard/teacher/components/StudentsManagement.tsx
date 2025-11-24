@@ -210,7 +210,7 @@ const StudentsManagement: React.FC<StudentsManagementProps> = ({ className }) =>
   const getStatusColor = (status: string) => {
     switch (status?.toLowerCase()) {
       case 'approved':
-        return 'bg-green-100 text-green-800 border-green-300'
+        return 'bg-blue-100 text-blue-800 border-blue-300'
       case 'pending':
         return 'bg-yellow-100 text-yellow-800 border-yellow-300'
       case 'rejected':
@@ -450,7 +450,7 @@ const StudentsManagement: React.FC<StudentsManagementProps> = ({ className }) =>
                   </div>
                   {/* Status Indicator */}
                   <div className={`w-3 h-3 rounded-full ${
-                    studentEnrollment.status === 'approved' ? 'bg-green-500' :
+                    studentEnrollment.status === 'approved' ? 'bg-blue-500' :
                     studentEnrollment.status === 'pending' ? 'bg-yellow-500' :
                     'bg-red-500'
                   }`}></div>
@@ -483,7 +483,7 @@ const StudentsManagement: React.FC<StudentsManagementProps> = ({ className }) =>
                       {studentEnrollment.status === 'rejected' && '❌ مرفوض'}
                     </Badge>
                     {studentEnrollment.status === 'approved' && (
-                      <div className="flex items-center gap-1 text-xs text-green-600">
+                      <div className="flex items-center gap-1 text-xs text-blue-600">
                         <Award className="w-3 h-3" />
                         <span>نشط</span>
                       </div>

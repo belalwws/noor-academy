@@ -199,7 +199,7 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
                   )}
                 </Badge>
                 {profileData?.is_verified ? (
-                  <Badge className="bg-emerald-500/40 dark:bg-emerald-600/40 text-white border-emerald-300/40 backdrop-blur-sm shadow-lg px-3 py-1">
+                  <Badge className="bg-blue-500/40 dark:bg-blue-600/40 text-white border-blue-300/40 backdrop-blur-sm shadow-lg px-3 py-1">
                     <Check className="w-4 h-4 mr-1" />
                     محقق
                   </Badge>

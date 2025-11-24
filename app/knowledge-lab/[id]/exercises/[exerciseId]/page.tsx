@@ -677,8 +677,8 @@ export default function ExerciseDetailsPage() {
             </Card>
           ) : showResults && attempt ? (
             /* Results View */
-            <Card className="border-2 border-green-200 shadow-xl bg-green-50">
-              <CardHeader className="bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-t-lg">
+            <Card className="border-2 border-blue-200 shadow-xl bg-blue-50">
+              <CardHeader className="bg-gradient-to-r from-blue-500 to-blue-500 text-white rounded-t-lg">
                 <CardTitle className="text-2xl flex items-center gap-2">
                   <CheckCircle className="w-6 h-6" />
                   نتائج التمرين
@@ -687,7 +687,7 @@ export default function ExerciseDetailsPage() {
               <CardContent className="p-6 space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="text-center p-6 bg-white rounded-lg">
-                    <p className="text-4xl font-bold text-green-600">{attempt.score || 0}%</p>
+                    <p className="text-4xl font-bold text-blue-600">{attempt.score || 0}%</p>
                     <p className="text-sm text-gray-600 mt-2">النسبة المئوية</p>
                   </div>
                   <div className="text-center p-6 bg-white rounded-lg">
@@ -814,7 +814,7 @@ export default function ExerciseDetailsPage() {
                           <div className="flex items-start justify-between mb-3">
                             <div className="flex-1">
                               <div className="flex items-center gap-2 mb-2">
-                                <Badge className={isCorrect ? 'bg-green-500 text-white' : 'bg-red-500 text-white'}>
+                                <Badge className={isCorrect ? 'bg-blue-500 text-white' : 'bg-red-500 text-white'}>
                                   {isCorrect ? '✓ صحيح' : '✗ خاطئ'}
                                 </Badge>
                                 <span className="text-sm text-gray-600">سؤال {index + 1}</span>
@@ -827,17 +827,17 @@ export default function ExerciseDetailsPage() {
                           </div>
                           
                           <div className="mt-4 space-y-3">
-                            <div className={`p-4 rounded-lg border-2 ${isCorrect ? 'bg-green-50 border-green-300' : 'bg-red-50 border-red-300'}`}>
+                            <div className={`p-4 rounded-lg border-2 ${isCorrect ? 'bg-blue-50 border-blue-300' : 'bg-red-50 border-red-300'}`}>
                               <div className="space-y-2">
                                 <div className="flex items-start gap-2">
                                   <span className="font-semibold text-gray-700 min-w-[80px]">إجابتك:</span>
-                                  <span className={`font-medium ${isCorrect ? 'text-green-700' : 'text-red-700'}`}>
+                                  <span className={`font-medium ${isCorrect ? 'text-blue-700' : 'text-red-700'}`}>
                                     {userAnswerText}
                                   </span>
                                 </div>
                                 <div className="flex items-start gap-2 pt-2 border-t border-gray-200">
                                   <span className="font-semibold text-gray-700 min-w-[100px]">الإجابة الصحيحة:</span>
-                                  <span className="font-bold text-green-700">
+                                  <span className="font-bold text-blue-700">
                                     {correctAnswerText}
                                   </span>
                                 </div>
@@ -993,7 +993,7 @@ export default function ExerciseDetailsPage() {
                     <Button
                       onClick={handleSubmit}
                       disabled={submitting || Object.keys(answers).length === 0}
-                      className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white"
+                      className="bg-gradient-to-r from-blue-500 to-blue-500 hover:from-blue-600 hover:to-blue-600 text-white"
                     >
                       {submitting ? (
                         <>
@@ -1037,7 +1037,7 @@ export default function ExerciseDetailsPage() {
                               isCurrent
                                 ? 'bg-orange-500 text-white scale-110'
                                 : isAnswered
-                                ? 'bg-green-500 text-white'
+                                ? 'bg-blue-500 text-white'
                                 : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
                             }`}
                           >

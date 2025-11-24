@@ -16,8 +16,8 @@ export const FloatingContact: React.FC = () => {
     {
       icon: MessageCircle,
       label: 'واتساب',
-      color: 'from-green-500 to-emerald-500',
-      hoverColor: 'hover:shadow-green-500/50',
+      color: 'from-blue-500 to-blue-500',
+      hoverColor: 'hover:shadow-blue-500/50',
       action: () => window.open('https://wa.me/966500000000', '_blank'),
     },
     {

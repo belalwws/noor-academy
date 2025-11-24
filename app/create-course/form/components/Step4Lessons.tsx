@@ -231,13 +231,13 @@ export function Step4Lessons({ formData, updateFormData, courseType }: StepProps
                           </label>
                           
                           {currentLesson.videoUploaded ? (
-                            <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-lg border border-green-200 dark:border-green-800">
-                              <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0" />
+                            <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+                              <CheckCircle className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
                               <div className="flex-1 min-w-0">
-                                <p className="text-sm font-medium text-green-700 dark:text-green-400">
+                                <p className="text-sm font-medium text-blue-700 dark:text-blue-400">
                                   تم رفع الفيديو بنجاح
                                 </p>
-                                <p className="text-xs text-green-600 dark:text-green-500 truncate">
+                                <p className="text-xs text-blue-600 dark:text-blue-500 truncate">
                                   {currentLesson.videoFileName}
                                 </p>
                               </div>
@@ -262,25 +262,25 @@ export function Step4Lessons({ formData, updateFormData, courseType }: StepProps
                                     uploadingVideos[lesson.id]
                                       ? 'border-blue-300 bg-blue-50 dark:bg-blue-900/10 cursor-wait'
                                       : hasVideo 
-                                      ? 'border-green-500 bg-green-50 dark:bg-green-900/20 hover:border-green-600' 
+                                      ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 hover:border-blue-600' 
                                       : 'border-gray-300 dark:border-gray-600 hover:border-amber-500 dark:hover:border-amber-600 hover:bg-amber-50 dark:hover:bg-amber-900/10'
                                   }`}
                                 >
                                   <div className={`p-2 rounded-lg ${
                                     hasVideo 
-                                      ? 'bg-green-100 dark:bg-green-900/30' 
+                                      ? 'bg-blue-100 dark:bg-blue-900/30' 
                                       : 'bg-gray-100 dark:bg-gray-700'
                                   }`}>
                                     <Upload className={`w-5 h-5 ${
                                       hasVideo 
-                                        ? 'text-green-600 dark:text-green-400' 
+                                        ? 'text-blue-600 dark:text-blue-400' 
                                         : 'text-gray-400 dark:text-gray-500'
                                     }`} />
                                   </div>
                                   <div className="flex-1 min-w-0">
                                     <span className={`text-sm font-medium block ${
                                       hasVideo 
-                                        ? 'text-green-700 dark:text-green-400' 
+                                        ? 'text-blue-700 dark:text-blue-400' 
                                         : 'text-gray-600 dark:text-gray-400'
                                     }`}>
                                     {displayFileName || 'اختر ملف فيديو (MP4, WebM, OGG, MOV)'}

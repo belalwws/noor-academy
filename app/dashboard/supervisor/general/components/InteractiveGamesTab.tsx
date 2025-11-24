@@ -116,7 +116,7 @@ export default function InteractiveGamesTab({ onApprove, onReject }: Interactive
                 <Badge 
                   variant={status === 'approved' ? 'default' : status === 'rejected' ? 'destructive' : 'secondary'}
                   className={
-                    status === 'approved' ? 'bg-green-500' : 
+                    status === 'approved' ? 'bg-blue-500' : 
                     status === 'rejected' ? 'bg-red-500' : 
                     'bg-amber-500'
                   }
@@ -144,7 +144,7 @@ export default function InteractiveGamesTab({ onApprove, onReject }: Interactive
                   <Button
                     variant="outline"
                     size="sm"
-                    className="flex-1 bg-green-50 hover:bg-green-100 border-green-300 text-green-700 dark:bg-green-900/20 dark:hover:bg-green-900/30 dark:border-green-700 dark:text-green-400"
+                    className="flex-1 bg-blue-50 hover:bg-blue-100 border-blue-300 text-blue-700 dark:bg-blue-900/20 dark:hover:bg-blue-900/30 dark:border-blue-700 dark:text-blue-400"
                     onClick={() => {
                       setSelectedGame(game);
                       setShowApprovalModal(true);
@@ -196,7 +196,7 @@ export default function InteractiveGamesTab({ onApprove, onReject }: Interactive
   if (loading) {
     return (
       <div className="text-center py-12">
-        <Loader2 className="w-12 h-12 animate-spin mx-auto text-green-600 mb-4" />
+        <Loader2 className="w-12 h-12 animate-spin mx-auto text-blue-600 mb-4" />
         <p className="text-gray-600 dark:text-gray-400">جاري التحميل...</p>
       </div>
     );
@@ -212,7 +212,7 @@ export default function InteractiveGamesTab({ onApprove, onReject }: Interactive
           <Badge variant="secondary" className="text-base px-3 py-1">
             قيد المراجعة: {pendingGames.length}
           </Badge>
-          <Badge variant="default" className="text-base px-3 py-1 bg-green-500">
+          <Badge variant="default" className="text-base px-3 py-1 bg-blue-500">
             موافق عليها: {approvedGames.length}
           </Badge>
           <Badge variant="destructive" className="text-base px-3 py-1 bg-red-500">
@@ -232,7 +232,7 @@ export default function InteractiveGamesTab({ onApprove, onReject }: Interactive
           </TabsTrigger>
           <TabsTrigger 
             value="approved"
-            className="flex items-center gap-2 data-[state=active]:bg-green-500 data-[state=active]:text-white data-[state=inactive]:text-gray-600 dark:data-[state=inactive]:text-gray-400"
+            className="flex items-center gap-2 data-[state=active]:bg-blue-500 data-[state=active]:text-white data-[state=inactive]:text-gray-600 dark:data-[state=inactive]:text-gray-400"
           >
             <CheckCircle2 className="w-4 h-4" />
             موافق عليها ({approvedGames.length})
@@ -261,9 +261,9 @@ export default function InteractiveGamesTab({ onApprove, onReject }: Interactive
 
       {/* Approval Modal */}
       <Dialog open={showApprovalModal} onOpenChange={setShowApprovalModal}>
-        <DialogContent className="max-w-md border-green-200 dark:border-green-800">
+        <DialogContent className="max-w-md border-blue-200 dark:border-blue-800">
           <DialogHeader>
-            <DialogTitle className="text-green-600 dark:text-green-400">
+            <DialogTitle className="text-blue-600 dark:text-blue-400">
               موافقة على لعبة تفاعلية
             </DialogTitle>
             <DialogDescription>
@@ -282,7 +282,7 @@ export default function InteractiveGamesTab({ onApprove, onReject }: Interactive
             <Button
               onClick={handleApprove}
               disabled={processing}
-              className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 text-sm"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 text-sm"
             >
               {processing ? (
                 <>

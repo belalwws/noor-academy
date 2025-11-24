@@ -193,7 +193,7 @@ export default function ReminderTestPage() {
 
               <Button
                 onClick={testQuranReminder}
-                className="h-20 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 flex flex-col items-center gap-2"
+                className="h-20 bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 flex flex-col items-center gap-2"
               >
                 <BookOpen className="w-6 h-6" />
                 <span>اختبار تذكير القرآن</span>
@@ -237,7 +237,7 @@ export default function ReminderTestPage() {
 
         {/* Test Results */}
         {testResults.length > 0 && (
-          <Card className="border-emerald-200 dark:border-emerald-800">
+          <Card className="border-blue-200 dark:border-blue-800">
             <CardHeader>
               <CardTitle className="text-xl">نتائج الاختبارات</CardTitle>
             </CardHeader>
@@ -248,12 +248,12 @@ export default function ReminderTestPage() {
                     key={index}
                     className={`p-3 rounded-lg flex items-center gap-3 ${
                       result.success
-                        ? 'bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800'
+                        ? 'bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800'
                         : 'bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800'
                     }`}
                   >
                     {result.success ? (
-                      <CheckCircle className="w-5 h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
                     ) : (
                       <XCircle className="w-5 h-5 text-red-600 dark:text-red-400 flex-shrink-0" />
                     )}

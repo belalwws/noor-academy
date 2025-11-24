@@ -52,7 +52,7 @@ export const ProfileSideMenu: React.FC<ProfileSideMenuProps> = ({
   return (
     <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-6 sticky top-8">
       <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-        <div className="w-2 h-2 bg-gradient-to-r from-green-600 to-green-700 rounded-full"></div>
+        <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full"></div>
         قائمة الإعدادات
       </h3>
       
@@ -67,15 +67,15 @@ export const ProfileSideMenu: React.FC<ProfileSideMenuProps> = ({
               onClick={() => onSectionChange(item.id)}
               className={`w-full text-right p-4 rounded-xl transition-all duration-300 group ${
                 isActive
-                  ? 'bg-gradient-to-r from-green-600 to-green-700 text-white shadow-lg transform scale-105'
-                  : 'hover:bg-gradient-to-r hover:from-green-50 hover:to-green-50 text-gray-700 hover:text-green-600'
+                  ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg transform scale-105'
+                  : 'hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-50 text-gray-700 hover:text-blue-600'
               }`}
             >
               <div className="flex items-center gap-3">
                 <div className={`p-2 rounded-lg transition-colors ${
                   isActive 
                     ? 'bg-white/20' 
-                    : 'bg-green-100 group-hover:bg-green-100 group-hover:text-green-600'
+                    : 'bg-blue-100 group-hover:bg-blue-100 group-hover:text-blue-600'
                 }`}>
                   <Icon className="w-5 h-5" />
                 </div>
@@ -84,7 +84,7 @@ export const ProfileSideMenu: React.FC<ProfileSideMenuProps> = ({
                     {item.label}
                   </div>
                   <div className={`text-xs mt-1 ${
-                    isActive ? 'text-green-100' : 'text-gray-500'
+                    isActive ? 'text-blue-100' : 'text-gray-500'
                   }`}>
                     {item.description}
                   </div>

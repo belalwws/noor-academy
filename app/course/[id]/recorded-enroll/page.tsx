@@ -308,10 +308,10 @@ export default function RecordedCourseEnrollmentPage() {
       if (enrollment.status === 'active') {
         return {
           icon: CheckCircle,
-          color: 'green',
-          bgColor: 'bg-green-50 dark:bg-green-900/20',
-          borderColor: 'border-green-300 dark:border-green-800',
-          textColor: 'text-green-800 dark:text-green-300',
+          color: 'blue',
+          bgColor: 'bg-blue-50 dark:bg-blue-900/20',
+          borderColor: 'border-blue-300 dark:border-blue-800',
+          textColor: 'text-blue-800 dark:text-blue-300',
           title: 'مسجل في الدورة! 🎉',
           description: 'يمكنك الآن الوصول إلى جميع دروس الدورة'
         };
@@ -343,10 +343,10 @@ export default function RecordedCourseEnrollmentPage() {
       } else if (application.status === 'approved') {
         return {
           icon: CheckCircle,
-          color: 'green',
-          bgColor: 'bg-green-50 dark:bg-green-900/20',
-          borderColor: 'border-green-300 dark:border-green-800',
-          textColor: 'text-green-800 dark:text-green-300',
+          color: 'blue',
+          bgColor: 'bg-blue-50 dark:bg-blue-900/20',
+          borderColor: 'border-blue-300 dark:border-blue-800',
+          textColor: 'text-blue-800 dark:text-blue-300',
           title: 'تمت الموافقة! ✅',
           description: 'جاري تفعيل اشتراكك في الدورة'
         };
@@ -556,13 +556,13 @@ export default function RecordedCourseEnrollmentPage() {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.02, x: 5 }}
                     whileTap={{ scale: 0.98 }}
-                    className="flex items-center gap-3 p-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all shadow-md hover:shadow-lg group"
+                    className="flex items-center gap-3 p-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl hover:from-blue-600 hover:to-blue-700 transition-all shadow-md hover:shadow-lg group"
                   >
                     <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center group-hover:bg-white/30 transition-colors">
                       <MessageCircle className="w-5 h-5 text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs text-green-100 mb-0.5">تواصل عبر واتساب</p>
+                      <p className="text-xs text-blue-100 mb-0.5">تواصل عبر واتساب</p>
                       <p className="text-sm font-bold text-white">
                         {supervisor.whatsapp}
                       </p>

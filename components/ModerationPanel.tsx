@@ -213,7 +213,7 @@ const ModerationPanel = ({ currentUserId, userRole, className }: ModerationPanel
       case 'pending':
         return 'bg-yellow-100 text-yellow-800'
       case 'approved':
-        return 'bg-green-100 text-green-800'
+        return 'bg-blue-100 text-blue-800'
       case 'rejected':
         return 'bg-red-100 text-red-800'
       case 'resolved':
@@ -292,11 +292,11 @@ const ModerationPanel = ({ currentUserId, userRole, className }: ModerationPanel
           </CardContent>
         </Card>
         
-        <Card className="bg-gradient-to-br from-green-50 to-emerald-50 border-green-200">
+        <Card className="bg-gradient-to-br from-blue-50 to-blue-50 border-blue-200">
           <CardContent className="p-4 text-center">
-            <CheckCircle className="h-8 w-8 mx-auto mb-2 text-green-600" />
-            <div className="text-2xl font-bold text-green-800">{stats.resolvedToday}</div>
-            <div className="text-xs text-green-600">تم حلها اليوم</div>
+            <CheckCircle className="h-8 w-8 mx-auto mb-2 text-blue-600" />
+            <div className="text-2xl font-bold text-blue-800">{stats.resolvedToday}</div>
+            <div className="text-xs text-blue-600">تم حلها اليوم</div>
           </CardContent>
         </Card>
         
@@ -327,8 +327,8 @@ const ModerationPanel = ({ currentUserId, userRole, className }: ModerationPanel
 
       {/* Main Panel */}
       <Card className="bg-white shadow-lg">
-        <CardHeader className="bg-gradient-to-r from-emerald-50 to-green-50 border-b">
-          <CardTitle className="flex items-center gap-2 text-emerald-800">
+        <CardHeader className="bg-gradient-to-r from-blue-50 to-blue-50 border-b">
+          <CardTitle className="flex items-center gap-2 text-blue-800">
             <Shield className="h-6 w-6" />
             لوحة الإشراف والمراجعة
           </CardTitle>
@@ -459,7 +459,7 @@ const ModerationPanel = ({ currentUserId, userRole, className }: ModerationPanel
                             <>
                               <Dialog>
                                 <DialogTrigger asChild>
-                                  <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white">
+                                  <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
                                     <CheckCircle className="h-4 w-4 ml-2" />
                                     موافقة
                                   </Button>
@@ -476,7 +476,7 @@ const ModerationPanel = ({ currentUserId, userRole, className }: ModerationPanel
                                     <div className="flex justify-end gap-2">
                                       <Button
                                         onClick={() => handleReportAction(report.id, 'approve')}
-                                        className="bg-green-600 hover:bg-green-700"
+                                        className="bg-blue-600 hover:bg-blue-700"
                                       >
                                         تأكيد الموافقة
                                       </Button>

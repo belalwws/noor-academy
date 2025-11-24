@@ -153,7 +153,7 @@ const NotificationSystem = ({ className }: NotificationSystemProps) => {
       case 'like':
         return <Heart className="h-4 w-4 text-red-600" />
       case 'follow':
-        return <UserPlus className="h-4 w-4 text-green-600" />
+        return <UserPlus className="h-4 w-4 text-blue-600" />
       case 'mention':
         return <MessageSquare className="h-4 w-4 text-purple-600" />
       case 'award':
@@ -236,10 +236,10 @@ const NotificationSystem = ({ className }: NotificationSystemProps) => {
         <Button 
           variant="ghost" 
           size="sm" 
-          className={`relative hover:bg-emerald-50 ${className}`}
+          className={`relative hover:bg-blue-50 ${className}`}
         >
           {unreadCount > 0 ? (
-            <BellRing className="h-5 w-5 text-emerald-600" />
+            <BellRing className="h-5 w-5 text-blue-600" />
           ) : (
             <AlertCircle className="h-5 w-5 text-slate-600" />
           )}
@@ -255,9 +255,9 @@ const NotificationSystem = ({ className }: NotificationSystemProps) => {
       
       <PopoverContent className="w-96 p-0" align="end" dir="rtl">
         <Card className="border-0 shadow-lg">
-          <CardHeader className="pb-3 bg-gradient-to-r from-emerald-50 to-green-50">
+          <CardHeader className="pb-3 bg-gradient-to-r from-blue-50 to-blue-50">
             <div className="flex items-center justify-between">
-              <CardTitle className="text-lg text-emerald-800 flex items-center gap-2">
+              <CardTitle className="text-lg text-blue-800 flex items-center gap-2">
                 <AlertCircle className="h-5 w-5" />
                 الإشعارات
                 {unreadCount > 0 && (
@@ -297,7 +297,7 @@ const NotificationSystem = ({ className }: NotificationSystemProps) => {
                     variant="ghost" 
                     size="sm"
                     onClick={markAllAsRead}
-                    className="text-emerald-600 hover:text-emerald-700"
+                    className="text-blue-600 hover:text-blue-700"
                   >
                     <Check className="h-4 w-4" />
                   </Button>
@@ -392,7 +392,7 @@ const NotificationSystem = ({ className }: NotificationSystemProps) => {
                             </div>
                             
                             {!notification.read && (
-                              <div className="h-2 w-2 bg-emerald-500 rounded-full"></div>
+                              <div className="h-2 w-2 bg-blue-500 rounded-full"></div>
                             )}
                           </div>
                         </div>
@@ -407,7 +407,7 @@ const NotificationSystem = ({ className }: NotificationSystemProps) => {
               <Button 
                 variant="ghost" 
                 size="sm" 
-                className="w-full text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50"
+                className="w-full text-blue-600 hover:text-blue-700 hover:bg-blue-50"
               >
                 <Settings className="h-4 w-4 ml-2" />
                 إعدادات الإشعارات

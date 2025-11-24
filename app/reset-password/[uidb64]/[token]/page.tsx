@@ -142,7 +142,7 @@ export default function ResetPasswordPage() {
 
   if (status === 'loading') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-emerald-50 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center p-4">
         <div className="text-center">
           <Spinner size="xl" className="mx-auto mb-4" />
           <p className="text-gray-600">جاري التحقق من الرابط...</p>
@@ -153,7 +153,7 @@ export default function ResetPasswordPage() {
 
   if (status === 'error') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-emerald-50 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center">
           <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <XCircle className="w-10 h-10 text-red-600" />
@@ -165,7 +165,7 @@ export default function ResetPasswordPage() {
           <div className="space-y-3">
             <button
               onClick={() => router.push('/forgot-password')}
-              className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 px-4 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2"
             >
               <KeyRound className="w-5 h-5" />
               طلب رابط جديد
@@ -184,10 +184,10 @@ export default function ResetPasswordPage() {
 
   if (status === 'success') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-emerald-50 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center">
-          <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
-            <CheckCircle className="w-10 h-10 text-emerald-600" />
+          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
+            <CheckCircle className="w-10 h-10 text-blue-600" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900 mb-2">تم بنجاح!</h1>
           <p className="text-gray-600 mb-6">
@@ -195,7 +195,7 @@ export default function ResetPasswordPage() {
           </p>
           <button
             onClick={() => router.push('/login')}
-            className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 px-4 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2"
           >
             تسجيل الدخول الآن
             <ArrowRight className="w-5 h-5" />
@@ -209,12 +209,12 @@ export default function ResetPasswordPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-emerald-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Lock className="w-8 h-8 text-emerald-600" />
+          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Lock className="w-8 h-8 text-blue-600" />
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
             إعادة تعيين كلمة المرور
@@ -242,8 +242,8 @@ export default function ResetPasswordPage() {
                   errors.new_password
                     ? 'border-red-300 focus:border-red-500 focus:ring-red-200'
                     : passwordValidation.minLength
-                    ? 'border-emerald-300 focus:border-emerald-500 focus:ring-emerald-200'
-                    : 'border-gray-200 focus:border-emerald-500 focus:ring-emerald-200'
+                    ? 'border-blue-300 focus:border-blue-500 focus:ring-blue-200'
+                    : 'border-gray-200 focus:border-blue-500 focus:ring-blue-200'
                 }`}
                 placeholder="أدخل كلمة المرور الجديدة"
                 disabled={isSubmitting}
@@ -280,8 +280,8 @@ export default function ResetPasswordPage() {
                   errors.confirm_password
                     ? 'border-red-300 focus:border-red-500 focus:ring-red-200'
                     : passwordValidation.hasMatch && formData.confirm_password
-                    ? 'border-emerald-300 focus:border-emerald-500 focus:ring-emerald-200'
-                    : 'border-gray-200 focus:border-emerald-500 focus:ring-emerald-200'
+                    ? 'border-blue-300 focus:border-blue-500 focus:ring-blue-200'
+                    : 'border-gray-200 focus:border-blue-500 focus:ring-blue-200'
                 }`}
                 placeholder="أعد إدخال كلمة المرور"
                 disabled={isSubmitting}
@@ -306,7 +306,7 @@ export default function ResetPasswordPage() {
           <div className="bg-gray-50 rounded-xl p-4 space-y-2">
             <p className="text-sm font-semibold text-gray-700 mb-2">متطلبات كلمة المرور:</p>
             <div className="space-y-1">
-              <div className={`text-sm flex items-center gap-2 ${passwordValidation.minLength ? 'text-emerald-600' : 'text-gray-500'}`}>
+              <div className={`text-sm flex items-center gap-2 ${passwordValidation.minLength ? 'text-blue-600' : 'text-gray-500'}`}>
                 {passwordValidation.minLength ? (
                   <CheckCircle className="w-4 h-4" />
                 ) : (
@@ -314,7 +314,7 @@ export default function ResetPasswordPage() {
                 )}
                 8 أحرف على الأقل
               </div>
-              <div className={`text-sm flex items-center gap-2 ${passwordValidation.hasMatch && formData.confirm_password ? 'text-emerald-600' : 'text-gray-500'}`}>
+              <div className={`text-sm flex items-center gap-2 ${passwordValidation.hasMatch && formData.confirm_password ? 'text-blue-600' : 'text-gray-500'}`}>
                 {passwordValidation.hasMatch && formData.confirm_password ? (
                   <CheckCircle className="w-4 h-4" />
                 ) : (
@@ -329,7 +329,7 @@ export default function ResetPasswordPage() {
           <button
             type="submit"
             disabled={isSubmitting || !passwordValidation.isValid}
-            className="w-full bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white py-3 px-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+            className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white py-3 px-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
           >
             {isSubmitting ? (
               <>
@@ -349,7 +349,7 @@ export default function ResetPasswordPage() {
         <div className="mt-6 text-center">
           <button
             onClick={() => router.push('/login')}
-            className="text-emerald-600 hover:text-emerald-700 font-semibold text-sm"
+            className="text-blue-600 hover:text-blue-700 font-semibold text-sm"
           >
             العودة لتسجيل الدخول
           </button>

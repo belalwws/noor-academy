@@ -44,7 +44,7 @@ const CommunityForumCard = ({ forum, isSelected, onSelect, onCreateTopic }: Foru
   const getForumColor = (forumType: string) => {
     switch (forumType) {
       case 'quran_memorization':
-        return 'from-emerald-500 to-green-600'
+        return 'from-blue-500 to-blue-600'
       case 'islamic_studies':
         return 'from-blue-500 to-indigo-600'
       case 'arabic_language':
@@ -59,7 +59,7 @@ const CommunityForumCard = ({ forum, isSelected, onSelect, onCreateTopic }: Foru
   const getForumColorLight = (forumType: string) => {
     switch (forumType) {
       case 'quran_memorization':
-        return 'bg-emerald-50 text-emerald-700 border-emerald-200'
+        return 'bg-blue-50 text-blue-700 border-blue-200'
       case 'islamic_studies':
         return 'bg-blue-50 text-blue-700 border-blue-200'
       case 'arabic_language':
@@ -82,8 +82,8 @@ const CommunityForumCard = ({ forum, isSelected, onSelect, onCreateTopic }: Foru
     <Card 
       className={`cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-[1.02] group border ${
         isSelected 
-          ? 'ring-2 ring-emerald-500 shadow-lg bg-gradient-to-bl from-emerald-50 to-green-50 border-emerald-200' 
-          : 'hover:shadow-md bg-white/95 backdrop-blur-sm border-slate-200 hover:border-emerald-300'
+          ? 'ring-2 ring-blue-500 shadow-lg bg-gradient-to-bl from-blue-50 to-blue-50 border-blue-200' 
+          : 'hover:shadow-md bg-white/95 backdrop-blur-sm border-slate-200 hover:border-blue-300'
       }`}
     >
       <CardContent className="p-4">
@@ -97,7 +97,7 @@ const CommunityForumCard = ({ forum, isSelected, onSelect, onCreateTopic }: Foru
               {getForumIcon(forum.forum_type)}
             </div>
             <div className="flex-1 min-w-0">
-              <h3 className="font-bold text-slate-800 group-hover:text-emerald-700 transition-colors text-right truncate">
+              <h3 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-right truncate">
                 {forum.name}
               </h3>
               <p className="text-sm text-slate-600 line-clamp-2 mt-1 text-right">
@@ -105,7 +105,7 @@ const CommunityForumCard = ({ forum, isSelected, onSelect, onCreateTopic }: Foru
               </p>
             </div>
             {isSelected && (
-              <Badge className="bg-emerald-100 text-emerald-700 border-emerald-200 flex-shrink-0">
+              <Badge className="bg-blue-100 text-blue-700 border-blue-200 flex-shrink-0">
                 نشط
               </Badge>
             )}
@@ -113,13 +113,13 @@ const CommunityForumCard = ({ forum, isSelected, onSelect, onCreateTopic }: Foru
 
           {/* Stats */}
           <div className="grid grid-cols-2 gap-2">
-            <div className="bg-gradient-to-bl from-emerald-50 to-green-50 rounded-lg p-2.5 border border-emerald-100">
+            <div className="bg-gradient-to-bl from-blue-50 to-blue-50 rounded-lg p-2.5 border border-blue-100">
               <div className="flex items-center gap-2 justify-end">
-                <span className="text-xs text-emerald-700 font-medium">المواضيع</span>
-                <MessageSquare className="h-3.5 w-3.5 text-emerald-600" />
+                <span className="text-xs text-blue-700 font-medium">المواضيع</span>
+                <MessageSquare className="h-3.5 w-3.5 text-blue-600" />
               </div>
               <div className="mt-1 text-right">
-                <span className="text-lg font-bold text-emerald-800">
+                <span className="text-lg font-bold text-blue-800">
                   {formatNumber(forum.topics_count || 0)}
                 </span>
               </div>
@@ -143,7 +143,7 @@ const CommunityForumCard = ({ forum, isSelected, onSelect, onCreateTopic }: Foru
             className={`w-full justify-between text-right h-auto p-2.5 ${
               isSelected 
                 ? `bg-gradient-to-l ${getForumColor(forum.forum_type)} text-white shadow-md hover:shadow-lg` 
-                : 'bg-white/80 border border-emerald-200 hover:bg-emerald-50 text-emerald-700'
+                : 'bg-white/80 border border-blue-200 hover:bg-blue-50 text-blue-700'
             }`}
             onClick={(e) => {
               e.stopPropagation()
@@ -161,7 +161,7 @@ const CommunityForumCard = ({ forum, isSelected, onSelect, onCreateTopic }: Foru
 
           {/* Activity Indicator */}
           <div className="flex items-center justify-between pt-2 border-t border-slate-100">
-            <div className="flex items-center gap-1 text-xs text-emerald-600">
+            <div className="flex items-center gap-1 text-xs text-blue-600">
               <TrendingUp className="h-3 w-3" />
               <span>نشط</span>
             </div>

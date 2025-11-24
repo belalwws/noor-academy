@@ -434,7 +434,7 @@ const TopicDetailPage = () => {
 
   const getRoleBadgeColor = (role: string) => {
     switch (role) {
-      case 'teacher': return 'bg-green-100 text-green-800'
+      case 'teacher': return 'bg-blue-100 text-blue-800'
       case 'supervisor': return 'bg-purple-100 text-purple-800'
       default: return 'bg-blue-100 text-blue-800'
     }
@@ -479,11 +479,11 @@ const TopicDetailPage = () => {
 
   const renderPost = (post: Post, isReply = false) => (
     <div key={post.id} className={`${isReply ? 'mr-12 mt-4' : ''}`}>
-      <Card className={`${isReply ? 'bg-gradient-to-r from-emerald-25 to-green-25 border-emerald-100' : 'bg-white/80 backdrop-blur-sm border-emerald-100'} shadow-lg hover:shadow-xl transition-all duration-200`}>
+      <Card className={`${isReply ? 'bg-gradient-to-r from-blue-25 to-blue-25 border-blue-100' : 'bg-white/80 backdrop-blur-sm border-blue-100'} shadow-lg hover:shadow-xl transition-all duration-200`}>
         <CardContent className="p-6">
           <div className="flex items-start gap-4">
-            <Avatar className="w-10 h-10 ring-2 ring-emerald-200">
-              <AvatarFallback className="bg-gradient-to-br from-emerald-100 to-green-100 text-emerald-700 font-semibold">
+            <Avatar className="w-10 h-10 ring-2 ring-blue-200">
+              <AvatarFallback className="bg-gradient-to-br from-blue-100 to-blue-100 text-blue-700 font-semibold">
                 {post.author?.full_name?.charAt(0) || post.author?.username?.charAt(0) || 'م'}
               </AvatarFallback>
             </Avatar>
@@ -501,11 +501,11 @@ const TopicDetailPage = () => {
                 
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" size="sm" className="hover:bg-emerald-50 text-slate-500 hover:text-emerald-600">
+                    <Button variant="ghost" size="sm" className="hover:bg-blue-50 text-slate-500 hover:text-blue-600">
                       <MoreVertical className="w-4 h-4" />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="border-emerald-100">
+                  <DropdownMenuContent align="end" className="border-blue-100">
                     <DropdownMenuItem
                       onClick={() => {
                         setReportingPost(post.id)
@@ -519,7 +519,7 @@ const TopicDetailPage = () => {
                     </DropdownMenuItem>
                     {canEdit(post.author) && (
                       <>
-                        <DropdownMenuItem className="hover:bg-emerald-50 hover:text-emerald-600">
+                        <DropdownMenuItem className="hover:bg-blue-50 hover:text-blue-600">
                           <Edit className="w-4 h-4 ml-2" />
                           تعديل
                         </DropdownMenuItem>
@@ -555,7 +555,7 @@ const TopicDetailPage = () => {
                             href={attachment.file_url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-sm text-emerald-600 hover:text-emerald-700 truncate block"
+                            className="text-sm text-blue-600 hover:text-blue-700 truncate block"
                           >
                             {attachment.original_name}
                           </a>
@@ -607,7 +607,7 @@ const TopicDetailPage = () => {
                         setSelectedFiles([])
                       }
                     }}
-                    className="gap-1 text-slate-500 hover:text-emerald-600 hover:bg-emerald-50"
+                    className="gap-1 text-slate-500 hover:text-blue-600 hover:bg-blue-50"
                   >
                     <Reply className="w-4 h-4" />
                     رد
@@ -616,19 +616,19 @@ const TopicDetailPage = () => {
               </div>
               
               {replyingTo === post.id && (
-                <div className="mt-4 space-y-3 p-4 bg-gradient-to-r from-emerald-50 to-green-50 rounded-lg border border-emerald-100">
+                <div className="mt-4 space-y-3 p-4 bg-gradient-to-r from-blue-50 to-blue-50 rounded-lg border border-blue-100">
                   <Textarea
                     value={newReply}
                     onChange={(e: any) => handleReplyChange(e)}
                     placeholder="اكتب ردك هنا..."
-                    className="border-emerald-200 focus:border-emerald-400 focus:ring-emerald-200 resize-none"
+                    className="border-blue-200 focus:border-blue-400 focus:ring-blue-200 resize-none"
                   />
                   {showMentions && (
-                    <div className="bg-white/80 backdrop-blur-sm border-emerald-100 shadow-sm p-2 mt-2 rounded-lg">
+                    <div className="bg-white/80 backdrop-blur-sm border-blue-100 shadow-sm p-2 mt-2 rounded-lg">
                       {mentionSuggestions.map(user => (
-                        <div key={user.id} className="flex items-center gap-2 p-2 hover:bg-emerald-50 cursor-pointer" onClick={() => insertMention(user.username)}>
-                          <Avatar className="w-6 h-6 ring-2 ring-emerald-200">
-                            <AvatarFallback className="bg-gradient-to-br from-emerald-100 to-green-100 text-emerald-700 text-xs font-semibold">
+                        <div key={user.id} className="flex items-center gap-2 p-2 hover:bg-blue-50 cursor-pointer" onClick={() => insertMention(user.username)}>
+                          <Avatar className="w-6 h-6 ring-2 ring-blue-200">
+                            <AvatarFallback className="bg-gradient-to-br from-blue-100 to-blue-100 text-blue-700 text-xs font-semibold">
                               {user.name?.charAt(0) || user.username?.charAt(0) || 'U'}
                             </AvatarFallback>
                           </Avatar>
@@ -654,7 +654,7 @@ const TopicDetailPage = () => {
                         variant="outline"
                         size="sm"
                         onClick={() => document.getElementById(`file-input-${post.id}`)?.click()}
-                        className="border-emerald-200 hover:bg-emerald-50 hover:border-emerald-300"
+                        className="border-blue-200 hover:bg-blue-50 hover:border-blue-300"
                         disabled={selectedFiles.length >= 10}
                       >
                         <Paperclip className="w-4 h-4 ml-2" />
@@ -665,7 +665,7 @@ const TopicDetailPage = () => {
                     {selectedFiles.length > 0 && (
                       <div className="space-y-1">
                         {selectedFiles.map((file, index) => (
-                          <div key={index} className="flex items-center gap-2 p-2 bg-white rounded border border-emerald-200">
+                          <div key={index} className="flex items-center gap-2 p-2 bg-white rounded border border-blue-200">
                             <div className="text-slate-600">
                               {getFileIcon(
                                 file.type.startsWith('image/') ? 'image' :
@@ -697,7 +697,7 @@ const TopicDetailPage = () => {
                   <div className="flex gap-2">
                     <Button 
                       onClick={() => handleReply(post.id)}
-                      className="bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-200"
+                      className="bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-200"
                       disabled={submitting || uploadingFiles || (!newReply.trim() && selectedFiles.length === 0)}
                     >
                       {submitting && <Spinner size="sm" tone="contrast" className="ml-2" />}
@@ -710,7 +710,7 @@ const TopicDetailPage = () => {
                         setSelectedFiles([])
                       }}
                       size="sm"
-                      className="border-emerald-200 hover:bg-emerald-50 hover:border-emerald-300"
+                      className="border-blue-200 hover:bg-blue-50 hover:border-blue-300"
                     >
                       إلغاء
                     </Button>
@@ -729,14 +729,14 @@ const TopicDetailPage = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 p-6">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-50 to-teal-50 p-6">
         <div className="max-w-4xl mx-auto">
           <div className="animate-pulse space-y-6">
-            <div className="h-8 bg-gradient-to-r from-emerald-200 to-green-200 rounded-lg w-1/3"></div>
-            <div className="h-32 bg-gradient-to-r from-emerald-100 to-green-100 rounded-xl shadow-sm"></div>
+            <div className="h-8 bg-gradient-to-r from-blue-200 to-blue-200 rounded-lg w-1/3"></div>
+            <div className="h-32 bg-gradient-to-r from-blue-100 to-blue-100 rounded-xl shadow-sm"></div>
             <div className="space-y-4">
               {[1, 2, 3].map(i => (
-                <div key={i} className="h-24 bg-gradient-to-r from-emerald-50 to-green-50 rounded-xl shadow-sm"></div>
+                <div key={i} className="h-24 bg-gradient-to-r from-blue-50 to-blue-50 rounded-xl shadow-sm"></div>
               ))}
             </div>
           </div>
@@ -747,14 +747,14 @@ const TopicDetailPage = () => {
 
   if (!topic) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 p-6">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-50 to-teal-50 p-6">
         <div className="max-w-4xl mx-auto text-center py-12">
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-emerald-100 p-8">
-            <h2 className="text-2xl font-bold bg-gradient-to-r from-emerald-700 to-green-700 bg-clip-text text-transparent mb-4">
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-blue-100 p-8">
+            <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-700 to-blue-700 bg-clip-text text-transparent mb-4">
               الموضوع غير موجود
             </h2>
             <Link href="/community">
-              <Button className="bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-200">
+              <Button className="bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-200">
                 العودة للمجتمع
               </Button>
             </Link>
@@ -765,13 +765,13 @@ const TopicDetailPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 p-6" dir="rtl">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-50 to-teal-50 p-6" dir="rtl">
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Back Button */}
         <Link href="/community">
           <Button 
             variant="ghost" 
-            className="gap-2 hover:bg-emerald-100 text-emerald-700 hover:text-emerald-800 transition-colors"
+            className="gap-2 hover:bg-blue-100 text-blue-700 hover:text-blue-800 transition-colors"
           >
             <ArrowRight className="w-4 h-4" />
             العودة للمجتمع
@@ -779,9 +779,9 @@ const TopicDetailPage = () => {
         </Link>
 
         {/* Topic Header */}
-        <Card className="bg-white/80 backdrop-blur-sm shadow-lg border-emerald-100 hover:shadow-xl transition-shadow duration-200">
-          <CardHeader className="bg-gradient-to-r from-emerald-50 to-green-50 rounded-t-lg">
-            <div className="flex items-center gap-2 text-sm text-emerald-600 mb-2">
+        <Card className="bg-white/80 backdrop-blur-sm shadow-lg border-blue-100 hover:shadow-xl transition-shadow duration-200">
+          <CardHeader className="bg-gradient-to-r from-blue-50 to-blue-50 rounded-t-lg">
+            <div className="flex items-center gap-2 text-sm text-blue-600 mb-2">
               <span className="text-lg">{topic.forum.icon}</span>
               <span className="font-medium">{topic.forum.name}</span>
             </div>
@@ -790,14 +790,14 @@ const TopicDetailPage = () => {
                 <div className="flex items-center gap-2">
                   {topic.is_pinned && <Pin className="w-5 h-5 text-amber-500" />}
                   {topic.is_locked && <Lock className="w-5 h-5 text-slate-500" />}
-                  <CardTitle className="text-2xl bg-gradient-to-r from-emerald-800 to-green-800 bg-clip-text text-transparent">
+                  <CardTitle className="text-2xl bg-gradient-to-r from-blue-800 to-blue-800 bg-clip-text text-transparent">
                     {topic.title}
                   </CardTitle>
                 </div>
                 <div className="flex items-center gap-4 text-sm text-slate-600">
                   <div className="flex items-center gap-2">
-                    <Avatar className="w-6 h-6 ring-2 ring-emerald-200">
-                      <AvatarFallback className="bg-gradient-to-br from-emerald-100 to-green-100 text-emerald-700 text-xs font-semibold">
+                    <Avatar className="w-6 h-6 ring-2 ring-blue-200">
+                      <AvatarFallback className="bg-gradient-to-br from-blue-100 to-blue-100 text-blue-700 text-xs font-semibold">
                         {topic.author?.full_name?.charAt(0) || topic.author?.username?.charAt(0) || 'U'}
                       </AvatarFallback>
                     </Avatar>
@@ -811,7 +811,7 @@ const TopicDetailPage = () => {
                   <span>•</span>
                   <span>{formatDate(topic.created_at)}</span>
                   <span>•</span>
-                  <div className="flex items-center gap-1 text-emerald-600">
+                  <div className="flex items-center gap-1 text-blue-600">
                     <Eye className="w-4 h-4" />
                     <span>{topic.views_count} مشاهدة</span>
                   </div>
@@ -819,7 +819,7 @@ const TopicDetailPage = () => {
                     variant="ghost" 
                     size="sm" 
                     onClick={handleBookmark} 
-                    className={`text-emerald-600 hover:text-emerald-800 ${isBookmarked ? 'text-emerald-800' : ''}`}
+                    className={`text-blue-600 hover:text-blue-800 ${isBookmarked ? 'text-blue-800' : ''}`}
                   >
                     <Bookmark className={`w-4 h-4 ${isBookmarked ? 'fill-current' : ''}`} />
                     إشارة مرجعية
@@ -828,11 +828,11 @@ const TopicDetailPage = () => {
               </div>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="sm" className="hover:bg-emerald-50 text-slate-500 hover:text-emerald-600">
+                  <Button variant="ghost" size="sm" className="hover:bg-blue-50 text-slate-500 hover:text-blue-600">
                     <MoreVertical className="w-4 h-4" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="border-emerald-100">
+                <DropdownMenuContent align="end" className="border-blue-100">
                   <DropdownMenuItem
                     onClick={() => {
                       setReportingTopic(true)
@@ -857,7 +857,7 @@ const TopicDetailPage = () => {
                   </DropdownMenuItem>
                   {canEdit(topic.author) && (
                     <>
-                      <DropdownMenuItem className="hover:bg-emerald-50 hover:text-emerald-600">
+                      <DropdownMenuItem className="hover:bg-blue-50 hover:text-blue-600">
                         <Edit className="w-4 h-4 ml-2" />
                         تعديل
                       </DropdownMenuItem>
@@ -878,15 +878,15 @@ const TopicDetailPage = () => {
           </CardContent>
         </Card>
 
-        <Separator className="bg-gradient-to-r from-transparent via-emerald-200 to-transparent" />
+        <Separator className="bg-gradient-to-r from-transparent via-blue-200 to-transparent" />
 
         {/* Posts */}
         <div className="space-y-6">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-gradient-to-br from-emerald-100 to-green-100 rounded-lg">
-              <MessageSquare className="w-5 h-5 text-emerald-600" />
+            <div className="p-2 bg-gradient-to-br from-blue-100 to-blue-100 rounded-lg">
+              <MessageSquare className="w-5 h-5 text-blue-600" />
             </div>
-            <h3 className="text-xl font-semibold bg-gradient-to-r from-emerald-700 to-green-700 bg-clip-text text-transparent">
+            <h3 className="text-xl font-semibold bg-gradient-to-r from-blue-700 to-blue-700 bg-clip-text text-transparent">
               المشاركات ({posts.length})
             </h3>
           </div>
@@ -894,7 +894,7 @@ const TopicDetailPage = () => {
           {postsLoading ? (
             <div className="flex justify-center py-12">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-r from-emerald-200 to-green-200 rounded-full animate-pulse"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-200 to-blue-200 rounded-full animate-pulse"></div>
                 <Spinner size="lg" className="absolute top-2 left-2" />
               </div>
             </div>
@@ -905,9 +905,9 @@ const TopicDetailPage = () => {
 
         {/* New Reply Form */}
         {!topic.is_locked && user ? (
-          <Card className="bg-white/80 backdrop-blur-sm shadow-lg border-emerald-100 hover:shadow-xl transition-shadow duration-200">
-            <CardHeader className="bg-gradient-to-r from-emerald-50 to-green-50 rounded-t-lg">
-              <CardTitle className="text-lg bg-gradient-to-r from-emerald-700 to-green-700 bg-clip-text text-transparent">
+          <Card className="bg-white/80 backdrop-blur-sm shadow-lg border-blue-100 hover:shadow-xl transition-shadow duration-200">
+            <CardHeader className="bg-gradient-to-r from-blue-50 to-blue-50 rounded-t-lg">
+              <CardTitle className="text-lg bg-gradient-to-r from-blue-700 to-blue-700 bg-clip-text text-transparent">
                 إضافة مشاركة جديدة
               </CardTitle>
             </CardHeader>
@@ -916,14 +916,14 @@ const TopicDetailPage = () => {
                 value={newReply}
                 onChange={(e: any) => handleReplyChange(e)}
                 placeholder="اكتب ردك هنا..."
-                className="border-emerald-200 focus:border-emerald-400 focus:ring-emerald-200 resize-none"
+                className="border-blue-200 focus:border-blue-400 focus:ring-blue-200 resize-none"
               />
               {showMentions && (
-                <div className="bg-white/80 backdrop-blur-sm border-emerald-100 shadow-sm p-2 mt-2 rounded-lg">
+                <div className="bg-white/80 backdrop-blur-sm border-blue-100 shadow-sm p-2 mt-2 rounded-lg">
                   {mentionSuggestions.map(user => (
-                    <div key={user.id} className="flex items-center gap-2 p-2 hover:bg-emerald-50 cursor-pointer" onClick={() => insertMention(user.username)}>
-                      <Avatar className="w-6 h-6 ring-2 ring-emerald-200">
-                        <AvatarFallback className="bg-gradient-to-br from-emerald-100 to-green-100 text-emerald-700 text-xs font-semibold">
+                    <div key={user.id} className="flex items-center gap-2 p-2 hover:bg-blue-50 cursor-pointer" onClick={() => insertMention(user.username)}>
+                      <Avatar className="w-6 h-6 ring-2 ring-blue-200">
+                        <AvatarFallback className="bg-gradient-to-br from-blue-100 to-blue-100 text-blue-700 text-xs font-semibold">
                           {user.name?.charAt(0) || user.username?.charAt(0) || 'U'}
                         </AvatarFallback>
                       </Avatar>
@@ -949,7 +949,7 @@ const TopicDetailPage = () => {
                     variant="outline"
                     size="sm"
                     onClick={() => document.getElementById('file-input-main')?.click()}
-                    className="border-emerald-200 hover:bg-emerald-50 hover:border-emerald-300"
+                    className="border-blue-200 hover:bg-blue-50 hover:border-blue-300"
                     disabled={selectedFiles.length >= 10}
                   >
                     <Paperclip className="w-4 h-4 ml-2" />
@@ -960,7 +960,7 @@ const TopicDetailPage = () => {
                 {selectedFiles.length > 0 && (
                   <div className="space-y-1">
                     {selectedFiles.map((file, index) => (
-                      <div key={index} className="flex items-center gap-2 p-2 bg-white rounded border border-emerald-200">
+                      <div key={index} className="flex items-center gap-2 p-2 bg-white rounded border border-blue-200">
                         <div className="text-slate-600">
                           {getFileIcon(
                             file.type.startsWith('image/') ? 'image' :
@@ -992,7 +992,7 @@ const TopicDetailPage = () => {
               <div className="flex gap-2">
                 <Button 
                   onClick={() => handleReply()}
-                  className="bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-200"
+                  className="bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-200"
                   disabled={(!newReply.trim() && selectedFiles.length === 0) || submitting || uploadingFiles}
                 >
                   {submitting && <Spinner size="sm" tone="contrast" className="ml-2" />}
@@ -1028,9 +1028,9 @@ const TopicDetailPage = () => {
 
       {/* Report Dialog */}
       <Dialog open={showReportDialog} onOpenChange={setShowReportDialog}>
-        <DialogContent dir="rtl" className="border-emerald-100">
+        <DialogContent dir="rtl" className="border-blue-100">
           <DialogHeader>
-            <DialogTitle className="bg-gradient-to-r from-emerald-700 to-green-700 bg-clip-text text-transparent">
+            <DialogTitle className="bg-gradient-to-r from-blue-700 to-blue-700 bg-clip-text text-transparent">
               إبلاغ عن محتوى غير مناسب
             </DialogTitle>
             <DialogDescription className="text-slate-600">
@@ -1041,10 +1041,10 @@ const TopicDetailPage = () => {
             <div>
               <label className="text-sm font-medium mb-2 block text-slate-700">سبب الإبلاغ</label>
               <Select value={reportData.reason} onValueChange={(value) => setReportData({...reportData, reason: value})}>
-                <SelectTrigger className="border-emerald-200 focus:border-emerald-400 focus:ring-emerald-200">
+                <SelectTrigger className="border-blue-200 focus:border-blue-400 focus:ring-blue-200">
                   <SelectValue placeholder="اختر السبب" />
                 </SelectTrigger>
-                <SelectContent className="border-emerald-100">
+                <SelectContent className="border-blue-100">
                   <SelectItem value="inappropriate">محتوى غير مناسب</SelectItem>
                   <SelectItem value="spam">رسائل مزعجة</SelectItem>
                   <SelectItem value="harassment">تحرش أو إساءة</SelectItem>
@@ -1060,14 +1060,14 @@ const TopicDetailPage = () => {
                 value={reportData.description}
                 onChange={(e) => setReportData({...reportData, description: e.target.value})}
                 rows={3}
-                className="border-emerald-200 focus:border-emerald-400 focus:ring-emerald-200 resize-none"
+                className="border-blue-200 focus:border-blue-400 focus:ring-blue-200 resize-none"
               />
             </div>
             <div className="flex gap-3 justify-end">
               <Button 
                 variant="outline" 
                 onClick={() => setShowReportDialog(false)}
-                className="border-emerald-200 hover:bg-emerald-50 hover:border-emerald-300"
+                className="border-blue-200 hover:bg-blue-50 hover:border-blue-300"
               >
                 إلغاء
               </Button>

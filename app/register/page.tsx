@@ -149,7 +149,7 @@ export default function RegisterPage() {
 
   // نستخدم عرض progress عبر classes (بدون inline style)
   const getPasswordStrengthBucket = (score: number) => {
-    if (score >= 80) return { w: 'w-full', color: 'bg-emerald-500 dark:bg-emerald-400' };
+    if (score >= 80) return { w: 'w-full', color: 'bg-blue-500 dark:bg-blue-400' };
     if (score >= 60) return { w: 'w-4/5', color: 'bg-yellow-500' };
     if (score >= 40) return { w: 'w-3/5', color: 'bg-orange-500' };
     if (score >= 20) return { w: 'w-2/5', color: 'bg-red-500' };
@@ -313,7 +313,7 @@ export default function RegisterPage() {
   return (
     <div dir="rtl" className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center py-10 px-4 relative overflow-hidden pt-24">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-[#0A5734]/10 to-[#4A8F5C]/10 rounded-full blur-3xl opacity-30 dark:opacity-20"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-[#1e40af]/10 to-[#2563eb]/10 rounded-full blur-3xl opacity-30 dark:opacity-20"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#C5A15A]/10 rounded-full blur-3xl opacity-30 dark:opacity-20"></div>
       </div>
       <motion.div
@@ -328,11 +328,11 @@ export default function RegisterPage() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="order-1 rounded-3xl p-8 lg:p-12 bg-gradient-to-br from-[#0A5734]/5 to-[#4A8F5C]/5 dark:from-[#0A5734]/10 dark:to-[#4A8F5C]/10 backdrop-blur-xl shadow-2xl border border-[#0A5734]/20 dark:border-[#4A8F5C]/20 flex flex-col justify-center relative z-10"
+            className="order-1 rounded-3xl p-8 lg:p-12 bg-gradient-to-br from-[#1e40af]/5 to-[#2563eb]/5 dark:from-blue-500/10 dark:to-blue-400/10 backdrop-blur-xl shadow-2xl border border-[#1e40af]/20 dark:border-blue-400/20 flex flex-col justify-center relative z-10"
           >
             <div className="flex flex-col items-center text-center space-y-6">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#0A5734] to-[#4A8F5C] rounded-2xl blur-2xl opacity-30" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1e40af] to-[#2563eb] rounded-2xl blur-2xl opacity-30" />
                 <Image
                   src="/logo.png"
                   alt="شعار أكاديمية نور"
@@ -343,18 +343,18 @@ export default function RegisterPage() {
                 />
               </div>
               <div>
-                <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#0A5734] to-[#4A8F5C] dark:from-[#4A8F5C] dark:to-[#5BA86D] bg-clip-text text-transparent">
+                <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#1e40af] to-[#2563eb] dark:from-blue-400 dark:to-[#3b82f6] bg-clip-text text-transparent">
                   أكاديمية نور
                 </h1>
-                <p className="mt-3 text-lg text-[#0A5734]/70 dark:text-[#4A8F5C]/70 font-medium">
+                <p className="mt-3 text-lg text-[#1e40af]/70 dark:text-blue-400/70 font-medium">
                   بيئة قرآنية تربوية متكاملة
                 </p>
               </div>
-              <p className="text-[#0A5734]/60 dark:text-[#4A8F5C]/60 leading-relaxed max-w-sm">
+              <p className="text-[#1e40af]/60 dark:text-blue-400/60 leading-relaxed max-w-sm">
                 انضم لرحلة تعليمية مُنظمة وممتعة مع أفضل المعلمين والمحتوى الإسلامي الموثوق
               </p>
 
-              <div className="mt-8 w-full h-48 rounded-2xl bg-gradient-to-br from-[#0A5734]/20 to-[#4A8F5C]/20 dark:from-[#0A5734]/10 dark:to-[#4A8F5C]/10 border border-[#0A5734]/30 dark:border-[#4A8F5C]/30 shadow-inner flex items-center justify-center overflow-hidden">
+              <div className="mt-8 w-full h-48 rounded-2xl bg-gradient-to-br from-[#1e40af]/20 to-[#2563eb]/20 dark:from-blue-500/10 dark:to-blue-400/10 border border-[#1e40af]/30 dark:border-blue-400/30 shadow-inner flex items-center justify-center overflow-hidden">
                 {lottieData ? (
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -372,7 +372,7 @@ export default function RegisterPage() {
                 ) : (
                   <div className="text-center">
                     <div className="text-4xl mb-2 animate-pulse">📚</div>
-                    <p className="text-sm text-[#0A5734]/60 dark:text-[#4A8F5C]/60">تعليم إسلامي متميز</p>
+                    <p className="text-sm text-[#1e40af]/60 dark:text-blue-400/60">تعليم إسلامي متميز</p>
                   </div>
                 )}
               </div>
@@ -422,7 +422,7 @@ export default function RegisterPage() {
                     className={`w-full px-4 py-3 rounded-lg border-2 transition-all focus:outline-none ${
                       getFieldError('first_name')
                         ? 'border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-200 dark:focus:ring-red-900'
-                        : 'border-slate-200 dark:border-slate-700 focus:border-[#0A5734] focus:ring-2 focus:ring-[#0A5734]/20 dark:focus:ring-[#4A8F5C]/20'
+                        : 'border-slate-200 dark:border-slate-700 focus:border-[#1e40af] focus:ring-2 focus:ring-[#1e40af]/20 dark:focus:ring-[#2563eb]/20'
                     } bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white`}
                     required
                   />
@@ -439,7 +439,7 @@ export default function RegisterPage() {
                     className={`w-full px-4 py-3 rounded-lg border-2 transition-all focus:outline-none ${
                       getFieldError('last_name')
                         ? 'border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-200 dark:focus:ring-red-900'
-                        : 'border-slate-200 dark:border-slate-700 focus:border-[#0A5734] focus:ring-2 focus:ring-[#0A5734]/20 dark:focus:ring-[#4A8F5C]/20'
+                        : 'border-slate-200 dark:border-slate-700 focus:border-[#1e40af] focus:ring-2 focus:ring-[#1e40af]/20 dark:focus:ring-[#2563eb]/20'
                     } bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white`}
                     required
                   />
@@ -496,7 +496,7 @@ export default function RegisterPage() {
                       <div className="flex items-center justify-between text-xs font-medium text-slate-600 dark:text-slate-400">
                         <span>قوة كلمة المرور</span>
                         <span className={`px-2 py-1 rounded-full text-white text-xs font-bold ${
-                          score >= 80 ? 'bg-emerald-500' :
+                          score >= 80 ? 'bg-blue-500' :
                           score >= 60 ? 'bg-yellow-500' :
                           score >= 40 ? 'bg-orange-500' :
                           'bg-red-500'
@@ -513,16 +513,16 @@ export default function RegisterPage() {
                         />
                       </div>
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-xs">
-                        <span className={`flex items-center gap-1 ${formData.password.length >= 8 ? 'text-emerald-600 dark:text-emerald-400 font-medium' : 'text-slate-500 dark:text-slate-500'}`}>
+                        <span className={`flex items-center gap-1 ${formData.password.length >= 8 ? 'text-blue-600 dark:text-blue-400 font-medium' : 'text-slate-500 dark:text-slate-500'}`}>
                           {formData.password.length >= 8 ? '✓' : '○'} ٨ أحرف
                         </span>
-                        <span className={`flex items-center gap-1 ${/[A-Z]/.test(formData.password) ? 'text-emerald-600 dark:text-emerald-400 font-medium' : 'text-slate-500 dark:text-slate-500'}`}>
+                        <span className={`flex items-center gap-1 ${/[A-Z]/.test(formData.password) ? 'text-blue-600 dark:text-blue-400 font-medium' : 'text-slate-500 dark:text-slate-500'}`}>
                           {/[A-Z]/.test(formData.password) ? '✓' : '○'} حرف كبير
                         </span>
-                        <span className={`flex items-center gap-1 ${/[a-z]/.test(formData.password) ? 'text-emerald-600 dark:text-emerald-400 font-medium' : 'text-slate-500 dark:text-slate-500'}`}>
+                        <span className={`flex items-center gap-1 ${/[a-z]/.test(formData.password) ? 'text-blue-600 dark:text-blue-400 font-medium' : 'text-slate-500 dark:text-slate-500'}`}>
                           {/[a-z]/.test(formData.password) ? '✓' : '○'} حرف صغير
                         </span>
-                        <span className={`flex items-center gap-1 ${/\d/.test(formData.password) ? 'text-emerald-600 dark:text-emerald-400 font-medium' : 'text-slate-500 dark:text-slate-500'}`}>
+                        <span className={`flex items-center gap-1 ${/\d/.test(formData.password) ? 'text-blue-600 dark:text-blue-400 font-medium' : 'text-slate-500 dark:text-slate-500'}`}>
                           {/\d/.test(formData.password) ? '✓' : '○'} رقم
                         </span>
                       </div>
@@ -601,7 +601,7 @@ export default function RegisterPage() {
                     </motion.div>
                   )}
                   <div className="mt-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 px-3 py-2 text-xs text-slate-600 dark:text-slate-400">
-                    <div className="font-semibold text-[#0A5734] dark:text-[#4A8F5C] mb-1">💡 إرشاد:</div>
+                    <div className="font-semibold text-[#1e40af] dark:text-blue-400 mb-1">💡 إرشاد:</div>
                     <div>
                       أدخل الرقم بدون رمز الدولة (مثال: <span className="font-semibold text-slate-900 dark:text-slate-200">501234567</span>) — من 7 إلى 14 رقم فقط.
                     </div>
@@ -657,11 +657,11 @@ export default function RegisterPage() {
                   type="checkbox"
                   checked={formData.accept_terms}
                   onChange={handleInputChange}
-                  className="mt-1 h-5 w-5 rounded border-2 border-slate-300 dark:border-slate-600 text-[#0A5734] focus:ring-2 focus:ring-[#0A5734]/20 dark:focus:ring-[#4A8F5C]/20 cursor-pointer"
+                  className="mt-1 h-5 w-5 rounded border-2 border-slate-300 dark:border-slate-600 text-[#1e40af] focus:ring-2 focus:ring-[#1e40af]/20 dark:focus:ring-[#2563eb]/20 cursor-pointer"
                   required
                 />
                 <label htmlFor="accept_terms" className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-                  أوافق على <Link href="/terms" className="text-[#0A5734] dark:text-[#4A8F5C] hover:underline font-medium">الشروط والأحكام</Link> و <Link href="/privacy" className="text-[#0A5734] dark:text-[#4A8F5C] hover:underline font-medium">سياسة الخصوصية</Link>
+                  أوافق على <Link href="/terms" className="text-[#1e40af] dark:text-blue-400 hover:underline font-medium">الشروط والأحكام</Link> و <Link href="/privacy" className="text-[#1e40af] dark:text-blue-400 hover:underline font-medium">سياسة الخصوصية</Link>
                 </label>
               </div>
               {errors['accept_terms'] && <p className="mt-2 text-sm text-red-600 dark:text-red-400">{errors['accept_terms']}</p>}
@@ -672,7 +672,7 @@ export default function RegisterPage() {
                 whileTap={{ scale: 0.98 }}
                 disabled={isSubmitting}
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#0A5734] to-[#4A8F5C] hover:from-[#073D24] hover:to-[#3A7148] text-white font-bold py-3 shadow-lg hover:shadow-xl transition disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:from-[#0A5734] disabled:hover:to-[#4A8F5C]"
+                className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#1e40af] to-[#2563eb] hover:from-[#1e3a8a] hover:to-[#1e40af] text-white font-bold py-3 shadow-lg hover:shadow-xl transition disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:from-[#1e40af] disabled:hover:to-[#2563eb]"
               >
                 {isSubmitting ? (
                   <>
@@ -689,11 +689,11 @@ export default function RegisterPage() {
 
               <div className="pt-6 border-t border-slate-200 dark:border-slate-700">
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-slate-600 dark:text-slate-400">
-                  <Link href="/login" className="inline-flex items-center gap-2 text-[#0A5734] dark:text-[#4A8F5C] hover:text-[#073D24] dark:hover:text-[#3A7148] font-medium transition">
+                  <Link href="/login" className="inline-flex items-center gap-2 text-[#1e40af] dark:text-blue-400 hover:text-[#1e3a8a] dark:hover:text-blue-400 font-medium transition">
                     <LogIn size={16} /> لديك حساب؟ تسجيل الدخول
                   </Link>
                   <span className="hidden sm:block text-slate-300 dark:text-slate-600">•</span>
-                  <Link href="/" className="inline-flex items-center gap-2 text-[#0A5734] dark:text-[#4A8F5C] hover:text-[#073D24] dark:hover:text-[#3A7148] font-medium transition">
+                  <Link href="/" className="inline-flex items-center gap-2 text-[#1e40af] dark:text-blue-400 hover:text-[#1e3a8a] dark:hover:text-blue-400 font-medium transition">
                     <Home size={16} /> العودة للرئيسية
                   </Link>
                 </div>

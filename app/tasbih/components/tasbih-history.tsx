@@ -221,7 +221,7 @@ export function TasbihHistory() {
           </p>
           <button
             onClick={() => setFilter('all')}
-            className="px-6 py-3 bg-emerald-500/20 text-emerald-300 rounded-xl hover:bg-emerald-500/30 transition-all duration-300"
+            className="px-6 py-3 bg-blue-500/20 text-blue-300 rounded-xl hover:bg-blue-500/30 transition-all duration-300"
           >
             عرض جميع الجلسات
           </button>
@@ -234,7 +234,7 @@ export function TasbihHistory() {
           <h3 className="text-lg font-semibold text-white mb-4">ملخص الفترة</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="text-center">
-              <p className="text-2xl font-bold text-emerald-400">
+              <p className="text-2xl font-bold text-blue-400">
                 {filteredSessions.length}
               </p>
               <p className="text-white/70 text-sm">جلسة</p>

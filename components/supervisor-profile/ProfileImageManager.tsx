@@ -123,10 +123,10 @@ const ProfileImageManager: React.FC<ProfileImageManagerProps> = ({
     <div className={`space-y-6 ${className}`}>
       {/* Header */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-50/80 via-green-50/60 to-slate-50/80 rounded-xl" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-50/80 via-blue-50/60 to-slate-50/80 rounded-xl" />
         <div className="relative bg-white/90 backdrop-blur-sm border border-slate-200/60 rounded-xl p-6 shadow-sm">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-8 h-8 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
               <Camera className="w-4 h-4 text-white" />
             </div>
             <h3 className="text-lg font-bold text-slate-800">الصورة الشخصية</h3>
@@ -193,8 +193,8 @@ const ProfileImageManager: React.FC<ProfileImageManagerProps> = ({
               {hasProfileImage ? (
                 <div className="space-y-3">
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                    <span className="text-sm font-medium text-green-800">تم رفع الصورة الشخصية</span>
+                    <CheckCircle className="w-4 h-4 text-blue-600" />
+                    <span className="text-sm font-medium text-blue-800">تم رفع الصورة الشخصية</span>
                   </div>
                   
                   <div className="flex gap-2">
@@ -202,7 +202,7 @@ const ProfileImageManager: React.FC<ProfileImageManagerProps> = ({
                       onClick={openFileDialog}
                       disabled={isUploading || isDeleting}
                       size="sm"
-                      className="bg-green-600 hover:bg-green-700 text-white"
+                      className="bg-blue-600 hover:bg-blue-700 text-white"
                     >
                       <Upload className="w-4 h-4 ml-2" />
                       تغيير الصورة
@@ -235,7 +235,7 @@ const ProfileImageManager: React.FC<ProfileImageManagerProps> = ({
                     onClick={openFileDialog}
                     disabled={isUploading || isDeleting}
                     size="sm"
-                    className="bg-green-600 hover:bg-green-700 text-white"
+                    className="bg-blue-600 hover:bg-blue-700 text-white"
                   >
                     <Upload className="w-4 h-4 ml-2" />
                     رفع صورة شخصية
@@ -313,7 +313,7 @@ const ProfileImageManager: React.FC<ProfileImageManagerProps> = ({
                     onClick={handleUpload}
                     disabled={isUploading}
                     size="sm"
-                    className="bg-green-600 hover:bg-green-700 text-white"
+                    className="bg-blue-600 hover:bg-blue-700 text-white"
                   >
                     {isUploading ? (
                       <Spinner size="sm" className="ml-2" />

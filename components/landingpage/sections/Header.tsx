@@ -260,7 +260,7 @@ export const Header: React.FC = () => {
                 priority
               />
               <div className="hidden sm:block">
-                <h1 className="text-xl font-bold text-[#0A5734] dark:text-[#4A8F5C]">أكاديمية نور</h1>
+                <h1 className="text-xl font-bold text-[#1e40af] dark:text-blue-400">أكاديمية نور</h1>
                 <p className="text-xs text-[#555555] dark:text-slate-400">نور يهتدي به في دروب الحياة</p>
               </div>
             </motion.div>
@@ -276,8 +276,8 @@ export const Header: React.FC = () => {
                 transition={{ delay: 0 * 0.1 }}
                 className={`font-medium transition-colors cursor-pointer relative pb-1 ${
                   isActive('/')
-                    ? 'text-[#0A5734] dark:text-[#4A8F5C] border-b-2 border-[#0A5734] dark:border-[#4A8F5C]'
-                    : 'text-[#222222] dark:text-slate-200 hover:text-[#0A5734] dark:hover:text-[#4A8F5C]'
+                    ? 'text-[#1e40af] dark:text-blue-400 border-b-2 border-[#1e40af] dark:border-blue-400'
+                    : 'text-[#222222] dark:text-slate-200 hover:text-[#1e40af] dark:hover:text-blue-400'
                 }`}
               >
                 الرئيسية
@@ -286,7 +286,7 @@ export const Header: React.FC = () => {
 
             {/* الدورات Dropdown */}
             <div className="relative group/courses">
-              <button className="text-[#222222] dark:text-slate-200 hover:text-[#0A5734] dark:hover:text-[#4A8F5C] font-medium transition-colors flex items-center gap-1 py-2">
+              <button className="text-[#222222] dark:text-slate-200 hover:text-[#1e40af] dark:hover:text-blue-400 font-medium transition-colors flex items-center gap-1 py-2">
                 الدورات
                 <ChevronDown size={16} className="group-hover/courses:rotate-180 transition-transform" />
               </button>
@@ -297,7 +297,7 @@ export const Header: React.FC = () => {
                   <Link
                     key={course.label}
                     href={course.href}
-                    className={`block px-6 py-4 text-[#555555] dark:text-slate-300 hover:text-[#0A5734] dark:hover:text-[#4A8F5C] hover:bg-[#0A5734]/5 dark:hover:bg-[#4A8F5C]/10 transition-colors font-medium ${
+                    className={`block px-6 py-4 text-[#555555] dark:text-slate-300 hover:text-[#1e40af] dark:hover:text-blue-400 hover:bg-[#1e40af]/5 dark:hover:bg-blue-400/10 transition-colors font-medium ${
                       idx === 0 ? 'rounded-t-2xl pt-6' : ''
                     } ${idx === coursesMenu.length - 1 ? 'rounded-b-2xl pb-6' : ''}`}
                   >
@@ -316,8 +316,8 @@ export const Header: React.FC = () => {
                 transition={{ delay: 2 * 0.1 }}
                 className={`font-medium transition-colors cursor-pointer relative pb-1 ${
                   isActive('/interactive-learning')
-                    ? 'text-[#0A5734] dark:text-[#4A8F5C] border-b-2 border-[#0A5734] dark:border-[#4A8F5C]'
-                    : 'text-[#222222] dark:text-slate-200 hover:text-[#0A5734] dark:hover:text-[#4A8F5C]'
+                    ? 'text-[#1e40af] dark:text-blue-400 border-b-2 border-[#1e40af] dark:border-blue-400'
+                    : 'text-[#222222] dark:text-slate-200 hover:text-[#1e40af] dark:hover:text-blue-400'
                 }`}
               >
                 الألعاب التفاعلية
@@ -326,7 +326,7 @@ export const Header: React.FC = () => {
 
             {/* الأدوات الإسلامية Dropdown */}
             <div className="relative group/islamic">
-              <button className="text-[#222222] dark:text-slate-200 hover:text-[#0A5734] dark:hover:text-[#4A8F5C] font-medium transition-colors flex items-center gap-1 py-2">
+              <button className="text-[#222222] dark:text-slate-200 hover:text-[#1e40af] dark:hover:text-blue-400 font-medium transition-colors flex items-center gap-1 py-2">
                 الأدوات الإسلامية
                 <ChevronDown size={16} className="group-hover/islamic:rotate-180 transition-transform" />
               </button>
@@ -337,7 +337,7 @@ export const Header: React.FC = () => {
                   <Link
                     key={tool.label}
                     href={tool.href}
-                    className={`block px-6 py-4 text-[#555555] dark:text-slate-300 hover:text-[#0A5734] dark:hover:text-[#4A8F5C] hover:bg-[#0A5734]/5 dark:hover:bg-[#4A8F5C]/10 transition-colors font-medium ${
+                    className={`block px-6 py-4 text-[#555555] dark:text-slate-300 hover:text-[#1e40af] dark:hover:text-blue-400 hover:bg-[#1e40af]/5 dark:hover:bg-blue-400/10 transition-colors font-medium ${
                       idx === 0 ? 'rounded-t-2xl pt-6' : ''
                     } ${idx === islamicTools.length - 1 ? 'rounded-b-2xl pb-6' : ''}`}
                   >
@@ -355,8 +355,8 @@ export const Header: React.FC = () => {
                 transition={{ delay: 4 * 0.1 }}
                 className={`font-medium transition-colors cursor-pointer relative pb-1 ${
                   isActive('/about')
-                    ? 'text-[#0A5734] dark:text-[#4A8F5C] border-b-2 border-[#0A5734] dark:border-[#4A8F5C]'
-                    : 'text-[#222222] dark:text-slate-200 hover:text-[#0A5734] dark:hover:text-[#4A8F5C]'
+                    ? 'text-[#1e40af] dark:text-blue-400 border-b-2 border-[#1e40af] dark:border-blue-400'
+                    : 'text-[#222222] dark:text-slate-200 hover:text-[#1e40af] dark:hover:text-blue-400'
                 }`}
               >
                 عن الأكاديمية
@@ -371,8 +371,8 @@ export const Header: React.FC = () => {
                 transition={{ delay: 5 * 0.1 }}
                 className={`font-medium transition-colors cursor-pointer relative pb-1 ${
                   isActive('/contact-us')
-                    ? 'text-[#0A5734] dark:text-[#4A8F5C] border-b-2 border-[#0A5734] dark:border-[#4A8F5C]'
-                    : 'text-[#222222] dark:text-slate-200 hover:text-[#0A5734] dark:hover:text-[#4A8F5C]'
+                    ? 'text-[#1e40af] dark:text-blue-400 border-b-2 border-[#1e40af] dark:border-blue-400'
+                    : 'text-[#222222] dark:text-slate-200 hover:text-[#1e40af] dark:hover:text-blue-400'
                 }`}
               >
                 تواصل معنا
@@ -451,7 +451,7 @@ export const Header: React.FC = () => {
                   </Button>
                 </Link>
                 <Link href="/register">
-                  <Button variant="primary" size="sm" className="bg-[#0A5734] hover:bg-[#073D24] text-white">
+                  <Button variant="primary" size="sm" className="bg-[#1e40af] hover:bg-[#1e3a8a] text-white">
                     إنشاء حساب
                   </Button>
                 </Link>
@@ -502,8 +502,8 @@ export const Header: React.FC = () => {
                 onClick={() => setIsMenuOpen(false)}
                 className={`font-medium transition-colors py-2 border-r-4 pr-2 ${
                   isActive('/')
-                    ? 'text-[#0A5734] dark:text-[#4A8F5C] border-r-[#0A5734] dark:border-r-[#4A8F5C]'
-                    : 'text-[#222222] dark:text-slate-200 hover:text-[#0A5734] border-r-transparent'
+                    ? 'text-[#1e40af] dark:text-blue-400 border-r-[#1e40af] dark:border-r-[#2563eb]'
+                    : 'text-[#222222] dark:text-slate-200 hover:text-[#1e40af] border-r-transparent'
                 }`}
               >
                 الرئيسية
@@ -520,7 +520,7 @@ export const Header: React.FC = () => {
                     <Link
                       key={course.label}
                       href={course.href}
-                      className="text-[#555555] dark:text-slate-300 hover:text-[#0A5734] transition-colors py-1 block"
+                      className="text-[#555555] dark:text-slate-300 hover:text-[#1e40af] transition-colors py-1 block"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <span className="mr-2">{course.icon}</span>
@@ -554,7 +554,7 @@ export const Header: React.FC = () => {
                     <Link
                       key={tool.label}
                       href={tool.href}
-                      className="text-[#555555] dark:text-slate-300 hover:text-[#0A5734] transition-colors py-1 block"
+                      className="text-[#555555] dark:text-slate-300 hover:text-[#1e40af] transition-colors py-1 block"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {tool.label}
@@ -628,7 +628,7 @@ export const Header: React.FC = () => {
                       </Button>
                     </Link>
                     <Link href="/register" className="w-full">
-                      <Button variant="primary" size="md" className="w-full bg-[#0A5734] hover:bg-[#073D24] text-white">
+                      <Button variant="primary" size="md" className="w-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white">
                         إنشاء حساب
                       </Button>
                     </Link>

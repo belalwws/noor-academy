@@ -101,7 +101,7 @@ const getCourseTypeInfo = (lp?: string, courseType?: string) => {
       case "individual":
         return { name: "مباشر فردي", color: "text-blue-600", bg: "bg-blue-100", border: "border-blue-200" }
       case "family":
-        return { name: "مباشر عائلي", color: "text-green-600", bg: "bg-green-100", border: "border-green-200" }
+        return { name: "مباشر عائلي", color: "text-blue-600", bg: "bg-blue-100", border: "border-blue-200" }
       case "group_private":
         return { name: "جماعي خاص", color: "text-purple-600", bg: "bg-purple-100", border: "border-purple-200" }
       case "group_public":
@@ -114,7 +114,7 @@ const getCourseTypeInfo = (lp?: string, courseType?: string) => {
   // Handle legacy course types
   switch (lp) {
     case "individual":
-      return { name: "تعليم فردي", color: "text-green-600", bg: "bg-green-100", border: "border-green-200" }
+      return { name: "تعليم فردي", color: "text-blue-600", bg: "bg-blue-100", border: "border-blue-200" }
     case "group_continuous":
       return { name: "تعليم مستمر", color: "text-blue-600", bg: "bg-blue-100", border: "border-blue-200" }
     case "training":
@@ -168,7 +168,7 @@ export default function CourseDetailsDialog({
                     </Badge>
                     <Badge className={
                       (course.is_approved === true) || (course.approval_status === 'approved')
-                        ? "bg-green-500 text-white" 
+                        ? "bg-blue-500 text-white" 
                         : course.approval_status === 'rejected'
                           ? "bg-red-500 text-white"
                           : "bg-yellow-500 text-white"
@@ -186,7 +186,7 @@ export default function CourseDetailsDialog({
                 </div>
               </div>
               {course.description && (
-                <p className="text-green-100 leading-relaxed">{course.description}</p>
+                <p className="text-blue-100 leading-relaxed">{course.description}</p>
               )}
             </div>
 
@@ -213,7 +213,7 @@ export default function CourseDetailsDialog({
                   )}
                   <div className="flex justify-between">
                     <span className="text-gray-600">حالة النشر:</span>
-                    <span className={`font-semibold ${course.is_published ? 'text-green-600' : 'text-gray-600'}`}>
+                    <span className={`font-semibold ${course.is_published ? 'text-blue-600' : 'text-gray-600'}`}>
                       {course.is_published ? 'منشورة' : 'غير منشورة'}
                     </span>
                   </div>
@@ -258,9 +258,9 @@ export default function CourseDetailsDialog({
               </Card>
 
               {/* Enrollment Information */}
-              <Card className="border-2 border-green-100">
-                <CardHeader className="bg-green-50">
-                  <CardTitle className="text-green-800 flex items-center gap-2">
+              <Card className="border-2 border-blue-100">
+                <CardHeader className="bg-blue-50">
+                  <CardTitle className="text-blue-800 flex items-center gap-2">
                     <Users className="w-5 h-5" />
                     معلومات التسجيل
                   </CardTitle>
@@ -361,7 +361,7 @@ export default function CourseDetailsDialog({
                   {course.approved_by_name && (
                     <div className="flex justify-between">
                       <span className="text-gray-600">معتمد من:</span>
-                      <span className="font-semibold text-green-600">{course.approved_by_name}</span>
+                      <span className="font-semibold text-blue-600">{course.approved_by_name}</span>
                     </div>
                   )}
                   {course.approved_at && (
@@ -480,7 +480,7 @@ export default function CourseDetailsDialog({
                 <>
                   {/* ابدأ حصة جديدة - يوجه للصفحة /class-session/create */}
                   <Link href={`/class-session/create/${course.id}`} className="flex-1">
-                    <Button size="sm" variant="outline" className="w-full text-green-600 border-green-300 hover:bg-green-50 font-semibold">
+                    <Button size="sm" variant="outline" className="w-full text-blue-600 border-blue-300 hover:bg-blue-50 font-semibold">
                       <Play className="w-4 h-4 ml-2" />
                        حصة جديدة ابدأ
                     </Button>

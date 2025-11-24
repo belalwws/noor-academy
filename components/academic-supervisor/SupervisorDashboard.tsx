@@ -29,7 +29,7 @@ const SupervisorDashboard: React.FC<SupervisorDashboardProps> = ({ stats }) => {
             <div>
               <p className="text-sm font-medium text-gray-600">المعلمين المشرف عليهم</p>
               <p className="text-3xl font-bold text-blue-600">{stats.totalTeachers}</p>
-              <p className="text-xs text-green-600 mt-1">+2 هذا الشهر</p>
+              <p className="text-xs text-blue-600 mt-1">+2 هذا الشهر</p>
             </div>
             <div className="bg-blue-100 p-3 rounded-full">
               <Users className="h-8 w-8 text-blue-600" />
@@ -37,15 +37,15 @@ const SupervisorDashboard: React.FC<SupervisorDashboardProps> = ({ stats }) => {
           </div>
         </div>
 
-        <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-500">
+        <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-gray-600">الدورات النشطة</p>
-              <p className="text-3xl font-bold text-green-600">{stats.activeCourses}</p>
-              <p className="text-xs text-green-600 mt-1">+5 هذا الأسبوع</p>
+              <p className="text-3xl font-bold text-blue-600">{stats.activeCourses}</p>
+              <p className="text-xs text-blue-600 mt-1">+5 هذا الأسبوع</p>
             </div>
-            <div className="bg-green-100 p-3 rounded-full">
-              <BookOpen className="h-8 w-8 text-green-600" />
+            <div className="bg-blue-100 p-3 rounded-full">
+              <BookOpen className="h-8 w-8 text-blue-600" />
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@ const SupervisorDashboard: React.FC<SupervisorDashboardProps> = ({ stats }) => {
             <div>
               <p className="text-sm font-medium text-gray-600">التقييمات المكتملة</p>
               <p className="text-3xl font-bold text-purple-600">{stats.completedEvaluations}</p>
-              <p className="text-xs text-green-600 mt-1">+12 هذا الأسبوع</p>
+              <p className="text-xs text-blue-600 mt-1">+12 هذا الأسبوع</p>
             </div>
             <div className="bg-purple-100 p-3 rounded-full">
               <CheckCircle className="h-8 w-8 text-purple-600" />
@@ -90,12 +90,12 @@ const SupervisorDashboard: React.FC<SupervisorDashboardProps> = ({ stats }) => {
 
             <div className="flex items-center justify-between">
               <span className="text-sm text-gray-600">التقدم الشهري</span>
-              <span className="font-bold text-green-600">{stats.monthlyProgress}%</span>
+              <span className="font-bold text-blue-600">{stats.monthlyProgress}%</span>
             </div>
             
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div 
-                className="bg-green-500 h-2 rounded-full" 
+                className="bg-blue-500 h-2 rounded-full" 
                 style={{ width: `${stats.monthlyProgress}%` }}
               ></div>
             </div>
@@ -129,12 +129,12 @@ const SupervisorDashboard: React.FC<SupervisorDashboardProps> = ({ stats }) => {
               </span>
             </div>
 
-            <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+            <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
               <div className="flex items-center">
-                <Award className="h-5 w-5 text-green-600 ml-2" />
+                <Award className="h-5 w-5 text-blue-600 ml-2" />
                 <span className="text-sm text-gray-700">تقييمات دورية</span>
               </div>
-              <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">
+              <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">
                 7
               </span>
             </div>
@@ -152,8 +152,8 @@ const SupervisorDashboard: React.FC<SupervisorDashboardProps> = ({ stats }) => {
         <div className="space-y-4">
           <div className="flex items-start space-x-3 space-x-reverse">
             <div className="flex-shrink-0">
-              <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                <CheckCircle className="h-4 w-4 text-green-600" />
+              <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                <CheckCircle className="h-4 w-4 text-blue-600" />
               </div>
             </div>
             <div className="flex-1">

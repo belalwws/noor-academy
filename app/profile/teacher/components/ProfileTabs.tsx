@@ -43,9 +43,9 @@ export default function ProfileTabs({ activeTab, onTabChange }: ProfileTabsProps
   return (
     <div className="mb-8">
       {/* Enhanced Header */}
-      <div className="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 rounded-t-3xl p-6 text-white">
+      <div className="bg-gradient-to-r from-blue-600 via-blue-600 to-teal-600 rounded-t-3xl p-6 text-white">
         <h2 className="text-2xl font-bold text-center mb-2">إدارة الملف الشخصي</h2>
-        <p className="text-center text-green-100 text-sm">اختر القسم الذي تريد عرضه أو تعديله</p>
+        <p className="text-center text-blue-100 text-sm">اختر القسم الذي تريد عرضه أو تعديله</p>
       </div>
 
       {/* Enhanced Tabs */}
@@ -62,23 +62,23 @@ export default function ProfileTabs({ activeTab, onTabChange }: ProfileTabsProps
                 className={`
                   relative flex flex-col items-center gap-3 p-6 transition-all duration-500 group
                   ${isActive 
-                    ? 'bg-gradient-to-br from-green-50 to-emerald-50 text-green-800 shadow-inner' 
-                    : 'text-gray-600 hover:text-green-700 hover:bg-gradient-to-br hover:from-green-50/50 hover:to-transparent'
+                    ? 'bg-gradient-to-br from-blue-50 to-blue-50 text-blue-800 shadow-inner' 
+                    : 'text-gray-600 hover:text-blue-700 hover:bg-gradient-to-br hover:from-blue-50/50 hover:to-transparent'
                   }
                   ${index < tabs.length - 1 ? 'border-r border-gray-200' : ''}
                 `}
               >
                 {/* Active Indicator */}
                 {isActive && (
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-500 to-emerald-500"></div>
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-blue-500"></div>
                 )}
                 
                 {/* Icon with Enhanced Styling */}
                 <div className={`
                   w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-300
                   ${isActive 
-                    ? 'bg-gradient-to-br from-green-500 to-emerald-500 text-white shadow-lg scale-110' 
-                    : 'bg-gray-100 text-gray-500 group-hover:bg-green-100 group-hover:text-green-600 group-hover:scale-105'
+                    ? 'bg-gradient-to-br from-blue-500 to-blue-500 text-white shadow-lg scale-110' 
+                    : 'bg-gray-100 text-gray-500 group-hover:bg-blue-100 group-hover:text-blue-600 group-hover:scale-105'
                   }
                 `}>
                   <IconComponent className="w-6 h-6" />
@@ -86,16 +86,16 @@ export default function ProfileTabs({ activeTab, onTabChange }: ProfileTabsProps
                 
                 {/* Text Content */}
                 <div className="text-center">
-                  <div className={`font-bold text-sm mb-1 ${isActive ? 'text-green-800' : 'text-current'}`}>
+                  <div className={`font-bold text-sm mb-1 ${isActive ? 'text-blue-800' : 'text-current'}`}>
                     {tab.label}
                   </div>
-                  <div className={`text-xs leading-relaxed ${isActive ? 'text-green-600' : 'text-gray-500'}`}>
+                  <div className={`text-xs leading-relaxed ${isActive ? 'text-blue-600' : 'text-gray-500'}`}>
                     {tab.description}
                   </div>
                 </div>
 
                 {/* Hover Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
             )
           })}

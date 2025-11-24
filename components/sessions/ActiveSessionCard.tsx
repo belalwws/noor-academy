@@ -146,7 +146,7 @@ export default function ActiveSessionCard({
   };
 
   const getTimerColor = () => {
-    if (remainingSeconds > 600) return 'text-emerald-600'; // > 10 mins
+    if (remainingSeconds > 600) return 'text-blue-600'; // > 10 mins
     if (remainingSeconds > 300) return 'text-yellow-600'; // > 5 mins
     return 'text-red-600'; // < 5 mins
   };
@@ -155,11 +155,11 @@ export default function ActiveSessionCard({
   const hasBeenExtended = liveData?.has_been_extended ?? session.has_been_extended ?? false;
 
   return (
-    <div className="bg-gradient-to-r from-emerald-50 via-teal-50 to-cyan-50 rounded-2xl border-2 border-emerald-200 p-6 shadow-lg">
+    <div className="bg-gradient-to-r from-blue-50 via-teal-50 to-cyan-50 rounded-2xl border-2 border-blue-200 p-6 shadow-lg">
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center shadow-lg">
+          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-teal-600 rounded-xl flex items-center justify-center shadow-lg">
             <Video className="w-6 h-6 text-white" />
           </div>
           <div>
@@ -167,7 +167,7 @@ export default function ActiveSessionCard({
               <h3 className="font-bold text-gray-800 text-lg">
                 {session.title}
               </h3>
-              <span className="inline-flex items-center gap-1 px-2 py-1 bg-emerald-500 text-white text-xs font-bold rounded-full animate-pulse">
+              <span className="inline-flex items-center gap-1 px-2 py-1 bg-blue-500 text-white text-xs font-bold rounded-full animate-pulse">
                 <span className="w-2 h-2 bg-white rounded-full"></span>
                 نشطة
               </span>
@@ -235,7 +235,7 @@ export default function ActiveSessionCard({
       <div className="flex gap-3">
         <button
           onClick={handleJoinSession}
-          className="flex-1 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold py-3 px-4 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+          className="flex-1 bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white font-bold py-3 px-4 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
         >
           <ExternalLink className="w-5 h-5" />
           الانضمام للجلسة
@@ -269,7 +269,7 @@ export default function ActiveSessionCard({
       )}
 
       {/* Session Info */}
-      <div className="mt-4 pt-4 border-t border-emerald-200">
+      <div className="mt-4 pt-4 border-t border-blue-200">
         <div className="grid grid-cols-2 gap-4 text-xs text-gray-600">
           <div>
             <span className="font-medium">المدة الأصلية:</span>{' '}

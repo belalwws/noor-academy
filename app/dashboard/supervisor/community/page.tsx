@@ -255,7 +255,7 @@ const CommunitySupervisorPage = () => {
     switch (status) {
       case 'pending': return 'bg-yellow-100 text-yellow-800'
       case 'reviewed': return 'bg-blue-100 text-blue-800'
-      case 'resolved': return 'bg-green-100 text-green-800'
+      case 'resolved': return 'bg-blue-100 text-blue-800'
       case 'dismissed': return 'bg-gray-100 text-gray-800'
       default: return 'bg-gray-100 text-gray-800'
     }
@@ -323,8 +323,8 @@ const CommunitySupervisorPage = () => {
                     <p className="text-sm font-medium text-slate-600">إجمالي المواضيع</p>
                     <p className="text-3xl font-bold text-slate-900">{stats.total_topics}</p>
                   </div>
-                  <div className="p-3 bg-green-100 rounded-full">
-                    <MessageSquare className="w-6 h-6 text-green-600" />
+                  <div className="p-3 bg-blue-100 rounded-full">
+                    <MessageSquare className="w-6 h-6 text-blue-600" />
                   </div>
                 </div>
               </CardContent>
@@ -405,7 +405,7 @@ const CommunitySupervisorPage = () => {
                           <TableCell>
                             <div className="flex items-center gap-2">
                               <Avatar className="w-8 h-8">
-                                <AvatarFallback className="bg-emerald-100 text-emerald-700 text-xs">
+                                <AvatarFallback className="bg-blue-100 text-blue-700 text-xs">
                                   {report.reporter.full_name.charAt(0)}
                                 </AvatarFallback>
                               </Avatar>
@@ -492,7 +492,7 @@ const CommunitySupervisorPage = () => {
                           <TableCell>
                             <div className="flex items-center gap-2">
                               <Avatar className="w-8 h-8">
-                                <AvatarFallback className="bg-emerald-100 text-emerald-700 text-xs">
+                                <AvatarFallback className="bg-blue-100 text-blue-700 text-xs">
                                   {topic.author.full_name.charAt(0)}
                                 </AvatarFallback>
                               </Avatar>
@@ -513,7 +513,7 @@ const CommunitySupervisorPage = () => {
                                 <Badge className="bg-red-100 text-red-800">مغلق</Badge>
                               )}
                               {!topic.is_pinned && !topic.is_locked && (
-                                <Badge className="bg-green-100 text-green-800">نشط</Badge>
+                                <Badge className="bg-blue-100 text-blue-800">نشط</Badge>
                               )}
                             </div>
                           </TableCell>
@@ -584,7 +584,7 @@ const CommunitySupervisorPage = () => {
                               <span>{forum.posts_count} مشاركة</span>
                             </div>
                           </div>
-                          <Badge className={forum.is_active ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}>
+                          <Badge className={forum.is_active ? "bg-blue-100 text-blue-800" : "bg-red-100 text-red-800"}>
                             {forum.is_active ? "نشط" : "غير نشط"}
                           </Badge>
                         </div>
@@ -657,7 +657,7 @@ const CommunitySupervisorPage = () => {
                   <Button 
                     onClick={handleResolveReport}
                     disabled={submitting}
-                    className="bg-green-600 hover:bg-green-700"
+                    className="bg-blue-600 hover:bg-blue-700"
                   >
                     {submitting && <Spinner size="sm" tone="contrast" className="ml-2" />}
                     حل البلاغ

@@ -47,7 +47,7 @@ export default function SurahsComponent({
         <Input
           type="text"
           placeholder="البحث في السور..."
-          className="pr-10 pl-12 py-3 rtl font-noto-kufi-arabic bg-white dark:bg-slate-800 border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-100 placeholder-slate-500 dark:placeholder-slate-400 rounded-xl shadow-md focus:ring-2 focus:ring-emerald-500 dark:focus:ring-emerald-600"
+          className="pr-10 pl-12 py-3 rtl font-noto-kufi-arabic bg-white dark:bg-slate-800 border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-100 placeholder-slate-500 dark:placeholder-slate-400 rounded-xl shadow-md focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-600"
           onChange={(e) => setSearch(e.target.value)}
           value={search}
         />
@@ -63,7 +63,7 @@ export default function SurahsComponent({
           />
         </Button>
         <SearchIcon
-          className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-emerald-600 dark:text-emerald-400"
+          className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-blue-600 dark:text-blue-400"
         />
       </motion.div>
 
@@ -95,12 +95,12 @@ export default function SurahsComponent({
                         asChild
                         variant={"outline"}
                         size={"icon"}
-                        className="rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 dark:from-emerald-600 dark:to-green-700 text-white border-0 shadow-md hover:shadow-lg transition-all"
+                        className="rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-600 dark:to-blue-700 text-white border-0 shadow-md hover:shadow-lg transition-all"
                       >
                         <p>{surah.number}</p>
                       </Button>
                       <p
-                        className="mb-4 text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors"
+                        className="mb-4 text-slate-800 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
                         style={{
                           fontFamily: `var(--font-${font})`
                         }}

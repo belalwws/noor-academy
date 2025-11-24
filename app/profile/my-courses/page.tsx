@@ -75,7 +75,7 @@ export default function MyCoursesPage() {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'active': return 'bg-green-100 text-green-800';
+      case 'active': return 'bg-blue-100 text-blue-800';
       case 'completed': return 'bg-blue-100 text-blue-800';
       case 'paused': return 'bg-yellow-100 text-yellow-800';
       case 'cancelled': return 'bg-red-100 text-red-800';
@@ -94,7 +94,7 @@ export default function MyCoursesPage() {
 
   const getPaymentStatusColor = (status: string) => {
     switch (status) {
-      case 'paid': return 'bg-green-100 text-green-800';
+      case 'paid': return 'bg-blue-100 text-blue-800';
       case 'pending': return 'bg-yellow-100 text-yellow-800';
       case 'failed': return 'bg-red-100 text-red-800';
       default: return 'bg-gray-100 text-gray-800';
@@ -161,14 +161,14 @@ export default function MyCoursesPage() {
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/80 backdrop-blur-sm border-green-200">
+              <Card className="bg-white/80 backdrop-blur-sm border-blue-200">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4">
-                    <div className="p-3 bg-green-100 rounded-full">
-                      <PlayCircle className="h-8 w-8 text-green-600" />
+                    <div className="p-3 bg-blue-100 rounded-full">
+                      <PlayCircle className="h-8 w-8 text-blue-600" />
                     </div>
                     <div>
-                      <p className="text-3xl font-bold text-green-600">
+                      <p className="text-3xl font-bold text-blue-600">
                         {enrollments.filter(e => e.enrollment_status === 'active').length}
                       </p>
                       <p className="text-sm text-gray-600">دورات نشطة</p>
@@ -283,7 +283,7 @@ export default function MyCoursesPage() {
                                 <Button 
                                   variant="outline"
                                   size="sm"
-                                  className="border-green-200 text-green-600 hover:bg-green-50"
+                                  className="border-blue-200 text-blue-600 hover:bg-blue-50"
                                 >
                                   <PlayCircle className="w-4 h-4 ml-2" />
                                   متابعة

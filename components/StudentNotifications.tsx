@@ -148,7 +148,7 @@ export default function StudentNotifications({ className = '' }: StudentNotifica
       case 'session_created':
         return 'fas fa-video text-blue-600';
       case 'course_approved':
-        return 'fas fa-check-circle text-green-600';
+        return 'fas fa-check-circle text-blue-600';
       case 'course_request_created':
         return 'fas fa-plus-circle text-purple-600';
       case 'assignment_due':

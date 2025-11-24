@@ -141,12 +141,12 @@ export default function AnswerReview({ quiz, attempt }: AnswerReviewProps) {
                 
                 {/* Show correct answer if available */}
                 {question.correct_answer && (
-                  <div className="p-5 bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl border-2 border-green-300 dark:border-green-700">
-                    <p className="text-xs font-bold text-green-700 dark:text-green-300 mb-2 flex items-center gap-2">
+                  <div className="p-5 bg-gradient-to-br from-blue-100 to-blue-100 dark:from-blue-900/20 dark:to-blue-900/20 rounded-xl border-2 border-blue-300 dark:border-blue-700">
+                    <p className="text-xs font-bold text-blue-700 dark:text-blue-300 mb-2 flex items-center gap-2">
                       <CheckCircle className="w-4 h-4" />
                       الإجابة الصحيحة:
                     </p>
-                    <p className="text-base font-semibold text-green-900 dark:text-green-200">
+                    <p className="text-base font-semibold text-blue-900 dark:text-blue-200">
                       {question.correct_answer}
                     </p>
                   </div>
@@ -206,7 +206,7 @@ export default function AnswerReview({ quiz, attempt }: AnswerReviewProps) {
               !hasAnswer
                 ? 'bg-gray-50 dark:bg-slate-800/50'
                 : isCorrect
-                ? 'bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/10 dark:to-emerald-900/10'
+                ? 'bg-gradient-to-br from-blue-50 to-blue-50 dark:from-blue-900/10 dark:to-blue-900/10'
                 : 'bg-gradient-to-br from-red-50 to-rose-50 dark:from-red-900/10 dark:to-rose-900/10'
             }`}>
               {/* Top colored bar */}
@@ -214,7 +214,7 @@ export default function AnswerReview({ quiz, attempt }: AnswerReviewProps) {
                 !hasAnswer
                   ? 'bg-gray-300 dark:bg-slate-600'
                   : isCorrect
-                  ? 'bg-gradient-to-r from-green-500 to-emerald-500'
+                  ? 'bg-gradient-to-r from-blue-500 to-blue-500'
                   : 'bg-gradient-to-r from-red-500 to-rose-500'
               }`} />
               
@@ -228,7 +228,7 @@ export default function AnswerReview({ quiz, attempt }: AnswerReviewProps) {
                       </span>
                       {hasAnswer ? (
                         isCorrect ? (
-                          <span className="px-3 py-1.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-bold rounded-lg flex items-center gap-2">
+                          <span className="px-3 py-1.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-bold rounded-lg flex items-center gap-2">
                             <CheckCircle className="w-4 h-4" />
                             إجابة صحيحة
                           </span>
@@ -257,8 +257,8 @@ export default function AnswerReview({ quiz, attempt }: AnswerReviewProps) {
                   <div className="flex-shrink-0">
                     {hasAnswer ? (
                       isCorrect ? (
-                        <div className="p-4 bg-green-100 dark:bg-green-900/30 rounded-full">
-                          <CheckCircle className="w-8 h-8 text-green-600 dark:text-green-400" />
+                        <div className="p-4 bg-blue-100 dark:bg-blue-900/30 rounded-full">
+                          <CheckCircle className="w-8 h-8 text-blue-600 dark:text-blue-400" />
                         </div>
                       ) : (
                         <div className="p-4 bg-red-100 dark:bg-red-900/30 rounded-full">
@@ -279,12 +279,12 @@ export default function AnswerReview({ quiz, attempt }: AnswerReviewProps) {
                   {studentAnswer && (
                     <div className={`p-5 rounded-xl border-2 ${
                       isCorrect
-                        ? 'bg-white dark:bg-slate-900 border-green-200 dark:border-green-800'
+                        ? 'bg-white dark:bg-slate-900 border-blue-200 dark:border-blue-800'
                         : 'bg-white dark:bg-slate-900 border-red-200 dark:border-red-800'
                     }`}>
                       <p className={`text-xs font-bold mb-2 flex items-center gap-2 ${
                         isCorrect
-                          ? 'text-green-700 dark:text-green-300'
+                          ? 'text-blue-700 dark:text-blue-300'
                           : 'text-red-700 dark:text-red-300'
                       }`}>
                         {isCorrect ? <CheckCircle className="w-4 h-4" /> : <XCircle className="w-4 h-4" />}
@@ -303,12 +303,12 @@ export default function AnswerReview({ quiz, attempt }: AnswerReviewProps) {
 
                   {/* Correct Answer (shown if answer is wrong or not answered) */}
                   {(!isCorrect || !hasAnswer) && (
-                    <div className="p-5 bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl border-2 border-green-300 dark:border-green-700">
-                      <p className="text-xs font-bold text-green-700 dark:text-green-300 mb-2 flex items-center gap-2">
+                    <div className="p-5 bg-gradient-to-br from-blue-100 to-blue-100 dark:from-blue-900/20 dark:to-blue-900/20 rounded-xl border-2 border-blue-300 dark:border-blue-700">
+                      <p className="text-xs font-bold text-blue-700 dark:text-blue-300 mb-2 flex items-center gap-2">
                         <CheckCircle className="w-4 h-4" />
                         الإجابة الصحيحة:
                       </p>
-                      <p className="text-base font-semibold text-green-900 dark:text-green-200">
+                      <p className="text-base font-semibold text-blue-900 dark:text-blue-200">
                         {studentAnswer?.correct_answer || question.correct_answer}
                       </p>
                     </div>
@@ -342,7 +342,7 @@ export default function AnswerReview({ quiz, attempt }: AnswerReviewProps) {
                                 key={key}
                                 className={`p-3 rounded-lg border ${
                                   question.correct_answer === value
-                                    ? 'bg-green-50 dark:bg-green-900/20 border-green-300 dark:border-green-700'
+                                    ? 'bg-blue-50 dark:bg-blue-900/20 border-blue-300 dark:border-blue-700'
                                     : studentAnswer?.selected_answer === value
                                     ? 'bg-red-50 dark:bg-red-900/20 border-red-300 dark:border-red-700'
                                     : 'bg-gray-50 dark:bg-slate-800 border-gray-200 dark:border-slate-600'
@@ -351,7 +351,7 @@ export default function AnswerReview({ quiz, attempt }: AnswerReviewProps) {
                                 <span className="text-sm font-medium text-gray-900 dark:text-slate-50">
                                   {value as string}
                                   {question.correct_answer === value && (
-                                    <span className="text-green-600 dark:text-green-400 mr-2">✓</span>
+                                    <span className="text-blue-600 dark:text-blue-400 mr-2">✓</span>
                                   )}
                                   {studentAnswer?.selected_answer === value && question.correct_answer !== value && (
                                     <span className="text-red-600 dark:text-red-400 mr-2">✗</span>

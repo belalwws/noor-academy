@@ -355,7 +355,7 @@ export const getApprovalStatusLabel = (status: string): string => {
 export const getApprovalStatusColor = (status: string): string => {
   const colors = {
     'pending': 'yellow',
-    'approved': 'green',
+    'approved': 'blue',
     'rejected': 'red'
   };
   return colors[status as keyof typeof colors] || 'gray';

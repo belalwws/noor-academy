@@ -30,7 +30,7 @@ const CourseNotifications: React.FC<CourseNotificationsProps> = ({ className = '
   const getNotificationIcon = (type: string) => {
     switch (type) {
       case 'course_approved':
-        return <CheckCircle className="h-5 w-5 text-green-600" />;
+        return <CheckCircle className="h-5 w-5 text-blue-600" />;
       case 'course_rejected':
         return <XCircle className="h-5 w-5 text-red-600" />;
       case 'course_pending':
@@ -45,7 +45,7 @@ const CourseNotifications: React.FC<CourseNotificationsProps> = ({ className = '
   const getNotificationColor = (type: string) => {
     switch (type) {
       case 'course_approved':
-        return 'bg-green-50 border-green-200';
+        return 'bg-blue-50 border-blue-200';
       case 'course_rejected':
         return 'bg-red-50 border-red-200';
       case 'course_pending':
@@ -84,7 +84,7 @@ const CourseNotifications: React.FC<CourseNotificationsProps> = ({ className = '
     <Card className={`${className} mb-6`}>
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-lg">
-          <AlertCircle className="h-5 w-5 text-green-600" />
+          <AlertCircle className="h-5 w-5 text-blue-600" />
           إشعارات الدورات
           {courseNotifications.filter(n => !n.is_read).length > 0 && (
             <Badge className="bg-red-500 text-white">
@@ -147,7 +147,7 @@ const CourseNotifications: React.FC<CourseNotificationsProps> = ({ className = '
                       size="sm"
                       variant="default"
                       onClick={() => window.location.href = notification.action_url!}
-                      className="text-xs bg-green-600 hover:bg-green-700"
+                      className="text-xs bg-blue-600 hover:bg-blue-700"
                     >
                       {notification.action_text || 'عرض'}
                     </Button>
@@ -163,7 +163,7 @@ const CourseNotifications: React.FC<CourseNotificationsProps> = ({ className = '
                 variant="outline"
                 size="sm"
                 onClick={() => window.location.href = '/notifications'}
-                className="text-green-600 border-green-600 hover:bg-green-50"
+                className="text-blue-600 border-blue-600 hover:bg-blue-50"
               >
                 عرض جميع الإشعارات ({courseNotifications.length})
               </Button>

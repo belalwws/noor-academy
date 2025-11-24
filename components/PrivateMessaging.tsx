@@ -269,7 +269,7 @@ const PrivateMessaging = ({ currentUserId, className }: PrivateMessagingProps) =
       <div className={`fixed bottom-4 right-4 z-50 ${className}`}>
         <Button
           onClick={() => setIsMinimized(false)}
-          className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg relative"
+          className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg relative"
         >
           <MessageCircle className="h-5 w-5" />
           {totalUnreadCount > 0 && (
@@ -288,9 +288,9 @@ const PrivateMessaging = ({ currentUserId, className }: PrivateMessagingProps) =
         {/* Conversations List */}
         <div className={`${activeConversation ? 'w-1/3' : 'w-full'} border-l border-slate-200 flex flex-col`}>
           {/* Header */}
-          <div className="p-4 border-b border-slate-200 bg-emerald-50">
+          <div className="p-4 border-b border-slate-200 bg-blue-50">
             <div className="flex items-center justify-between mb-3">
-              <h3 className="font-bold text-emerald-800 flex items-center gap-2">
+              <h3 className="font-bold text-blue-800 flex items-center gap-2">
                 <MessageCircle className="h-5 w-5" />
                 الرسائل
                 {totalUnreadCount > 0 && (
@@ -347,7 +347,7 @@ const PrivateMessaging = ({ currentUserId, className }: PrivateMessagingProps) =
                     key={conversation.id}
                     className={`p-3 rounded-lg cursor-pointer transition-colors ${
                       activeConversation?.id === conversation.id
-                        ? 'bg-emerald-100 border border-emerald-200'
+                        ? 'bg-blue-100 border border-blue-200'
                         : 'hover:bg-slate-50'
                     }`}
                     onClick={() => {
@@ -364,7 +364,7 @@ const PrivateMessaging = ({ currentUserId, className }: PrivateMessagingProps) =
                           </AvatarFallback>
                         </Avatar>
                         <div className={`absolute -bottom-1 -right-1 w-3 h-3 rounded-full border-2 border-white ${
-                          participant.isOnline ? 'bg-green-500' : 'bg-slate-400'
+                          participant.isOnline ? 'bg-blue-500' : 'bg-slate-400'
                         }`} />
                       </div>
                       
@@ -395,7 +395,7 @@ const PrivateMessaging = ({ currentUserId, className }: PrivateMessagingProps) =
                               {conversation.lastMessage.content}
                             </p>
                             {conversation.unreadCount > 0 && (
-                              <Badge className="bg-emerald-500 text-white text-xs">
+                              <Badge className="bg-blue-500 text-white text-xs">
                                 {conversation.unreadCount}
                               </Badge>
                             )}
@@ -425,7 +425,7 @@ const PrivateMessaging = ({ currentUserId, className }: PrivateMessagingProps) =
                       </AvatarFallback>
                     </Avatar>
                     <div className={`absolute -bottom-1 -right-1 w-2 h-2 rounded-full border border-white ${
-                      activeConversation.participants[0].isOnline ? 'bg-green-500' : 'bg-slate-400'
+                      activeConversation.participants[0].isOnline ? 'bg-blue-500' : 'bg-slate-400'
                     }`} />
                   </div>
                   <div>
@@ -479,13 +479,13 @@ const PrivateMessaging = ({ currentUserId, className }: PrivateMessagingProps) =
                     <div
                       className={`max-w-[80%] p-3 rounded-lg ${
                         message.senderId === currentUserId
-                          ? 'bg-emerald-500 text-white'
+                          ? 'bg-blue-500 text-white'
                           : 'bg-slate-100 text-slate-800'
                       }`}
                     >
                       <p className="text-sm">{message.content}</p>
                       <div className={`flex items-center justify-end gap-1 mt-1 text-xs ${
-                        message.senderId === currentUserId ? 'text-emerald-100' : 'text-slate-500'
+                        message.senderId === currentUserId ? 'text-blue-100' : 'text-slate-500'
                       }`}>
                         <span>{formatTime(message.timestamp)}</span>
                         {message.senderId === currentUserId && (
@@ -522,7 +522,7 @@ const PrivateMessaging = ({ currentUserId, className }: PrivateMessagingProps) =
                 <Button
                   onClick={handleSendMessage}
                   disabled={!newMessage.trim()}
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white"
+                  className="bg-blue-600 hover:bg-blue-700 text-white"
                   size="sm"
                 >
                   <Send className="h-4 w-4" />

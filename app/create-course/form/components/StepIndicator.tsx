@@ -34,7 +34,7 @@ export function StepIndicator({ steps, currentStep }: StepIndicatorProps) {
                   className={`
                     w-12 h-12 rounded-full flex items-center justify-center
                     ${isCurrent ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg' : ''}
-                    ${isCompleted ? 'bg-green-500 text-white' : ''}
+                    ${isCompleted ? 'bg-blue-500 text-white' : ''}
                     ${!isCurrent && !isCompleted ? 'bg-white dark:bg-slate-800 text-slate-400 border-2 border-slate-200 dark:border-slate-700' : ''}
                   `}
                   whileHover={{ scale: 1.05 }}

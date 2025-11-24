@@ -409,7 +409,7 @@ function CreateLiveCourseFormContent() {
         <motion.div
           animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.3, 0.2] }}
           transition={{ duration: 10, repeat: Infinity, delay: 1 }}
-          className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-green-200/20 to-emerald-200/20 rounded-full blur-3xl"
+          className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-blue-200/20 to-blue-200/20 rounded-full blur-3xl"
         />
       </div>
 
@@ -484,7 +484,7 @@ function CreateLiveCourseFormContent() {
                     <Button
                       onClick={handleSubmit}
                       disabled={isSubmitting}
-                      className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 gap-2"
+                      className="bg-gradient-to-r from-blue-500 to-blue-500 hover:from-blue-600 hover:to-blue-600 gap-2"
                     >
                       {isSubmitting ? (
                         <>

@@ -259,7 +259,7 @@ const EnrollmentsTab: React.FC<EnrollmentsTabProps> = () => {
                       <div className="flex gap-3">
                         <Button
                           onClick={() => openActionDialog(enrollment, 'approve')}
-                          className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                          className="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                         >
                           <CheckCircle className="w-4 h-4 mr-2" />
                           قبول
@@ -357,7 +357,7 @@ const EnrollmentsTab: React.FC<EnrollmentsTabProps> = () => {
                 <Button 
                   type="submit" 
                   disabled={processingAction}
-                  className={action === 'approve' ? 'bg-green-600 hover:bg-green-700' : ''}
+                  className={action === 'approve' ? 'bg-blue-600 hover:bg-blue-700' : ''}
                   variant={action === 'reject' ? 'destructive' : 'default'}
                 >
                   {processingAction ? (

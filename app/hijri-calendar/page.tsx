@@ -182,7 +182,7 @@ export default function HijriCalendarPage() {
 
   const getEventTypeColor = (type: string) => {
     switch (type) {
-      case 'religious': return 'bg-emerald-100 text-emerald-800';
+      case 'religious': return 'bg-blue-100 text-blue-800';
       case 'historical': return 'bg-blue-100 text-blue-800';
       case 'celebration': return 'bg-amber-100 text-amber-800';
       default: return 'bg-gray-100 text-gray-800';
@@ -201,18 +201,18 @@ export default function HijriCalendarPage() {
   const calendarDays = generateCalendarDays();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50" dir="rtl">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-teal-50 to-cyan-50" dir="rtl">
       {/* Header */}
-      <div className="bg-white/80 backdrop-blur-sm border-b border-emerald-100 sticky top-0 z-10">
+      <div className="bg-white/80 backdrop-blur-sm border-b border-blue-100 sticky top-0 z-10">
         <div className="container mx-auto px-4 py-6">
           <div className="text-center mb-6">
             <div className="flex items-center justify-center gap-3 mb-3">
-              <Calendar className="w-8 h-8 text-emerald-600" />
-              <h1 className="text-4xl font-bold text-emerald-800">
+              <Calendar className="w-8 h-8 text-blue-600" />
+              <h1 className="text-4xl font-bold text-blue-800">
                 التقويم الهجري
               </h1>
             </div>
-            <p className="text-emerald-600 text-lg">
+            <p className="text-blue-600 text-lg">
               تقويم إسلامي شامل مع المناسبات الدينية وتحويل التواريخ
             </p>
           </div>
@@ -220,13 +220,13 @@ export default function HijriCalendarPage() {
           {/* Controls */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             {/* View Mode Toggle */}
-            <div className="flex bg-white rounded-xl p-1 border border-emerald-200">
+            <div className="flex bg-white rounded-xl p-1 border border-blue-200">
               <button
                 onClick={() => setViewMode('hijri')}
                 className={`px-4 py-2 rounded-lg font-medium transition-all ${
                   viewMode === 'hijri'
-                    ? 'bg-emerald-500 text-white shadow-md'
-                    : 'text-emerald-700 hover:bg-emerald-50'
+                    ? 'bg-blue-500 text-white shadow-md'
+                    : 'text-blue-700 hover:bg-blue-50'
                 }`}
               >
                 هجري
@@ -235,8 +235,8 @@ export default function HijriCalendarPage() {
                 onClick={() => setViewMode('gregorian')}
                 className={`px-4 py-2 rounded-lg font-medium transition-all ${
                   viewMode === 'gregorian'
-                    ? 'bg-emerald-500 text-white shadow-md'
-                    : 'text-emerald-700 hover:bg-emerald-50'
+                    ? 'bg-blue-500 text-white shadow-md'
+                    : 'text-blue-700 hover:bg-blue-50'
                 }`}
               >
                 ميلادي
@@ -247,35 +247,35 @@ export default function HijriCalendarPage() {
             <div className="flex items-center gap-4">
               <button
                 onClick={() => navigateMonth('prev')}
-                className="p-2 rounded-lg bg-white border border-emerald-200 hover:bg-emerald-50 transition-all"
+                className="p-2 rounded-lg bg-white border border-blue-200 hover:bg-blue-50 transition-all"
               >
-                <ArrowRight className="w-5 h-5 text-emerald-600" />
+                <ArrowRight className="w-5 h-5 text-blue-600" />
               </button>
               
               <div className="text-center min-w-[200px]">
-                <h2 className="text-xl font-bold text-emerald-800">
+                <h2 className="text-xl font-bold text-blue-800">
                   {viewMode === 'hijri' 
                     ? `${currentHijriDate.monthName} ${currentHijriDate.year}`
                     : `${currentGregorianDate.monthName} ${currentGregorianDate.year}`
                   }
                 </h2>
-                <p className="text-emerald-600 text-sm">
+                <p className="text-blue-600 text-sm">
                   {viewMode === 'hijri' ? 'هجرية' : 'ميلادية'}
                 </p>
               </div>
 
               <button
                 onClick={() => navigateMonth('next')}
-                className="p-2 rounded-lg bg-white border border-emerald-200 hover:bg-emerald-50 transition-all"
+                className="p-2 rounded-lg bg-white border border-blue-200 hover:bg-blue-50 transition-all"
               >
-                <ArrowLeft className="w-5 h-5 text-emerald-600" />
+                <ArrowLeft className="w-5 h-5 text-blue-600" />
               </button>
             </div>
 
             {/* Converter Button */}
             <button
               onClick={() => setShowConverter(!showConverter)}
-              className="flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-medium transition-all"
+              className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-all"
             >
               <RefreshCw className="w-4 h-4" />
               محول التاريخ
@@ -288,16 +288,16 @@ export default function HijriCalendarPage() {
         <div className="max-w-6xl mx-auto">
           {/* Date Converter */}
           {showConverter && (
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-emerald-100 p-6 mb-6">
-              <h3 className="text-xl font-bold text-emerald-800 mb-4 flex items-center gap-2">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-blue-100 p-6 mb-6">
+              <h3 className="text-xl font-bold text-blue-800 mb-4 flex items-center gap-2">
                 <Globe className="w-6 h-6" />
                 محول التاريخ
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-emerald-50 rounded-xl p-4">
-                  <h4 className="font-semibold text-emerald-800 mb-3">التاريخ الهجري</h4>
+                <div className="bg-blue-50 rounded-xl p-4">
+                  <h4 className="font-semibold text-blue-800 mb-3">التاريخ الهجري</h4>
                   <div className="space-y-2">
-                    <div className="text-2xl font-bold text-emerald-700">
+                    <div className="text-2xl font-bold text-blue-700">
                       {currentHijriDate.day} {currentHijriDate.monthName} {currentHijriDate.year} هـ
                     </div>
                   </div>
@@ -315,9 +315,9 @@ export default function HijriCalendarPage() {
           )}
 
           {/* Calendar Grid */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-emerald-100 overflow-hidden">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-blue-100 overflow-hidden">
             {/* Calendar Header */}
-            <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-4">
+            <div className="bg-gradient-to-r from-blue-600 to-teal-600 text-white p-4">
               <div className="grid grid-cols-7 gap-2 text-center">
                 {['السبت', 'الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة'].map(day => (
                   <div key={day} className="font-semibold py-2">
@@ -340,7 +340,7 @@ export default function HijriCalendarPage() {
                       onClick={() => setSelectedDate(selectedDate === day ? null : day)}
                       className={`aspect-square p-2 rounded-lg border cursor-pointer transition-all hover:shadow-md ${
                         selectedDate === day
-                          ? 'bg-emerald-100 border-emerald-300'
+                          ? 'bg-blue-100 border-blue-300'
                           : hasEvents
                           ? 'bg-amber-50 border-amber-200 hover:bg-amber-100'
                           : 'bg-gray-50 border-gray-200 hover:bg-gray-100'
@@ -367,22 +367,22 @@ export default function HijriCalendarPage() {
 
           {/* Event Details */}
           {selectedDate && (
-            <div className="mt-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-emerald-100 p-6">
-              <h3 className="text-xl font-bold text-emerald-800 mb-4">
+            <div className="mt-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-blue-100 p-6">
+              <h3 className="text-xl font-bold text-blue-800 mb-4">
                 أحداث يوم {selectedDate} {viewMode === 'hijri' ? currentHijriDate.monthName : currentGregorianDate.monthName}
               </h3>
               
               {getEventsForDay(selectedDate).length > 0 ? (
                 <div className="space-y-4">
                   {getEventsForDay(selectedDate).map((event, index) => (
-                    <div key={index} className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl p-4 border border-emerald-200">
+                    <div key={index} className="bg-gradient-to-r from-blue-50 to-teal-50 rounded-xl p-4 border border-blue-200">
                       <div className="flex items-start gap-3">
                         <div className={`p-2 rounded-lg ${getEventTypeColor(event.type)}`}>
                           {getEventTypeIcon(event.type)}
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-bold text-emerald-800 mb-1">{event.name}</h4>
-                          <p className="text-emerald-700 text-sm">{event.description}</p>
+                          <h4 className="font-bold text-blue-800 mb-1">{event.name}</h4>
+                          <p className="text-blue-700 text-sm">{event.description}</p>
                           <span className={`inline-block mt-2 px-3 py-1 rounded-full text-xs font-medium ${getEventTypeColor(event.type)}`}>
                             {event.type === 'religious' ? 'ديني' : event.type === 'historical' ? 'تاريخي' : 'احتفالي'}
                           </span>
@@ -392,7 +392,7 @@ export default function HijriCalendarPage() {
                   ))}
                 </div>
               ) : (
-                <div className="text-center py-8 text-emerald-600">
+                <div className="text-center py-8 text-blue-600">
                   <Calendar className="w-12 h-12 mx-auto mb-3 opacity-50" />
                   <p>لا توجد مناسبات في هذا اليوم</p>
                 </div>
@@ -401,20 +401,20 @@ export default function HijriCalendarPage() {
           )}
 
           {/* Upcoming Events */}
-          <div className="mt-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-emerald-100 p-6">
-            <h3 className="text-xl font-bold text-emerald-800 mb-4 flex items-center gap-2">
+          <div className="mt-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-blue-100 p-6">
+            <h3 className="text-xl font-bold text-blue-800 mb-4 flex items-center gap-2">
               <Star className="w-6 h-6" />
               المناسبات القادمة
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {islamicEvents.slice(0, 6).map((event, index) => (
-                <div key={index} className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-4 border border-emerald-200">
+                <div key={index} className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-xl p-4 border border-blue-200">
                   <div className="flex items-center gap-2 mb-2">
                     {getEventTypeIcon(event.type)}
-                    <span className="font-semibold text-emerald-800">{event.name}</span>
+                    <span className="font-semibold text-blue-800">{event.name}</span>
                   </div>
-                  <p className="text-emerald-700 text-sm mb-2">{event.description}</p>
-                  <div className="text-xs text-emerald-600">
+                  <p className="text-blue-700 text-sm mb-2">{event.description}</p>
+                  <div className="text-xs text-blue-600">
                     {event.hijriDay} {hijriMonths[event.hijriMonth - 1]}
                   </div>
                 </div>
